@@ -1,0 +1,189 @@
+{
+  "JSChart" : {
+	"datasets" : [
+	  {
+		"type" : "line",
+		"data" : [
+		  {
+			"unit" : "一月",
+			"value" : "5"
+		  },
+		  {
+			"unit" : "二月",
+			"value" : "16"
+		  },
+		  {
+			"unit" : "三月",
+			"value" : "31"
+		  },
+		  {
+			"unit" : "四月",
+			"value" : "27"
+		  },
+		  {
+			"unit" : "五月",
+			"value" : "52"
+		  },
+		  {
+			"unit" : "六月",
+			"value" : "50"
+		  },
+		  {
+			"unit" : "七月",
+			"value" : "59"
+		  },
+		  {
+			"unit" : "八月",
+			"value" : "24"
+		  },
+		  {
+			"unit" : "九月",
+			"value" : "25"
+		  },
+		  {
+			"unit" : "十月",
+			"value" : "36"
+		  },
+		  {
+			"unit" : "十一月",
+			"value" : "60"
+		  },
+		  {
+			"unit" : "十二月",
+			"value" : "41"
+		  }
+		]
+	  }
+	],
+	"optionset" : [
+	  {
+		"set" : "setAxisColor",
+		"value" : "'#C8C4BF'"
+	  },
+	  {
+		"set" : "setAxisNameColor",
+		"value" : "'#4A4A4A'"
+	  },
+	  {
+		"set" : "setAxisNameFontSize",
+		"value" : "10"
+	  },
+	  {
+		"set" : "setAxisPaddingBottom",
+		"value" : "60"
+	  },
+	  {
+		"set" : "setAxisPaddingLeft",
+		"value" : "180"
+	  },
+	  {
+		"set" : "setAxisPaddingRight",
+		"value" : "170"
+	  },
+	  {
+		"set" : "setAxisPaddingTop",
+		"value" : "65"
+	  },
+	  {
+		"set" : "setAxisValuesColor",
+		"value" : "'#656565'"
+	  },
+	  {
+		"set" : "setAxisValuesNumberX",
+		"value" : "6"
+	  },
+	  {
+		"set" : "setGrid",
+		"value" : "true"
+	  },
+	  {
+		"set" : "setGridOpacityY",
+		"value" : "0"
+	  },
+	  {
+		"set" : "setLineColor",
+		"value" : "'#00AEC4'"
+	  },
+	  {
+		"set" : "setShowYValues",
+		"value" : "true"
+	  },
+	  {
+		"set" : "setTitle",
+		"value" : "''"
+	  },
+	  {
+		"set" : "setTitleColor",
+		"value" : "'#505050'"
+	  },
+	  {
+		"set" : "setSize",
+		"value" : "1000, 500"
+	  },
+	  {
+		"set" : "setTextPaddingBottom",
+		"value" : "20"
+	  },
+	  {
+		"set" : "setTextPaddingLeft",
+		"value" : "120"
+	  },
+	  {
+		"set" : "setTextPaddingTop",
+		"value" : "15"
+	  },
+	  {
+		"set" : "setFlagRadius",
+		"value" : "6"
+	  },
+	  {
+		"set" : "setBackgroundColor",
+		"value" : "'#fff'"
+	  },
+	  {
+		"set" : "setTooltipBackground",
+		"value" : "'#fff'"
+	  },
+	  {
+		"set" : "setFlagColor",
+		"value" : "'#C6EAF1'"
+	  },
+	  {
+		"set" : "setFlagFillColor",
+		"value" : "'#00AEC4'"
+	  },
+	  {
+		"set" : "setTooltipFontColor",
+		"value" : "'#000'"
+	  },
+	  {
+		"set" : "setTooltipBorder",
+		"value" : "'transparent'"
+	  },
+	  {
+		"set" : "setLineWidth",
+		"value" : "3"
+	  },
+	  {
+		"set" : "setAxisReversed",
+		"value" : "true"
+	  },
+	  {
+		"set" : "setAxisNameX",
+		"value" : "''"
+	  },
+	  {
+		"set" : "setAxisNameY",
+		"value" : "''"
+	  },
+	  {
+		"set" : "setFontFamily",
+		"value" : "'Microsoft YaHei'"
+	  },
+	  {
+		"set" : "setTooltipPosition",
+		"value" : "'nw'"
+	  }
+	]
+  }
+}

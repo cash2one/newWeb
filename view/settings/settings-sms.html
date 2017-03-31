@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20161010" rel="stylesheet" type="text/css"/>
+    <link href="../../css/settings.css?v=upd20161103" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div class="pacs-body">
+    <div class="header pacs-settings-header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pacs-warp settings-box">
+        <h4 class="bread-settings">
+            <span><a href="pacs.html">云PACS</a> >><b style="color:#898989;">设置</b></span>
+        </h4>
+        <div class="settings-left">
+            <div class="pacs-settings-left settings-left-content">
+                <p id="info"><a href="settings-info.html">个人信息</a></p>
+                <p id="scheduling"><a href="settings-scheduling.html">排班设置</a></p>
+                <p id="pricesetting"><a href="settings-pricesetting.html">排班价格设置</a></p>
+                <p id="report"><a href="settings-report.html">报告模版</a></p>
+                <p id="sign"><a href="settings-sign.html">签约管理</a></p>
+                <p class="settings-on settings-click" id="sms"><a href="#">短信设置</a></p>
+                <p id="pass"><a href="settings-pass.html">修改密码</a></p>
+                <span class="settings-split"></span>
+                <p id="contacts"><a href="settings-contacts.html">我的联系人</a></p>
+                <p id="patients"><a href="settings-patients.html">关注我的患者</a></p>
+                <span class="settings-split"></span>
+                <p id="account"><a href="settings-account.html">我的账户</a></p>
+                <p id="order"><a href="settings-order.html">待确认订单</a></p>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="settings-right  pacs-settings-right">
+            <div style="display: block;" class="settings-right-content pacs-settings-right">
+                <input type="hidden" value="" id="errorMsg">
+
+                <form id="modifySms" action="/user/modifySmsSettings.htm" method="post">
+                    <input type="hidden" name="isRecSms" id="isRecSms">
+                    <input type="hidden" name="recStartTime" id="recStartTime">
+                    <input type="hidden" name="recEndTime" id="recEndTime">
+
+                    <div class="settings-user-sms">
+                        <ul class="center-ul clearfix">
+                            <li>
+                                <div>是否接收短信：</div>
+                                <div>
+                                    <input type="checkbox" id="isRecSms_0" value="0" checked=""><span>留言咨询</span>
+                                    <input type="checkbox" id="isRecSms_1" value="0" checked=""><span>视频诊室</span>
+                                    <input style="visibility:hidden;" type="checkbox" id="isRecSms_2" value="0" checked=""><span
+                                        style="visibility:hidden;">诊间预约</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>设置开始接收时间：</div>
+                                <div>
+                                    <div class="aycan-select" style="width:70%;margin:0;z-index:999;">
+                                        <div class="user-select user-select-1" style="width:100%;z-index:999;">
+                                            <div class="grey-select" style="min-width: 109px;">
+                                                <span class="user-select-span user-span-1">00:00:00</span>
+                                                <i id="selected1"></i>
+                                            </div>
+
+                                            <ul class="user-select-ul user-ul-1" style="width: 100%; z-index: 999; display: none;">
+                                                <li value="00"><a href="javascript:;">00:00:00</a></li>
+                                                <li value="01"><a href="javascript:;">01:00:00</a></li>
+                                                <li value="02"><a href="javascript:;">02:00:00</a></li>
+                                                <li value="03"><a href="javascript:;">03:00:00</a></li>
+                                                <li value="04"><a href="javascript:;">04:00:00</a></li>
+                                                <li value="05"><a href="javascript:;">05:00:00</a></li>
+                                                <li value="06"><a href="javascript:;">06:00:00</a></li>
+                                                <li value="07"><a href="javascript:;">07:00:00</a></li>
+                                                <li value="08"><a href="javascript:;">08:00:00</a></li>
+                                                <li value="09"><a href="javascript:;">09:00:00</a></li>
+                                                <li value="10"><a href="javascript:;">10:00:00</a></li>
+                                                <li value="11"><a href="javascript:;">11:00:00</a></li>
+                                                <li value="12"><a href="javascript:;">12:00:00</a></li>
+                                                <li value="13"><a href="javascript:;">13:00:00</a></li>
+                                                <li value="14"><a href="javascript:;">14:00:00</a></li>
+                                                <li value="15"><a href="javascript:;">15:00:00</a></li>
+                                                <li value="16"><a href="javascript:;">16:00:00</a></li>
+                                                <li value="17"><a href="javascript:;">17:00:00</a></li>
+                                                <li value="18"><a href="javascript:;">18:00:00</a></li>
+                                                <li value="19"><a href="javascript:;">19:00:00</a></li>
+                                                <li value="20"><a href="javascript:;">20:00:00</a></li>
+                                                <li value="21"><a href="javascript:;">21:00:00</a></li>
+                                                <li value="22"><a href="javascript:;">22:00:00</a></li>
+                                                <li value="23"><a href="javascript:;">23:00:00</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div>设置结束接收时间：</div>
+                                <div>
+                                    <div class="aycan-select" style="width:70%;margin:0;">
+                                        <div class="user-select user-select-2" style="width:100%;">
+                                            <div class="grey-select" style="min-width: 109px;">
+                                                <span class="user-select-span user-span-2">15:59:59</span>
+                                                <i></i>
+                                            </div>
+
+                                            <ul class="user-select-ul user-ul-2" style="width: 100%; display: none;">
+                                                <li value="00"><a href="javascript:;">00:59:59</a></li>
+                                                <li value="01"><a href="javascript:;">01:59:59</a></li>
+                                                <li value="02"><a href="javascript:;">02:59:59</a></li>
+                                                <li value="03"><a href="javascript:;">03:59:59</a></li>
+                                                <li value="04"><a href="javascript:;">04:59:59</a></li>
+                                                <li value="05"><a href="javascript:;">05:59:59</a></li>
+                                                <li value="06"><a href="javascript:;">06:59:59</a></li>
+                                                <li value="07"><a href="javascript:;">07:59:59</a></li>
+                                                <li value="08"><a href="javascript:;">08:59:59</a></li>
+                                                <li value="09"><a href="javascript:;">09:59:59</a></li>
+                                                <li value="10"><a href="javascript:;">10:59:59</a></li>
+                                                <li value="11"><a href="javascript:;">11:59:59</a></li>
+                                                <li value="12"><a href="javascript:;">12:59:59</a></li>
+                                                <li value="13"><a href="javascript:;">13:59:59</a></li>
+                                                <li value="14"><a href="javascript:;">14:59:59</a></li>
+                                                <li value="15"><a href="javascript:;">15:59:59</a></li>
+                                                <li value="16"><a href="javascript:;">16:59:59</a></li>
+                                                <li value="17"><a href="javascript:;">17:59:59</a></li>
+                                                <li value="18"><a href="javascript:;">18:59:59</a></li>
+                                                <li value="19"><a href="javascript:;">19:59:59</a></li>
+                                                <li value="20"><a href="javascript:;">20:59:59</a></li>
+                                                <li value="21"><a href="javascript:;">21:59:59</a></li>
+                                                <li value="22"><a href="javascript:;">22:59:59</a></li>
+                                                <li value="23"><a href="javascript:;">23:59:59</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="submit-btn" style="float:none;">
+                            <input name=" " type="button" class="loginbut" id="submit1" value="确定提交" onclick="user.modifySms();">
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!--<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>-->
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+
+<script>
+    $(function(){
+        //            高度控制
+        resize();
+        $(window).resize(function() {
+            resize();
+        });
+        function resize(){
+            var rightH = $(".settings-right").height();
+            var windowH = document.body.clientHeight-124;
+            var height = $(".settings-box").height()-80;
+            height > windowH ? height = height :height=windowH;
+            rightH>height?$(".settings-right").height(rightH):$(".settings-right").height(height);
+        }
+        jQuery.divselect(".user-select-1",".user-ul-1",".user-span-1");
+    });
+</script>
+</body>
+</html>

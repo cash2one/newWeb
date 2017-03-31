@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../images/favicon.ico">
+    <script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.poshytip.min.js" type="text/javascript"></script>
+    <script src="../js/searchbar.js"></script>
+    <link href="../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet"  />
+    <script src="../js/scrollbar/jquery.mousewheel.min.js"></script>
+    <script src="../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="../js/layer/layer.js"></script>
+    <script src="../js/jquery.select.js"></script>
+    <title>全球影像用户界面用户注册</title>
+    <script>
+        (function() {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+
+    <style>
+        .logo-black{float: left; margin-top: 15px; width: 68px; height: 73px; background: url(../images/imgs.png) no-repeat -224px -300px; }
+        .header-hide{position: relative; float: right;width: 460px; height: 48px;margin-top: 30px;}
+        .header-hide ul li{float: left;width:60px;height:50px;margin:0px;text-align: center;line-height: 50px;font-size: 16px;}
+        .header-hide ul li a{color:#666666;}
+        .header-search2 ul li{float: left;}
+        .hide a{font-size: 14px;}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+            background-color: #999B99;
+        }
+        .mCSB_scrollTools .mCSB_draggerRail{
+            background-color: #DBDBDB;
+        }
+        .main-header{height:100px;}
+    </style>
+
+</head>
+<body>
+<header class="main-header">
+    <div class="width980">
+        <div class="logo-black"><a href="#"></a></div>
+        <div class="header-hide" style="left: 0px;">
+            <ul class="fr" style="height: 100%;width: 27%;">
+                <li class="hide" ><a href="#" style="border-right:1px solid #666; padding-right: 20px;">登录</a></li>
+                <li class="hide"><a href="#">注册</a></li>
+            </ul>
+            <ul class=" fr" style="height:100%; width: 45%;">
+                <li style="position: relative"><a href="#">专题</a>
+                    <ul class="hidden-menu show" id="hidden-menu">
+                        <li></li>
+                        <li><a href="#">视频会诊</a></li>
+                        <li><a href="#">空中会诊</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">APP</a></li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="alignmiddle">
+    <div class="login-bg">
+        <div class="reg-login">
+            <div class="left-toppike">
+                <i class="top-y"></i>
+                <ul class="top-title">
+                    <li>
+                        <a href="#">填写基础信息</a>
+                        <a href="reg-doc1.html" class="top-quan top-quan1"></a>
+                    </li>
+                    <li>
+                        <a href="#">填写医生信息</a>
+                        <a href="reg-doc2.html" class="top-quan top-quan1"></a>
+                    </li>
+                    <li>
+                        <a href="#">医生资格认证</a>
+                        <a href="reg-doc3.html" class="top-quan top-quan2"></a>
+                    </li>
+                    <li>
+                        <a href="#">注册成功</a>
+                        <a href="reg-success.html" class="top-quan top-quan1"></a>
+                    </li>
+                </ul>
+            </div>
+        <div class="reg-login">
+            <div class="center registered">
+                <ul class="registered-ul">
+                    <li ><a href="reg-normal.html">用户</a></li>
+                    <li class="reg-check"><a href="reg-doc1.html">医生</a></li>
+                </ul>
+                <div class="reg-scroll" style="height:65%; border-bottom: 1px solid #e6e6e6;margin-bottom: 30px;">
+                    <div class="reg-text">
+                        <div class="reg-main">
+                            <a href="#" class="fl reg-title" style="position: absolute;left: -26px;">您的职称</a>
+                            <div class="reg-cheack2 "  style="width: 87%;margin-left: 11%;">
+                                <div class="reg-department">
+                                    <span class="reg-mgsw reg-department-mgsw">高级康复治疗师</span>
+                                    <span class="reg-mgbt"></span>
+                                </div>
+                                <ul class="reg-department-mgul ulxxx">
+                                    <li><a href="#">高级营养师</a></li>
+                                    <li><a href="#">高级按摩师</a></li>
+                                    <li><a href="#">高级。。。</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="reg-main">
+                            <a href="#" class="fl reg-title" style="position: absolute;left: -67px;">执业资格证编号</a>
+                            <input type="text" class="reg-infor reg-id-card" value="提供证书编号"/>
+                        </div>
+
+                        <div class="reg-main" style="height: 170px;">
+                            <a href="#" class="fl reg-title" style="position: absolute;left: -39px;">执业资格证</a>
+                            <span style="line-height: 3;color: #a0a0a0;">请上传医生执业资格证的复印件，共2张</span>
+                            <div class="fl reg-photo" style="margin-left:52px; ">
+                                <a href=""  class="id-z">
+                                    <span style="padding: 2px 0;">
+                                        <img src="../images/hzhb.png" alt="" />
+                                    </span>
+                                </a>
+
+                            </div>
+                            <div class="fl reg-photo" style="margin-left:35px; ">
+                                <img src="" alt=""/>
+                            </div>
+                            <a href="#" class="fr fl1" style="margin-top: 10px; color: #8fcb0d;"> &lt;查看范例&gt;</a>
+                        </div>
+
+                        <div class="reg-main" style="height: 170px;">
+                            <a href="#" class="fl reg-title" style="position: absolute;left: -39px;">工作证照片</a>
+                            <span style="line-height: 3;color: #a0a0a0;margin-left: 36px;width: 348px;display: inline-block;float: left;">请手持您的工作牌并拍照，确保面部及工作牌文字清晰</span>
+                            <div class="fl reg-photo2 add-id" style="margin-left:52px; ">
+                                <a href="" class="cc">
+                                    <span>
+                                        <img src="../images/icr4.png" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                            <a href="#" class="fr fl2" style="margin-top: 10px; color: #8fcb0d;"> &lt;查看范例&gt;</a>
+                        </div>
+
+                        <div class="reg-main" style="height: 170px;">
+                            <a href="#" class="fl reg-title" style="position:absolute;left: -70px;width: 100px;height: 50px">医师技术职称证(可选)</a>
+                            <span style="line-height: 3;color: #a0a0a0;margin-left: 40px;" class="fl">请上传医师技术职称证的复印件</span>
+                            <div class="fl reg-photo2 add-id" style="margin-left:52px; ">
+                                <a href="" class="cc">
+                                    <span style="padding: 13px 0;">
+                                        <img src="../images/downloadBanner1.jpg" alt="" />
+                                    </span>
+                                </a>
+                            </div>
+                            <a href="#" class="fr fl3" style="margin-top: 10px; color: #8fcb0d;"> &lt;查看范例&gt;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reg-main" style="width:70%;height:41px;margin: 0 auto;float: none;">
+                    <input type="button" class="reg-infor deakblue-btn reg-login-btn" onclick=window.location.replace("reg-success.html")   value="提交待审核"/>
+                </div>
+            </div>
+        </div>
+        <div class="right-toppike">
+            <i class="top-pike"></i>
+            <p class="top-write">医院、医生用户注册，请正确上传相关资质证件。如遇上传问题可请联系我司客服电话：400-0571-574，上传审核周期为3个工作日，客服人员进行相关实名认证后，通过审核。</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="reg-foot">
+    <div class="reg-foot-text">
+        <p>客服电话：400-0571-574</p>
+        <p>联系地址：杭州市上城区中河中路258号瑞丰国际商务大厦9D、10E</p>
+        <p>杭州联众医疗科技股份有限公司  ICP证 浙B-20140372 浙ICP备11059294号-3</p>
+    </div>
+</footer>
+<div id="fl1" style="display:none;"><img src="../images/fl1.jpg" alt="" /></div>
+<div id="fl2" style="display:none;"><img src="../images/fl2.jpg" alt="" /></div>
+<div id="fl3" style="display:none;"><img src="../images/fl3.jpg" alt="" /></div>
+
+<script>
+    $(".center .registered-ul li").click(function(){
+        $(this).addClass("reg-check");
+        $(this).siblings().removeClass("reg-check");
+    });
+    $(".reg-main").click(function(){
+        $(this).find(".reg-name").removeClass("reg-name").addClass("reg-pick-name");
+        $(this).find(".reg-pwd").removeClass("reg-pwd").addClass("reg-pick-pwd");
+        $(this).find(".reg-infor").addClass("reg-pick");
+        $(this).siblings().find(".reg-infor").removeClass("reg-pick");
+
+    });
+
+    var InterValObj; //timer变量，控制时间
+    var count = 0; //间隔函数，1秒执行
+    var i;//当前剩余秒数
+
+    function sendMessage() {
+        i = count;
+        //设置button效果，开始计时
+        InterValObj = window.setInterval(SetRemainTime, 300); //启动计时器，1秒执行一次
+        //向后台发送处理数据
+
+    }
+
+    //timer处理函数
+    function SetRemainTime() {
+        if (i == 7) {
+            window.clearInterval(InterValObj);//停止计时器
+        }
+        else {
+            $(".reg-main").eq(i).animate({"opacity":1},500);
+            i++;
+        }
+    }
+
+    sendMessage();
+
+    $(".left-toppike .top-title li").click(function(){
+        $(this).find(".top-quan").addClass("top-quan2");
+        $(this).siblings().find(".top-quan").removeClass("top-quan2").addClass("top-quan1");
+
+    });
+
+    $(".reg-scroll").mCustomScrollbar({
+        scrollButtons:{
+            enable:false,
+            scrollType:"continuous",
+            scrollSpeed:20,
+            scrollAmount:40
+        },
+        horizontalScroll:false
+    });
+
+</script>
+<script>
+    $(function(){
+        $('.fl1').on('click', function(){
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 1,
+                area: ['735px', '302px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: $('#fl1')
+            });
+        });
+
+        $('.fl2').on('click', function(){
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 1,
+                area: ['auto', 'auto'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: $('#fl2')
+            });
+        });
+
+        $('.fl3').on('click', function(){
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 1,
+                area: ['auto', 'auto'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: $('#fl3')
+            });
+        })
+    })
+
+</script>
+<script>
+    $(function(){
+        $.divselect(".reg-main",".ulxxx",".reg-mgsw");
+    });
+</script>
+</body>
+</html>

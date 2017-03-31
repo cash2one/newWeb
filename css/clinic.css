@@ -1,0 +1,267 @@
+.fw900{font-weight: 900;}
+.header{height: 80px;}
+.clinic-header{background: #6fcac4;}
+.header-content{width: 1200px; height: 80px; margin: 0 auto;}
+.head-left a{float: left; margin: 15px 4px 0 8px; width: 141px; height: 47px;}
+.clinic-content,.clinic-bread{width: 1200px; margin: 20px auto; overflow: hidden;}
+.clinic-content{font-size: 14px; border: 1px solid #f0f0f0;}
+.clinic-bread span{color:#6fcac4; margin:0 6px;}
+.clinic-bread a{font-weight: 600; color:#6fcac4;}
+.clinic-bread b{color:#898989;}
+.clinic-left{float: left; padding-bottom: 9999px; margin-bottom: -9999px; width: 198px; border: 1px solid #f0f0f0; background: #f7f7f7;}
+.clinic-right{float: right; width: 1000px;}
+.clinic-top{position: relative; width: 100%; height: 60px;}
+.clinic-top i{position: absolute; top: 16px; left: 24px; display: block; width: 32px; height: 32px; background: url(../images/airclinic/clinic.png) no-repeat 0 -80px;}
+.clinic-left .clinic-top{width: 200px; margin: -1px 0 0 -1px; background: #6fcac4; color:#fff; text-align: center; height: 60px; line-height: 60px; font-size: 18px;}
+.clinic-right .clinic-top{background: #fbfbfd;}
+.big-module{background:#f7f7f7; color:#898989; border-bottom:1px solid #e6e6e6; padding-bottom: 20px;}
+.module-title{position: relative; display: block; height: 60px; font-size: 16px; line-height: 60px; text-align: center;}
+.module-title-icon{position: absolute; top: 20px; left: 36px; display: inline-block; width: 24px; height: 24px; background: url(../images/airclinic/clinic.png) no-repeat;}
+i.icon-bianmin{background-position: -97px -85px;}
+i.icon-dingdan{background-position: -126px -85px;}
+i.icon-yingxiang{background-position: -156px -85px;}
+i.icon-guanzhu{background-position: -191px -85px;}
+i.icon-zhanghu{background-position: -226px -85px;}
+.big-module p{height: 32px; line-height: 32px;}
+.big-module p a{display: block; width:200px; margin-left: -1px; text-indent: 64px;}
+.big-module p a.clinic-click{background: #3dafa7; color:#fff; position: relative;}
+.big-module p a.clinic-click::after{display: block; content: ""; width: 20px; height: 20px; position: absolute; top: 11px; right:0; background: url(../images/airclinic/clinic.png) no-repeat -45px -90px;}
+.pb0{padding-bottom:0;}
+.clinic-right-warp{width: 960px; margin:0 auto;}
+.clinic-search-box{float: right;position: relative; height: 60px; line-height: 60px;}
+.clinic-search-box input{border: 1px solid #dedede; width: 240px; padding-right: 20px; padding-left: 8px; height: 30px; line-height: 30px;}
+.clinic-search-box i.icon-magnifier{position: absolute;top: 20px;left: 240px;display: block;width: 22px;height: 22px;background: url(../images/airclinic/clinic.png) no-repeat -64px -85px;}
+.clinic-search-btn{margin-left: 20px; padding: 7.5px 20px; background: #3989ce; color:#fff; font-size: 14px; border-radius: 2px;}
+.clinic-table-content{margin-top: 20px; width: 100%;}
+.clinic-table-content table{width: 100%;}
+.clinic-table-content table thead{height: 38px; line-height: 38px; background: #f5f5f5;}
+.clinic-table-content table tbody tr{font-size: 12px; border-bottom: 1px dashed #ebebeb;}
+.clinic-table-content table tbody tr td{font-size:14px;text-align: center; height: 50px; line-height: 50px;}
+.lyzz-time p,.lyzz-info p,.lyzz-caozuo p{height: 20px; line-height: 20px;}
+.lyzz-caozuo b{margin: 0 4px; color:#d7d7d7;}
+.lyzz-caozuo a{color:#898989;}
+.text-b3{color: #b3b3b3;}
+.red-text{color:#f00; font-weight: 900;}
+.lyzz-caozuo{}
+.lyzz-caozuo p{width: 60%; margin: 0 auto; text-align: left;}
+.clinic-page{position: relative; text-align: center;}
+.clinic-page div.pages{position: relative; width: 100%; max-width: 100%; text-align: center;}
+.clinic-page-detail{vertical-align: middle; display: inline-block;}
+.clinic-page-detail i{color:#3989ce;}
+.clinic-page-detail a.page-go{line-height: 16px;}
+.clinic-page-detail input{margin: 0 6px; width: 40px; height: 12px; line-height: 12px; border: 1px solid #898989; text-indent: 8px;}
+.pages a.pageimg,.pages a.pageimg:hover{vertical-align: bottom;}
+/*留言咨询申诉*/
+.liuyan-shensu{width: 680px; height: 580px; background: #fff;}
+.liuyan-layer h4{width: 90%; padding: 10px 0; margin: 0 auto; border-bottom: 1px solid #e6e6e6; color:#3989ce; font-size: 16px;}
+.liuyan-warp{width: 90%; margin: 0 auto;}
+.liuyan-shensu-warp textarea{float: left; resize: none; width: 430px; border: 1px solid #e5e5e5;}
+.liuyan-shensu-warp input{float: left; width: 230px; border: 1px solid #e5e5e5; height: 26px; line-height: 26px; text-indent: 8px; border-radius: 2px;}
+.shensu-title{float: left; width: 150px; text-align: right; color:#666;}
+.liuyan-row{margin-top: 20px;}
+.liuyan-submit-btn{float: left; margin-top: 40px; padding: 10px 60px; color: #fff; border-radius: 2px; background: #3989ce;}
+.lyzx-detail-box-row{width: 100%; margin-top: 20px;}
+.lyzx-detail-box-row span{margin-right:4px;}
+.base-right-bottom-box{width: 90%; margin: 0 auto;}
+.base-right-bottom-box .lyzx-detail-box-row>div{width: 50%; text-align: left;}
+.lyzx-detail-label{font-weight: 900;}
+.liuyan-data b{color:#3dafa7; margin: 0 10px;}
+.liuyan-data em{color:#898989; margin-right: 20px;}
+div.liuyan-data>a{margin-left: 30px; padding: 4px 10px; color:#fff; border-radius: 2px; background: #ff8f2c;}
+.lyzx-detail-img-list li{margin: 20px 20px 20px 0; float: left; width: 100px;}
+.lyzx-detail-img-list li img{width: 100px; height: 100px;}
+.lyzx-detail-img-list li p{text-align: center; color:#898989;}
+/*评价弹出框*/
+.liuyan-pingjia{width: 560px; height: 580px;}
+.pingjia-top{width: 400px; margin: 20px auto; text-align: center; border-bottom: 1px solid #d7d7d7;}
+.pingjia-bottom{width: 400px; margin: 0 auto;}
+.pingjia-bottom .liuyan-row{width: 100%;}
+.pingjia-bottom .liuyan-row textarea{width: 394px; resize: none;}
+.pingjia-bottom .liuyan-row .liuyan-submit-btn{float: right; background: #3dafa7;}
+.pingjia-content{width: 60%; margin: 10px auto;}
+.pingjia-content a:hover p{color:#3dafa7;}
+.pingjia-icon{margin: 20px 0; display: block; width: 56px; height: 32px; background: url(../images/airclinic/clinic.png) no-repeat;}
+.good .pingjia-icon{background-position: 0 0 ;}
+.bad .pingjia-icon{background-position: -148px 0;}
+.good a:hover .pingjia-icon{background-position: -74px 0 ;}
+.bad a:hover .pingjia-icon{background-position: -223px 0;}
+.start-system{float: left; width: 150px; height: 24px; background: url(../images/airclinic/clinic.png) no-repeat -149px -51px;}
+.star{margin-right: 3px; position: relative; left: 2px; display: inline-block; width: 23px; height: 22px; z-index: 299;}
+a.enter-room{display: block; height: 20px; line-height: 20px; width:100%; background: #3989ce; color:#fff; text-align: center; border-radius: 2px;}
+/*我的云盘*/
+.yunpan-container h6{margin: 10px 0; color:#898989;}
+.my-img-search-box{}
+.search-left{position: relative; float: left; width: 600px;}
+.search-left b{position: absolute; bottom: 13px; right: 217px; font-size: 16px;}
+.search-right{width: 310px; float: right;}
+.search-col-3{float: left; width: 33%;}
+.search-col-3 p{color: #898989;}
+.search-col-3 .user-select{margin: 6px 0;}
+.search-col-3 .user-select .grey-select{height: 28px; line-height: 28px; border-radius: 2px; border: 1px solid #e5e5e5;}
+.search-col-3 input{margin: 6px 0; border: 1px solid #e5e5e5; height: 26px; line-height: 26px; width: 160px; border-radius: 2px;}
+.search-right .search-col-3 input{position: relative; top: 2px; margin-right: 4px; width: 14px; height:14px;}
+.search-right h5{color: #898989;}
+.search-right a{margin-top: 10px; float: right; padding: 6px 60px; color:#fff; background: #3dafa7; border-radius: 2px;}
+.txa-c span,.txa-r span{display: inline-block; width: 30px; text-align: center;}
+.txa-l{text-align: left;}
+.txa-c{text-align: center;}
+.txa-r{text-align: right;}
+.base-right-top{width: 800px; margin: 20px auto;}
+.base-right-top h3 a{margin-left: 60px; font-size: 12px; color:#999;}
+.base-right-top h4{margin: 20px 0; font-size: 14px;}
+.base-right-top h4 a{text-decoration: underline; color:#3dafa7;}
+.base-right-bottom{width: 960px; margin: 20px auto;}
+.base-right-bottom h6{height: 40px; line-height: 40px; background: #f5f5f5;}
+.base-right-bottom h6 .fl{margin-left: 20px;}
+.base-right-bottom h6 .fr{margin-right: 20px;}
+.base-right-bottom h6 .fr a{padding:4px 10px; color:#fff; background: #3989ce;}
+.upload-image-list{margin-bottom: 40px;}
+.upload-image-list li{height: 96px; line-height:96px; border-bottom: 1px dashed #e7e7e7;}
+.upload-image-list li img{position: relative; top: 18px; margin: 0 30px; width: 42px; height: 60px; border: 1px solid red;}
+.base-right-bottom a{margin-top: 40px; padding: 8px 50px; border-radius: 2px; background: #3dafa7; color:#fff;}
+/*我的关注*/
+.follow-hospital-table .txa-l{text-indent: 48px;}
+.clinic-text{color:#3dafa7;}
+/*我的账户*/
+/*账户设置*/
+.clinic-account-list{margin: 30px 0 30px 10px; width: 70%; border-bottom: 1px solid #e5e5e5;}
+.clinic-account-list li a{padding-bottom: 10px; display: inline-block; height: 36px; line-height: 36px; width: 110px; text-align: center; color:#666; font-size: 16px;}
+.clinic-account-list li a.clinic-account-on{color:#3dafa7; border-bottom: 2px solid #3dafa7;}
+.clinic-account-row{width: 70%; height: 30px; line-height: 30px; margin-top: 16px;}
+.clinic-account-row input{text-indent: 8px;}
+.clinic-account-row>a{width: 100px;}
+.clinic-account-row>a.clinic-account-submit{padding: 8px 50px; color: #fff; background: #3dafa7; border-radius: 2px;}
+.clinic-account-row .grey-select{width: 120px; min-width: 120px;}
+.clinic-account-row .user-select{margin:0 16px 0 4px; width: 120px; min-width: 120px;}
+.clinic-account-label{display: inline-block; width: 110px; text-align: right; color: #999; height: 30px; line-height: 30px;}
+.clinic-account-name{width: 252px; height: 26px; line-height: 26px; border: 1px solid #e5e5e5;}
+.clinic-account-addr{width: 400px; height: 26px; line-height: 26px; border: 1px solid #e5e5e5;}
+/*绑定手机*/
+.bind-box{
+    display: none;
+    width: 580px;
+    height: 340px;
+}
+.bind-box h4 {
+    width: 90%;
+    padding: 10px 0;
+    margin: 0 auto 40px;
+    border-bottom: 1px solid #e6e6e6;
+    color: #3989ce;
+    font-size: 16px;
+}
+.bind-box .clinic-account-row{
+    margin:  10px auto;
+}
+.bind-box .clinic-account-row span{
+    font-size: 14px;
+}
+.bind-box .clinic-account-row input{
+    border: 1px solid #d7d7d7;
+    width: 220px;
+    height: 26px;
+    line-height: 26px;
+}
+.bind-box .clinic-account-row input.v-code{
+    border: 1px solid #d7d7d7;
+    margin-right: 10px;
+    width: 110px;
+    height: 26px;
+    line-height: 26px;
+}
+.bind-box .clinic-account-row a.get-vcode{
+    display: inline-block;
+    width: 96px;
+    height: 30px;
+    line-height: 30px;
+    color:#fff;
+    text-align: center;
+    background: #3989ce;
+    border-radius: 2px;
+}
+.bind-box .clinic-account-row a.bind-btn{
+    position: relative;
+    top: 20px;
+    margin-top: 40px;
+    padding: 10px 40px;
+    background: #3dafa7;
+    color: #fff;
+    border-radius: 2px;
+}
+/*修改头像*/
+.clinic-headimg{position: relative; padding-bottom: 40px;}
+.head-img-title{margin: 40px 0 0 40px; font-size: 16px; color:#333;}
+.head-img-title p{margin: 8px 0; font-size: 12px; color:#999;}
+.file{position: relative;z-index: -2; top: 20px; margin:30px 0 0 40px; width: 170px; height: 30px; cursor: pointer;}
+.my-file{cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; filter: alpha(opacity=0); font-size: 120px;}
+.clinic-headimg a{padding: 10px 40px; margin:40px 0 0 40px; color: #fff; background: #3dafa7; border-radius: 2px;}
+/*新增就诊人*/
+.clinic-patients{height: 30px; line-height: 30px; margin: 20px 0;}
+.clinic-patients i{position: relative; top:8px; margin-right: 4px; display: inline-block; width: 29px; height: 29px; background:url(../images/airclinic/clinic.png) no-repeat -36px -119px;}
+.clinic-patients span{font-size: 22px;}
+.add-patients{display: none; width: 600px; height:500px;}
+.add-patients h3,.add-patients h4,.clinic-patients-row{margin: 10px auto; width: 500px;}
+.add-patients h3{padding-bottom: 10px; border-bottom: 1px solid #e6e6e6;}
+.add-patients h3 span{color: #898989;}
+.add-patients h4{margin: 20px 0; text-align: center;}
+.clinic-patients-row{margin-top: 8px; height: 30px; line-height: 30px;}
+.clinic-patients-row input{width: 248px; height: 30px; line-height: 30px; border: 1px solid #e5e5e5;}
+.clinic-patients-row input.clinic-patients-vcode{width: 128px; margin-right: 10px;}
+.clinic-patients-vcode-btn{padding: 7px 18px; color: #fff; background: #3989ce; border-radius:2px;}
+.clinic-patients-label{display: inline-block; width: 100px; text-align: right; color: #666;}
+.clinic-patients-sub-box{margin-top: 30px;}
+.clinic-patients-sub{padding: 8px 58px; color: #fff; background: #3dafa7; border-radius: 2px;}
+/*消息中心*/
+.clinic-message{margin: 20px 0;}
+.clinic-message a{margin-right: 10px; padding: 2px 10px; border-radius: 2px; border: 1px solid #b3b3b3; background: #f5f5f5; color:#333;}
+.icon-clinic-message{display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 24px;
+    height: 18px;
+    background: url(../images/airclinic/clinic.png) no-repeat;
+}
+.unread{
+    background-position: -315px -25px;
+}
+/*页脚*/
+.clinic-foot{margin-top: 40px; background: #ebebeb;}
+.footer-text{width: 900px; margin-top: 0; font-size: 12px; color:#999;}
+.footer-img li{width: 114px; height: 168px; margin-right: 20px; text-align: center; line-height: 30px; font-size: 16px; color: #fff;}
+.bordernone{border: none;}
+/*分页*/
+.clinic-pages{position:relative; width: 100%; height: 90px; padding:30px 0 0 118px; margin:22px 0 85px 0;overflow: hidden;}
+.clinic-pages-padn{padding:0 0 0 0; margin: 0;}
+.clinic-pages-padn .pages{width: 100%;  text-align: center;position: relative;max-width: 100%;}
+.clinic-pages span{display: inline-block; margin: 0 2px; vertical-align: bottom;}
+.pages strong{color: #49bfc1; margin: 0 2px;}
+.clinic-pages .pages .clinic-page-to{width: 40px; height: 14px; border: 1px solid #ddd; text-align: center;}
+.clinic-pages .pages .clinic-page-go{height: 16px; background: #31c5eb; color: #fff; border: 0; font-weight: bold; cursor: pointer; box-shadow: 1px 1px 2px #d7d7d7;}
+.pages a{display: inline-block; width: 30px; height: 30px; border: 1px solid #ddd; background: #fff; text-decoration: none; text-align: center; vertical-align: bottom; line-height: 30px; margin: 0 2px;}
+.clinic-pages .pages  .clinic-pageimg{ background: url(../images/airclinic/clinic.png) no-repeat #fff; vertical-align: middle; text-indent: -999px; font-size: 0; line-height: 0;}
+.clinic-pages .pages .clinic-page-first{background-position: -384px -20px;}
+.clinic-pages .pages .clinic-page-prev{background-position: -345px -20px;}
+.clinic-pages .pages .clinic-page-next{background-position: -345px 7px;}
+.clinic-pages .pages .clinic-page-last{background-position: -384px 7px;}
+.clinic-pages  .current{background: #20afbd; color: #fff; }
+.pages a:hover{background: #20afbd; color: #fff; }
+.pages a.clinic-pageimg:hover{background: url(../images/airclinic/clinic.png) no-repeat #20afbd;}
+.pages a.clinic-page-first:hover{background-position: -459px -20px;}
+.pages a.clinic-page-prev:hover{background-position: -420px -20px;}
+.pages a.clinic-page-next:hover{background-position: -421px -44px;}
+.pages a.clinic-page-last:hover{background-position: -460px -44px;}
+
+/*个人设置*/
+.user-layer{width:600px;height:450px; background-color: #fff;padding-left: 70px; padding-top: 72px;}
+.clinic-file{position: absolute;  width: 140px;  height: 32px;  opacity: 0;  cursor: pointer;  filter: alpha(opacity=0);  z-index: 1;}
+.user-upbtn2{display: inline-block;width: 140px;  height: 32px;  background: #75be0c;  color: #fff;  text-align: center;  border-radius: 4px;  font-size: 16px;  font-weight: bold;  z-index: 10;}
+.user-layer-main{width:510px;height:400px;}
+.user-layer-main p{margin-top: 20px;}
+.img-container{float:left;width:315px ;height:200px;margin-right: 50px;}
+.img-container img{max-width: 315px; max-height:200px;}
+
+.uesr-img-select p{float:left;color: #306185;margin-top: 8px;margin-bottom: 15px;}
+.uesr-img-select{margin-top:16px;height:350px;}
+.user-succes{width:90px; height:32px;}
+.jcrop-holder #preview-pane {display: block;position:absolute;z-index:2000;top:78px;  right: -190px;  padding: 6px;  background-color: white; }
+#preview-pane .preview-container {width: 135px;height: 135px;overflow:hidden;}

@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../css/icomoon.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/searchbar.js" type="text/javascript"></script>
+<script src="../../js/jquery.switchable.min.js" type="text/javascript"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>
+          <li><a href="#"><span class="nav-icon3"></span>影像</a></li>
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" style="position: relative">
+    <aside class=" mm-menu"  >
+        <div class="column-wide-block for-cwb" >
+            <dl class="mm-menu--items">
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul style="margin-top:14px;">
+                    <li><a href="#">· 个人影像</a></li>
+                    <li class="last"><a href="#">· 共享影像</a></li>
+                    <li><a href="#">· 获取影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 上传记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>空中诊室<p>air room</p></dt>
+                <dd class="column-icon column-air"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 留言咨询</a></li>
+                    <li class="last"><a href="#">· 视频诊室</a></li>
+                    <li><a href="#">· 诊间预约</a></li>
+                    <li class="last"><a href="#">· 医院挂号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>双向转诊<p>referral</p></dt>
+                <dd class="column-icon column-ref"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="">
+                    <li><a href="#">· 待办列表</a></li>
+                    <li class="last"><a href="#">· 转入记录</a></li>
+                    <li><a href="#">· 转出记录</a></li>
+                    <li class="last"><a href="#">· 患者跟踪</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl  class="clearfix">
+                    <dt>影像报告<p>report</p></dt>
+                    <dd class="column-icon column-rep"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 报告列表</a></li>
+                        <li><a href="#">· 报告书写</a></li>
+                        <li><a href="#">· 影像匹配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>病历查询<p>medical record</p></dt>
+                    <dd class="column-icon column-med"></dd>
+                </dl>
+                <div class="column-detail narrow-right">
+                    <ul>
+                        <li><a href="#">· 按患者查询</a></li>
+                        <li><a href="#">· 按类型查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl class="clearfix">
+                    <dt>联系人<p>contacts</p></dt>
+                    <dd class="column-icon column-cont"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul>
+                        <li><a href="#">· 我的联系人</a></li>
+                        <li><a href="#">· 关注我的患者</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>设置管理<p>settings</p></dt>
+                    <dd class="column-icon column-set"></dd>
+                </dl>
+                <div class="column-detail  narrow-right">
+                    <ul class="column-spe-ul" style="margin-top:14px;">
+                        <li><a href="#">· 个人信息</a></li>
+                        <li><a href="#">· 排班设置</a></li>
+                        <li><a href="#">· 价格设置</a></li>
+                        <li><a href="#">· 报告模板</a></li>
+                        <li><a href="#">· 短信设置</a></li>
+                        <li><a href="#">· 修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="../../js/jquery.sidebar.js"></script>
+
+    <section class="user-right wrapper">
+        <span class="mm-menu-toggle"></span>
+
+        <div class="breadcrumbs"><span class="bread-fir">影像 &gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">影像管理</span></div>
+    <div class="aycan-main">
+              <a class="aycan-upload" href="#"><em></em><input type="button" class="green-btn" value="本地上传"></a>
+              <a class="aycan-get" href="#"><em></em><input type="button" class="blue-btn" value="获取影像"></a>
+              <p class="aycan-tip">
+               当前您若没有可供分享的影像图片，请首先<strong>从影像网云端获取</strong>您的影像文件或<strong>从本地上传</strong>您的影像文件到“个人影像”文件夹中。</p>    
+
+
+        <ul class="aycan-tit">
+        <li class="current">个人影像</li>
+        <li>共享影像</li>
+        </ul>
+        <div class="user-items">
+            <table width="100%" border="0" cellspacing="0" class="table-con">
+            <tr class="table-tit">
+              <td class="table-text" width="8%">患者姓名</td>
+              <td class="table-text" width="12%">检查部位</td>
+              <td class="table-text" width="10%">检查序号</td>
+              <td class="table-text" width="5%">检查日期</td>
+              <td class="table-text" width="15%">患者UID</td>
+              <td class="table-text" width="5%">影像数</td>
+              <td class="table-text" width="10%">操作</td>
+            </tr>
+             <tr>
+                <td class="table-text">张三</td>
+              <td class="table-text">Head 4-Sinus (Adult)</td>
+              <td class="table-text">2012-08-02</td>
+              <td class="table-text">153931</td>
+              <td class="table-text">ZHU CHEN FENG-CT-170928-19970101</td>
+              <td class="table-text">5</td>
+              <td class="table-text"><a href="#">删除</a></td>
+            </tr>
+             <tr>
+                <td class="table-text">张三</td>
+              <td class="table-text">Head 4-Sinus (Adult)</td>
+              <td class="table-text">2012-08-02</td>
+              <td class="table-text">153931</td>
+              <td class="table-text">CT-170928-19970101</td>
+              <td class="table-text">5</td>
+              <td class="table-text"><a href="#">删除</a></td>
+            </tr>
+             <tr>
+                <td class="table-text">张三</td>
+              <td class="table-text">Head 4-Sinus (Adult)</td>
+              <td class="table-text">2012-08-02</td>
+              <td class="table-text">153931</td>
+              <td class="table-text"style="position:relative;"><div class="toe">ZHU CHEN FENG-CT-170928-19970101FENG-CT-170928-19970101FENG-CT-170928-19970101FENG-CT-170928-19970101</div></td>
+              <td class="table-text">5</td>
+              <td class="table-text"><a href="#">删除</a></td>
+            </tr>
+             <tr>
+                <td class="table-text">张三</td>
+              <td class="table-text">Head 4-Sinus (Adult)</td>
+              <td class="table-text">2012-08-02</td>
+              <td class="table-text">153931</td>
+              <td class="table-text">ZHU CHEN FENG-CT-170928-19970101</td>
+              <td class="table-text">5</td>
+              <td class="table-text"><a href="#">删除</a></td>
+            </tr>
+            </table>
+       
+
+          <div class="pages">
+            <span class="page-detail">当前第<strong>6</strong>页 / 共<strong>6</strong>页</span>
+            <a href="#if($!queryString)?pageNum=$!page.previousPageNumber&$!queryString#else?pageNum=$!page.previousPageNumber#end" class="page-prev unable">
+            </a>
+           
+            <b class="current"><!-- $!page.thisPageNumber -->1</b>
+            <b>2</b>
+            <input type="hidden" value="$!queryString" name="queryString" id="queryString"/>
+              <a href="#if($!queryString)?pageNum=$!page.nextPageNumber&$!queryString#else?pageNum=$!page.nextPageNumber#end" class="page-next">
+            </a>
+          </div>
+        </div>
+
+
+        <div class="user-items" style="display:none;">
+            <div class="aycan-pass">
+             <span class="warn"></span>
+            <span class="aycan-text">全球影像网社区为您开辟了“个人影像”和“共享影像”两个云空间，您可以从本地上传或通过全球影像网获取影像保存于您的“个人影像”空间；如果您的联系人向您分享了影像，这些影像将保存于您的“共享影像”空间，如果您的联系人在向您分享的同时，还授予您复制的权限，您可以将此分享影像复制到“个人影像”空间中。</span>
+            <div class="lock-input">
+			   <span class="lock"></span>
+              <input name="name" type="text"  class="aycan-pass-in" id="name" value="请输入解锁码" />
+              <input type="button" value="" class="ok">
+			</div>
+			</div>
+                <div class="img-bar clearfix">
+                 <p class="img-all"><a href="#"><input name="" type="checkbox" value="" id="check-all" onclick="selectAll(this);" />全选</a></p>
+                 <p class="img-out">
+                 	<a href="#"><span class="action-icon icon-eye"></span>浏览</a>
+                 	<a href="#"><span class="action-icon icon-download"></span>下载</a>
+                 	<a href="#"><span class="action-icon icon-share"></span>分享</a>
+                 	<a href="#"><span class="action-icon icon-cross"></span>取消分享</a>
+                 	<a href="#"><span class="action-icon icon-cog"></span>设置为常用</a>
+                 	</p>
+            	</div>
+		<ul class="aycan-imgs">
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel"/>2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel"/>2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel"/>2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel"/>2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+		</ul>
+  <ul class="aycan-imgs">
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel"/>2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel"/>2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel" />2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+             <li>
+               <p class="aycan-pic"><img src="../../images/aycan.jpg" alt="" /></p>
+               <p class="aycan-time"><input type="checkbox" name="all" id="check-sel" />2013/01/01 13:23:24</p>
+               <p class="aycan-name">Liu Xin Yu<span class="aycan-parts">脑部</span><span class="aycan-type">CT</span></p>
+               <div class="aycan-action">
+                <a href="#"><span class="action-icon icon-eye"></span></a>
+                <a href="#"><span class="action-icon icon-download"></span></a>
+                <a href="#"><span class="action-icon icon-share"></span></a>
+                <a href="#"><span class="action-icon icon-cog"></span></a>
+               </div>
+             </li>
+    </ul>
+            <div class="pages">
+              <span class="page-detail">当前第<strong>6</strong>页 / 共<strong>6</strong>页</span>
+              <a href="#if($!queryString)?pageNum=$!page.previousPageNumber&$!queryString#else?pageNum=$!page.previousPageNumber#end" class="page-prev unable">
+              </a>
+             
+              <b class="current"><!-- $!page.thisPageNumber -->1</b>
+              <b>2</b>
+              <input type="hidden" value="$!queryString" name="queryString" id="queryString"/>
+                <a href="#if($!queryString)?pageNum=$!page.nextPageNumber&$!queryString#else?pageNum=$!page.nextPageNumber#end" class="page-next">
+              </a>
+            </div>
+          </div>
+  </div>
+ </section>
+</div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript">
+function selectAll(checkbox) {
+               $('input[type=checkbox]').prop('checked', $(checkbox).prop('checked'));
+            }
+</script> 
+<script type="text/javascript">
+  $(function(){ 
+    $(".aycan-tit>li").hover(
+        function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".user-items").eq($(".aycan-tit>li").index(this)).show().siblings(".user-items").hide();
+        } 
+    ) 
+}) 
+
+  //旧的tab标签 IE7、8下有bug
+  // $(function(){
+  //   $(".aycan-tit").switchable(".user-items",{
+  //     triggers:'li',
+  //     currentCls:'current'
+  //   });
+  // }); 
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{
+	"JSChart" : {
+		"datasets" : [
+			{
+				"type" : "pie",
+				"data" : [
+					{
+						"unit" : "急诊",
+						"value" : "110"
+					},
+					{
+						"unit" : "住院",
+						"value" : "124"
+					},
+					{
+						"unit" : "门诊",
+						"value" : "150"
+					}
+				]
+			}
+		],
+		"colorset" : [
+
+			"#EC7031",
+			"#F3AC86",
+			"#F5D4C5"
+		],
+	  "optionset" : [
+		{
+		  "set" : "setTitleColor",
+		  "value" : "'#857D7D'"
+		},
+		{
+		  "set" : "setPieUnitsColor",
+		  "value" : "'#9B9B9B'"
+		},
+		{
+		  "set" : "setPieValuesColor",
+		  "value" : "'#6A0000'"
+		},
+		{
+		  "set" : "setPieValuesColor",
+		  "value" : "'#6A0000'"
+		},
+		{
+		  "set": "setLegendShow",
+		  "value": "true"
+		},
+		{
+		  "set": "setTitle",
+		  "value": "'就诊类别'"
+		},
+		{
+		  "set": "setTitleColor",
+		  "value": "'#000'"
+		},
+		{
+		  "set": "setTitleFontSize",
+		  "value": "16"
+		},
+		{
+		  "set": "setTextPaddingTop",
+		  "value": "0"
+		},
+		{
+		  "set": "setLegend",
+		  "value": "'#EC7031', '急诊'"
+		},
+
+		{
+		  "set": "setLegend",
+		  "value": "'#F3AC86', '住院'"
+		},
+		{
+		  "set": "setLegend",
+		  "value": "'#F5D4C5', '门诊'"
+		},
+
+		{
+		  "set": "setLegendPosition",
+		  "value": "'bottom center'"
+		},
+		{
+		  "set": "setSize",
+		  "value": "499,252"
+		},
+		{
+		  "set" : "setFontFamily",
+		  "value" : "'Microsoft YaHei'"
+		},
+		{
+		  "set": "setPieRadius",
+		  "value": "77"
+		}
+	  ]
+	}
+}

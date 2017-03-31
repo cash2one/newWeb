@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../css/style.css"/>
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/searchbar.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<style type="text/css" media="screen">
+@media screen and (max-width: 1163px){
+.post-query-left .post-a-query{width: 220px;}
+}
+</style>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script>
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+
+<div class="bodymain" >
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>        
+          <li><a href="#"><span class="nav-icon3"></span>影像</a></li> 
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li> 
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" style="position: relative">
+    <aside class=" mm-menu"  >
+        <div class="column-wide-block for-cwb" >
+            <dl class="mm-menu--items">
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul style="margin-top:14px;">
+                    <li><a href="#">· 个人影像</a></li>
+                    <li class="last"><a href="#">· 共享影像</a></li>
+                    <li><a href="#">· 获取影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 上传记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>空中诊室<p>air room</p></dt>
+                <dd class="column-icon column-air"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 留言咨询</a></li>
+                    <li class="last"><a href="#">· 视频诊室</a></li>
+                    <li><a href="#">· 诊间预约</a></li>
+                    <li class="last"><a href="#">· 医院挂号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>双向转诊<p>referral</p></dt>
+                <dd class="column-icon column-ref"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="">
+                    <li><a href="#">· 待办列表</a></li>
+                    <li class="last"><a href="#">· 转入记录</a></li>
+                    <li><a href="#">· 转出记录</a></li>
+                    <li class="last"><a href="#">· 患者跟踪</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl  class="clearfix">
+                    <dt>影像报告<p>report</p></dt>
+                    <dd class="column-icon column-rep"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 报告列表</a></li>
+                        <li><a href="#">· 报告书写</a></li>
+                        <li><a href="#">· 影像匹配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>病历查询<p>medical record</p></dt>
+                    <dd class="column-icon column-med"></dd>
+                </dl>
+                <div class="column-detail narrow-right">
+                    <ul>
+                        <li><a href="#">· 按患者查询</a></li>
+                        <li><a href="#">· 按类型查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl class="clearfix">
+                    <dt>联系人<p>contacts</p></dt>
+                    <dd class="column-icon column-cont"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul>
+                        <li><a href="#">· 我的联系人</a></li>
+                        <li><a href="#">· 关注我的患者</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>设置管理<p>settings</p></dt>
+                    <dd class="column-icon column-set"></dd>
+                </dl>
+                <div class="column-detail  narrow-right">
+                    <ul class="column-spe-ul" style="margin-top:14px;">
+                        <li><a href="#">· 个人信息</a></li>
+                        <li><a href="#">· 排班设置</a></li>
+                        <li><a href="#">· 价格设置</a></li>
+                        <li><a href="#">· 报告模板</a></li>
+                        <li><a href="#">· 短信设置</a></li>
+                        <li><a href="#">· 修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+ <section class="user-right wrapper">
+     <span class="mm-menu-toggle"></span>
+
+     <div class="breadcrumbs"><span class="bread-fir">后台管理 &gt;&gt;&gt;</span><span class="bread-sec">账号管理</span></div>
+<div class="post-account" >
+  <div class="state account-state">
+    <div class="post-query-left">
+        <div class="post-query-left-select">
+            <div class="user-select" style="z-index: 10;">
+                <p>医院</p>
+                <div>
+                    <span class="user-select-span grey-select">请选择</span>
+                    <i></i>
+                </div>
+                <ul class="user-select-ul">
+                    <li><a href="javascript:;">医院</a></li>
+                    <li><a href="javascript:;">医院医院医院医院</a></li>
+                    <li><a href="javascript:;">医院医院医院医院</a></li>
+                    <li><a href="javascript:;">医院医院医院医院医院医院医院医院</a></li>
+                </ul>
+            </div>
+            <div class="user-select" style="z-index: 10">
+                <p>科室</p>
+                <div>
+                    <span class="user-select-span grey-select">请选择</span>
+                    <i></i>
+                </div>
+                <ul class="user-select-ul">
+                    <li><a href="javascript:;">科室1</a></li>
+                    <li><a href="javascript:;">科室1</a></li>
+                    <li><a href="javascript:;">科室1</a></li>
+                    <li><a href="javascript:;">科室1</a></li>
+                </ul>
+            </div>
+            <div class="user-select" style="z-index: 1">
+        <p>按权限查</p>
+        <div>
+            <span class="user-select-span grey-select">请选择</span>
+            <i></i>
+        </div>
+        <ul class="user-select-ul">
+            <li><a href="javascript:;">登记组</a></li>
+            <li><a href="javascript:;">审核组</a></li>
+            <li><a href="javascript:;">书写组</a></li>
+            <li><a href="javascript:;">管理用户组</a></li>
+            <li><a href="javascript:;">临时组</a></li>
+        </ul>
+    </div>
+            <div class="user-select" style="z-index: 1">
+        <p>按岗位查</p>
+        <div>
+            <span class="user-select-span grey-select">请选择</span>
+            <i></i>
+        </div>
+        <ul class="user-select-ul">
+            <li><a href="javascript:;">登记组</a></li>
+            <li><a href="javascript:;">审核组</a></li>
+            <li><a href="javascript:;">书写组</a></li>
+            <li><a href="javascript:;">管理用户组</a></li>
+            <li><a href="javascript:;">临时组</a></li>
+        </ul>
+    </div>
+        </div>
+            <div class="ref-query post-a-query">
+                <span>医生姓名</span> <input type="text" class="post-searchinput" value="请输入医生姓名"/>
+            </div>
+            <div class="ref-query post-a-query"> <span>联系方式</span> <input type="text"  class="form-input inactive post-searchinput" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"/></div>
+      </div>
+      <input type="button" class="lakeblue-btn post-search" value="查 询"  />
+  </div>
+
+
+
+    </div>
+
+  <div class="account-list">
+
+	<span class="account-list-tit">账号列表</span>
+    <input type="button" class="green-btn account-role-btn"  value="角色分配">
+		<table class="accountlist" cellspacing="0" border="0">
+			<thead>
+				<tr>
+			    <th width="10%">医生姓名</th>
+			    <th width="20%">电话</th>
+          		<th width="15%">岗位</th>
+			    <th width="15%">权限</th>
+         	 	<th width="10%">状态</th>
+			    <th width="30%">操作</th>
+			    </tr>
+			</thead>
+		  	<tbody>
+		  		<tr>
+		  			<td>杨韩龙</td>
+		  			<td>1334456757</td>
+		            <td>CT</td>
+		            <td>管理员</td>
+                	<td>正常</td>
+		            <td><a href="javascript:;">停用</a></td>
+		  		</tr>
+		  		<tr>
+		  			<td>周青春</td>
+		  			<td>13505397571</td>
+		            <td>CT</td>
+		            <td>书写组</td>
+                	<td>正常</td>
+		            <td><a href="javascript:;">停用</a></td>
+		  		</tr>
+		  	</tbody>
+		</table>
+        <div class="page-list">
+                  <div class="page-left">
+                      <a href='#' onclick="gotoPageP(1)" class="pageimg page-first">首页 </a>
+		            <a href='#' onclick="gotoPageP($prePage)" class="pageimg page-prev">上一页 </a>
+		            <!--
+		            <a href='#' class="page-num current">1</a> 
+		            <a href='#' class="page-num">2</a>
+		            <a href='#' class="page-elp">...</a> 
+		            -->
+		            <a href='#' class="big"><input type="text" value="1" name="queryString" id="queryString" class="page-to"/>
+		            <span>/ &nbsp; 1</span><span class="page-go">go</span> </a>
+		            <a href='#'  onclick="gotoPageP($nextPage)" class="pageimg page-next" >下一页</a>
+		            <a href='#' onclick="gotoPageP($tPage)" class="pageimg page-last">尾页 </a>
+            	 </div>
+                 <div class="page-right">   
+                      <span class="pagen">本页共<a class="page-number">&nbsp;3&nbsp;</a>条记录&nbsp;/&nbsp;总共<a class="page-number">&nbsp;3&nbsp;</a>条记录</span>
+        
+                  </div>
+        </div>
+</div>
+  </div>
+
+     <script>
+         (function(){
+             $.divselect(".user-select",".user-select-ul",".user-select-span");
+         })()
+     </script>
+
+ </section>
+</div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+<!-- 更改角色分配 start-->
+<div class="acc-role clearfix" id="acc-role" style="display:none;">
+    <div class="acc-doc-list"></div>
+        <div class="acc-post">
+         <h3>当前用户：<span>杨涵龙</span></h3>
+            <div class="acc-post-left">
+            <h4>可分配岗位</h4>
+            <ul class="acc-block1"></ul>
+            </div>
+        	    <div class="acc-post-mid">
+        	        <input class="navy-btn movebtn type="button" value="全部右移 →"/>
+        	        <input class="blue-btn movebtn type="button" value="← 全部左移"/>
+        	    </div>
+            <div class="acc-post-right">
+            <h4>已分配岗位</h4>
+          	<ul class="acc-block2"></ul>
+            </div>
+        </div>
+
+
+<div class="acc-purview">
+    <div class="acc-purview-left">
+    <h4>可分配权限</h4>
+    <ul class="acc-block1"></ul>
+    </div>
+        <div class="acc-purview-mid">
+            <input class="navy-btn movebtn type="button" value="全部右移 →"/>
+            <input class="blue-btn movebtn type="button" value="← 全部左移"/>
+        </div>
+    <div class="acc-purview-right">
+    <h4>已分配权限</h4>
+    <ul class="acc-block2"></ul>
+    </div>
+</div>
+    <div class="clearfix"></div>
+    <div class="post-pop-btn"><input type="button" class="navy-btn pop-btn" value="保存"/> <input type="button" class="grey-btn pop-btn" value="取消" style="margin-right:0;" />
+  </div>
+</div>
+<!-- 更改角色分配 end-->
+
+<script>
+
+$('.account-role-btn').on('click', function(){
+  layer.open({
+    type: 1,
+    title:'反而',
+    shade:false, 
+    area: ['690px', ''],
+    content:$('#acc-role')
+});
+});
+
+</script>
+
+
+
+</div>
+
+</body>
+</html>

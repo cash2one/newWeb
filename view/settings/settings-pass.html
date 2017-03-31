@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20161010" rel="stylesheet" type="text/css"/>
+    <link href="../../css/settings.css?v=upd20161103" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <link href="../../js/ztree/ztreemetroStyle.css?v=upd20160402" rel="stylesheet"/>
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div  class="pacs-body">
+    <div class="header pacs-settings-header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pacs-warp settings-box">
+        <h4 class="bread-settings">
+            <span><a href="pacs.html">云PACS</a> >><b style="color:#898989;">设置</b></span>
+        </h4>
+        <div class="settings-left">
+            <div class="pacs-settings-left settings-left-content">
+                <p id="info"><a href="settings-info.html">个人信息</a></p>
+                <p id="scheduling"><a href="settings-scheduling.html">排班设置</a></p>
+                <p id="pricesetting"><a href="settings-pricesetting.html">排班价格设置</a></p>
+                <p id="report"><a href="settings-report.html">报告模版</a></p>
+                <p id="sign"><a href="settings-sign.html">签约管理</a></p>
+                <p id="sms"><a href="settings-sms.html">短信设置</a></p>
+                <p class="settings-on settings-click" id="pass"><a href="#">修改密码</a></p>
+                <span class="settings-split"></span>
+                <p id="contacts"><a href="settings-contacts.html">我的联系人</a></p>
+                <p id="patients"><a href="settings-patients.html">关注我的患者</a></p>
+                <span class="settings-split"></span>
+                <p id="account"><a href="settings-account.html">我的账户</a></p>
+                <p id="order"><a href="settings-order.html">待确认订单</a></p>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="settings-right  pacs-settings-right">
+            <div class="settings-right-content pacs-settings-right">
+                <div class="settings-pass-tabs">
+                    <a class="settings-pwd-on" href="#">修改密码</a>
+                    <a href="#">修改账户密码</a>
+                </div>
+                <div class="settings-pwd-content">
+                    <div style="display: block;" class="settings-pwd-box settings-user-pass">
+                        <ul class="center-ul clearfix">
+                            <li>
+                                <div class="center-title">请输入原密码：</div>
+                                <div class="center-intext">
+                                    <input name="name" type="text"  class="box-input" id="name" value="cccv"onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"  />
+                                </div>
+                                <div class="center-field" id="textname" style="display: none;float: left;width: 546px;">请输入原密码。</div>
+                            </li>
+                            <li>
+                                <div class="center-title">输入新密码：</div>
+                                <div class="center-intext"><input name="name" type="text"  class="box-input" id="name" value="cccv" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"  /></div>
+                                <div class="center-field" id="textsecret" style="display: none;float: left;width: 546px;">6-16个字符，请使用字母加数字或符号的组合密码，不能单独使用字母、数字或符号。</div>
+                            </li>
+                            <li>
+                                <div class="center-title">确认密码：</div>
+                                <div class="center-intext"><input name="name" type="text"  class="box-input" id="name" value="cccv" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"  /></div>
+                                <div class="center-field" id="textsecretb" style="display: none;float: left;width: 546px;">请再次确认新密码</div>
+                            </li>
+                        </ul>
+                        <p class="submit-btn" style="float: none;">
+                            <input name=" " type="button" class="loginbut password-submit" id="" value="确定提交"/>
+                        </p>
+                    </div>
+                    <div style="display: none;" class="settings-pwd-box settings-account-pass">
+                        <div class="settings-account-pass-title settings-account-pass-title-step1 clearfix">
+                            <div class="step account-repwd1 fl">
+                                1、确认手机号
+                            </div>
+                            <div class="line fl"></div>
+                            <div class="step account-repwd2 fl">
+                                2、修改账户密码
+                            </div>
+                        </div>
+                        <div class="settings-account-pass-step1">
+                            <ul class="account-pass-list">
+                                <li class="pwd-type-li">
+                                    <span>用户类型：</span>
+                                    <input name="pwd-type" type="radio"/>用户
+                                    <input name="pwd-type" type="radio"/>专家
+                                </li>
+                                <li>
+                                    <span>手机：</span>
+                                    <input type="text"/>
+                                </li>
+                                <li>
+                                    <span>验证码：</span>
+                                    <input class="settings-vcod" type="text"/>
+                                    <a id="get-vcode" class="settings-get-vcod" href="javaScript:void(0);">获取验证码</a>
+                                </li>
+                                <li>
+                                    <span>&nbsp;</span>
+                                    <a id="go-pwd-step2" class="settings-pwd-ok" href="javaScript:void(0);">下一步</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display: none;" class="settings-account-pass-step2">
+                            <ul class="account-pass-list">
+                                <li>
+                                    <span>新登录密码：</span>
+                                    <input type="password"/>
+                                </li>
+                                <li>
+                                    <span>确认新登录密码：</span>
+                                    <input type="password"/>
+                                </li>
+                                <li>
+                                    <span>&nbsp;</span>
+                                    <a id="reset-pwd" class="settings-pwd-ok" href="javaScript:void(0);">确定</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+
+    <script>
+        $(function(){
+//            高度控制
+            var rightH = $(".settings-right").height();
+            var windowH = document.body.clientHeight-124;
+            var height = $(".settings-box").height()-80;
+            height > windowH ? height = height :height=windowH;
+            rightH>height?$(".settings-right").height(rightH):$(".settings-right").height(height);
+
+
+//            密码修改tabs切换
+            $(".settings-pass-tabs a").on("click",function(){
+                var index = $(this).index();
+                $(this).addClass("settings-pwd-on");
+                $(this).siblings().removeClass("settings-pwd-on");
+                $(".settings-pwd-box").hide();
+                $(".settings-pwd-content .settings-pwd-box").eq(index).show();
+            });
+
+            $("#get-vcode").on("click",function(){
+                layer.msg('验证码以发出,请注意查收');
+            });
+            $("#go-pwd-step2").on("click",function(){
+                $(".settings-account-pass-step1").hide();
+                $(".settings-account-pass-step2").show();
+                $(".settings-account-pass-title").removeClass(".settings-account-pass-title-step1").addClass("settings-account-pass-title-step2");
+            });
+            $("#reset-pwd").on("click",function(){
+                layer.msg('密码修改成功');
+            })
+        })
+    </script>
+</body>
+</html>
+
+

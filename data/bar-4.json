@@ -1,0 +1,64 @@
+{
+	"JSChart" : {
+		"datasets" : [
+			{
+				"type" : "bar",
+				"data" : [
+					{
+						"unit" : "书写未审核",
+						"value" : "70"
+					},
+					{
+						"unit" : "审核",
+						"value" : "20"
+					},
+					{
+						"unit" : "修订",
+						"value" : "60"
+					},
+					{
+						"unit" : "无报告",
+						"value" : "20"
+					}
+				]
+			}
+		],
+		"colorset" : [
+		  
+			"#ACCC37",
+			"#D6E071",
+			"#E3E6A6",
+			"#F3F0D0"
+		],
+		"optionset" : [
+		  {
+			"set": "setSize",
+			"value": "499,252"
+		  },
+		  {
+			"set": "setBarSpacingRatio",
+			"value": "80"
+		  },
+		  {
+			"set": "setTitle",
+			"value": "'报告完成'"
+		  },
+		  {
+			"set": "setTitlePosition",
+			"value": "'right'"
+		  },
+		  {
+			"set" : "setAxisNameX",
+			"value" : "''"
+		  },
+		  {
+			"set" : "setAxisNameY",
+			"value" : "''"
+		  },
+		  {
+			"set" : "setFontFamily",
+			"value" : "'Microsoft YaHei'"
+		  }
+		]
+	}
+}

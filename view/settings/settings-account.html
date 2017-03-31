@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/settings.css?v=upd20161103" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div  class="con-body">
+    <div class="header pacs-settings-header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em class="sys-text">99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pacs-warp settings-box">
+        <h4 class="bread-settings">
+            <span><a href="pacs.html">云PACS</a> >><b style="color:#898989;">设置</b></span>
+        </h4>
+        <div class="settings-left">
+            <div class="pacs-settings-left settings-left-content">
+                <p id="info"><a href="settings-info.html">个人信息</a></p>
+                <p id="scheduling"><a href="settings-scheduling.html">排班设置</a></p>
+                <p id="pricesetting"><a href="settings-pricesetting.html">排班价格设置</a></p>
+                <p id="report"><a href="settings-report.html">报告模版</a></p>
+                <p id="sign"><a href="settings-sign.html">签约管理</a></p>
+                <p id="sms"><a href="settings-sms.html">短信设置</a></p>
+                <p id="pass"><a href="settings-pass.html">修改密码</a></p>
+                <span class="settings-split"></span>
+                <p id="contacts"><a href="settings-contacts.html">我的联系人</a></p>
+                <p id="patients"><a href="settings-patients.html">关注我的患者</a></p>
+                <span class="settings-split"></span>
+                <p class="settings-on settings-click" id="account1"><a href="#">我的账户</a></p>
+                <p id="order"><a href="settings-order.html">待确认订单</a></p>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="settings-right  pacs-settings-right">
+            <div style="display: none;" class="settings-right-content">
+                <p style="font-size: 18px;margin-bottom:14px;">支付账户尚未开通,请先开通账户.</p>
+                <a class="base-btn jigou-btn" id="add-new-account" href="#">开通账户</a>
+            </div>
+            <div style="display: block;" class="settings-right-content ">
+                <div style="display:block;" class="account-user-content">
+                    <div class="settings-account-head clearfix">
+                        <div id="account" class="account account-on">
+                            <a href="javaScript:void(0);">
+                                <i class="settings-icon account-icon account-icon-on"></i>
+                                用户账户
+                            </a>
+                        </div>
+                        <div id="credit" class="credit">
+                            <a href="javaScript:void(0);">
+                                <i class="settings-icon credit-icon"></i>
+                                信用点账户
+                            </a>
+                        </div>
+                        <div id="freeze" class="freeze">
+                            <a href="javaScript:void(0);">
+                                <i class="settings-icon freeze-icon"></i>
+                                冻结金额
+                            </a>
+                        </div>
+                    </div>
+                    <div class="account-content">
+                        <div id="account-user">
+                            <div class="settings-account-info">
+                                <p class="account-balance">账户余额（元）</p>
+                                <p class="account-money">
+                                    <span>614.71</span>元
+                                    <a class="settings-orange-btn" href="javaScript:queryDetailed();">查询明细</a>
+                                    <a class="settings-green-btn" href="javaScript:withdrawCash();">提现</a>
+                                </p>
+                            </div>
+                            <div style="margin-top:20px;border:1px solid #d7d7d7;border-radius: 2px">
+                                <div class="account-table-caption">
+                                    <div class="account-table-on">收入</div>
+                                    <div>支出</div>
+                                    <div>提现记录</div>
+                                </div>
+                                <table style="margin-top:10px" class="settings-base-table pacs-settings-table account-table">
+                                    <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>流水号</th>
+                                        <th>信息</th>
+                                        <th>金额</th>
+                                        <th>余额</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2016-09-09 18:00</td>
+                                        <td>201609091800</td>
+                                        <td>来自大老板的支付</td>
+                                        <td class="increase">+100</td>
+                                        <td>111</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-09-09 18:00</td>
+                                        <td>201609091800</td>
+                                        <td>来自大老板的支付</td>
+                                        <td class="reduce">+100</td>
+                                        <td>111</td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td style="position:relative;height: 40px;" colspan="5">
+                                            <div class="pages pacs-settings-pages">
+                                                <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                                                <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                                                <a href='#' class="page-num current">1</a>
+                                                <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                                                <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="display:none;" id="credit-user">
+                            <div class="settings-account-info">
+                                <p class="account-balance">账户余额（点）</p>
+                                <p class="account-money">
+                                    <span>614.71</span>点
+                                </p>
+                            </div>
+                            <div style="margin-top:20px;border:1px solid #d7d7d7;border-radius: 2px">
+                                <div class="account-table-caption">
+                                    <div class="account-table-on">收入</div>
+                                    <div>支出</div>
+                                </div>
+                                <table style="margin-top:10px" class="settings-base-table account-table">
+                                    <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>流水号</th>
+                                        <th>信息</th>
+                                        <th>金额</th>
+                                        <th>余额</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2016-09-09 18:00</td>
+                                        <td>201609091800</td>
+                                        <td>来自大老板的支付</td>
+                                        <td>+100</td>
+                                        <td>111</td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="pages pacs-settings-pages">
+                                                <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                                                <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                                                <a href='#' class="page-num current">1</a>
+                                                <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                                                <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="display:none;" id="freeze-user">
+                            <div class="settings-account-info">
+                                <p class="account-balance">账户余额（元）</p>
+                                <p class="account-money">
+                                    <span>614.71</span>元
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:none;" class="account-user-detail-content">
+                    <div class="account-user-detail-head">
+                        <div class="settings-query-box clearfix">
+                            <div class="settings-select fl">
+                                <div class="user-select">
+                                    <p class="fl">选择账户：</p>
+                                    <div class="grey-select fl">
+                                        <span class="user-select-span">请选择</span>
+                                        <i></i>
+                                    </div>
+                                    <ul class="user-select-ul">
+                                        <li><a href="javaScript:void(0);">专家</a></li>
+                                        <li><a href="javaScript:void(0);">患者</a></li>
+                                        <li><a href="javaScript:void(0);">医疗机构</a></li>
+                                    </ul>
+                                </div>
+                                <div class="user-select">
+                                    <p class="fl">账户类型：</p>
+                                    <div class="grey-select fl">
+                                        <span class="user-select-span ">请选择</span>
+                                        <i></i>
+                                    </div>
+                                    <ul class="user-select-ul">
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                        <li><a href="javaScript:void(0);">广州</a></li>
+                                        <li><a href="javaScript:void(0);">北京</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                    </ul>
+                                </div>
+                                <div style="display: inline-block" class="account-date">
+                                    <p class="fl">起止日期：</p>
+                                    <input class="Wdate" onFocus="WdatePicker({lang:'zh-cn'})"/>
+                                    <b>～</b>
+                                    <input class="Wdate" onFocus="WdatePicker({lang:'zh-cn'})"/>
+                                </div>
+                            </div>
+                            <a class="settings-green-btn fr " href="javaScript:void(0);">查询</a>
+                        </div>
+                    </div>
+                    <div class="settings-account-box">
+                        <p>共查询到<b style="color:#ff8f2c;">66</b>条，共<b style="color:#ff8f2c;">66</b>页</p>
+                        <table class="settings-base-table pacs-settings-table">
+                            <thead>
+                            <tr>
+                                <th width="20%">日期</th>
+                                <th width="20%">流水号</th>
+                                <th width="20%">信息</th>
+                                <th width="20%">金额</th>
+                                <th width="20%">余额</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2016-09-09 13:22</td>
+                                <td>201609091322</td>
+                                <td>201609091322信息</td>
+                                <td>+201609091322</td>
+                                <td>201609091322.00</td>
+                            </tr>
+                            <tr>
+                                <td>2016-09-09 13:22</td>
+                                <td>201609091322</td>
+                                <td>201609091322信息</td>
+                                <td>+201609091322</td>
+                                <td>201609091322.00</td>
+                            </tr>
+                            <tr>
+                                <td>2016-09-09 13:22</td>
+                                <td>201609091322</td>
+                                <td>201609091322信息</td>
+                                <td>+201609091322</td>
+                                <td>201609091322.00</td>
+                            </tr>
+                            <tr>
+                                <td>2016-09-09 13:22</td>
+                                <td>201609091322</td>
+                                <td>201609091322信息</td>
+                                <td>+201609091322</td>
+                                <td>201609091322.00</td>
+                            </tr>
+                            <tr>
+                                <td>2016-09-09 13:22</td>
+                                <td>201609091322</td>
+                                <td>201609091322信息</td>
+                                <td>+201609091322</td>
+                                <td>201609091322.00</td>
+                            </tr>
+                            <tr>
+                                <td>2016-09-09 13:22</td>
+                                <td>201609091322</td>
+                                <td>201609091322信息</td>
+                                <td>+201609091322</td>
+                                <td>201609091322.00</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <div class="pages pacs-settings-pages">
+                                        <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                                        <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                                        <a href='#' class="page-num current">1</a>
+                                        <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                                        <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div style="display:none;" class="account-user-cash-content">
+                    <div class="cash-warning-box account-user-cash-box clearfix">
+                        <i class='cash-warning-icon'></i>
+                        <p>1.周一到周五提现受力时间为09：00-17：00，周六周日顺延至下周一受理；提现到账时间7个工作日内。</p>
+                        <p>2.提现金额100起提，日累计最高20000元。</p>
+                    </div>
+                    <div class="account-user-cash-box">
+                        <h4>账户基本信息</h4>
+                        <div>
+                            <span><i>真实姓名:</i><b>周大福</b></span>
+                            <span><i>手机:</i><b>13777777777</b></span>
+                        </div>
+                        <div>
+                            <span><i>账户余额:</i><b>0.00</b></span>
+                            <span><i>提现中余额:</i><b>0.00</b></span>
+                        </div>
+                    </div>
+                    <div class="account-user-cash-box">
+                        <h4>请选择提现账户</h4>
+                        <div class="choose-account-bank">
+                            <div id="bank-user">
+                                <div>
+                                    <a class="bank-account sys-text" href="javaScript:void(0);">银行账户</a>
+                                    <a class="color-green" href="javaScript:onlineAccount();">选择线上账户</a>
+                                </div>
+                                <ul class="account-bank-list clearfix">
+                                    <li class="used-bank account-bank-list-click">
+                                        <i class="icon-ok"><b></b></i>
+                                        <h4 class="clearfix">
+                                            <i class="bank-icon gdyh"></i>
+                                            <a href="javaScript:void(0);">删除</a>
+                                        </h4>
+                                        <p><span>姓名：</span><b>周大福</b></p>
+                                        <p><span>卡号：</span><b>6222222222222222222223232323</b></p>
+                                        <p><span>支行信息：</span><b>中国工商银行平安路支行</b></p>
+                                    </li>
+                                    <li class="add-bank">
+                                        <a href="javaScript:addBank();">
+                                            <i class="bank-icon add-bank-icon"></i>
+                                            <p>新增银行账户</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="input-cash">
+                                    请输入提现金额：<input type="text"/>
+                                    <a id="cash-submit" class="green-btn" href="javaScript:void(0);">提交</a>
+                                </div>
+                            </div>
+                            <div style="display: none" id="online-user">
+                                <div>
+                                    <a class="bank-account" href="javaScript:void(0);">线上账户</a>
+                                </div>
+                                <div class="online-account-box">
+                                    <p>
+                                        <span>支付宝账户：</span>
+                                        <input type="text"/>
+                                        <a class="color-green" href="javaScript:bankAccount();">选择银行账户</a>
+                                    </p>
+                                    <p>
+                                        <span>账户姓名：</span>
+                                        <input type="text"/>
+                                    </p>
+                                </div>
+                                <div class="input-cash">
+                                    请输入提现金额：<input type="text"/>
+                                    <a class="green-btn" href="javaScript:void(0);">提交</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:none;" class="account-bank-content">
+                    <h3>选择开户行：</h3>
+                    <ul class="bank-list clearfix">
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-cbc"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-abc"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-icbc"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-cmsb"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-ccb"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-cmbc"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-bcm"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-cgb"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-cib"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-bon"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-citic"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-sdb"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-bosh"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-yzcx"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-czb"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-pa"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-spdb"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-ceb"></b>
+                        </li>
+                        <li>
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <b class="bank-icon bank-bobj"></b>
+                        </li>
+                        <li id="choose-other-bank">
+                            <i class="settings-icon-radio"></i>
+                            <input type="radio"/>
+                            <p>选择其他银行</p>
+                        </li>
+                    </ul>
+                    <div style="display:none;" class="other-bank">
+                        <span>开户银行：</span><input type="text"/>
+                    </div>
+                    <a class="green-btn bank-next" href="javaScript:bankNext();">下一步</a>
+                </div>
+                <div style="display:none;" class="account-add-bank-enter">
+                    <ul class="account-user-info-list">
+                        <li style="margin-bottom:7px;">
+                            <span class="account-info-lable">真实姓名：</span><b>周前</b>
+                        </li>
+                        <li style="margin-bottom:3px;">
+                            <span class="account-info-lable">开户银行：</span><b>平安银行</b>
+                            <a class="sys-text" href="javaScript:bankPrev();">返回重选</a>
+                        </li>
+                        <li class="bank-place">
+                            <span class="account-info-lable">银行开户地：</span>
+                            <!--<i></i>-->
+                            <div class="user-select pacs-select" >
+                                <div class="grey-select" style="position:relative;top: 12px;height: 26px;min-width: 80px;">
+                                    <span style="font-weight:400;" class="user-select-span select-1-span">全部会诊医院</span>
+                                    <i></i>
+                                </div>
+                                <ul class="user-select-ul select-1-ul" style="top:39px;width: 100%;z-index: 100; ">
+                                    <li><a href="javaScript:void(0);">杭州</a></li>
+                                    <li><a href="javaScript:void(0);">南昌</a></li>
+                                    <li><a href="javaScript:void(0);">上海</a></li>
+                                    <li><a href="javaScript:void(0);">杭州</a></li>
+                                    <li><a href="javaScript:void(0);">南昌</a></li>
+                                    <li><a href="javaScript:void(0);">上海</a></li>
+                                </ul>
+                            </div>
+                            <div class="user-select pacs-select" >
+                                <div class="grey-select" style="position:relative;top: 12px;height: 26px;min-width: 80px;">
+                                    <span style="font-weight:400;" class="user-select-span select-1-span">全部会诊医院</span>
+                                    <i></i>
+                                </div>
+                                <ul class="user-select-ul select-1-ul" style="top:39px;width: 100%;z-index: 100; ">
+                                    <li><a href="javaScript:void(0);">杭州</a></li>
+                                    <li><a href="javaScript:void(0);">南昌</a></li>
+                                    <li><a href="javaScript:void(0);">上海</a></li>
+                                    <li><a href="javaScript:void(0);">杭州</a></li>
+                                    <li><a href="javaScript:void(0);">南昌</a></li>
+                                    <li><a href="javaScript:void(0);">上海</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="account-info-lable">支行名称：</span>
+                            <input class="bank-name" type="text"/>
+                        </li>
+                        <li>
+                            <span class="account-info-lable">储蓄卡卡号：</span>
+                            <input class="bank-name" type="text"/>
+                            <i id="bank-nub-warning">银行卡号应为13-19位</i>
+                            <p class="cash-warning">此银行卡号开户名必须为“<span>周前</span>”，否则会提现失败。</p>
+                        </li>
+                        <li>
+                            <span class="account-info-lable">确认银行卡号：</span>
+                            <input class="bank-name" type="text"/>
+                        </li>
+                        <li class="add-bank-card-li">
+                            <a class="green-btn" href="javaScript:void(0);">添加</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--提现确认-->
+                <div style="display:none;" class="cash">
+                    <p>提现金额: <strong class="orange-text">100</strong>元</p>
+                    <p>提现账户名: <strong class="orange-text">是是是</strong>,&nbsp;&nbsp;
+                       提现银行卡号: <strong class="orange-text">32323232323234342</strong>
+                    </p>
+                    <div class="cash-box">
+                        <p><span>支付项目:</span><b>提现支付</b></p>
+                        <p><span>选择支付类型:</span><b>余额支付</b></p>
+                        <p><span>当前账户余额:</span><b>400</b>元</p>
+                        <p><span>支付密码</span><input class="cash-pwd" type="password"/></p>
+                    </div>
+                    <a class="jigou-btn base-btn" href="javaScript:void (0);">确认</a>
+                </div>
+            </div>
+        </div>
+
+        <!--弹出框-->
+        <div style="display:none;" class="add-new-acc">
+            <div style="display:none;" class="add-new-acc-step1">
+                <h4 class="add-new-acc-title">若需开通账户,请先输入手机收到的验证码.</h4>
+                <div>
+                    <span>验证码发送到:</span>
+                    <span>13712344567</span>
+                </div>
+                <div>
+                    <span>请输入验证码:</span>
+                    <input type="text"/>
+                </div>
+                <a class="base-btn re-send" href="javaScript:void(0);">58s后重发</a>
+                <a class="base-btn jigou-btn" href="javaScript:void(0);">下一步</a>
+            </div>
+            <div class="add-new-acc-step2">
+                <h4 class="add-new-acc-title">请设置包含字母、数字并不少于8位的交易密码</h4>
+                <div>
+                    <span>设置交易密码:</span>
+                    <input type="password"/>
+                </div>
+                <div>
+                    <span>确认交易密码:</span>
+                    <input type="password"/>
+                </div>
+                <a class="base-btn jigou-btn" href="javaScript:void(0);">提交并开通</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+
+<script>
+        function bankPrev(){
+            $(".account-bank-content").show();
+            $(".account-add-bank-enter").hide();
+        }
+        function bankNext(){
+            $(".account-bank-content").hide();
+            $(".account-add-bank-enter").show();
+        }
+        function queryDetailed(){
+            $(".account-user-content").hide();
+            $(".account-user-detail-content").show();
+        }
+        function withdrawCash(){
+            $(".account-user-content").hide();
+            $(".account-user-cash-content").show();
+        }
+        //银行账户 线上账户切换
+        function bankAccount(){
+            $("#online-user").hide();
+            $("#bank-user").show();
+        }
+        function onlineAccount(){
+            $("#online-user").show();
+            $("#bank-user").hide();
+        }
+        //添加银行
+        function addBank(){
+            $(".account-user-cash-content").hide();
+            $(".account-bank-content").show();
+        }
+
+        $(function(){
+            //            高度控制
+            resize();
+            $(window).resize(function() {
+                resize();
+            });
+            function resize(){
+                var rightH = $(".settings-right").height();
+                var windowH = document.body.clientHeight-124;
+                var height = $(".settings-box").height()-80;
+                height > windowH ? height = height :height=windowH;
+                rightH>height?$(".settings-right").height(rightH):$(".settings-right").height(height);
+            }
+
+            $("#add-new-account").click(function(){
+                layer.open({
+                    type:1,
+                    title:false,
+                    shade:0.3,
+                    area: ['400px', '300px'],
+                    scrollbar: false,
+                    content:$('.add-new-acc'),
+                })
+            })
+
+            $(".pacs-settings-table tbody tr:odd").addClass("bg-grey");
+            $.divselect(".user-select", ".user-select-ul", ".user-select-span");
+
+
+            //账户板块操作
+            $(".settings-account-head a").click(function(){
+                var id =$(this).parent().attr("id");
+                $(this).parent().addClass("account-on");
+                $(this).parent().siblings().removeClass("account-on");
+                $(".account-content>div").hide();
+                $("#"+id+"-user").show();
+                if(id == "account"){
+                    $(".account-icon").addClass("account-icon-on");
+                    $(".credit-icon").removeClass("credit-icon-on").addClass("credit-icon");
+                    $(".freeze-icon").removeClass("freeze-icon-on").addClass("freeze-icon");
+                }else if(id == "credit"){
+                    $(".credit-icon").addClass("credit-icon-on");
+                    $(".account-icon").removeClass("account-icon-on").addClass("account-icon");
+                    $(".freeze-icon").removeClass("freeze-icon-on").addClass("freeze-icon");
+                }else{
+                    $(".freeze-icon").addClass("freeze-icon-on");
+                    $(".credit-icon").removeClass("credit-icon-on").addClass("credit-icon");
+                    $(".account-icon").removeClass("account-icon-on").addClass("account-icon");
+                }
+            });
+            $(".account-table-caption div").click(function(){
+                $(this).siblings().removeClass("account-table-on");
+                $(this).addClass("account-table-on");
+            });
+
+
+            $(".bank-list li").click(function(){
+                var id = $(this).attr("id");
+                if(id == "choose-other-bank"){
+                    $(".other-bank").slideDown();
+                }else{
+                    $(".other-bank").slideUp();
+                }
+                $(this).find("i").removeClass("settings-icon-radio").addClass("settings-icon-radio-check");
+                $(this).siblings().find("i").removeClass("settings-icon-radio-check").addClass("settings-icon-radio");
+                $(this).find("input").removeAttr("check").attr("check","checked");
+                $(this).siblings().find("input").removeAttr("check","checked").attr("check");
+            });
+
+            $("#cash-submit").on("click",function(){
+                $(this).parents(".account-user-cash-content").hide();
+                $(".cash").show();
+            })
+        })
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/clinic.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="../../js/jquery.select.js" type="text/javascript"></script>
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+    <div class="header clinic-header ">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clinic-bread">
+        <a href="#">首页</a>
+        <span>&gt;&gt;</span>
+        <a href="#">用户中心</a>
+        <span>&gt;&gt;</span>
+        <b>影像上传</b>
+    </div>
+    <div class="clinic-content clearfix">
+        <div class="clinic-left">
+            <div class="clinic-top">
+                <i></i>用户中心
+            </div>
+            <div class="big-module pb0">
+                <a href="#" class="module-title">
+                    <i class="module-title-icon icon-bianmin"></i>便民查询
+                </a>
+            </div>
+            <div class="big-module">
+                <span class="module-title">
+                    <i class="module-title-icon icon-dingdan"></i>我的订单
+                </span>
+                <p><a href="clinic-liuyan.html">留言咨询</a></p>
+                <p><a href="clinic-shipin.html">视频诊室预约</a></p>
+                <p><a href="clinic-guahao.html">医生挂号</a></p>
+            </div>
+            <div class="big-module">
+                <span class="module-title">
+                    <i class="module-title-icon icon-yingxiang"></i>我的影像
+                </span>
+                <p><a class="clinic-click" href="clinic-yunpan.html">我的云盘</a></p>
+                <p><a href="clinic-huoqu.html">影像获取</a></p>
+            </div>
+            <div class="big-module">
+                <span class="module-title">
+                    <i class="module-title-icon icon-guanzhu"></i>我的关注
+                </span>
+                <p><a href="clinic-follow-hospital.html">医院</a></p>
+                <p><a href="clinic-follow-department.html">科室</a></p>
+                <p><a href="clinic-follow-doctor.html">医生</a></p>
+            </div>
+            <div class="big-module bordernone">
+                <span class="module-title">
+                    <i class="module-title-icon icon-zhanghu"></i>我的账户
+                </span>
+                <p><a href="clinic-account.html">账户设置</a></p>
+                <p><a href="clinic-patients.html">就诊人管理</a></p>
+                <p><a href="clinic-message.html">消息中心</a></p>
+            </div>
+        </div>
+        <div class="clinic-right">
+            <div class="clinic-top">
+                <div class="clinic-right-warp clearfix">
+                    <div class="clinic-search-box">
+                        <a class="clinic-search-btn" href="javaScript:void(0);">影像上传</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clinic-right-warp upload-container">
+                <div class="base-right-top">
+                    <h3>
+                        <b>影像上传</b>
+                        <a href="javaScript:void(0);">&lt;返回我的云盘</a>
+                    </h3>
+                    <h4>
+                        DR/CR/DX等图片较少的普放，建议通过此页面直接上传；CT/MR等图片较多的检查,建议
+                        <a href="#">下载“云管家”</a>进行上传。
+                    </h4>
+                </div>
+                <div class="base-right-bottom">
+                    <h6>
+                        <div class="fl">
+                            选择的文件（<b class="orange-text">3</b>）
+                        </div>
+                        <div class="fr">
+                            <a href="javaScript:void(0);">选择文件</a>
+                        </div>
+                    </h6>
+                    <ul class="upload-image-list">
+                        <li>
+                            <img src="" alt=""/>
+                            <span>C:/systemaes/images/head.png</span>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <span>C:/systemaes/images/head.png</span>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <span>C:/systemaes/images/head.png</span>
+                        </li>
+                    </ul>
+                    <a href="javaScript:void(0);">上传</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--页脚-->
+    <div class="clinic-foot">
+        <div class="footer warp">
+            <ul class="footer-text fl">
+                <li style="opacity:0.5;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</li>
+                <li class="padding"></li>
+                <li style="">客服电话：<h2>400-0571-574</h2>  &nbsp; &nbsp; &nbsp;ICP证  浙B-20140372 浙ICP备11059294号-3&nbsp; &nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202000272" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../images/beian.png" style="float:left;">浙公网安备 33010202000272号<p></p></a> </li>
+                <li style="">联系地址：杭州市上城区中河中路198号绿都大厦4F、5F    &nbsp; &nbsp; &nbsp; </li>
+                <li style="margin-bottom:20px;">为了本站的正常浏览，建议您使用IE 9及以上的IE浏览器或chrome、firefox等浏览器</li>
+            </ul>
+            <ul class="footer-img clearfix">
+                <li><img src="../../images/doctor.png">专家版</li>
+                <li><img src="../../images/patient.png">大众版</li>
+            </ul>
+            <p style="opacity:0.5;font-size:12px;">
+                杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Science Co., Ltd.
+            </p>
+        </div>
+    </div>
+    <script>
+
+</script>
+</body>
+</html>

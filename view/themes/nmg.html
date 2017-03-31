@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/themes.css?v=upd20160307" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script src="../../js/jquery.slides.min.js"></script>
+<title>内蒙古影像会诊平台</title>
+<script type="text/javascript"> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<script type="text/javascript">
+	function goToByScroll(id){
+		$('html,body').animate({scrollTop: $("#"+id).offset().top-70},2000);
+	}
+</script>
+</head>
+<body>
+<header class="nmg-header">
+	<div class="m-width">
+	      <div class="login-ent">
+             <a href="#" ><span>登 陆</span></a>
+             <a href="#" class="current"><span>注 册</span></a>
+           </div>
+          <a href="#" class="logo"><span><img src="../../images/themes/logo_nmg.png"></span></a>
+
+ 	</div>
+</header>
+
+<!-- content开始-->
+<article>
+	<section class="nmg-banner"></section>
+
+	<section class="nmg-block">
+		<div class="nmg-area">
+			<h2>呼伦贝尔</h2>
+			<p>鄂伦春旗人民医院</p>
+			<p>呼伦贝尔市第二人民医院</p>
+			<p>...</p>
+			<a href=""></a>
+		</div>
+		<div class="nmg-area">
+			<h2>兴安</h2>
+			<p>兴安盟人民医院</p>
+			<p>...</p>
+			<a href=""></a>
+		</div>
+		<div class="nmg-area">
+			<h2>鄂尔多斯</h2>
+			<p>鄂尔多斯市中心医院</p>
+			<p>鄂尔多斯第二人民医院</p>
+			<p>鄂尔多斯第三人民医院</p>
+			<p>...</p>
+			<a href="eeds.html"></a>
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">赤峰</h2>
+			<p>敬请期待</p>
+
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">通辽</h2>
+			<p>敬请期待</p>
+
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">阿拉善</h2>
+			<p>敬请期待</p>
+
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">乌兰察布</h2>
+			<p>敬请期待</p>
+
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">包头</h2>
+			<p>敬请期待</p>
+
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">锡林郭勒</h2>
+			<p>敬请期待</p>
+
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">呼和浩特</h2>
+			<p>敬请期待</p>
+
+		</div>
+		<div class="nmg-area">
+			<h2 class="unable">巴彦淖尔</h2>
+			<p>敬请期待</p>
+
+		</div>
+	</section>
+ 
+
+</article>
+<!-- content结束 -->
+
+<footer class="clearfix">
+  <section class="m-width">
+	<div class="footer-links footer-center ">
+		<ul class="footer-type">
+			<h5>政治机构 |</h5>
+			<h5>医疗机构 |</h5>
+			<h5><br/></h5>
+			<h5>技术支持 |</h5>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">鄂尔多斯卫生局</a></li>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">鄂尔多斯第三人民医院</a></li>
+			<li><a href="" alt="">中国人民解放军海军总医院</a></li>
+			<li><a href="" alt="">鄂尔多斯第三人民医院</a></li>
+			<li><a href="" alt="">中国人民解放军海军总医院</a></li>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">全球影像网</a></li>
+		</ul>
+
+  			<p>杭州联众医疗科技股份有限公司  Copyright @ Hangzhou Lianzhong Healthcare Technology Co. Ltd</p>
+	</div>
+
+  </section>
+</footer>
+
+<script type="text/javascript">
+//title显示
+$(function(){
+
+	$(".banner-arw img").hide().fadeIn(2000);
+	$(".banner-cj").css({opacity:"0",top:"+=40px"}).animate({opacity:".5", top: "-=40px"},1800);
+	$(".banner-title").css({opacity:"0"}).delay(1500).animate({opacity:"1"},1800);
+})
+//箭头浮动
+$(function animateUD(){
+		$("#down-arrow").load().animate({top:"-=10px"},500)
+		.animate({top:"+=10px"},500,animateUD); 
+})
+
+</script>
+</body>
+
+</html>

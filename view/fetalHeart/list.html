@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全球影像用户界面</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/fetalheart.css?v=upd20160913" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery.select.js" type="text/javascript"></script>
+    <script src="../../js/layer/layer.js" type="text/javascript"></script>
+    <script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <!--<script src="../../js/messagetip.js" type="text/javascript"></script>-->
+    <script src="https://img.hcharts.cn/highstock/highstock.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="../../js/highchart/chart-themes.js" type="text/javascript"></script>
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                            /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+    <style>
+        .highcharts-range-selector-buttons{
+            display: none;
+        }
+        path{
+            cursor: ew-resize;
+        }
+    </style>
+
+</head>
+<div class="fh-header">
+    <div class="fh-check">
+        <div class="head-left fl">
+            <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+            <span></span>
+        </div>
+
+        <div class="head-right fr">
+            <div class="user-head">
+                <img src="../../images/user.jpg" alt=""/>
+            </div>
+            <div class="user-info">
+                <p>欢迎您，<span>用户名</span>
+                    <a href="#" class="message"><i></i> <em>99+</em></a>
+                </p>
+
+                <p>
+                    <a href="javascript:;">桌面</a>
+                    <a href="javascript:;">设置</a>
+                    <a href="javascript:;">账户</a>
+                    <a href="javascript:;">联系人</a>
+                    <a href="javascript:;">退出</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div>
+    <div class="fhlist-title">
+        <ul>
+            <li class="current">远程记录</li>
+            <li>孕妇列表</li>
+        </ul>
+    </div>
+    <div class="fh-lists" style="display:block;">
+        <div class="fh-query clearfix">
+            <div class="search w1200">
+
+                <div class="user-select select-2 fl" style="margin-right:30px; width:180px;z-index: 1;">
+                    <div class="grey-select" style="height:26px;">
+                        <span class="user-select-span select-2-span" style="line-height:26px;">查询条件</span>
+                        <i></i>
+                    </div>
+                    <ul class="user-select-ul select-2-ul" style="width: 99%;z-index: 100; ">
+                        <li><a href="javascript:;">全部</a></li>
+                        <li><a href="javascript:;">已处理</a></li>
+                        <li><a href="javascript:;">未处理</a></li>
+                    </ul>
+                </div>
+                <div class="fl" style="width:500px;">
+                    <label>上传时间：</label>
+
+                    <div class="query-time update-time">
+                        <input name="studyDateStart" type="text" id="studyDateStart1" value="" onclick="WdatePicker({el:'studyDateStart1',dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                        <img onclick="WdatePicker({el:'studyDateStart1',dateFmt:'yyyy-MM-dd HH:mm:ss'})"
+                             class="tri-timepicker" style="cursor:pointer"
+                             src="../../js/My97DatePicker/skin/datePicker.gif">
+                    </div>
+
+                    <div class="query-time-cnt">~</div>
+                    <div class="query-time update-time">
+                        <input name="studyDateStart" type="text" id="studyDateStart2" value=""
+                               onclick="WdatePicker({el:'studyDateStart2',dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                        <img onclick="WdatePicker({el:'studyDateStart2',dateFmt:'yyyy-MM-dd HH:mm:ss'})"
+                             class="tri-timepicker" style="cursor:pointer"
+                             src="../../js/My97DatePicker/skin/datePicker.gif">
+                    </div>
+
+
+                </div>
+                <div class="fl">
+                    <div class="fh-input1"><label>关键字：</label><input type="text"></div>
+                </div>
+                <input type="button" value="查询" class="btn fr">
+            </div>
+        </div>
+
+        <div class="fh-resault w1200">
+            <div class="fh-list">
+                <span class="fh-list-tit">远程记录</span>
+                <table width="100%" border="0" cellspacing="0" class="fhlist">
+                    <thead>
+                    <tr>
+                        <td width="5%"><input type="checkbox" id="checkall"> 全选</td>
+                        <td width="5%">状态</td>
+                        <td width="17%">监测时间</td>
+                        <td width="10%">孕妇姓名</td>
+                        <td width="5%">年龄</td>
+                        <td width="8%">孕期</td>
+                        <td width="15%">预产期</td>
+                        <td width="5%">监测时长</td>
+                        <td width="10%">就诊医生</td>
+                        <td width="10%">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="no-reply"> 未回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="no-reply"> 未回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="no-reply">未回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="no-reply">未回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="no-reply">未回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="no-reply">未回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="no-reply">未回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="replyed">已回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="replyed">已回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="num"></td>
+                        <td class="replyed">已回复</td>
+                        <td>2015-08-11 14:33:49</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>12周4天</td>
+                        <td>2016-10-01</td>
+                        <td>21'34"</td>
+                        <td>王医生</td>
+                        <td><a class="fh-list-caozuo" href="javascript:;">查看详情</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="page-list">
+
+
+                    <div class="page-right">
+                            <span class="pagen">本页共<a class="page-number">&nbsp;12&nbsp;</a>条记录&nbsp;/&nbsp;总共<a
+                                    class="page-number">&nbsp;12&nbsp;</a>条记录</span>
+                        <button type="button" class="print">批量打开</button>
+                    </div>
+                    <div class="page-left">
+                        <a href="#" class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                        <a href="#" class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                        <div href="#" class="big"><input type="text" value="1"
+                                                         onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                         onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                                                         id="paginationCPage" name="currentPage" class="page-to">
+                            <span>/ &nbsp; 1</span><span class="page-go" onclick="gotoPageByForm()">go</span> </div>
+                        <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                        <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="fh-lists">
+        <div class="fh-query clearfix">
+            <div class="search w1200">
+
+                <div class="fl" style="width:480px;">
+                    <label>预产期：</label>
+
+                    <div class="query-time update-time">
+                        <input name="studyDateStart" type="text" id="studyDateStart3" value=""
+                               onclick="WdatePicker({el:'studyDateStart3'})">
+                        <img class="tri-timepicker" style="cursor:pointer"
+                             src="../../js/My97DatePicker/skin/datePicker.gif">
+                    </div>
+
+                    <div class="query-time-cnt">~</div>
+                    <div class="query-time update-time">
+                        <input name="studyDateStart" type="text" id="studyDateStart4" value=""
+                               onclick="WdatePicker({el:'studyDateStart4'})">
+                        <img class="tri-timepicker" style="cursor:pointer"
+                             src="../../js/My97DatePicker/skin/datePicker.gif">
+                    </div>
+                </div>
+
+
+                <div class="fl">
+                    <div class="fh-input1"><label>关键字：</label><input type="text"></div>
+                </div>
+                <span class="add-con fr newuser-add"><i class="icon icon-add-con"></i>新增孕妇</span>
+                <input type="button" value="查询" class="btn fr">
+            </div>
+        </div>
+
+        <div class="fh-resault w1200">
+            <div class="fh-list">
+                <span class="fh-list-tit">孕妇列表</span>
+                <table width="100%" border="0" cellspacing="0" class="fhlist">
+                    <thead>
+                    <tr>
+                        <td width="5%">序号</td>
+                        <td width="15%">身份证号</td>
+                        <td width="15%">姓名</td>
+                        <td width="5%">年龄</td>
+                        <td width="10%">预产期</td>
+                        <td width="5%">就诊医生</td>
+                        <td width="10%">电话</td>
+                        <td width="20%">备注</td>
+                        <td width="15%">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>330***********210</td>
+                        <td>zhang wang xiang</td>
+                        <td>35</td>
+                        <td>2016-10-01</td>
+                        <td>王医生</td>
+                        <td>13819821114</td>
+                        <td>
+                            <div class="toe">我的备注文字有点长的。很长很长</div>
+                        </td>
+                        <td>
+                            <a class="fh-list-info newuser-add" href="javascript:;">个人资料</a>
+                            <a class="fh-list-detail" href="javascript:;">记录查看</a>
+                            <a class="fh-list-info delete" href="javascript:;">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>330***********210</td>
+                        <td>刘美玲</td>
+                        <td>35</td>
+                        <td>2016-10-01</td>
+                        <td>王医生</td>
+                        <td>13819821114</td>
+                        <td>
+                            <div class="toe">我的备注文字有点长的。很长很长</div>
+                        </td>
+                        <td>
+                            <a class="fh-list-info newuser-add" href="javascript:;">个人资料</a>
+                            <a class="fh-list-detail" href="javascript:;">记录查看</a>
+                            <a class="fh-list-info delete" href="javascript:;">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>330***********210</td>
+                        <td>zhangwang xiang</td>
+                        <td>35</td>
+                        <td>2016-10-01</td>
+                        <td>王医生</td>
+                        <td>13819821114</td>
+                        <td>
+                            <div class="toe">我的备注文字有点长的。很长很长</div>
+                        </td>
+                        <td>
+                            <a class="fh-list-info newuser-add" href="javascript:;">个人资料</a>
+                            <a class="fh-list-detail" href="javascript:;">记录查看</a>
+                            <a class="fh-list-info delete" href="javascript:;">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="page-list">
+
+
+                    <div class="page-right">
+                            <span class="pagen">本页共<a class="page-number">&nbsp;12&nbsp;</a>条记录&nbsp;/&nbsp;总共<a
+                                    class="page-number">&nbsp;12&nbsp;</a>条记录</span>
+
+                    </div>
+                    <div class="page-left">
+                        <a href="#" class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                        <a href="#" class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                        <div href="#" class="big"><input type="text" value="1"
+                                                         onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                         onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                                                         id="paginationCPage" name="currentPage" class="page-to">
+                            <span>/ &nbsp; 1</span><span class="page-go" onclick="gotoPageByForm()">go</span> </div>
+                        <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                        <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 弹窗  新增用户-->
+<div class="newuser">
+    <ul class="pregnant-info clearfix">
+        <li><span>姓名<em>*</em>：</span><input type="text"/></li>
+        <li><span>身份证<em>*</em>：</span><input type="text" value="330102195205140267"/></li>
+        <li><span>年龄：</span><input type="text" readonly/></li>
+        <li><span>孕期：</span><input type="text" readonly/></li>
+        <li><span>产/孕：</span><input type="text"/></li>
+        <li><span>胎数：</span>
+
+            <div class="user-select select-1 fl" style="margin-right:20px; width:140px;z-index:50; height:28px;">
+                <div class="grey-select" style="height:26px;">
+                    <span class="user-select-span select-1-span" style="line-height:26px;">单胎</span>
+                    <i></i>
+                </div>
+                <ul class="user-select-ul select-1-ul" style="width: 99%;z-index: 100; ">
+                    <li><a href="javascript:;">单胎</a></li>
+                    <li><a href="javascript:;">双胞胎</a></li>
+                    <li><a href="javascript:;">三胞胎</a></li>
+                    <li><a href="javascript:;">多胞胎</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><span>预产期<em>*</em>：</span>
+            <input name="studyDateStart" type="text" id="studyDateStart5" value=""
+                   onclick="WdatePicker({el:'studyDateStart5'})">
+            <img class="tri-timepicker" style="cursor:pointer;right:25px;"
+                 src="../../js/My97DatePicker/skin/datePicker.gif"></li>
+
+        <li><span>就诊医院<em>*</em>：</span>
+
+            <div class="user-select select-2 fl" style="margin-right:20px; width:142px;z-index: 40;">
+                <div class="grey-select" style="height:26px;">
+                    <span class="user-select-span select-2-span" style="line-height:26px;">医院一</span>
+                    <i></i>
+                </div>
+                <ul class="user-select-ul select-2-ul" style="width: 99%;z-index: 100; ">
+                    <li><a href="javascript:;">医院一医院一医院一</a></li>
+                    <li><a href="javascript:;">医院二医院一医院一医院一</a></li>
+                    <li><a href="javascript:;">医院三</a></li>
+                    <li><a href="javascript:;">医院四</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><span>电话<em>*</em>：</span><input type="text"/></li>
+        <li>
+            <span>就诊医生<em>*</em>：</span>
+
+            <div class="user-select select-4 fl" style="margin-right:20px;  width:140px;z-index: 30;">
+                <div class="grey-select" style="height:26px;">
+                    <span class="user-select-span select-4-span" style="line-height:26px;">张医生(zs)</span>
+                    <i></i>
+                </div>
+                <ul class="user-select-ul select-4-ul" style="width: 99%;z-index: 100; ">
+                    <li><a href="javascript:;">王医生</a></li>
+                    <li><a href="javascript:;">张医生(zs)</a></li>
+                    <li><a href="javascript:;">郝建</a></li>
+                    <li><a href="javascript:;">腾格尔木</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><span>地址：</span><input type="text" style="width:388px;"/></li>
+        <li><span>备注：</span><input type="text" style="width:388px;"/></li>
+        <li class="fr">该医生有 <b><em>3</em>位已分配孕妇</b> / <b><em>39</em>条未回复</b></li>
+
+    </ul>
+
+    <ul class="emergency clearfix">
+        <h4>紧急联系人（必填）</h4>
+        <!--         <li><span>关系：</span>
+
+                    <div class="user-select select-3 fl" style="margin-right:30px; width:40px;z-index: 15;">
+                        <div class="grey-select" style="height:26px;">
+                            <span class="user-select-span select-3-span" style="line-height:26px;">父母</span>
+                            <i></i>
+                        </div>
+                        <ul class="user-select-ul select-3-ul" style="width: 99%;z-index: 100; ">
+                            <li><a href="javascript:;">亲人</a></li>
+                            <li><a href="javascript:;">朋友</a></li>
+                            <li><a href="javascript:;">爱人</a></li>
+                        </ul>
+                    </div>
+                </li> -->
+        <li><span>姓名：</span><input type="text" value="" /></li>
+        <li><span>电话：</span><input type="text" value="" /></li>
+
+    </ul>
+    <input type="button" value="关闭" class="grey-btn fh-pop-btn fr"/>
+    <input type="button" value="删除" class="orange-btn fh-pop-btn fr"/>
+    <input type="button" value="添加" class="fh-pop-btn fr"/>
+
+</div>
+
+
+<!-- 弹窗 用户记录 -->
+<div class="preg-record" style="display:none;">
+    <div class="preg-form">
+        D
+    </div>
+    <div class="highchart"></div>
+    <div class="preg-ask"></div>
+</div>
+
+<!-- 弹窗  查看记录-->
+<div class="view-log clearfix" style="display:none;">
+
+    <div style="display:none;">
+
+        <div class="no-data">
+            <img src="../../images/failed.png" alt="">
+            <input type="button" value="重新加载"  class="reload">
+        </div>
+    </div>
+    <div style="display:block;">
+        <div class="gravida-list">
+            <div class="view-log-head">
+                <span class="data-state">状态</span>
+                <span class="data-start-time">监测时间</span>
+                <span class="data-name">姓名</span>
+                <span class="data-age">年龄</span>
+                <span class="data-pregnancy">孕期</span>
+                <span class="data-childbirth">预产期</span>
+                <span class="data-time">监测时长</span>
+                <span class="data-doc">就诊医生</span>
+                <span class="data-pat">提交人</span>
+            </div>
+            <ul>
+                <li>
+                    <span class="data-state">已回复</span>
+                    <span class="data-start-time">2015-01-01</span>
+                    <span class="data-name">京津冀</span>
+                    <span class="data-age">23</span>
+                    <span class="data-pregnancy">26周</span>
+                    <span class="data-childbirth">2015-11-01</span>
+                    <span class="data-time">20′5″</span>
+                    <span class="data-doc">是是是</span>
+                    <span class="data-pat">对对对</span>
+                </li>
+                <li>
+                    <span class="data-state">已回复</span>
+                    <span class="data-start-time">2015-01-01</span>
+                    <span class="data-name">京津冀</span>
+                    <span class="data-age">23</span>
+                    <span class="data-pregnancy">26周</span>
+                    <span class="data-childbirth">2015-11-01</span>
+                    <span class="data-time">20′5″</span>
+                    <span class="data-doc">是是是</span>
+                    <span class="data-pat">对对对</span>
+                </li>
+                <li>
+                    <span class="data-state">已回复</span>
+                    <span class="data-start-time">2015-01-01</span>
+                    <span class="data-name">京津冀</span>
+                    <span class="data-age">23</span>
+                    <span class="data-pregnancy">26周</span>
+                    <span class="data-childbirth">2015-11-01</span>
+                    <span class="data-time">20′5″</span>
+                    <span class="data-doc">是是是</span>
+                    <span class="data-pat">对对对</span>
+                </li>
+                <li>
+                    <span class="data-state">已回复</span>
+                    <span class="data-start-time">2015-01-01</span>
+                    <span class="data-name">京津冀</span>
+                    <span class="data-age">23</span>
+                    <span class="data-pregnancy">26周</span>
+                    <span class="data-childbirth">2015-11-01</span>
+                    <span class="data-time">20′5″</span>
+                    <span class="data-doc">是是是</span>
+                    <span class="data-pat">对对对</span>
+                </li>
+                <li>
+                    <span class="data-state">已回复</span>
+                    <span class="data-start-time">2015-01-01</span>
+                    <span class="data-name">京津冀</span>
+                    <span class="data-age">23</span>
+                    <span class="data-pregnancy">26周</span>
+                    <span class="data-childbirth">2015-11-01</span>
+                    <span class="data-time">20′5″</span>
+                    <span class="data-doc">是是是</span>
+                    <span class="data-pat">对对对</span>
+                </li>
+                <li>
+                    <span class="data-state">已回复</span>
+                    <span class="data-start-time">2015-01-01</span>
+                    <span class="data-name">京津冀</span>
+                    <span class="data-age">23</span>
+                    <span class="data-pregnancy">26周</span>
+                    <span class="data-childbirth">2015-11-01</span>
+                    <span class="data-time">20′5″</span>
+                    <span class="data-doc">是是是</span>
+                    <span class="data-pat">对对对</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="highcharts-content clearfix">
+            <div class="highchart-box fl">
+                <audio style="display:none;" controls="controls" id="video1">
+                    <!--<source src="audio.mp3"/>-->
+                    <source src="audio2.mp3"/>
+                </audio>
+                <div class="audio-info clearfix">
+                    <p class="fl">胎心: <span id="baby">0</span></p>
+                    <p class="fl">胎动: <span id="fetal">3</span></p>
+                    <p class="fl">宫缩: <span id="uterine">0</span></p>
+                    <p class="fr"><b id="currentNow">00:00</b>/<b id="audioDuration">00:00</b></p>
+                </div>
+                <div id="baby-container" style="min-width: 400px;width:560px;height:200px;">
+                </div>
+                <div id="uterine-container" style="min-width: 400px;width:560px;height:140px;">
+                </div>
+                <a id="audiobtn" class="playbtn" href="javaScript:void(0);"></a>
+                <!--<a id="suspendbtn" class="suspendbtn" href="javaScript:void(0);"></a>-->
+            </div>
+            <div class="consultation fr">
+                <div class="consultation-box patient">
+                    <i class="fetal-heart-print"></i>
+                    <h6 class="title">患者咨询:</h6>
+                    <p class="">这个看起来怪怪怪的</p>
+                    <p class="consultation-patient">
+                        <span class="patient-name">大眼皮</span>
+                        <span class="patient-age"><b>23</b>岁</span>
+                        <span class="patient-week">
+                            孕周：<b>26</b>周 <b>2</b>天
+                        </span>
+                        <span class="patient-born">预产期：<b>2017-01-01</b></span>
+                    </p>
+                </div>
+                <div class="consultation-box doctor">
+                    <h6 class="title">我的回复:</h6>
+                    <p style="display:none;">我的回复我的回复我的回复我的回复我的回复我的回复我的回复我的回复我的回复</p>
+                    <div style="width:90%">
+                        <textarea style="resize:none; width:100%;" name="" id="" cols="30" rows="7">
+
+                        </textarea>
+                        <a class="doctor-reply fr" href="javaScript:void(0);">回复</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        $(window).load(function () {
+            $('.wholedata-content').height($(".wholedata").height() - 80);
+            $('.wd-sidebar').height($('.wholedata-content').height());
+        }); //全局高度
+
+        $('.fh-list li').click(function () {
+            $(this).addClass('current').append('<i></i>').siblings().removeClass('current').remove('i');
+        }); //左侧被选中效果
+    })
+
+    $(".view-log ul li:odd").css("background-color", "#f7f7f7");
+    $(".view-log ul li").hover(function () {
+        $(this).css("background-color", "#f2e6e5");
+    }, function () {
+        var index = $(this).index();
+        if (index % 2 == 0) {
+            $(this).css("background-color", "#fff");
+        } else {
+            $(this).css("background-color", "#f7f7f7");
+        }
+    });
+    $(".fhlist-title li").click(
+            function () {
+                $(this).addClass("current").siblings().removeClass("current");
+                $(".fh-lists").eq($(".fhlist-title li").index(this)).show().siblings(".fh-lists").hide();
+            }
+    );//tab选框
+
+    //消息闪动
+    function shake(ele, cls, times) {
+        var i = 0, t = false, o = ele.attr("class") + " ", c = "", times = times || 2;
+        if (t) return;
+
+        t = setInterval(function () {
+            i++;
+            c = i % 2 ? o + cls : o;
+            ele.attr("class", c);
+
+            if (i == 2 * times) {
+                clearInterval(t);
+                ele.removeClass(cls);
+            }
+        }, 200);
+    };
+
+    $(function () {
+        shake($(".message"), "alert", 8);
+    });
+
+
+    //新增用户
+    $('.newuser-add').on('click', function () {
+        layer.open({
+            type: 1,
+            title: "孕妇资料",
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            area: ['auto', '520px'],
+            content: $('.newuser')
+        });
+    });
+    $('.fh-list-detail').on('click', function () {
+        layer.open({
+            type: 1,
+            title: "查看记录",
+            shade: 0.8,
+            skin: 'layui-layer-rim',
+            area: ['920px', ''],
+            content: $('.view-log')
+        });
+    });
+    $('.fh-list-caozuo').on('click', function () {
+        layer.open({
+            type: 2,
+            title: '查看详情',
+            shadeClose: false,
+            shade: false,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['1100px', '600px'],
+            content: 'fh-detail.html'
+        });
+    });
+
+
+    $("#checkall").click(function () {
+        $("input[name='num']").each(function () {
+            if ($(this).prop("checked")) {
+                $(this).prop("checked",false);
+            }
+            else {
+                $(this).prop("checked", true);
+            }
+        })
+    })
+</script>
+<script>
+    (function () {
+        $.divselect(".select-1", ".select-1-ul", ".select-1-span");
+        $.divselect(".select-2", ".select-2-ul", ".select-2-span");
+        $.divselect(".select-3", ".select-3-ul", ".select-3-span");
+        $.divselect(".select-4", ".select-4-ul", ".select-4-span");
+    })()
+</script>
+
+<!--highcharts-->
+<script>
+    var chart = null;
+    var vis = true;
+    var audioStatus = "paused";
+    var myVid = document.getElementById("video1");
+    var timeout = false;
+    var currentTime = 0;
+    var toco = [
+        9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 8, 8, 11, 11, 16, 16, 16, 16, 18, 18, 19, 19, 19, 19, 19, 19, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 17, 17, 18, 18, 18, 18, 15, 15, 14, 14, 15, 15, 15, 15, 15, 15, 19, 19, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 18, 18, 33, 33, 21, 21, 16, 16, 12, 12, 11, 11, 10, 10, 10, 10, 10, 10, 21, 21, 21, 21, 23, 23, 23, 23, 22, 22, 20, 20, 22, 22, 22, 22, 21, 21, 20, 20, 21, 21, 21, 22, 22, 22, 22, 21, 21, 21, 21, 22, 22, 22, 22, 21, 21, 21, 21, 22, 22, 23, 23, 22, 22, 21, 21, 22, 22, 23, 23, 23, 23, 22, 22, 13, 13, 10, 10, 10, 10, 11, 11, 11, 11, 10, 10, 5, 5, 6, 6, 8, 8, 8, 8, 19, 19, 43, 43, 45, 45, 48, 48, 48, 45, 45, 42, 42, 41, 41, 45, 45, 49, 49, 47, 47, 44, 44, 46, 46, 51, 51, 49, 49, 43, 43, 39, 39, 38, 38, 44, 44, 46, 46, 40, 40, 36, 36, 36, 36, 41, 41, 43, 43, 37, 37, 34, 34, 35, 35, 40, 40, 40, 40, 37, 37, 35, 35, 35, 35, 40, 40, 42, 42, 38, 38, 35, 35, 35, 38, 38, 43, 43, 42, 42, 37, 37, 34, 34, 38, 38, 43, 43, 43, 43, 38, 38, 35, 35, 37, 37, 42, 42, 41, 41, 36, 36, 34, 34, 39, 39, 44, 44, 39, 39, 35, 35, 37, 37, 42, 42, 44, 44, 39, 39, 35, 35, 36, 36, 41, 41, 41, 43, 38, 38, 36, 36, 36, 35, 35, 37, 40, 40, 40, 40, 41, 41, 40, 40, 38, 38, 37, 37, 35, 35, 37, 37, 43, 43, 43, 43, 38, 38, 36, 36, 38, 38, 42, 42, 44, 44, 40, 40, 37, 37, 37, 37, 41, 41, 44, 44, 36, 36, 28, 28, 23, 23, 40, 40, 49, 49, 50, 50, 46, 46, 49, 49, 49, 49, 46, 46, 44, 44, 44, 44, 44, 47, 47, 49, 49, 47, 47, 44, 44, 43, 43, 44, 44, 47, 47, 49, 49, 46, 46, 45, 45, 49, 49, 54, 54, 54, 54, 51, 51, 50, 50, 53, 53, 57, 57, 51, 51, 50, 50, 55, 55, 57, 57, 54, 54, 51, 51, 52, 52, 56, 56, 55, 55, 52, 52, 50, 50, 52, 52, 55, 55, 55, 54, 52, 52, 52, 53, 53, 55, 55, 55, 55, 51, 51, 49, 49, 52, 52, 54, 54, 52, 52, 49, 49, 50, 50, 54, 54, 53, 53, 50, 50, 49, 49, 51, 51, 54, 54, 52, 52, 50, 50, 49, 49, 53, 53, 55, 55, 51, 51, 50, 50, 52, 52, 58, 58, 59, 59, 55, 55, 52, 52, 53, 53, 55, 55, 55, 57, 53, 53, 53, 51, 51, 55, 55, 59, 59, 56, 56, 52, 52, 52, 52, 56, 56, 58, 58, 53, 53, 51, 51, 53, 53, 57, 57, 55, 55, 51, 51, 50, 50, 53, 53, 57, 57, 54, 54, 53, 53, 53, 53, 55, 55, 58, 58, 55, 55, 52, 52, 51, 51, 54, 54, 57, 57, 54, 54, 54, 52, 52, 51, 51, 51, 56, 58, 58, 58, 55, 55, 52, 52, 52, 52, 56, 56, 61, 61, 65, 65, 68, 68, 66, 66, 58, 58, 53, 53, 50, 50, 49, 49, 50, 50, 54, 54, 52, 52, 49, 49, 48, 48, 48, 48, 50, 50, 54, 54, 53, 53, 50, 50, 49, 49, 49, 49, 52, 52, 55, 55, 52, 52, 50, 50, 49, 49, 53, 53, 53, 57, 57, 53, 53, 50, 50, 49, 49, 54, 54, 56, 56, 51, 51, 50, 50, 50, 50, 54, 54, 56, 56, 52, 52, 50, 50, 49, 49, 52, 52, 55, 55, 52, 52, 50, 50, 50, 50, 55, 55, 57, 57, 53, 53, 50, 50, 50, 50, 49, 49, 50, 50, 50, 50, 51, 51, 51, 52, 52, 50, 50, 50, 50, 49, 49, 52, 52, 55, 55, 54, 54, 50, 50, 49, 49, 52, 52, 56, 56, 55, 55, 51, 51, 49, 49, 54, 54, 59, 59, 55, 55, 51, 51, 50, 50, 54, 54, 56, 56, 53, 53, 50, 50, 50, 50, 53, 53, 57, 57, 54, 54, 51, 51, 49, 49, 51, 51, 57, 57, 60, 60, 67, 67, 65, 65, 65, 65, 65, 68, 68, 67, 67, 58, 58, 52, 52, 51, 51, 54, 54, 57, 57, 54, 54, 50, 50, 51, 51, 56, 56, 59, 59, 56, 56, 53, 53, 53, 53, 57, 57, 58, 58, 54, 54, 52, 52, 54, 54, 61, 61, 61, 61, 55, 55, 52, 52, 56, 56, 61, 61, 55, 55, 52, 52, 52, 56, 59, 59, 52, 52, 52, 50, 50, 50, 49, 49, 50, 50, 51, 51, 50, 50, 47, 47, 46, 46, 49, 49, 53, 53, 53, 53, 51, 51, 56, 56, 59, 59, 61, 61, 63, 63, 62, 62, 59, 59, 59, 59, 62, 62, 65, 65, 62, 62, 58, 58, 63, 63, 70, 70, 70, 70, 64, 64, 62, 62, 66, 66, 69, 69, 64, 64, 64, 57, 57, 57, 57, 60, 60, 61, 61, 57, 57, 54, 54, 56, 56, 60, 60, 59, 59, 54, 54, 52, 52, 56, 56, 58, 58, 55, 55, 52, 52, 51, 51, 54, 54, 58, 58, 57, 57, 53, 53, 51, 51, 55, 55, 59, 59, 56, 56, 52, 52, 54, 54, 58, 58, 59, 59, 54, 54, 51, 51, 53, 53, 57, 57, 57, 57, 57, 53, 53, 51, 51, 54, 54, 58, 58, 55, 55, 53, 53, 55, 55, 57, 57, 56, 56, 52, 52, 53, 53, 56, 56, 60, 60, 55, 55, 52, 52, 53, 53, 56, 56, 58, 58, 54, 54, 51, 51, 54, 54, 57, 57, 57, 57, 52, 52, 50, 50, 51, 51, 51, 51, 54, 54, 57, 57, 55, 55, 51, 51, 51, 51, 51, 56, 56, 58, 58, 58, 58, 56, 56, 55, 55, 58, 58, 57, 57, 55, 55, 58, 58, 56, 56, 54, 54, 55, 55, 54, 54, 53, 53, 56, 56, 62, 62, 68, 68, 67, 67, 63, 63, 60, 60, 58, 58, 63, 63, 64, 64, 63, 63, 61, 61, 61, 58, 60, 60, 60, 66, 65, 65, 65, 65, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 67, 67, 64, 64, 62, 62, 61, 61, 59, 59, 60, 60, 63, 63, 63, 63, 58, 58, 54, 54, 57, 57, 60, 60, 60, 60, 55, 55, 54, 54, 58, 58, 60, 60, 58, 58, 57, 57, 57, 57, 57, 57, 56, 56, 56, 56, 56, 56, 54, 54, 54, 54, 56, 56, 56, 58, 58, 57, 57, 53, 53, 50, 50, 49, 49, 52, 52, 56, 56, 53, 53, 49, 49, 48, 48, 52, 52, 54, 54, 52, 52, 48, 48, 49, 49, 53, 53, 53, 53, 50, 50, 48, 48, 51, 51, 54, 54, 53, 53, 48, 48, 48, 48, 50, 50, 54, 54, 52, 52, 49, 49, 48, 48, 49, 49, 49, 53, 53, 55, 55, 50, 50, 48, 48, 50, 50, 55, 55, 55, 55, 52, 52, 48, 48, 50, 50, 54, 54, 54, 54, 49, 49, 49, 49, 52, 52, 54, 54, 49, 49, 47, 47, 49, 49, 54, 54, 54, 54, 50, 50, 47, 47, 49, 49, 52, 52, 57, 57, 51, 51, 48, 48, 49, 49, 51, 51, 55, 55, 52, 52, 52, 48, 48, 47, 47, 53, 53, 55, 55, 51, 51, 47, 47, 49, 49, 54, 54, 58, 58, 51, 51, 47, 47, 46, 46, 50, 50, 53, 53, 50, 50, 47, 47, 50, 50, 54, 54, 54, 54, 49, 49, 47, 47, 50, 50, 54, 54, 53, 53, 49, 49, 49, 49, 52, 52, 54, 54, 50, 50, 48, 48, 52, 52, 52, 55, 55, 53, 53, 53, 49, 49, 49, 54, 54, 54, 55, 55, 48, 48, 45, 45, 44, 44, 48, 48, 51, 51, 50, 50, 45, 45, 45, 45, 49, 49, 50, 50, 47, 47, 46, 46, 48, 48, 52, 52, 53, 53, 48, 48, 46, 46, 50, 50, 56, 56, 55, 55, 53, 53, 51, 51, 53, 53, 58, 58, 63, 63, 63, 64, 64, 52, 52, 46, 46, 49, 49, 51, 51, 47, 47, 45, 45, 46, 46, 53, 53, 55, 55, 50, 50, 47, 47, 51, 51, 56, 56, 54, 54, 50, 50, 49, 49, 53, 53, 55, 55, 52, 52, 49, 49, 50, 50, 54, 54, 57, 57, 53, 53, 49, 49, 52, 52, 56, 56, 53, 53, 49, 49, 50, 50, 54, 54, 54, 57, 57, 53, 53, 49, 49, 50, 50, 55, 55, 56, 56, 51, 51, 49, 49, 53, 53, 57, 57, 53, 53, 49, 49, 49, 49, 54, 54, 54, 54, 50, 50, 47, 47, 48, 48, 52, 52, 54, 54, 50, 50, 47, 47, 47, 47, 51, 51, 52, 52, 49, 49, 47, 47, 49, 49, 51, 51, 54, 54, 53, 53, 50, 50, 50, 48, 48, 52, 52, 53, 53, 49, 49, 47, 47, 50, 50, 53, 53, 54, 54, 49, 49, 48, 48, 50, 50, 54, 54, 54, 54, 49, 49, 48, 48, 51, 51, 54, 54, 53, 53, 49, 49, 50, 50, 54, 54, 55, 55, 51, 51, 48, 48, 51, 51, 55, 55, 56, 56, 52, 52, 49, 49, 51, 51, 51, 52, 52, 50, 50, 50, 46, 46, 47, 49, 49, 49, 51, 51, 48, 48, 45, 45, 47, 47, 51, 51, 51, 51, 47, 47, 47, 47, 52, 52, 55, 55, 51, 51, 48, 48, 48, 48, 52, 52, 54, 54, 50, 50, 47, 47, 50, 50, 54, 54, 51, 51, 48, 48, 51, 51, 54, 54, 53, 53, 49, 49, 47, 47, 49, 49, 49, 53, 53, 53, 53, 48, 48, 46, 46, 50, 50, 53, 53, 51, 51, 47, 47, 47, 47, 49, 49, 45, 45, 49, 49, 53, 53, 50, 50, 49, 49, 51, 51, 52, 52, 55, 55, 55, 55, 50, 50, 49, 49, 52, 52, 55, 55, 51, 51, 49, 49, 51, 51, 55, 55, 53, 53, 49, 49, 49, 49, 50, 50, 54, 54, 54, 53, 53, 49, 49, 49, 49, 52, 52, 56, 56, 52, 52, 48, 48, 49, 49, 54, 54, 56, 56, 51, 51, 49, 49, 48, 48, 50, 50, 54, 54, 54, 54, 50, 50, 48, 48, 54, 54, 55, 55, 51, 51, 47, 47, 49, 49, 54, 54, 56, 56, 51, 51, 48, 48, 53, 53, 56, 56, 53, 53, 53, 49, 49, 48, 48, 50, 50, 56, 56, 56, 56, 50, 50, 48, 48, 51, 51, 57, 57, 60, 60, 54, 54, 50, 50, 52, 52, 56, 56, 55, 55, 50, 50, 52, 52, 56, 56, 57, 57, 53, 53, 51, 51, 53, 53, 56, 56, 56, 56, 52, 52, 51, 51, 55, 55, 57, 57, 53, 53, 49, 49, 51, 51, 57, 57, 57, 57, 57, 57, 53, 49, 49, 49, 49, 49, 53, 53, 55, 55, 50, 50, 47, 47, 49, 49, 55, 55, 55, 55, 49, 49, 47, 47, 49, 49, 55, 55, 58, 58, 53, 53, 47, 47, 47, 47, 54, 54, 58, 58, 55, 55, 50, 50, 49, 49, 53, 53, 58, 58, 55, 55, 50, 50, 49, 49, 55, 55, 55, 60, 60, 57, 57, 51, 51, 49, 49, 55, 55, 58, 58, 53, 53, 49, 49, 51, 51, 54, 54, 50, 50, 45, 45, 41, 41, 40, 40, 42, 42, 40, 40, 38, 38, 39, 39, 44, 44, 45, 45, 41, 41, 38, 38, 41, 41, 47, 47, 47, 47, 43, 43, 42, 42, 46, 46, 50, 50, 46, 46, 44, 44, 46, 46, 46, 50, 50, 54, 54, 51, 51, 47, 47, 46, 46, 50, 50, 54, 54, 51, 51, 48, 48, 48, 48, 53, 53, 57, 57, 57, 53, 50, 50, 50, 50, 55, 55, 60, 60, 58, 58, 52, 52, 50, 50, 52, 52, 55, 55, 55, 55, 51, 51, 49, 49, 53, 53, 57, 57, 53, 53, 47, 47, 46, 46, 47, 47, 49, 49, 49, 49, 49, 47, 47, 49, 49, 53, 53, 51, 51, 48, 48, 48, 48, 54, 54, 56, 56, 50, 50, 47, 47, 50, 50, 54, 54, 58, 58, 54, 54, 50, 50, 46, 46, 49, 49, 51, 51, 51, 51, 50, 50, 53, 53, 55, 55, 53, 53, 50, 50, 51, 51, 55, 55, 57, 57, 52, 52, 50, 50, 50, 52, 52, 52, 56, 56, 54, 50, 50, 50, 49, 49, 52, 52, 56, 56, 55, 55, 51, 51, 51, 51, 55, 55, 57, 57, 53, 53, 50, 50, 52, 52, 56, 56, 55, 55, 51, 51, 49, 49, 49, 49, 52, 52, 55, 55, 53, 53, 50, 50, 50, 50, 52, 52, 56, 56, 54, 54, 50, 50, 50, 50, 51, 51, 54, 54, 54, 56, 56, 52, 52, 50, 50, 51, 51, 55, 55, 55, 55, 52, 52, 51, 51, 51, 51, 55, 55, 55, 55, 52, 52, 50, 50, 51, 51, 55, 55, 54, 54, 52, 52, 51, 51, 55, 55, 56, 56, 54, 54, 50, 50, 51, 51, 55, 55, 57, 57, 53, 53, 51, 51, 50, 50, 51, 51, 54, 54, 56, 56, 52, 52, 52, 50, 50, 53, 53, 55, 55, 54, 54, 51, 51, 51, 51, 54, 54, 57, 57, 53, 53, 51, 51, 51, 51, 55, 55, 56, 56, 54, 54, 50, 50, 50, 50, 53, 53, 57, 57, 58, 58, 53, 53, 51, 51, 52, 52, 55, 55, 56, 56, 53, 53, 51, 51, 52, 52, 55, 55, 55, 55, 52, 52, 52, 50, 50, 54, 54, 56, 56, 54, 54, 51, 51, 49, 49, 51, 51, 55, 55, 55, 55, 50, 50, 47, 47, 47, 47, 51, 51, 51, 55, 57, 57, 46, 46, 43, 43, 43, 43, 45, 45, 44, 44, 40, 40, 38, 38, 39, 39, 43, 43, 46, 46, 44, 44, 42, 42, 43, 43, 46, 46, 48, 48, 45, 45, 43, 43, 43, 43, 46, 49, 49, 49, 49, 49, 45, 45, 42, 42, 42, 42, 45, 45, 46, 46, 44, 44, 41, 41, 43, 43, 46, 46, 47, 47, 44, 44, 43, 43, 43, 43, 49, 49, 49, 49, 45, 45, 44, 44, 47, 47, 51, 51, 50, 50, 47, 47, 44, 44, 45, 45, 48, 48, 49, 49, 47, 47, 45, 45, 45, 47, 50, 50, 50, 49, 49, 46, 46, 45, 45, 47, 47, 50, 50, 51, 51, 48, 48, 46, 46, 47, 47, 50, 50, 52, 52, 49, 49, 47, 47, 46, 46, 48, 48, 50, 50, 48, 48, 46, 46, 44, 44, 46, 46, 48, 48, 49, 49, 47, 47, 45, 45, 46, 46, 48, 48, 49, 49, 47, 47, 45, 45, 45, 45, 45, 48, 51, 51, 51, 50, 50, 46, 46, 46, 46, 48, 48, 51, 51, 51, 51, 47, 47, 46, 46, 47, 47, 50, 50, 53, 53, 50, 50, 46, 46, 46, 46, 49, 49, 52, 52, 52, 52, 51, 51, 49, 49, 47, 47, 45, 45, 42, 42, 42, 42, 40, 40, 39, 39, 38, 38, 40, 40, 41, 41, 42, 42, 39, 39, 39, 38, 38, 38, 38, 39, 39, 40, 40, 41, 41, 39, 39, 38, 38, 38, 38, 38, 38, 37, 37, 37, 37, 40, 40, 41, 41, 39, 39, 38, 38, 37, 37, 39, 39, 41, 41, 40, 40, 40, 40, 38, 38, 37, 37, 37, 37, 40, 40, 42, 42, 39, 39, 38, 38, 39, 39, 39, 41, 42, 42, 39, 39, 39, 39, 37, 40, 40, 41, 41, 41, 43, 43, 39, 37, 37, 37, 39, 39, 40, 40, 42, 42, 39, 39, 38, 38, 38, 38, 42, 42, 42, 42, 40, 40, 38, 38, 39, 39, 41, 41, 41, 41, 40, 40, 38, 38, 40, 40, 43, 43, 42, 42, 39, 39, 38, 38, 40, 40, 42, 42, 39, 39, 38, 38, 38, 38, 39, 39, 39, 42, 42, 41, 41, 40, 40, 39, 39, 42, 42, 43, 43, 41, 41, 40, 40, 40, 40, 42, 42, 42, 42, 40, 40, 40, 40, 42, 42, 43, 43, 41, 41, 40, 40, 40, 40, 43, 43, 43, 43, 42, 42, 40, 40, 40, 40, 42, 42, 43, 43, 42, 42, 40, 40, 40, 40, 42, 42, 43, 43, 41, 41, 41, 40, 40, 41, 41, 43, 43, 42, 42, 41, 41, 40, 40, 40, 40, 42, 42, 42, 42, 41, 41, 40, 40, 40, 40, 42, 42, 43, 43, 40, 40, 39, 39, 41, 41, 43, 43, 44, 44, 40, 40, 40, 40, 42, 42, 43, 43, 45, 45, 43, 43, 41, 41, 41, 41, 43, 43, 45, 45, 44, 44, 44, 42, 42, 40, 40, 42, 42, 44, 44, 44, 44, 42, 42, 40, 40, 41, 41, 43, 43, 43, 43, 42, 42, 41, 41, 39, 39, 41, 41, 43, 43, 43, 43, 42, 42, 40, 40, 40, 40, 43, 43, 43, 43, 42, 42, 40, 40, 39, 39, 41, 41, 43, 43, 44, 44, 42, 42, 40, 40, 39, 39, 39, 39, 41, 41, 41, 42, 42, 41, 41, 39, 39, 39, 39, 40, 40, 40, 42, 42, 41, 41, 39, 39, 37, 37, 39, 39, 40, 40, 40, 40, 38, 38, 38, 38, 40, 40, 42, 42, 40, 40, 38, 38, 37, 37, 40, 40, 42, 42, 40, 40, 38, 38, 37, 37, 40, 40, 42, 42, 40, 40, 38, 38, 37, 37, 39, 39, 42, 42, 42, 42, 42, 40, 40, 38, 38, 39, 39, 41, 41, 43, 43, 41, 41, 38, 38, 38, 38, 40, 40, 42, 42, 43, 43, 41, 41, 38, 38, 39, 39, 40, 40, 43, 43, 41, 41, 40, 40, 38, 38, 39, 39, 40, 40, 43, 43, 42, 42, 40, 40, 38, 38, 40, 40, 42, 42, 39, 39, 38, 38, 36, 36, 36, 34, 34, 34, 34, 35, 35, 36, 36, 37, 37, 34, 34, 34, 34, 34, 34, 35, 35, 37, 37, 37, 37, 35, 35, 34, 34, 34, 34, 36, 36, 38, 38, 35, 35, 34, 34, 34, 34, 36, 36, 37, 37, 36, 36, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 36, 36, 37, 37, 35, 35, 35, 35, 36, 36, 36, 37, 37, 39, 39, 37, 37, 35, 35, 35, 35, 37, 37, 39, 39, 37, 37, 34, 34, 34, 34, 36, 36, 38, 38, 36, 36, 35, 35, 34, 34, 34, 34, 36, 36, 37, 37, 36, 36, 34, 34, 35, 35, 36, 36, 37, 37, 36, 36, 35, 35, 35, 35, 37, 37, 35, 35, 31, 31, 25, 25, 25, 25, 25, 29, 31, 31, 32, 32, 32, 32, 31, 31, 31, 33, 33, 33, 34, 34, 34, 34, 34, 34, 33, 33, 33, 33, 32, 32, 31, 31, 29, 29, 30, 30, 31, 31, 32, 32, 30, 30, 29, 29, 30, 30, 31, 31, 31, 31, 29, 29, 29, 29, 30, 30, 32, 32, 31, 31, 30, 30, 30, 30, 31, 31, 30, 30, 30, 26, 26, 26, 26, 28, 28, 30, 30, 30, 30, 30, 30, 30, 30, 32, 32, 35, 35, 35, 35, 33, 33, 33, 33, 33, 33, 32, 32, 31, 31, 30, 30, 32, 32, 34, 34, 34, 34, 32, 32, 31, 31, 32, 32, 34, 34, 33, 33, 32, 32, 32, 32, 34, 34, 35, 35, 34, 34, 32, 32, 30, 30, 30, 30, 30, 31, 31, 32, 32, 31, 31, 30, 30, 33, 33, 35, 35, 35, 35, 34, 34, 33, 33, 35, 35, 37, 37, 37, 37, 35, 35, 34, 34, 36, 36, 37, 37, 38, 38, 36, 36, 35, 35, 37, 37, 38, 38, 38, 38, 36, 36, 37, 37, 39, 39, 39, 39, 38, 38, 37, 37, 36, 36, 38, 38, 39, 39, 39, 38, 38, 37, 37, 36, 36, 37, 37, 39, 39, 40, 40, 38, 38, 37, 37, 36, 36, 37, 37, 36, 36, 43, 43, 43, 43, 38, 38, 41, 41, 47, 47, 45, 45, 45, 45, 44, 44, 42, 42, 43, 43, 45, 45, 45, 46, 44, 44, 43, 43, 43, 43, 43, 43, 46, 46, 45, 45, 44, 44, 42, 42, 42, 43, 43, 44, 44, 44, 45, 45, 43, 42, 42, 42, 42, 42, 43, 43, 45, 45, 46, 46, 44, 44, 43, 43, 41, 41, 45, 45, 46, 46, 43, 43, 42, 42, 42, 42, 45, 45, 46, 46, 44, 44, 41, 41, 42, 42, 45, 45, 48, 48, 46, 46, 45, 45, 43, 43, 45, 45, 48, 48, 47, 47, 44, 44, 43, 43, 43, 44, 44, 48, 48, 46, 46, 44, 44, 43, 43, 43, 43, 47, 47, 46, 46, 44, 44, 42, 42, 44, 44, 46, 46, 46, 46, 43, 43, 43, 43, 45, 45, 47, 47, 45, 45, 43, 43, 44, 44, 46, 46, 46, 46, 44, 44, 42, 42, 44, 44, 45, 45, 44, 44, 42, 42, 41, 41, 44, 44, 44, 45, 43, 43, 43, 40, 40, 41, 41, 43, 43, 46, 46, 43, 43, 42, 42, 43, 43, 45, 45, 45, 45, 42, 42, 42, 42, 44, 44, 45, 45, 43, 43, 42, 42, 43, 43, 45, 45, 45, 45, 42, 42, 42, 42, 43, 43, 46, 46, 45, 45, 42, 42, 41, 41, 41, 41, 42, 42, 44, 44, 45, 45, 43, 43, 43, 41, 41, 43, 43, 45, 45, 45, 45, 42, 42, 42, 42, 45, 45, 45, 45, 43, 43, 41, 41, 35, 35, 33, 33, 29, 29, 27, 27, 28, 28, 28, 28, 27, 27, 25, 25, 26, 26, 26, 26, 27, 27, 31, 31, 43, 43, 49, 49, 49, 49, 45, 45, 40, 40, 43, 43, 43, 43, 41, 41, 40, 40, 38, 38, 38, 31, 31, 31, 29, 29, 29, 28, 28, 28, 30, 30, 29, 29, 27, 27, 26, 26, 29, 29, 29, 29, 27, 27, 26, 26, 28, 28, 30, 30, 29, 29, 28, 28, 26, 26, 28, 28, 30, 30, 30, 30, 28, 28, 28, 28, 29, 29, 30, 30, 30, 30, 28, 28, 29, 29, 30, 30, 28, 28, 26, 26, 26, 26, 27, 27, 27, 28, 28, 31, 31, 29, 29, 29, 29, 29, 29, 32, 32, 32, 32, 29, 29, 27, 27, 28, 28, 30, 30, 29, 29, 27, 27, 27, 27, 30, 30, 30, 30, 28, 28, 27, 27, 29, 29, 31, 31, 29, 29, 27, 27, 30, 30, 31, 31, 30, 30, 29, 29, 28, 28, 30, 30, 31, 31, 31, 31, 31, 30, 30, 30, 30, 32, 32, 33, 33, 31, 31, 29, 29, 29, 29, 31, 31, 31, 31, 29, 29, 28, 28, 30, 30, 33, 33, 34, 34, 32, 32, 29, 29, 26, 26, 27, 27, 28, 28, 27, 27, 26, 26, 25, 25, 26, 26, 28, 28, 28, 28, 27, 27, 25, 25, 25, 25, 27, 27, 28, 28, 28, 28, 26, 26, 26, 27, 27, 28, 28, 31, 31, 30, 30, 30, 30, 30, 30, 26, 26, 27, 27, 26, 26, 26, 26, 25, 25, 25, 25, 28, 28, 28, 28, 26, 26, 26, 26, 26, 26, 28, 28, 29, 29, 27, 27, 27, 27, 27, 27, 28, 28, 29, 29, 26, 26, 27, 27, 27, 25, 28, 28, 28, 28, 27, 27, 27, 27, 27, 25, 25, 25, 28, 29, 29, 28, 28, 28, 26, 26, 26, 26, 26, 26, 28, 28, 27, 27, 27, 27, 25, 25, 28, 28, 28, 28, 28, 28, 26, 26, 26, 26, 26, 26, 29, 29, 28, 28, 28, 28, 26, 26, 27, 27, 30, 30, 28, 28, 28, 28, 26, 26, 28, 28, 30, 30, 29, 29, 27, 27, 27, 27, 27, 27, 27, 30, 30, 29, 29, 28, 28, 26, 26, 28, 28, 28, 28, 30, 30, 28, 28, 27, 27, 27, 27, 28, 28, 30, 30, 28, 28, 27, 27, 26, 26, 29, 29, 30, 30, 29, 29, 27, 27, 29, 29, 27, 27, 29, 29, 30, 30, 28, 28, 28, 28, 30, 30, 30, 30, 30, 30, 29, 29, 28, 28, 28, 28, 28, 29, 29, 29, 29, 18, 18, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 17, 17, 17, 17, 17, 17, 17, 17, 18, 18, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 17, 17, 18, 18, 17, 17, 17, 17, 16, 16, 16, 16, 17, 17, 16, 16, 16, 16, 15, 15, 14, 14, 14, 15, 15, 15, 15, 13, 13, 14, 14, 13, 13, 14, 14, 8, 8, 3, 3, 3, 3, 21, 21, 27, 27, 27, 27, 37, 37, 38, 38, 35, 35, 33, 33, 33, 33, 33, 33, 33, 33, 31, 31, 32, 32, 31, 31, 31, 31, 31, 31, 32, 32, 30, 30, 29, 29, 30, 30, 31, 31, 29, 29, 28, 28, 27, 27, 27, 28, 28, 28, 28, 26, 26, 27, 27, 27, 26, 29, 29, 29, 29, 29, 31, 31, 27, 27, 29, 29, 25, 25, 23, 23, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 17, 17, 23, 23, 23, 23, 27, 27, 30, 30, 33, 33, 33, 33, 31, 31, 31, 31, 33, 33, 34, 34, 32, 32, 31, 31, 31, 31, 33, 33, 33, 34, 34, 33, 33, 32, 32, 33, 33, 34, 34, 35, 35, 34, 34, 33, 33, 33, 33, 36, 36, 36, 36, 34, 34, 33, 33, 34, 34, 36, 36, 36, 36, 34, 34, 33, 33, 34, 34, 36, 36, 37, 37, 34, 34, 33, 33, 35, 35, 37, 37, 36, 36, 34, 34, 33, 33, 35, 35, 37, 37, 37, 36, 36, 35, 35, 34, 34, 36, 36, 37, 37, 36, 36, 34, 34, 34, 34, 36, 36, 37, 37, 36, 36, 34, 34, 34, 34, 36, 36, 38, 38, 37, 37, 35, 35, 34, 34, 36, 36, 38, 38, 38, 38, 36, 36, 35, 35, 37, 37, 37, 37, 37, 37, 37, 37, 35, 35, 33, 33, 32, 32, 32, 32, 32, 34, 34, 35, 35, 33, 33, 33, 33, 34, 34, 34, 34, 36, 36, 35, 35, 33, 33, 36, 36, 36, 36, 36, 36, 35, 35, 35, 35, 37, 37, 38, 38, 36, 36, 31, 31, 33, 33, 32, 32, 32, 32, 30, 30, 30, 30, 33, 33, 33, 33, 31, 31, 30, 30, 31, 31, 33, 33, 33, 33, 32, 32, 32, 30, 30, 31, 31, 33, 33, 32, 32, 32, 29, 29, 30, 32, 32, 33, 33, 33, 31, 31, 29, 32, 32, 32, 33, 33, 33, 33, 30, 30, 30, 30, 33, 33, 34, 34, 32, 32, 31, 31, 29, 29, 31, 31, 34, 34, 32, 32, 31, 31, 30, 30, 33, 33, 34, 34, 32, 32, 30, 30, 30, 30, 33, 33, 35, 35, 35, 34, 34, 32, 32, 31, 31, 33, 33, 35, 35, 33, 33, 31, 31, 30, 30, 32, 32, 34, 34, 32, 32, 30, 30, 29, 29, 31, 31, 34, 34, 33, 33, 30, 30, 29, 29, 31, 31, 33, 33, 32, 32, 27, 27, 23, 23, 23, 23, 25, 25, 25, 25, 22, 22, 22, 22, 24, 24, 25, 25, 25, 25, 22, 22, 22, 23, 23, 26, 26, 28, 28, 26, 26, 23, 23, 24, 24, 26, 26, 26, 26, 25, 25, 25, 25, 27, 27, 29, 29, 26, 26, 25, 25, 26, 26, 28, 28, 29, 29, 28, 28, 26, 26, 31, 31, 28, 28, 29, 29, 30, 30, 24, 24, 23, 23, 24, 24, 24, 24, 22, 22, 21, 21, 22, 22, 22, 23, 23, 24, 24, 23, 23, 21, 21, 21, 21, 22, 22, 24, 24, 25, 25, 23, 23, 22, 22, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 21, 21, 20, 20, 23, 23, 24, 24, 22, 22, 22, 22, 24, 24, 26, 26, 25, 25, 23, 23, 23, 23, 25, 25, 27, 27, 26, 26, 24, 24, 24, 24, 26, 26, 26, 27, 27, 27, 27, 26, 26, 25, 25, 25, 25, 28, 28, 28, 28, 28, 26, 26, 26, 26, 26, 26, 29, 29, 28, 28, 27, 27, 26, 26, 27, 27, 28, 28, 29, 29, 27, 27, 27, 27, 28, 28, 28, 28, 28, 28, 27, 27, 26, 26, 27, 27, 28, 28, 28, 28, 28, 28, 26, 26, 26, 26, 28, 28, 28, 28, 28, 25, 25, 24, 24, 26, 26, 27, 27, 26, 26, 25, 25, 26, 26, 26, 26, 27, 27, 28, 28, 29, 29, 27, 27, 25, 25, 25, 25, 24, 24, 24, 24, 25, 25, 27, 27, 28, 28, 27, 27, 27, 27, 29, 29, 28, 28, 30, 30, 30, 30, 29, 29, 28, 28, 28, 28, 28, 28, 31, 31, 31, 30, 30, 29, 29, 28, 28, 30, 30, 31, 31, 30, 30, 29, 29, 28, 28, 31, 31, 31, 31, 30, 30, 29, 29, 30, 30, 31, 31, 32, 32, 30, 30, 29, 29, 30, 30, 32, 32, 32, 32, 29, 29, 29, 29, 31, 31, 31, 31, 31, 31, 29, 29, 28, 28, 31, 31, 31, 31, 29, 29, 25, 25, 23, 23, 23, 24, 24, 26, 26, 26, 26, 25, 25, 24, 24, 25, 25, 27, 27, 25, 25, 22, 22, 21, 21, 24, 24, 25, 25, 24, 24, 23, 23, 23, 23, 25, 25, 25, 25, 23, 23, 23, 23, 23, 23, 24, 24, 25, 25, 24, 24, 25, 25, 27, 27, 28, 28, 25, 25, 23, 23, 24, 24, 27, 27, 27, 28, 28, 28, 26, 25, 25, 26, 26, 26, 28, 31, 31, 31, 27, 27, 26, 26, 27, 27, 28, 28, 27, 27, 25, 25, 24, 24, 25, 25, 26, 26, 25, 25, 23, 23, 25, 25, 27, 27, 28, 28, 26, 26, 25, 25, 28, 28, 28, 28, 28, 28, 26, 26, 25, 25, 27, 27, 29, 29, 27, 27, 25, 25, 25, 25, 25, 28, 28, 28, 28, 27, 27, 26, 26, 27, 27, 29, 29, 27, 27, 26, 26, 26, 26, 27, 27, 29, 29, 28, 28, 26, 26, 27, 27, 29, 29, 29, 29, 28, 28, 27, 27, 27, 27, 30, 30, 29, 29, 28, 28, 27, 27, 29, 29, 30, 30, 28, 28, 27, 27, 28, 28, 29, 29, 30, 30, 29, 29, 27, 27, 27, 29, 29, 31, 31, 30, 30, 28, 28, 26, 26, 29, 29, 30, 30, 30, 30, 28, 28, 27, 27, 29, 29, 30, 30, 31, 31, 28, 28, 27, 27, 29, 29, 30, 30, 30, 30, 28, 28, 28, 28, 30, 30, 31, 31, 29, 29, 28, 28, 28, 28, 29, 29, 31, 31, 30, 30, 29, 29, 27, 27, 27, 28, 28, 30, 30, 31, 31, 28, 28, 28, 28, 28, 28, 30, 30, 30, 30, 28, 28, 28, 28, 29, 29, 30, 30, 29, 29, 27, 27, 25, 25, 24, 24, 24, 24, 21, 21, 22, 22, 22, 22, 23, 23, 25, 25, 26, 26, 25, 25, 24, 24, 24, 25, 27, 27, 27, 27, 25, 25, 23, 23, 24, 24, 26, 26, 26, 27, 27, 26, 26, 25, 25, 25, 25, 26, 26, 28, 28, 28, 29, 29, 29, 27, 27, 27, 26, 26, 26, 26, 27, 27, 29, 29, 28, 28, 26, 26, 26, 26, 27, 27, 28, 28, 27, 27, 25, 25, 25, 25, 28, 28, 30, 30, 31, 31, 28, 28, 29, 29, 30, 30, 31, 31, 29, 29, 26, 26, 26, 26, 28, 28, 28, 29, 29, 28, 28, 26, 26, 27, 27, 29, 29, 28, 28, 27, 27, 25, 25, 27, 27, 28, 28, 30, 30, 27, 27, 26, 26, 25, 25, 27, 27, 28, 28, 27, 27, 25, 25, 26, 26, 28, 28, 28, 28, 26, 26, 25, 25, 25, 25, 28, 28, 26, 26, 24, 24, 23, 23, 24, 24, 27, 27, 27, 26, 26, 23, 23, 22, 22, 23, 23, 25, 25, 25, 25, 23, 23, 22, 22, 21, 21, 22, 22, 24, 24, 25, 25, 24, 24, 22, 22, 21, 21, 24, 24, 26, 26, 26, 26, 23, 23, 22, 22, 23, 23, 26, 26, 28, 28, 25, 25, 23, 23, 22, 22, 26, 26, 28, 28, 26, 26, 23, 23, 22, 22, 26, 26, 26, 28, 28, 26, 26, 23, 23, 22, 22, 24, 24, 27, 27, 28, 28, 25, 25, 24, 24, 27, 27, 29, 29, 26, 26, 24, 24, 27, 27, 29, 29, 28, 28, 26, 26, 24, 24, 25, 25, 29, 29, 29, 29, 27, 27, 25, 25, 28, 28, 30, 30, 29, 29, 26, 26, 24, 24, 27, 27, 29, 29, 27, 27, 24, 24, 24, 24, 24, 28, 28, 28, 28, 25, 25, 23, 23, 23, 25, 25, 28, 28, 28, 28, 24, 24, 24, 24, 27, 27, 29, 29, 25, 25, 23, 23, 24, 24, 27, 27, 28, 28, 25, 25, 23, 23, 23, 23, 27, 27, 27, 27, 24, 24, 22, 22, 23, 23, 25, 25, 26, 26, 23, 23, 22, 22, 23, 23, 23, 25, 25, 25, 25, 22, 22, 20, 20, 19, 19, 21, 21, 23, 23, 20, 20, 19, 19, 21, 21, 24, 24, 22, 22, 20, 20, 19, 19, 19, 19, 22, 22, 24, 24, 22, 22, 19, 19, 20, 20, 22, 22, 23, 23, 20, 20, 19, 19, 21, 21, 23, 23, 21, 21, 19, 19, 19, 19, 21, 21, 24, 24, 22, 22, 22, 20, 20, 19, 19, 22, 22, 21, 21, 17, 17, 14, 14, 13, 13, 15, 15, 16, 16, 15, 15, 13, 13, 14, 14, 17, 17, 17, 17, 15, 15, 13, 13, 14, 14, 16, 16, 17, 17, 14, 14, 13, 13, 13, 13, 16, 16, 16, 16, 14, 14, 13, 13, 14, 14, 17, 17, 18, 18, 16, 16, 16, 14, 14, 16, 16, 19, 19, 19, 19, 16, 16, 15, 15, 17, 17, 18, 18, 17, 17, 16, 16, 16, 16, 18, 18, 20, 20, 19, 19, 17, 17, 17, 17, 19, 19, 21, 21, 19, 19, 17, 17, 17, 17, 19, 19, 21, 21, 19, 19, 17, 17, 18, 18, 20, 20, 20, 20, 18, 18, 17, 17, 18, 18, 22, 22, 22, 22, 22, 20, 20, 18, 18, 18, 18, 20, 20, 20, 20, 20, 21, 20, 20, 21, 21, 21, 24, 24, 24, 23, 23, 23, 20, 20, 21, 21, 22, 22, 24, 24, 25, 25, 23, 23, 24, 24, 23, 23, 23, 23, 23, 23, 24, 24, 25, 25, 25, 25, 23, 23, 23, 23, 22, 22, 25, 25, 26, 26, 26, 26, 23, 23, 23, 22, 22, 23, 23, 26, 26, 27, 27, 25, 25, 24, 24, 23, 23, 21, 21, 22, 22, 24, 24, 24, 24, 25, 25, 26, 26, 25, 25, 25, 25, 24, 24, 23, 23, 23, 23, 24, 24, 24, 24, 23, 23, 23, 23, 22, 22, 22, 22, 22, 22, 24, 24, 24, 24, 23, 23, 21, 21, 20, 20, 20, 20, 20, 19, 19, 19, 19, 20, 20, 20, 20, 20, 20, 19, 19, 18, 18, 18, 18, 20, 20, 19, 19, 18, 18, 18, 18, 18, 18, 17, 17, 19, 19, 21, 21, 19, 19, 17, 17, 17, 17, 17, 17, 18, 18, 20, 20, 19, 19, 17, 17, 17, 17, 17, 17, 17, 17, 23, 23, 25, 25, 23, 23, 20, 20, 20, 19, 19, 20, 20, 21, 21, 22, 22, 20, 20, 19, 19, 18, 18, 20, 20, 22, 22, 21, 21, 19, 19, 19, 19, 19, 19, 21, 21, 22, 22, 26, 26, 40, 40, 42, 42, 43, 43, 43, 43, 45, 45, 42, 42, 36, 36, 37, 37, 39, 39, 40, 40, 37, 37, 37, 37, 37, 37, 38, 38, 38, 41, 38, 38, 38, 36, 36, 36, 36, 38, 38, 38, 40, 38, 38, 38, 36, 36, 36, 36, 36, 36, 39, 39, 38, 35, 35, 35, 35, 35, 36, 36, 37, 37, 36, 36, 34, 34, 34, 34, 37, 37, 38, 38, 37, 37, 35, 35, 34, 34, 36, 36, 39, 39, 38, 38, 35, 35, 34, 34, 34, 34, 37, 37, 37, 37, 37, 35, 35, 33, 33, 35, 35, 36, 36, 37, 37, 36, 36, 33, 33, 35, 35, 37, 37, 37, 37, 35, 35, 32, 32, 34, 34, 36, 36, 39, 39, 36, 36, 34, 34, 34, 34, 35, 35, 38, 38, 35, 35, 32, 32, 33, 33, 34, 34, 35, 35, 37, 37, 33, 33, 33, 33, 34, 34, 37, 37, 37, 37, 35, 35, 35, 33, 33, 35, 35, 37, 37, 36, 36, 35, 35, 33, 33, 34, 34, 36, 36, 34, 34, 34, 34, 32, 32, 34, 34, 35, 35, 37, 37, 34, 34, 33, 33, 33, 33, 33, 33, 35, 35, 35, 35, 33, 33, 32, 32, 32, 32, 34, 34, 37, 37, 35, 35, 32, 32, 33, 33, 35, 35, 37, 37, 35, 35, 35, 32, 32, 32, 32, 34, 34, 36, 36, 33, 33, 34, 34, 34, 34, 36, 36, 36, 36, 34, 34, 32, 32, 33, 33, 35, 35, 36, 36, 34, 34, 34, 34, 36, 36, 37, 37, 35, 35, 34, 34, 33, 33, 37, 37, 38, 38, 35, 35, 33, 33, 34, 34, 36, 36, 38, 38, 35, 35, 33, 33, 34, 34, 37, 37, 37, 37, 37, 35, 35, 33, 35, 35, 35, 35, 38, 37, 37, 34, 34, 34, 33, 33, 34, 36, 36, 36, 36, 36, 34, 34, 32, 32, 33, 33, 35, 35, 36, 36, 34, 34, 32, 32, 31, 31, 34, 34, 35, 35, 33, 33, 31, 31, 31, 31, 33, 33, 35, 35, 32, 32, 31, 31, 30, 30, 29, 29, 31, 31, 31, 33, 33, 32, 32, 30, 30, 28, 28, 25, 25, 25, 25, 25, 25, 27, 27, 29, 29, 27, 27, 26, 26, 25, 25, 29, 29, 29, 29, 26, 26, 25, 25, 25, 25, 28, 28, 28, 28, 26, 26, 24, 24, 24, 24, 25, 25, 28, 28, 27, 27, 24, 24, 24, 24, 25, 25, 27, 27, 25, 25, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 20, 20, 19, 19, 17, 17, 17, 17, 20, 20, 21, 21, 19, 19, 19, 19, 19, 19, 20, 20, 23, 23, 23, 23, 24, 24, 25, 25, 25, 25, 25, 25, 22, 22, 20, 20, 19, 19, 21, 21, 24, 24, 22, 22, 21, 21, 22, 22, 25, 25, 25, 25, 22, 22, 22, 22, 22, 24, 24, 28, 28, 27, 27, 23, 23, 23, 23, 27, 27, 28, 28, 24, 24, 22, 22, 23, 23, 26, 26, 27, 27, 24, 24, 23, 23, 25, 25, 28, 28, 29, 29, 26, 26, 25, 25, 25, 25, 28, 28, 28, 28, 27, 27, 25, 25, 25, 25, 27, 27, 26, 26, 24, 24, 24, 24, 27, 27, 28, 28, 28, 26, 26, 25, 25, 26, 26, 28, 28, 29, 29, 26, 26, 26, 26, 26, 28, 28, 31, 29, 29, 29, 28, 28, 28, 28, 31, 31, 32, 32, 30, 30, 28, 28, 30, 30, 32, 32, 31, 31, 29, 29, 28, 28, 31, 31, 31, 31, 29, 29, 28, 28, 29, 29, 32, 32, 32, 32, 29, 29, 29, 29, 29, 29, 29, 31, 31, 32, 32, 29, 29, 29, 29, 31, 31, 33, 33, 31, 31, 29, 29, 29, 29, 31, 31, 33, 33, 31, 31, 29, 29, 28, 28, 31, 31, 33, 33, 30, 30, 28, 28, 30, 30, 30, 30, 30, 30, 27, 27, 27, 27, 30, 30, 33, 33, 32, 32, 30, 30, 29, 29, 30, 30, 32, 32, 31, 31, 31, 29, 29, 28, 28, 30, 30, 32, 32, 30, 30, 28, 28, 28, 28, 30, 30, 31, 31, 30, 30, 28, 28, 28, 28, 29, 29, 31, 31, 31, 31, 29, 29, 29, 29, 29, 29, 31, 31, 32, 32, 31, 31, 29, 29, 29, 29, 31, 31, 33, 33, 31, 31, 29, 29, 29, 29, 31, 31, 33, 33, 32, 32, 30, 30, 30, 30, 30, 32, 32, 33, 33, 31, 31, 31, 31, 31, 31, 33, 33, 32, 32, 31, 31, 30, 30, 32, 32, 34, 34, 32, 32, 31, 31, 31, 31, 32, 32, 34, 34, 31, 31, 31, 31, 30, 30, 33, 33, 33, 33, 31, 31, 31, 31, 30, 30, 33, 33, 33, 33, 31, 31, 30, 30, 30, 30, 30, 33, 33, 33, 33, 32, 32, 31, 31, 31, 31, 32, 32, 32, 32, 32, 32, 32, 31, 32, 32, 33, 33, 33, 33, 33, 31, 31, 31, 31, 32, 32, 33, 33, 32, 32, 31, 31, 31, 31, 32, 32, 33, 33, 32, 32, 32, 32, 36, 36, 37, 37, 36, 36, 35, 35, 34, 34, 36, 36, 37, 37, 35, 35, 34, 34, 34, 34, 34, 36, 36, 35, 35, 32, 32, 33, 33, 34, 34, 34, 34, 32, 32, 31, 31, 33, 33, 33, 33, 32, 32, 32, 32, 36, 36, 37, 37, 35, 35, 34, 34, 32, 32, 34, 34, 35, 35, 34, 34, 32, 32, 34, 34, 35, 35, 35, 35, 33, 33, 33, 33, 34, 34, 35, 35, 34, 34, 32, 32, 31, 31, 31, 32, 32, 33, 33, 33, 33, 31, 31, 30, 30, 32, 32, 34, 34, 32, 32, 31, 31, 30, 30, 32, 32, 33, 33, 31, 31, 30, 30, 29, 29, 32, 32, 33, 33, 30, 30, 28, 28, 23, 23, 22, 22, 20, 20, 21, 21, 23, 23, 20, 20, 19, 19, 19, 19, 16, 16, 14, 14, 13, 13, 13, 11, 11, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 14, 14, 14, 14, 13, 13, 13, 13, 13, 13, 14, 14, 16, 16, 17, 17, 16, 16, 16, 16, 17, 17, 19, 19, 20, 20, 19, 19, 17, 17, 17, 17, 19, 19, 21, 21, 20, 20, 19, 19, 18, 18, 20, 20, 21, 21, 20, 20, 20, 18, 18, 17, 17, 17, 17, 16, 16, 15, 15, 14, 14, 14, 14, 14, 15, 17, 17, 17, 17, 17, 16, 16, 16, 17, 17, 17, 19, 19, 20, 20, 18, 18, 17, 17, 18, 18, 21, 21, 20, 20, 15, 15, 13, 13, 12, 12, 15, 15, 18, 18, 18, 18, 17, 17, 17, 17, 20, 20, 21, 21, 21, 21, 21, 19, 19, 19, 19, 20, 20, 22, 22, 22, 22, 20, 20, 20, 20, 20, 20, 21, 21, 22, 22, 22, 22, 20, 20, 20, 20, 21, 21, 22, 22, 22, 22, 21, 21, 19, 19, 21, 21, 22, 22, 22, 22, 21, 21, 20, 20, 20, 20, 23, 23, 23, 23, 22, 22, 21, 21, 21, 21, 23, 23, 23, 23, 23, 21, 20, 20, 20, 21
+    ];//宫缩
+    var fhr = [
+        159, 155, 155, 153, 153, 151, 151, 153, 153, 152, 152, 151, 151, 150, 150, 149, 149, 149, 149, 149, 149, 149, 149, 148, 148, 145, 145, 144, 144, 144, 144, 141, 141, 141, 141, 141, 141, 141, 141, 145, 145, 141, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 135, 135, 136, 136, 136, 136, 136, 136, 135, 135, 135, 135, 134, 134, 134, 134, 133, 133, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 135, 135, 134, 134, 137, 137, 135, 135, 135, 135, 134, 134, 135, 135, 136, 136, 135, 135, 134, 134, 132, 132, 132, 132, 132, 132, 132, 132, 132, 133, 133, 133, 133, 135, 135, 135, 135, 138, 138, 138, 138, 137, 137, 135, 135, 137, 137, 135, 135, 138, 138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 133, 133, 137, 137, 142, 142, 141, 141, 143, 143, 143, 141, 141, 142, 142, 142, 141, 141, 141, 142, 142, 142, 140, 140, 139, 139, 137, 137, 138, 138, 138, 138, 141, 141, 137, 137, 135, 135, 139, 139, 140, 140, 140, 140, 141, 141, 136, 136, 140, 140, 135, 135, 140, 140, 133, 133, 129, 129, 131, 131, 130, 130, 137, 137, 137, 137, 137, 137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 152, 152, 152, 152, 152, 152, 152, 152, 152, 152, 152, 152, 153, 153, 154, 154, 155, 155, 156, 156, 156, 156, 156, 156, 154, 154, 155, 155, 154, 154, 153, 153, 153, 153, 152, 152, 152, 152, 152, 152, 150, 150, 150, 150, 151, 151, 145, 145, 146, 146, 147, 147, 148, 148, 148, 148, 147, 147, 147, 147, 147, 150, 150, 151, 151, 151, 151, 152, 152, 152, 152, 152, 152, 153, 153, 152, 152, 153, 153, 149, 149, 146, 146, 146, 146, 148, 148, 147, 147, 146, 146, 147, 147, 146, 146, 145, 145, 145, 145, 144, 144, 144, 144, 140, 140, 138, 138, 137, 137, 135, 135, 130, 130, 129, 129, 131, 131, 130, 130, 130, 130, 129, 129, 131, 131, 131, 134, 134, 134, 134, 135, 135, 133, 133, 133, 133, 136, 136, 131, 131, 134, 134, 133, 133, 137, 137, 137, 137, 140, 140, 141, 141, 142, 142, 141, 141, 144, 144, 143, 143, 143, 143, 142, 142, 143, 143, 143, 143, 142, 142, 142, 142, 142, 142, 137, 137, 136, 136, 136, 137, 136, 136, 135, 135, 135, 132, 132, 132, 130, 130, 130, 130, 130, 130, 129, 129, 128, 128, 134, 134, 134, 134, 135, 135, 137, 137, 138, 138, 141, 141, 142, 142, 142, 142, 143, 143, 143, 143, 143, 143, 143, 143, 143, 143, 141, 141, 141, 141, 139, 139, 139, 139, 136, 136, 135, 135, 133, 133, 135, 135, 133, 133, 136, 136, 135, 135, 137, 137, 136, 136, 136, 136, 136, 134, 134, 135, 135, 134, 134, 128, 128, 133, 133, 138, 138, 137, 137, 135, 135, 136, 136, 137, 137, 136, 136, 136, 136, 136, 136, 135, 135, 137, 137, 140, 140, 136, 136, 130, 130, 129, 129, 130, 130, 130, 130, 128, 128, 126, 126, 124, 124, 123, 123, 123, 123, 129, 129, 129, 129, 129, 129, 65, 65, 65, 65, 130, 130, 130, 132, 132, 137, 137, 139, 139, 132, 132, 132, 132, 138, 138, 138, 138, 133, 133, 137, 137, 134, 134, 133, 133, 133, 133, 136, 136, 135, 135, 134, 134, 127, 127, 128, 128, 129, 129, 129, 129, 129, 129, 131, 131, 128, 128, 132, 132, 130, 130, 134, 134, 134, 134, 132, 132, 132, 132, 133, 133, 135, 135, 135, 133, 136, 136, 136, 137, 137, 140, 140, 140, 140, 139, 139, 142, 142, 138, 138, 137, 137, 137, 137, 138, 138, 138, 138, 135, 135, 133, 133, 134, 134, 135, 135, 130, 130, 130, 130, 130, 130, 132, 132, 133, 133, 134, 134, 132, 132, 128, 128, 129, 129, 126, 126, 132, 132, 132, 132, 130, 130, 133, 133, 133, 131, 131, 135, 135, 135, 135, 137, 137, 137, 139, 139, 140, 140, 138, 138, 139, 139, 136, 136, 138, 138, 136, 136, 140, 140, 140, 140, 141, 141, 137, 137, 136, 136, 136, 136, 137, 137, 134, 134, 132, 132, 130, 130, 131, 131, 130, 130, 129, 129, 128, 128, 130, 130, 131, 131, 131, 131, 131, 131, 130, 130, 128, 128, 128, 128, 129, 129, 131, 131, 131, 132, 132, 132, 132, 132, 132, 133, 133, 132, 132, 132, 132, 135, 135, 130, 130, 132, 132, 133, 133, 132, 132, 130, 130, 129, 129, 129, 129, 131, 131, 130, 130, 130, 130, 129, 129, 132, 132, 131, 131, 134, 134, 134, 134, 134, 134, 67, 67, 67, 67, 134, 134, 67, 67, 137, 137, 137, 67, 67, 67, 67, 67, 67, 67, 67, 67, 67, 67, 67, 68, 68, 68, 68, 68, 68, 135, 135, 137, 137, 138, 138, 140, 140, 139, 139, 67, 67, 134, 134, 133, 133, 135, 135, 135, 135, 138, 138, 137, 137, 133, 133, 131, 131, 131, 131, 137, 137, 132, 132, 127, 127, 131, 131, 138, 138, 140, 140, 142, 142, 142, 142, 143, 143, 142, 142, 142, 143, 143, 145, 145, 146, 146, 146, 146, 147, 147, 146, 146, 148, 148, 148, 148, 148, 148, 147, 147, 146, 146, 145, 145, 147, 147, 147, 147, 149, 149, 148, 148, 147, 147, 147, 147, 147, 147, 148, 148, 148, 148, 148, 148, 150, 150, 150, 150, 151, 151, 151, 151, 151, 151, 151, 151, 152, 152, 152, 154, 152, 152, 152, 152, 152, 155, 155, 155, 155, 155, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 157, 157, 158, 158, 159, 159, 159, 159, 160, 160, 160, 160, 161, 161, 161, 161, 159, 159, 156, 156, 157, 157, 160, 160, 161, 161, 161, 161, 160, 160, 159, 159, 159, 159, 161, 161, 162, 162, 162, 162, 161, 161, 161, 161, 159, 159, 159, 159, 159, 159, 159, 158, 158, 157, 157, 156, 156, 156, 156, 154, 154, 153, 153, 150, 150, 147, 147, 144, 144, 142, 142, 139, 139, 137, 137, 135, 135, 136, 136, 137, 137, 137, 137, 138, 138, 137, 137, 137, 137, 135, 135, 133, 133, 132, 132, 130, 130, 128, 128, 133, 133, 135, 135, 136, 136, 137, 137, 138, 138, 139, 139, 139, 142, 142, 142, 142, 142, 142, 137, 137, 137, 137, 137, 137, 137, 137, 134, 134, 130, 130, 131, 131, 127, 127, 126, 126, 126, 126, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 130, 130, 130, 130, 132, 132, 135, 135, 140, 140, 140, 140, 140, 140, 139, 139, 139, 139, 138, 138, 141, 141, 143, 143, 145, 145, 145, 146, 146, 149, 149, 149, 149, 149, 149, 149, 149, 150, 150, 150, 150, 149, 149, 149, 149, 148, 148, 149, 149, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 149, 149, 149, 149, 151, 151, 150, 150, 150, 150, 151, 151, 152, 152, 153, 153, 154, 154, 154, 154, 154, 155, 155, 155, 155, 156, 156, 156, 156, 156, 156, 156, 156, 156, 155, 155, 155, 155, 155, 155, 154, 154, 152, 152, 151, 151, 150, 150, 148, 148, 147, 147, 146, 146, 146, 146, 144, 144, 144, 144, 143, 143, 144, 144, 143, 143, 142, 142, 142, 142, 139, 139, 139, 139, 142, 142, 141, 141, 143, 143, 140, 140, 140, 140, 137, 137, 134, 134, 134, 134, 135, 135, 137, 137, 137, 130, 130, 131, 131, 132, 132, 135, 135, 135, 135, 132, 132, 138, 138, 139, 139, 139, 139, 134, 134, 132, 132, 132, 132, 132, 132, 135, 135, 129, 129, 129, 129, 129, 129, 135, 135, 134, 134, 129, 129, 126, 126, 130, 130, 129, 129, 135, 135, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 68, 68, 136, 136, 136, 136, 135, 135, 135, 135, 132, 132, 132, 132, 130, 130, 129, 129, 135, 135, 136, 136, 135, 135, 135, 135, 133, 133, 135, 135, 135, 135, 137, 137, 138, 138, 139, 139, 139, 139, 137, 137, 140, 140, 137, 137, 137, 137, 132, 132, 126, 126, 121, 121, 123, 123, 123, 123, 123, 69, 69, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 141, 141, 137, 137, 144, 144, 143, 143, 144, 144, 144, 144, 144, 144, 146, 146, 139, 139, 137, 137, 141, 141, 140, 140, 139, 139, 136, 136, 136, 136, 138, 138, 139, 139, 136, 136, 135, 135, 139, 139, 136, 136, 136, 136, 136, 136, 136, 137, 137, 138, 138, 138, 137, 137, 140, 141, 141, 141, 136, 136, 140, 140, 135, 135, 138, 138, 138, 138, 139, 139, 139, 139, 139, 139, 139, 139, 139, 139, 141, 141, 145, 145, 148, 148, 150, 150, 151, 151, 151, 151, 152, 152, 153, 153, 154, 154, 152, 152, 153, 153, 154, 154, 154, 154, 156, 156, 154, 154, 154, 154, 154, 153, 153, 156, 156, 154, 154, 155, 155, 154, 154, 153, 153, 154, 154, 156, 156, 156, 156, 156, 156, 156, 156, 157, 157, 156, 156, 156, 156, 156, 156, 154, 154, 153, 153, 151, 151, 150, 150, 147, 147, 145, 145, 143, 143, 140, 140, 139, 139, 139, 139, 138, 138, 137, 137, 136, 136, 136, 136, 136, 136, 135, 135, 135, 135, 135, 135, 135, 137, 137, 139, 139, 136, 136, 137, 137, 135, 135, 140, 140, 141, 141, 141, 141, 142, 142, 140, 140, 138, 138, 136, 136, 136, 136, 136, 136, 142, 142, 142, 142, 141, 141, 138, 138, 138, 138, 138, 138, 131, 131, 128, 128, 124, 124, 124, 124, 125, 125, 125, 125, 119, 119, 123, 123, 128, 128, 128, 128, 128, 128, 128, 130, 130, 135, 135, 137, 137, 140, 140, 140, 140, 140, 140, 137, 137, 137, 137, 70, 70, 139, 139, 136, 136, 137, 137, 138, 138, 138, 138, 139, 139, 136, 136, 138, 138, 138, 138, 139, 139, 139, 139, 141, 141, 141, 141, 142, 142, 144, 144, 146, 146, 146, 146, 147, 147, 147, 147, 148, 148, 149, 149, 149, 149, 149, 150, 150, 150, 150, 150, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 149, 150, 150, 150, 150, 149, 149, 149, 149, 148, 148, 147, 147, 145, 145, 144, 144, 143, 143, 142, 142, 139, 139, 138, 138, 136, 136, 136, 136, 135, 135, 135, 135, 133, 133, 133, 133, 131, 131, 129, 129, 129, 130, 130, 129, 129, 132, 132, 134, 134, 133, 133, 126, 126, 129, 129, 125, 125, 130, 130, 127, 127, 131, 131, 132, 132, 134, 134, 135, 135, 139, 139, 138, 138, 140, 140, 136, 136, 141, 141, 142, 142, 143, 143, 143, 143, 136, 136, 135, 135, 135, 135, 134, 134, 132, 132, 133, 133, 136, 136, 138, 138, 136, 136, 138, 138, 138, 138, 138, 131, 131, 128, 128, 130, 130, 128, 128, 126, 126, 130, 130, 132, 132, 134, 134, 137, 137, 132, 132, 128, 128, 133, 133, 137, 137, 142, 142, 144, 144, 140, 140, 146, 146, 141, 141, 137, 137, 141, 141, 140, 140, 140, 140, 137, 137, 138, 138, 138, 138, 142, 142, 140, 140, 137, 137, 138, 138, 138, 137, 137, 136, 136, 138, 138, 136, 136, 138, 138, 138, 138, 142, 142, 142, 142, 144, 144, 139, 139, 135, 135, 138, 138, 138, 138, 138, 138, 136, 136, 130, 130, 128, 128, 126, 126, 124, 124, 129, 129, 130, 130, 131, 131, 132, 132, 135, 135, 137, 137, 138, 138, 140, 140, 142, 142, 141, 141, 144, 144, 146, 146, 146, 146, 146, 146, 148, 148, 149, 150, 150, 150, 149, 149, 149, 149, 151, 151, 152, 152, 152, 152, 152, 152, 154, 154, 154, 154, 155, 155, 155, 155, 155, 155, 155, 155, 156, 156, 157, 157, 157, 157, 157, 157, 156, 156, 159, 159, 153, 153, 159, 159, 158, 158, 159, 159, 158, 158, 159, 159, 159, 159, 158, 158, 158, 158, 158, 158, 158, 157, 157, 156, 156, 153, 153, 152, 152, 153, 153, 152, 152, 152, 152, 152, 152, 153, 153, 153, 153, 154, 154, 151, 151, 147, 147, 143, 143, 143, 143, 136, 136, 142, 142, 147, 147, 151, 151, 156, 156, 158, 158, 159, 159, 160, 160, 161, 161, 161, 161, 162, 162, 162, 162, 162, 162, 163, 163, 160, 160, 160, 160, 160, 161, 161, 163, 163, 162, 162, 162, 162, 161, 161, 163, 163, 162, 162, 162, 162, 163, 163, 164, 164, 165, 165, 165, 165, 165, 164, 164, 164, 163, 163, 163, 163, 160, 160, 164, 164, 163, 163, 163, 163, 163, 163, 163, 163, 162, 162, 163, 163, 162, 162, 162, 162, 161, 161, 161, 161, 159, 159, 158, 158, 157, 157, 155, 155, 155, 155, 155, 153, 153, 158, 158, 153, 153, 154, 154, 155, 155, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 158, 158, 159, 159, 159, 159, 159, 159, 159, 159, 158, 158, 158, 158, 157, 157, 156, 156, 155, 155, 154, 154, 153, 153, 153, 153, 152, 152, 153, 153, 152, 152, 151, 151, 150, 150, 150, 150, 150, 150, 151, 151, 147, 146, 146, 146, 145, 145, 145, 145, 143, 143, 142, 142, 141, 141, 143, 143, 142, 142, 143, 143, 143, 143, 146, 146, 146, 146, 142, 142, 144, 144, 142, 142, 142, 142, 144, 144, 139, 139, 139, 139, 138, 138, 141, 141, 142, 142, 143, 143, 137, 137, 137, 137, 136, 136, 134, 134, 134, 134, 132, 132, 132, 134, 134, 133, 133, 132, 132, 132, 132, 131, 131, 132, 132, 132, 132, 131, 131, 131, 131, 134, 134, 133, 133, 137, 137, 135, 135, 136, 136, 133, 133, 134, 134, 138, 138, 139, 139, 139, 139, 137, 137, 136, 136, 68, 68, 69, 69, 69, 69, 69, 69, 142, 142, 142, 142, 143, 143, 143, 143, 144, 144, 142, 142, 141, 141, 141, 140, 140, 140, 140, 140, 140, 142, 142, 137, 137, 132, 132, 131, 131, 135, 135, 136, 136, 136, 136, 135, 135, 135, 135, 135, 135, 135, 135, 132, 132, 139, 139, 135, 135, 139, 139, 139, 139, 139, 139, 70, 70, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 140, 140, 136, 136, 136, 137, 137, 134, 134, 137, 137, 137, 137, 138, 138, 138, 138, 137, 137, 138, 138, 137, 137, 138, 138, 140, 140, 141, 141, 142, 142, 142, 144, 145, 145, 146, 146, 144, 144, 146, 146, 148, 148, 149, 149, 148, 148, 149, 149, 151, 151, 149, 149, 151, 151, 154, 154, 154, 154, 156, 156, 158, 158, 159, 159, 161, 161, 162, 162, 162, 162, 161, 161, 161, 161, 161, 161, 159, 159, 161, 160, 160, 160, 161, 161, 154, 154, 158, 158, 159, 159, 160, 160, 161, 161, 161, 161, 162, 162, 160, 160, 162, 162, 157, 157, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 156, 156, 158, 158, 159, 159, 160, 160, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 158, 158, 158, 158, 158, 155, 155, 152, 152, 150, 150, 149, 149, 147, 147, 146, 146, 145, 145, 144, 144, 139, 139, 132, 132, 128, 128, 123, 123, 122, 122, 121, 121, 121, 121, 120, 120, 119, 119, 117, 117, 116, 116, 116, 116, 116, 116, 117, 117, 117, 117, 118, 118, 117, 117, 120, 120, 122, 122, 114, 114, 108, 108, 108, 101, 126, 126, 126, 130, 130, 134, 134, 132, 132, 133, 133, 124, 124, 129, 129, 136, 136, 135, 135, 135, 135, 134, 134, 135, 135, 131, 131, 129, 129, 129, 129, 129, 129, 135, 135, 135, 135, 132, 132, 137, 137, 139, 139, 138, 138, 137, 137, 138, 138, 141, 141, 142, 142, 142, 142, 142, 142, 141, 141, 141, 141, 140, 140, 140, 140, 140, 134, 134, 132, 132, 132, 132, 132, 132, 125, 125, 130, 130, 125, 125, 123, 123, 116, 116, 124, 124, 128, 128, 135, 135, 138, 138, 140, 140, 138, 138, 137, 137, 137, 137, 137, 137, 138, 138, 135, 135, 136, 136, 137, 137, 137, 137, 140, 140, 141, 141, 142, 142, 143, 143, 143, 143, 145, 145, 139, 139, 139, 139, 139, 138, 138, 137, 137, 137, 138, 138, 139, 135, 135, 135, 136, 136, 134, 134, 132, 132, 133, 133, 136, 136, 135, 135, 131, 131, 129, 129, 129, 129, 129, 129, 132, 132, 132, 132, 133, 133, 133, 133, 132, 132, 134, 134, 134, 134, 135, 135, 135, 135, 136, 136, 139, 139, 138, 138, 139, 139, 138, 138, 142, 142, 137, 137, 137, 144, 144, 138, 138, 139, 139, 140, 140, 145, 145, 139, 139, 136, 136, 132, 132, 132, 132, 137, 137, 135, 135, 135, 135, 133, 133, 135, 135, 135, 135, 135, 135, 135, 135, 135, 135, 135, 135, 139, 139, 139, 139, 139, 139, 139, 139, 140, 140, 142, 142, 141, 141, 139, 139, 139, 139, 138, 138, 140, 140, 142, 142, 142, 138, 138, 141, 141, 141, 141, 142, 142, 141, 141, 140, 140, 140, 140, 140, 140, 140, 140, 142, 142, 141, 141, 141, 141, 141, 141, 141, 141, 140, 140, 140, 140, 135, 135, 135, 135, 135, 135, 137, 137, 135, 135, 137, 137, 138, 138, 139, 139, 136, 136, 135, 135, 132, 132, 137, 137, 137, 137, 140, 140, 140, 140, 140, 142, 142, 137, 137, 137, 137, 138, 138, 141, 141, 137, 137, 136, 136, 140, 140, 139, 139, 139, 139, 138, 138, 139, 139, 140, 140, 141, 141, 140, 140, 141, 141, 137, 137, 137, 138, 139, 139, 140, 140, 144, 144, 137, 137, 139, 139, 137, 137, 141, 141, 146, 146, 149, 149, 142, 142, 142, 142, 143, 143, 145, 145, 145, 143, 143, 145, 145, 145, 145, 145, 145, 140, 140, 140, 144, 144, 138, 138, 139, 139, 138, 138, 143, 143, 146, 146, 144, 144, 0, 0, 142, 142, 142, 142, 141, 141, 141, 141, 141, 141, 143, 143, 139, 139, 144, 144, 138, 138, 134, 134, 131, 131, 135, 135, 131, 131, 138, 138, 135, 135, 135, 135, 135, 135, 140, 140, 135, 135, 135, 140, 140, 137, 137, 137, 137, 137, 137, 138, 138, 137, 137, 138, 138, 138, 138, 139, 139, 140, 140, 141, 141, 140, 140, 141, 141, 142, 142, 143, 143, 144, 144, 143, 143, 141, 141, 140, 140, 139, 139, 141, 141, 141, 141, 142, 142, 140, 140, 140, 140, 141, 141, 135, 135, 136, 136, 138, 138, 140, 140, 140, 142, 142, 139, 139, 138, 138, 138, 138, 138, 138, 139, 139, 138, 138, 138, 138, 136, 136, 137, 137, 136, 136, 137, 137, 137, 137, 137, 137, 136, 136, 136, 136, 135, 135, 140, 140, 134, 134, 134, 134, 134, 134, 133, 133, 134, 134, 134, 134, 134, 134, 135, 135, 136, 136, 137, 137, 133, 133, 134, 134, 136, 136, 136, 136, 136, 136, 136, 132, 132, 136, 136, 138, 138, 138, 138, 143, 143, 143, 143, 138, 138, 141, 141, 140, 140, 139, 139, 139, 139, 140, 140, 140, 140, 140, 140, 139, 139, 140, 140, 138, 138, 138, 138, 139, 139, 143, 143, 142, 142, 138, 138, 134, 134, 134, 134, 127, 127, 132, 132, 127, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 156, 156, 156, 156, 155, 155, 156, 156, 157, 157, 159, 159, 158, 158, 158, 158, 158, 158, 158, 158, 159, 159, 159, 159, 159, 159, 160, 160, 161, 161, 161, 161, 161, 161, 161, 161, 161, 161, 161, 161, 162, 162, 162, 162, 162, 162, 162, 163, 163, 163, 163, 161, 161, 161, 161, 162, 162, 161, 161, 161, 161, 161, 161, 161, 161, 161, 161, 161, 161, 162, 162, 162, 162, 162, 162, 162, 162, 162, 162, 161, 161, 161, 161, 160, 160, 159, 159, 158, 158, 159, 159, 159, 159, 159, 159, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 157, 157, 157, 156, 156, 156, 156, 154, 154, 154, 154, 154, 154, 156, 156, 151, 151, 150, 150, 149, 149, 148, 148, 146, 146, 146, 146, 145, 145, 144, 144, 143, 143, 143, 143, 142, 142, 142, 142, 143, 143, 144, 144, 145, 145, 145, 145, 144, 144, 142, 142, 140, 140, 142, 142, 142, 142, 143, 143, 142, 142, 139, 139, 140, 140, 140, 139, 139, 139, 139, 138, 138, 139, 139, 139, 139, 142, 142, 137, 137, 139, 139, 138, 138, 139, 139, 139, 139, 138, 138, 138, 138, 137, 137, 131, 131, 133, 133, 133, 133, 133, 133, 135, 135, 135, 135, 135, 135, 135, 135, 135, 129, 130, 130, 132, 132, 137, 137, 137, 137, 137, 137, 137, 137, 138, 138, 133, 133, 133, 134, 134, 134, 134, 134, 134, 134, 136, 136, 136, 136, 138, 138, 132, 132, 138, 138, 139, 139, 139, 139, 139, 139, 139, 139, 134, 134, 134, 134, 135, 135, 135, 135, 136, 136, 135, 135, 133, 133, 140, 140, 137, 137, 139, 139, 136, 136, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 143, 143, 144, 144, 144, 144, 144, 144, 144, 143, 143, 143, 143, 143, 143, 140, 140, 145, 145, 143, 143, 145, 145, 145, 145, 144, 144, 145, 145, 144, 144, 144, 144, 141, 141, 141, 141, 140, 140, 134, 134, 128, 128, 128, 128, 128, 128, 135, 135, 138, 138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 142, 141, 141, 141, 143, 143, 142, 142, 142, 142, 141, 141, 141, 141, 140, 140, 140, 140, 138, 138, 137, 137, 137, 137, 137, 137, 139, 139, 142, 142, 143, 143, 143, 143, 143, 143, 144, 144, 142, 142, 143, 143, 143, 143, 137, 137, 138, 138, 139, 139, 141, 141, 142, 142, 144, 144, 139, 139, 145, 145, 141, 141, 138, 138, 138, 137, 137, 133, 133, 139, 139, 139, 139, 142, 142, 135, 135, 138, 138, 138, 138, 138, 138, 141, 141, 140, 140, 141, 141, 141, 141, 140, 140, 133, 133, 135, 135, 126, 126, 125, 125, 128, 128, 123, 123, 128, 128, 123, 123, 130, 130, 137, 137, 138, 138, 140, 140, 140, 140, 142, 142, 136, 136, 136, 136, 135, 135, 138, 138, 138, 140, 140, 140, 141, 141, 141, 140, 140, 140, 140, 140, 139, 139, 140, 140, 140, 140, 141, 141, 141, 141, 136, 136, 138, 138, 134, 134, 136, 136, 137, 137, 138, 138, 138, 138, 137, 137, 137, 137, 137, 137, 141, 141, 141, 141, 142, 142, 142, 142, 144, 144, 142, 142, 145, 145, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 148, 148, 149, 149, 152, 152, 153, 153, 154, 154, 154, 154, 154, 154, 154, 154, 155, 155, 155, 155, 155, 155, 156, 156, 156, 156, 156, 156, 157, 157, 158, 158, 158, 158, 158, 158, 161, 161, 156, 156, 156, 156, 156, 156, 156, 156, 157, 157, 155, 155, 156, 156, 155, 155, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 154, 154, 152, 152, 152, 152, 151, 151, 148, 148, 147, 147, 146, 146, 144, 144, 142, 142, 141, 141, 140, 140, 138, 138, 137, 137, 136, 136, 135, 135, 134, 134, 131, 131, 129, 129, 129, 129, 128, 128, 123, 123, 121, 121, 123, 123, 127, 127, 127, 127, 124, 124, 128, 128, 127, 127, 127, 128, 128, 132, 132, 132, 132, 132, 132, 133, 133, 134, 134, 134, 134, 135, 135, 134, 134, 134, 134, 134, 134, 133, 133, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 135, 135, 135, 135, 135, 135, 138, 138, 135, 135, 135, 135, 135, 135, 135, 135, 135, 137, 138, 138, 139, 139, 132, 132, 132, 132, 132, 130, 130, 130, 129, 132, 132, 134, 134, 134, 134, 134, 131, 131, 131, 131, 131, 131, 133, 133, 134, 134, 134, 134, 133, 133, 133, 133, 133, 133, 131, 131, 131, 131, 133, 133, 135, 135, 135, 135, 135, 135, 138, 138, 137, 137, 135, 135, 137, 137, 139, 139, 139, 139, 135, 135, 135, 135, 134, 134, 134, 134, 132, 132, 132, 131, 131, 132, 132, 132, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 137, 137, 135, 135, 135, 135, 135, 135, 134, 134, 125, 125, 117, 117, 110, 110, 110, 110, 116, 116, 119, 119, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 134, 134, 134, 132, 132, 127, 127, 68, 68, 69, 69, 69, 69, 130, 130, 128, 128, 130, 130, 124, 124, 70, 70, 121, 121, 121, 121, 71, 71, 122, 122, 118, 118, 123, 123, 117, 117, 122, 122, 120, 120, 120, 120, 127, 127, 132, 132, 137, 137, 136, 136, 136, 135, 135, 135, 135, 136, 136, 136, 136, 137, 137, 139, 139, 146, 146, 148, 148, 146, 146, 153, 153, 157, 157, 161, 161, 161, 161, 156, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 141, 141, 141, 141, 139, 139, 139, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138, 136, 136, 137, 137, 137, 140, 140, 140, 140, 143, 143, 145, 145, 141, 141, 138, 138, 139, 139, 139, 139, 139, 139, 138, 138, 138, 138, 142, 142, 141, 141, 140, 140, 139, 139, 138, 138, 135, 135, 139, 139, 145, 145, 144, 144, 139, 139, 139, 139, 145, 145, 145, 145, 136, 136, 136, 130, 130, 136, 136, 143, 143, 144, 144, 145, 145, 145, 145, 144, 144, 146, 146, 144, 144, 146, 146, 138, 138, 131, 131, 124, 124, 124, 124, 136, 136, 142, 142, 139, 139, 138, 138, 138, 138, 139, 139, 139, 139, 142, 142, 142, 142, 144, 144, 146, 146, 141, 141, 135, 135, 139, 139, 132, 132, 139, 139, 139, 139, 139, 141, 141, 141, 141, 140, 140, 140, 140, 145, 145, 141, 141, 133, 133, 138, 138, 142, 142, 142, 142, 142, 142, 136, 136, 142, 142, 142, 142, 133, 133, 128, 128, 0, 0, 0, 0, 124, 124, 118, 118, 121, 121, 123, 123, 123, 123, 126, 126, 128, 128, 128, 128, 136, 136, 140, 140, 70, 70, 70, 70, 70, 76, 76, 76, 76, 76, 76, 75, 75, 68, 68, 75, 75, 75, 75, 75, 75, 75, 75, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 140, 140, 142, 142, 140, 140, 140, 140, 136, 136, 137, 137, 139, 139, 141, 141, 140, 140, 141, 141, 136, 136, 141, 141, 141, 141, 142, 142, 142, 138, 138, 143, 143, 143, 143, 142, 142, 142, 140, 140, 137, 137, 137, 135, 135, 135, 140, 140, 136, 128, 128, 128, 121, 121, 115, 115, 116, 116, 118, 118, 127, 127, 131, 131, 124, 124, 118, 118, 111, 111, 108, 108, 108, 108, 114, 114, 114, 114, 121, 121, 129, 129, 133, 133, 138, 138, 143, 143, 142, 142, 140, 140, 139, 139, 139, 138, 138, 138, 138, 137, 137, 137, 137, 138, 138, 139, 139, 143, 143, 144, 144, 143, 143, 142, 142, 144, 144, 146, 146, 146, 146, 146, 146, 148, 148, 147, 147, 147, 147, 146, 146, 144, 144, 145, 145, 144, 144, 145, 145, 149, 149, 144, 144, 146, 146, 146, 146, 147, 147, 149, 149, 149, 149, 151, 151, 152, 152, 154, 154, 154, 155, 155, 156, 156, 156, 156, 158, 158, 158, 158, 159, 159, 159, 159, 158, 158, 157, 157, 158, 158, 156, 156, 156, 156, 156, 156, 158, 158, 158, 158, 160, 160, 159, 159, 160, 160, 159, 159, 161, 161, 161, 161, 161, 161, 162, 162, 160, 160, 160, 160, 159, 159, 160, 160, 161, 161, 161, 161, 161, 161, 161, 161, 161, 160, 160, 161, 161, 161, 161, 160, 160, 160, 160, 161, 161, 162, 162, 161, 161, 161, 161, 160, 160, 160, 160, 158, 158, 157, 157, 156, 156, 156, 156, 155, 155, 155, 155, 156, 156, 155, 155, 155, 155, 154, 154, 154, 154, 152, 152, 147, 147, 145, 145, 145, 145, 144, 144, 144, 144, 143, 143, 143, 143, 143, 143, 143, 144, 144, 145, 145, 146, 146, 146, 146, 146, 145, 144, 144, 143, 143, 143, 145, 145, 145, 145, 144, 144, 146, 146, 146, 146, 149, 149, 144, 144, 141, 141, 139, 139, 136, 136, 137, 137, 132, 132, 132, 132, 132, 132, 132, 132, 130, 130, 135, 135, 134, 134, 133, 133, 132, 132, 132, 132, 131, 131, 132, 132, 130, 130, 135, 135, 135, 138, 138, 139, 139, 141, 141, 142, 142, 143, 143, 145, 145, 143, 143, 145, 145, 144, 144, 137, 137, 139, 139, 139, 139, 135, 135, 127, 127, 120, 120, 127, 127, 132, 132, 138, 138, 141, 141, 142, 142, 135, 135, 141, 141, 137, 137, 142, 142, 141, 141, 141, 141, 140, 140, 139, 139, 133, 133, 133, 133, 133, 132, 132, 130, 130, 135, 135, 135, 135, 127, 127, 123, 123, 120, 120, 119, 119, 129, 129, 134, 134, 138, 138, 140, 140, 141, 141, 141, 141, 143, 143, 141, 141, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142, 141, 141, 141, 141, 141, 141, 143, 143, 140, 140, 134, 134, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 149, 152, 152, 151, 151, 152, 152, 153, 153, 154, 154, 154, 154, 154, 154, 154, 154, 155, 155, 157, 157, 156, 156, 158, 158, 158, 158, 159, 159, 160, 160, 160, 160, 160, 160, 160, 160, 160, 159, 159, 159, 159, 160, 160, 160, 160, 160, 161, 160, 160, 160, 157, 157, 157, 157, 159, 159, 160, 160, 160, 160, 159, 159, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 159, 159, 159, 159, 159, 159, 157, 157, 157, 157, 154, 154, 154, 154, 152, 152, 152, 152, 152, 152, 152, 152, 151, 151, 151, 151, 149, 149, 149, 149, 149, 150, 150, 150, 150, 148, 148, 148, 148, 148, 148, 149, 149, 143, 143, 141, 141, 143, 143, 143, 143, 142, 142, 143, 143, 141, 141, 146, 146, 142, 142, 136, 136, 135, 135, 135, 135, 135, 135, 135, 135, 135, 135, 135, 135, 136, 136, 137, 137, 136, 136, 133, 133, 136, 136, 139, 139, 138, 138, 139, 139, 140, 140, 142, 142, 142, 140, 140, 139, 139, 137, 137, 138, 138, 138, 138, 141, 141, 136, 136, 136, 136, 137, 137, 137, 137, 137, 137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 143, 143, 143, 143, 141, 141, 142, 142, 140, 140, 139, 139, 139, 139, 141, 141, 140, 140, 139, 139, 139, 139, 139, 139, 139, 140, 140, 139, 139, 139, 139, 140, 140, 144, 144, 144, 144, 145, 145, 145, 145, 145, 145, 147, 147, 148, 148, 148, 148, 150, 150, 152, 152, 150, 150, 148, 148, 144, 144, 145, 145, 147, 147, 148, 148, 149, 149, 148, 148, 148, 148, 148, 148, 149, 149, 149, 149, 149, 149, 150, 150, 149, 149, 149, 149, 149, 146, 146, 147, 147, 147, 147, 147, 149, 148, 148, 148, 148, 148, 147, 147, 147, 144, 144, 144, 143, 143, 141, 141, 139, 139, 137, 137, 136, 136, 136, 136, 137, 137, 136, 136, 136, 136, 135, 135, 134, 134, 135, 135, 136, 136, 138, 138, 142, 142, 141, 141, 141, 141, 141, 141, 132, 132, 128, 128, 133, 133, 137, 137, 140, 140, 140, 145, 145, 143, 143, 143, 143, 143, 143, 145, 145, 145, 145, 146, 146, 145, 145, 145, 145, 139, 139, 134, 134, 135, 135, 128, 128, 135, 135, 139, 139, 139, 139, 139, 139, 140, 140, 141, 141, 141, 141, 139, 139, 139, 139, 140, 140, 139, 139, 139, 139, 139, 139, 138, 138, 137, 137, 136, 136, 137, 137, 137, 137, 137, 140, 140, 140, 140, 140, 140, 141, 141, 140, 140, 140, 140, 143, 143, 141, 141, 139, 139, 140, 140, 139, 139, 141, 141, 141, 141, 141, 141, 140, 140, 140, 140, 139, 139, 135, 135, 135, 135, 136, 136, 138, 138, 137, 137, 135, 135, 133, 133, 132, 132, 132, 132, 133, 133, 132, 132, 135, 135, 129, 129, 134, 134, 134, 134, 134, 134, 134, 132, 132, 131, 131, 131, 131, 132, 132, 133, 133, 133, 133, 133, 133, 135, 135, 136, 136, 137, 137, 136, 136, 139, 139, 139, 139, 139, 139, 139, 139, 138, 138, 139, 139, 138, 138, 137, 137, 137, 137, 138, 138, 140, 140, 144, 144, 141, 141, 141, 141, 140, 140, 138, 138, 139, 139, 136, 136, 137, 137, 137, 137, 137, 128, 128, 132, 132, 138, 138, 138, 138, 138, 137, 137, 128, 130, 130, 130, 130, 130, 134, 134, 136, 136, 136, 136, 138, 138, 140, 140, 133, 133, 134, 134, 130, 130, 134, 134, 139, 139, 139, 139, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 142, 142, 140, 140, 137, 137, 142, 142, 149, 149, 156, 156, 162, 162, 162, 162, 162, 162, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 141, 141, 144, 144, 146, 146, 146, 146, 148, 148, 149, 149, 149, 149, 149, 149, 150, 150, 149, 149, 151, 151, 151, 152, 152, 152, 152, 154, 154, 156, 156, 156, 156, 150, 150, 151, 151, 149, 149, 155, 155, 156, 156, 156, 156, 158, 158, 159, 159, 159, 159, 159, 159, 158, 158, 160, 160, 160, 160, 160, 160, 161, 161, 161, 161, 162, 162, 163, 163, 163, 163, 162, 162, 161, 161, 162, 162, 164, 164, 165, 165, 165, 165, 165, 165, 165, 164, 164, 164, 164, 164, 164, 165, 165, 165, 165, 164, 164, 164, 164, 165, 165, 164, 164, 165, 165, 164, 164, 165, 165, 164, 164, 163, 163, 157, 157, 156, 156, 156, 156, 155, 155, 154, 154, 154, 154, 152, 152, 151, 151, 151, 151, 151, 151, 151, 151, 152, 152, 154, 154, 154, 154, 154, 154, 153, 153, 151, 151, 151, 150, 150, 148, 148, 144, 144, 141, 141, 143, 143, 143, 146, 146, 146, 148, 148, 148, 148, 148, 146, 146, 145, 145, 145, 145, 151, 151, 146, 146, 145, 145, 143, 143, 139, 139, 145, 145, 144, 144, 146, 146, 145, 145, 147, 147, 147, 147, 147, 147, 148, 148, 150, 150, 147, 147, 0, 0, 135, 135, 137, 137, 135, 135, 139, 139, 139, 135, 135, 139, 139, 141, 141, 142, 142, 143, 143, 142, 142, 143, 143, 142, 142, 146, 146, 146, 146, 148, 148, 148, 148, 149, 149, 151, 151, 151, 151, 151, 151, 151, 151, 149, 149, 146, 146, 143, 143, 142, 142, 146, 146, 148, 148, 150, 150, 144, 144, 149, 149, 150, 150, 145, 145, 141, 141, 137, 137, 137, 135, 135, 140, 140, 141, 141, 142, 142, 141, 141, 142, 142, 139, 139, 135, 135, 140, 140, 146, 146, 142, 142, 141, 141, 133, 133, 138, 138, 143, 143, 143, 143, 142, 142, 142, 142, 141, 141, 140, 140, 141, 141, 141, 141, 141, 141, 140, 140, 142, 142, 143, 143, 142, 142, 143, 143, 143, 143, 144, 144, 141, 141, 136, 136, 136, 136, 136, 142, 142, 141, 141, 140, 140, 139, 139, 135, 135, 136, 136, 140, 140, 141, 141, 141, 141, 143, 143, 143, 143, 144, 144, 144, 144, 144, 144, 144, 144, 144, 144, 145, 145, 145, 145, 144, 144, 142, 142, 142, 142, 142, 142, 140, 140, 140, 140, 146, 146, 144, 144, 144, 144, 143, 143, 139, 139, 139, 139, 134, 134, 134, 141, 141, 136, 136, 136, 136, 136, 136, 141, 141, 141, 143, 144, 144, 146, 146, 146, 144, 144, 144, 145, 145, 145, 144, 144, 144, 144, 144, 144, 147, 147, 147, 147, 141, 141, 141, 141, 143, 143, 145, 145, 146, 146, 146, 146, 146, 146, 141, 141, 136, 136, 131, 131, 126, 126, 124, 124, 134, 134, 139, 139, 139, 145, 145, 149, 149, 149, 149, 149, 149, 149, 149, 72, 72, 73, 73, 72, 72, 72, 72, 72, 72, 72, 72, 147, 147, 148, 148, 148, 148, 146, 146, 147, 147, 145, 145, 67, 67, 142, 142, 143, 143, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 145, 145, 144, 144, 144, 144, 144, 144, 144, 144, 145, 145, 145, 144, 144, 146, 146, 143, 143, 140, 140, 141, 141, 145, 145, 149, 149, 151, 151, 151, 151, 151, 151, 151, 151, 145, 145, 133, 133, 127, 127, 134, 134, 141, 141, 146, 146, 145, 145, 142, 142, 139, 139, 146, 146, 143, 143, 146, 146, 145, 145, 145, 145, 145, 145, 147, 147, 146, 146, 148, 148, 148, 148, 148, 148, 148, 148, 148, 147, 147, 145, 145, 152, 152, 151, 151, 148, 148, 144, 144, 145, 145, 149, 149, 144, 144, 149, 149, 144, 144, 140, 140, 140, 140, 145, 145, 144, 144, 145, 145, 142, 142, 141, 141, 141, 141, 141, 141, 142, 142, 141, 141, 141, 141, 142, 142, 144, 144, 145, 145, 138, 138, 141, 141, 139, 139, 139, 139, 132, 132, 132, 132, 132, 132, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 143, 143, 143, 143, 142, 142, 140, 140, 140, 140, 142, 142, 143, 143, 145, 145, 145, 145, 145, 145, 145, 145, 145, 145, 146, 146, 146, 142, 142, 139, 139, 139, 139, 134, 134, 127, 127, 120, 120, 121, 121, 123, 123, 132, 132, 137, 137, 141, 141, 145, 145, 145, 145, 143, 143, 143, 143, 143, 143, 142, 142, 143, 143, 139, 139, 143, 143, 144, 144, 146, 146, 140, 140, 137, 137, 138, 138, 139, 139, 139, 139, 135, 135, 139, 139, 144, 144, 143, 143, 141, 141, 141, 143, 143, 143, 143, 146, 146, 146, 146, 148, 148, 148, 148, 148, 148, 151, 151, 152, 152, 154, 154, 156, 156, 155, 155, 156, 156, 157, 157, 157, 157, 158, 158, 156, 156, 162, 162, 169, 169, 167, 167, 167, 167, 167, 167, 162, 162, 158, 158, 160, 160, 158, 158, 160, 160, 161, 161, 161, 161, 161, 161, 161, 161, 161, 162, 162, 161, 161, 162, 162, 163, 163, 165, 165, 164, 164, 163, 163, 162, 162, 164, 164, 163, 163, 163, 163, 162, 162, 161, 161, 159, 159, 159, 159, 159, 159, 158, 158, 159, 159, 158, 158, 161, 161, 161, 161, 160, 160, 157, 157, 159, 159, 158, 158, 160, 160, 160, 160, 160, 160, 159, 159, 158, 158, 157, 157, 157, 158, 158, 159, 159, 159, 159, 159, 159, 158, 158, 154, 154, 154, 154, 154, 151, 151, 148, 146, 146, 146, 145, 145, 144, 144, 140, 140, 139, 139, 139, 139, 141, 141, 142, 142, 144, 144, 146, 146, 146, 146, 149, 149, 150, 150, 150, 150, 151, 151, 152, 152, 152, 152, 152, 152, 153, 153, 153, 153, 153, 153, 153, 153, 153, 153, 153, 152, 152, 151, 151, 150, 150, 149, 149, 148, 148, 146, 146, 146, 146, 146, 146, 146, 146, 148, 148, 148, 148, 148, 148, 149, 149, 147, 147, 142, 142, 142, 142, 141, 141, 141, 141, 140, 140, 142, 142, 139, 139, 142, 142, 143, 143, 143, 143, 139, 139, 135, 135, 137, 137, 140, 140, 141, 141, 143, 143, 143, 143, 143, 140, 140, 141, 141, 142, 142, 141, 141, 142, 142, 141, 141, 142, 142, 143, 143, 142, 142, 142, 142, 144, 144, 143, 143, 144, 144, 144, 144, 144, 144, 143, 143, 143, 143, 143, 143, 143, 143, 144, 144, 144, 144, 145, 145, 145, 145, 145, 145, 145, 145, 145, 145, 145, 145, 148, 148, 149, 149, 149, 149, 146, 146, 146, 142, 142, 143, 143, 149, 149, 149, 149, 145, 145, 146, 146, 146, 146, 146, 146, 145, 145, 145, 145, 145, 145, 149, 149, 149, 149, 150, 150, 144, 144, 143, 143, 144, 144, 147, 147, 147, 147, 152, 152, 146, 146, 148, 148, 148, 148, 147, 147, 148, 148, 149, 149, 148, 148, 148, 148, 148, 148, 149, 149, 149, 148, 148, 145, 145, 146, 146, 145, 145, 144, 144, 144, 144, 143, 143, 142, 142, 142, 142, 149, 149, 144, 144, 144, 147, 147, 146, 146, 146, 146, 146, 146, 145, 145, 145, 145, 145, 145, 141, 141, 143, 143, 142, 142, 142, 142, 142, 142, 143, 143, 145, 145, 143, 143, 142, 142, 141, 141, 140, 140, 141, 141, 140, 140, 141, 141, 141, 145, 145, 141, 141, 136, 136, 135, 135, 136, 136, 136, 136, 140, 140, 141, 141, 143, 143, 141, 141, 140, 140, 143, 143, 141, 141, 138, 138, 141, 141, 141, 141, 141, 141, 141, 141, 140, 140, 141, 141, 140, 140, 143, 143, 145, 145, 144, 144, 142, 142, 141, 141, 144, 144, 144, 144, 143, 143, 141, 141, 144, 144, 146, 146, 146, 146, 146, 142, 142, 144, 144, 143, 143, 145, 145, 144, 144, 144, 144, 145, 145, 143, 143, 145, 145, 143, 143, 143, 143, 146, 146, 146, 146, 140, 140, 142, 142, 142, 142, 138, 138, 132, 132, 139, 139, 143, 143, 145, 145, 146, 146, 147, 147, 151, 151, 151, 151, 151, 151, 151, 151, 150, 150, 151, 151, 151, 149, 149, 151, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 158, 158, 159, 159, 156, 156, 156, 156, 156, 156, 158, 158, 156, 156, 156, 156, 156, 156, 156, 156, 157, 157, 156, 156, 156, 156, 156, 156, 156, 156, 155, 155, 156, 156, 157, 157, 155, 155, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 156, 154, 154, 157, 157, 157, 157, 157, 157, 158, 158, 159, 159, 161, 161, 161, 161, 161, 161, 160, 160, 160, 160, 160, 160, 161, 161, 161, 161, 161, 161, 161, 162, 162, 161, 161, 162, 162, 163, 163, 164, 164, 162, 162, 162, 162, 163, 163, 163, 163, 164, 164, 165, 165, 165, 165, 165, 165, 165, 165, 166, 166, 166, 166, 166, 166, 166, 166, 166, 166, 166, 166, 166, 167, 167, 167, 167, 166, 166, 164, 164, 162, 162, 162, 162, 161, 161, 161, 161, 159, 159, 158, 158, 158, 158, 156, 156, 155, 155, 153, 153, 154, 154, 149, 149, 148, 148, 145, 145, 147, 147, 143, 143, 143, 143, 141, 141, 142, 142, 140, 140, 139, 139, 129, 129, 124, 124, 124, 120, 116, 116, 116, 115
+    ];//胎心
+    var audio = ["audio.mp3","audio2.mp3","audio3.wav"];
+    var heartbeat = {
+        baby:[],
+        uterine:[],
+        fmFlag:[]
+    };
+    var renderer;
+    var chart = null;
+    var uchart = null;
+    var pointX = null;
+    var drag = false;
+    var eleBaby = document.getElementById("baby");
+    var eleUterine = document.getElementById("uterine");
+
+
+
+    function audioPlay(){
+        var currT = Math.floor(myVid.currentTime);
+        var m = Math.floor(currT/60);
+        var s = currT%60;
+        var currentNow = "";
+        m<10?currentNow += "0" +m+":":currentNow += m+":";
+        s<10?currentNow += "0"+s:currentNow += s + "";
+        $("#currentNow").text(currentNow);
+    }
+
+    function audioDur(){
+        var dur = myVid.duration;
+        $("#audioDuration").text(dur);
+    }
+    function getData(ele,arr,xposition){
+        $(ele).text(arr[xposition]);
+    }
+
+    function runPlayLine() {
+        console.log(myVid.currentTime);
+        var currentTime = Math.floor(myVid.currentTime);
+        audioPlay();
+        chart.xAxis[0].removePlotLine("b-playline");
+        chart.xAxis[0].addPlotLine({           //在x轴上增加
+            value: currentTime,                //在值为2的地方
+            width: 2,                          //标示线的宽度为2px
+            color: '#5CA1D5',                  //标示线的颜色
+            zIndex: 99,
+            id: 'b-playline',                  //标示线的id，在删除该标示线的时候需要该id标示
+            events: {
+                click: function () {
+                    //当标示线被单击时，触发的事件
+                },
+                mouseout: function () {
+                    //当标示线被鼠标移出时，触发的事件
+                },
+                mousedown: function (e) {
+                    drag = true;
+                },
+                mouseup: function (e) {
+                    drag = false;
+                }
+            }
+        });
+        uchart.xAxis[0].removePlotLine("u-playline");
+        uchart.xAxis[0].addPlotLine({           //在x轴上增加
+            value: currentTime,                 //在值为2的地方
+            width: 2,                           //标示线的宽度为2px
+            color: '#5CA1D5',                   //标示线的颜色
+            zIndex: 99,
+            id: 'u-playline',
+            //标示线的id，在删除该标示线的时候需要该id标示
+            events: {
+                click: function () {
+                    //当标示线被单击时，触发的事件
+                },
+                mouseout: function () {
+                    //当标示线被鼠标移出时，触发的事件
+                },
+                mousedown: function (e) {
+                    drag = true;
+                },
+                mouseup: function (e) {
+                    drag = false;
+                }
+            }
+        });
+
+        getData(baby,heartbeat.baby,currentTime);
+        getData(uterine,heartbeat.uterine,currentTime);
+    }
+    //      定时器
+    function time() {
+        if (timeout) return;
+        runPlayLine();
+        setTimeout(time, 1010); //time是指本身,延时递归调用自己,100为间隔调用时间,单位毫秒
+    }
+    //        拖动进度条时,获取胎心,等数据
+    function getNowValue(ele,index,arr){
+//            var strEle = ele.id.toString();
+//            if(strEle == "fetal"){
+//                $(ele).text(arr.length);
+//            }else{
+        $(ele).text(arr[index]);
+//            }
+    }
+    //        动态绘制标识线
+    function addLine(){
+        chart.xAxis[0].removePlotLine("b-playline");
+        chart.xAxis[0].addPlotLine({
+            value: pointX,
+            width: 2,
+            color: '#5CA1D5',
+            zIndex: 99,
+            id: 'b-playline',
+            events : {
+                mousedown: function (e) {
+                    drag = true;
+                },
+                mouseup: function (e) {
+                    drag = false;
+                    myVid.currentTime=pointX;
+                }
+            }
+        });
+        uchart.xAxis[0].removePlotLine("u-playline");
+        uchart.xAxis[0].addPlotLine({
+            value: pointX,
+            width: 2,
+            color: '#5CA1D5',
+            zIndex: 99,
+            id: 'u-playline',
+            events : {
+                mousedown: function (e) {
+                    drag = true;
+                },
+                mouseup: function (e) {
+                    drag = false;
+                    currentTime = pointX;
+                    myVid.currentTime=pointX;
+                    alert(currentTime);
+                }
+            }
+        })
+    }
+
+    function getjson(){
+        $.ajax({
+            type:"GET",
+            url:"main.json",
+            dataType: "json",
+            async: false,
+            success: function(msg) {
+                var arr = msg;
+                for(var i=0;i<arr.length;i++){
+                    if(i%4 == 0){
+                        heartbeat.baby.push(arr[i].fhr1);
+                        heartbeat.uterine.push(arr[i].toco);
+                    }
+                    if(arr[i].fmFlag != 0){
+                        heartbeat.fmFlag.push(arr[i].fmFlag);
+                    }
+                }
+
+                console.log(heartbeat.uterine);
+                console.log(heartbeat.fmFlag);
+            },
+            complete:function(){
+
+            }
+        });
+    }
+
+    //        音频的播放控制
+    function playOrPause(){
+        var dur = Math.floor(myVid.duration);
+        var m = Math.floor(dur/60);
+        var s = dur%60;
+        var currentNow = "";
+        m<10?currentNow += "0" +m+":":currentNow += m+":";
+        s<10?currentNow += "0"+s:currentNow += s + "";
+        $("#audioDuration").text(currentNow);
+        if (vis) {
+            $("#audiobtn").removeClass("playbtn").addClass("suspendbtn");
+            $("#fetal").text(heartbeat.fmFlag.length);
+            console.log("currentTime:"+currentTime);
+            myVid.currentTime = currentTime;
+            console.log("myVid.currentTime:"+myVid.currentTime);
+            myVid.play();
+
+
+        } else {
+            $("#audiobtn").removeClass("suspendbtn").addClass("playbtn");
+            myVid.pause();
+            console.log("pmyVid.currentTime:"+myVid.currentTime);
+//            currentTime = myVid.currentTime;
+            console.log("PcurrentTime:"+currentTime);
+        }
+        vis = !vis;
+    }
+
+
+
+
+
+    $(function () {
+        getjson();
+
+        $(".gravida-list ul li").on("click",function(){
+            var i = $(this).index();
+            myVid.src = audio[i];
+            myVid.currentTime = 0;
+        });
+        $(document).mouseup(function(){
+            drag = false;
+        });
+        Highcharts.setOptions({
+            global: {
+                useUTC: false
+            }
+        });
+        // Create the chart
+//        表一/胎心
+        $('#baby-container').highcharts('StockChart', {
+            chart:
+            {
+                events: {
+                },
+                zoomType: 'none'
+            },
+            style: {
+                plotBackgroundColor: "#f00"
+            },
+            yAxis: [{ // Primary yAxis
+                tickPositions: [60, 90, 120, 150,180,210],
+                labels: {
+                    align: 'left',
+                    x: 0,
+                    y: -2,
+                    style: {
+                        color: "#000"
+                    }
+                },
+                plotBands: [{
+                    from: 110,               // 标示带开始值
+                    to: 160,                 // 标示带结束值
+                    label: {              // 标示带文字标签配置，详见API
+                    },
+                    color: '#F3E7E6',            // 标示带背景颜色
+                    borderWidth: 0,        // 标示带边框宽度
+                    borderColor: "#fff",        // 标示带边框颜色
+                    id: "save",                 // 标示带 id，用于删除等操作
+                    zIndex: "-1",              // 标示带层叠，用于调整显示层次
+                    events: {             // 事件，支持 click、mouseover、mouseout、mousemove等事件
+                        click: function (e) {
+                        },
+                        mouseover: function (e) {
+                        },
+                        mouseout: function (e) {
+                        },
+                        mousemove: function (e) {
+                        }
+                    }
+
+                }],
+                opposite: true
+            }],
+            rangeSelector: {
+                buttons: [{
+                    type: 'all',
+                    text: 'All'
+                }],
+                inputEnabled: false,
+                selected: 0
+            },
+            credits: {
+                enabled: false // 禁用版权信息
+            },
+            xAxis: {
+                labels: {
+                    y:20,
+                    formatter: function () {
+                        var val = this.value;
+                        if (val < 60) {
+                            return val + "″";
+                        } else {
+                            var min = Math.floor(val / 60);
+                            return min + "′" + val % 60 + "″";
+                        }
+                    }
+                },
+//                tickInterval:75,
+//                minTickInterval:20,
+                plotLines: [{
+                    color: '#5CA1D5',            //线的颜色
+                    dashStyle: 'Solid',//标示线的样式，默认是solid（实线），这里定义为长虚线
+                    value: 0,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
+                    width: 2,                 //标示线的宽度，2px
+                    id: "b-playline",
+                    zIndex: 99,
+                    events: {
+                        click: function () {
+                            //当标示线被单击时，触发的事件
+                        },
+                        mouseover: function () {
+                            //当标示线被鼠标悬停时，触发的事件
+                        },
+                        mousedown: function (e) {
+                            drag = true;
+                        },
+                        mouseup: function (e) {
+                            drag = false;
+                        }
+                    }
+                }]
+            },
+            scrollbar : {
+                enabled : false
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [
+                {
+                    lineWidth:1,
+                    color:"#000",
+                    name: 'baby',
+                    data: (function () {
+                        // generate an array of random data
+                        var data = [];
+                        for (i = 0; i < heartbeat.baby.length; i++) {
+                            data.push(heartbeat.baby[i]);
+                        }
+                        return data;
+                    }())
+                }
+            ],
+            navigator : {
+                enabled : false
+            },
+            plotOptions: {//鼠标移入样式
+                series: {
+                    marker: {
+                        states: {
+                            hover: {
+                                radiusPlus: 0,
+                                lineWidthPlus: 0
+                            }
+                        }
+                    },
+                    states: {
+                        hover: {
+                            lineWidthPlus: 0
+                        }
+                    }
+                }
+            },
+            tooltip: {
+                shared: false,
+                animation:false,
+//                enabled:false,
+                crosshairs: false,
+                backgroundColor:'transparent',
+                borderWidth: 0,
+                borderRadius: 0,
+                headerFormat: "",
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            radius: 1,
+                            lineColor: '#f00',
+                            lineWidth: 1
+                        }
+                    }
+                },
+                pointFormatter: function(){
+                    pointX = (this.x);
+                    var playTime = (this.x)/4;
+                    if(drag){
+                        var m = Math.floor(pointX/60);
+                        var s = pointX%60;
+                        var currentNow = "";
+                        m<10?currentNow += "0" +m+":":currentNow += m+":";
+                        s<10?currentNow += "0"+s:currentNow += s + "";
+                        addLine();
+                        $("#currentNow").text(currentNow);
+                        getNowValue(eleBaby,this.index,heartbeat.baby);
+                        getNowValue(eleUterine,this.index,heartbeat.uterine);
+//                        getNowValue(eleFmFlag,this.index,heartbeat.fmFlag);
+                        currentTime = pointX;
+                        console.log(currentTime);
+                    }
+                }
+            }
+        }, function (c) {
+            chart = c;
+        });
+//        表二/宫缩
+        $('#uterine-container').highcharts('StockChart', {
+            chart:
+            {
+                events: {
+//                    load : function () {
+//                        // set up the updating of the chart each second
+//                        var series = this.series[0];
+//                        setInterval(function () {
+//                            var x = heartbeat.baby[i], // current time
+//                                    y = Math.round(Math.random() * 250);
+//                            series.addPoint([x, y], true, true);
+//                            i++;
+//                        }, 1000);
+//                    }
+                },
+                zoomType: 'none'
+            },
+            style: {
+                plotBackgroundColor: "#f00"
+            },
+            yAxis: [{ // Primary yAxis
+                tickPositions: [0, 20, 40, 60,80,100],
+                labels: {
+//                    tickPositions: [0,100,200,400,800],
+                    align: 'left',
+                    x: 0,
+                    y: -2,
+                    style: {
+                        color: "#000"
+                    }
+                },
+                plotBands: [{
+                    from: 110,               // 标示带开始值
+                    to: 160,                 // 标示带结束值
+                    label: {              // 标示带文字标签配置，详见API
+                    },
+                    color: 'none',            // 标示带背景颜色
+                    borderWidth: 0,        // 标示带边框宽度
+                    borderColor: "#fff",        // 标示带边框颜色
+                    id: "save",                 // 标示带 id，用于删除等操作
+                    zIndex: "-1",              // 标示带层叠，用于调整显示层次
+                    events: {             // 事件，支持 click、mouseover、mouseout、mousemove等事件
+                        click: function (e) {
+                        },
+                        mouseover: function (e) {
+                        },
+                        mouseout: function (e) {
+                        },
+                        mousemove: function (e) {
+                        }
+                    }
+
+                }],
+                opposite: true
+            }],
+            rangeSelector: {
+                buttons: [{
+                    type: 'all',
+                    text: 'All1'
+                }],
+                inputEnabled: false,
+                selected: 0
+            },
+            credits: {
+                enabled: false // 禁用版权信息
+            },
+            scrollbar : {
+                enabled : false
+            },
+            xAxis: {
+                labels: {
+                    enabled: false
+                },
+                minTickInterval:70,
+                plotLines: [{
+                    color: '#5CA1D5',            //线的颜色
+                    dashStyle: 'Solid',//标示线的样式，默认是solid（实线），这里定义为长虚线
+                    value: 0,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
+                    width: 2,                 //标示线的宽度，2px
+                    id: "u-playline",
+                    zIndex: 99,
+                    events: {
+                        click: function () {
+                            //当标示线被单击时，触发的事件
+                        },
+                        mouseover: function () {
+                            //当标示线被鼠标悬停时，触发的事件
+                        },
+                        mousedown: function (e) {
+                            drag = true;
+                        },
+                        mouseup: function (e) {
+                            drag = false;
+                            alert("xxx")
+                        }
+                    }
+                }]
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [
+                {
+                    lineWidth:1,
+                    color : "#000",
+                    name: 'heart',
+                    data: (function () {
+                        // generate an array of random data
+                        var data = [];
+                        for (i = 0; i < heartbeat.uterine.length; i++) {
+                            data.push(heartbeat.uterine[i]);
+                        }
+                        return data;
+                    }())
+                }
+            ],
+            navigator : {
+                enabled : false
+            },
+            plotOptions: {//鼠标移入样式
+                series: {
+                    marker: {
+                        states: {
+                            hover: {
+                                radiusPlus: 1,
+                                lineWidthPlus: 1
+                            }
+                        }
+                    },
+                    states: {
+                        hover: {
+                            lineWidthPlus: 0
+                        }
+                    }
+                }
+            },
+            tooltip: {
+                shared: false,
+//                enabled:false,
+                crosshairs: false,
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            radius: 4,
+                            lineColor: '#666666',
+                            lineWidth: 1
+                        }
+                    }
+                },
+                backgroundColor: 'transparent',
+                borderWidth: 0,
+                borderRadius: 0,
+                headerFormat: "",
+                pointFormatter: function(){
+                    pointX = (this.x);
+                    var playTime = (this.x)/4;
+                    if(drag){
+                        var m = Math.floor(playTime/60);
+                        var s = Math.floor(playTime%60);
+                        var currentNow = "";
+                        m<10?currentNow += "0" +m+":":currentNow += m+":";
+                        s<10?currentNow += "0"+s:currentNow += s + "";
+                        addLine();
+                        $("#currentNow").text(currentNow);
+                        getNowValue(eleBaby,this.index,heartbeat.baby);
+                        getNowValue(eleUterine,this.index,heartbeat.uterine);
+//                        getNowValue(eleFmFlag,this.index,heartbeat.fmFlag);
+                        currentTime = pointX;
+                        console.log(currentTime);
+                        myVid.currentTime = pointX;
+
+                    }
+
+                }
+            }
+        }, function (c) {
+            uchart = c;
+        });
+
+
+
+
+
+        //音频
+        myVid.addEventListener("playing", function () {
+            audioStatus = "playing";
+//            myVid.currentTime=currentTime;
+            timeout = false;
+            console.log("playing");
+            time()
+        });
+        myVid.addEventListener("pause", function () {
+            audioStatus = "pause";
+            timeout = true;
+        });
+        myVid.addEventListener("ended", function () {
+            audioStatus = "ended";
+            timeout = true;
+            $("#audiobtn").removeClass("suspendbtn").addClass("playbtn");
+        });
+
+
+
+//        绘制圆形
+        renderer = new Highcharts.Renderer(
+                $('#baby-container')[0],
+                100,
+                80
+        );
+        for(var i=0;i<heartbeat.fmFlag.length;i++){
+            var group = renderer.g().add();
+            var x = (i+1)*20;
+            renderer.circle(x, 27, 3).attr({
+                fill: '#BD817C',
+                stroke: '#BD817C',
+                zIndex:999,
+                'stroke-width': 1
+            }).add(group);
+        }
+
+        $('#audiobtn').click(function () {
+            playOrPause();
+        });
+
+
+    });
+
+
+</script>
+</body>
+</html>

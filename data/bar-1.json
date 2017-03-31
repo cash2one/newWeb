@@ -1,0 +1,73 @@
+{
+	"JSChart" : {
+		"datasets" : [
+			{
+				"type" : "bar",
+			  "data" : [
+				{
+				  "unit" : "DR",
+				  "value" : "50"
+				},
+				{
+				  "unit" : "CT",
+				  "value" : "40"
+				},
+				{
+				  "unit" : "US",
+				  "value" : "30"
+				},
+				{
+				  "unit" : "MR",
+				  "value" : "20"
+				},
+				{
+				  "unit" : "CX",
+				  "value" : "10"
+				},
+				{
+				  "unit" : "RF",
+				  "value" : "2"
+				}
+			  ]
+			}
+		],
+		"colorset" : [
+		    "#00C1CC",
+			"#00C9CD",
+			"#00D1D3",
+			"#4DDBD3",
+			"#80E0DB",
+			"#B1E1DD"
+		],
+		"optionset" : [
+			{
+			  "set": "setSize",
+			  "value": "499,252"
+			},
+			{
+			  "set": "setBarSpacingRatio",
+			  "value": "50"
+			},
+			{
+			  "set": "setTitle",
+			  "value": "'影像类型'"
+			},
+			{
+			  "set": "setTitlePosition",
+			  "value": "'right'"
+			},
+		  {
+			"set" : "setAxisNameX",
+			"value" : "''"
+		  },
+		  {
+			"set" : "setAxisNameY",
+			"value" : "''"
+		  },
+		  {
+			"set" : "setFontFamily",
+			"value" : "'Microsoft YaHei'"
+		  }
+		]
+	}
+}

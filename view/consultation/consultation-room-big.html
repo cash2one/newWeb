@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height:100%">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全球影像用户界面</title>
+    <link href="../../css/layout.css?v=upd20160510" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160510" rel="stylesheet" type="text/css"/>
+    <link href="../../css/consultation.css?v=upd20160825" rel="stylesheet" type="text/css"/>
+    <!-- <link href="../../css/media.css?v=upd20160326" rel="stylesheet" type="text/css" /> -->
+    <link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+    <style>
+        .mCSB_inside>.mCSB_container{
+            margin-right:0px;
+        }
+    </style>
+
+</head>
+<body style="overflow:hidden;">
+<div class="con-room-head clearfixed">
+    <div class="con-room-head-left fl">
+        <p>
+            远程会诊间——MORE
+            <i class="icon-peo-nub"></i><span>5</span>
+            <span class="time">2016-09-09 18:22</span>
+        </p>
+    </div>
+    <div class="con-room-head-right fr">
+        <i id="outRoom"></i>
+        <i id="closeRoom"></i>
+    </div>
+</div>
+<div class="consultation-room" id='consultation-room'>
+    <ul class="clearfixed" >
+        <li class="con-room-left">
+            <div class="con-big-left-top">
+                <div id="diagnosisWrite-content">
+                    <div class="con-room-right-top">
+                        <div class="other-diagnosis">
+                            <div class="other-diagnosis">
+                                <div>张医生：</div>
+                                <textarea rows="7" style="display:none;border:none;margin-top:8px;width:100%;resize:none;"></textarea>
+                                <ul id="other-diagnosis-list">
+                                    <li><p>1窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                    <li><p>2窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                    <li><p>3窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                    <li><p>4窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                    <li><p>5窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                    <li><p>6窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                    <li><p>7窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="my-diagnosis-foot">
+                            <div class="fr">
+                                <input id="notice" type="checkbox"/><lable for="notice">通知发起人</lable>
+                                <a class="btn-save" href="Javascript:;">保存</a>
+                            </div>
+                        </div>
+                        <div class="other-diagnosis-head">
+                            <ul id="other-doctor-list" class="clearfixed">
+                                <li><div class="diagnosis-on">张医生</div></li>
+                                <li><div>张医生</div></li>
+                                <li><div>张医</div></li>
+                                <li><div>张生</div></li>
+                                <li><div>张生医</div></li>
+                                <li><div>医生张</div></li>
+                                <li><div>医张生</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="con-room-right-bottom">
+
+                    </div>
+                </div>
+                <div id="diagnosisTalk-content">
+                    <div class="con-room-right-top diagnosisTalk-top">
+                        <p class="chat-time">2016-09-09 18:33</p>
+                        <p class="chat-notice">
+                            <i class="icon-notice"></i>
+                            通知：会诊间开启，发起人：<span>张医生</span>,
+                            被邀请人：<span>张医生、李医生、王医生、康怡生</span>
+                        </p>
+                        <p class="talk-to-me"><span><b>王医生</b>对我说</span> 2016-09-09</p>
+                    </div>
+                    <div class="con-room-right-bottom diagnosisTalk-bottom">
+                        <div class="chat-box">
+                            <div class="chat-head">
+                                <div class="private-chat-box">
+                                    <i class="icon-chat"></i>私聊
+                                    <i class="icon-drop-down"></i>
+                                </div>
+                            </div>
+                            <div class="chat-doctor clearfixed">
+                                <span><b class="chat-with">张医生</b></span>
+                                <span><b>王医生</b></span>
+                                <span><b>李医生</b></span>
+                            </div>
+                            <textarea rows="7" style="border:none;margin-top:8px;width:100%;resize:none;"></textarea>
+                            <div class="chat-foot">
+                                <a href="javascript:;">发送</a>
+                                <a href="javascript:;">关闭</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con-room-left-bottom">
+                <div style="margin-right: 10px">
+                    <div class="meeting-data" style="display: block">
+                        <div class="data-type-box clearfixed">
+                            <div class="data-type"><span id="shjy" class="data-on">生化检验</span></div>
+                            <div class="data-type"><span id="yxjc">影像检查</span></div>
+                            <div class="data-type"><span id="blws">病历文书</span></div>
+                        </div>
+                        <div class="data-list-box">
+                            <ul class="shjy-list">
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>目瞪口呆.jpg</li>
+                                <li>
+                                    <span>2016-09-09 18:33</span>
+                                    <span>胸部检查</span>
+                                    <span>内蒙古海军附属医院</span>
+                                </li>
+                                <li>
+                                    <span>2016-09-09 18:33</span>
+                                    <span>胸部检查</span>
+                                    <span>内蒙古海军附属医院</span>
+                                </li>
+                            </ul>
+                            <ul class="yxjc-list">
+                                <li>一脸懵逼.jpg</li>
+                                <li>
+                                    <span>2016-09-09 18:33</span>
+                                    <span>胸部检查</span>
+                                    <span>内蒙古海军附属医院2</span>
+                                </li>
+                                <li>
+                                    <span>2016-09-09 18:33</span>
+                                    <span>胸部检查</span>
+                                    <span>内蒙古海军附属医院2</span>
+                                </li>
+                            </ul>
+                            <ul class="blws-list">
+                                <li>二脸懵逼.jpg</li>
+                                <li>
+                                    <span>2016-09-09 18:33</span>
+                                    <span>胸部检查</span>
+                                    <span>内蒙古海军附属医院1</span>
+                                </li>
+                                <li>
+                                    <span>2016-09-09 18:33</span>
+                                    <span>胸部检查</span>
+                                    <span>内蒙古海军附属医院1</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <label class="lab1" id='lab1'></label>
+        <li style="width:80%;" class="con-room-center">
+            <div class="room-center-top">
+                <div class="patient-info">
+                    <div class="clearfixed">
+                        <span class="patient-name">姓名：<b>舟舟</b></span>
+                        <span class="patient-sex">性别：<b>男</b></span>
+                        <span class="patient-age">年龄：<b>23</b></span>
+                    </div>
+                    <p><b>会诊要求:</b></p>
+
+                    <p>会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求</p>
+
+                    <p><b>病情描述:</b></p>
+
+                    <p>病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述</p>
+                </div>
+            </div>
+            <div id="box" class="room-center-bottom">
+                <div id="coor"><i></i></div>
+                <div class="report-main-content">
+                    <div class="report-main watermark">
+                        <input type="button" class="navy-btn fr" style="text-align:center; line-height:30px;" value="查看影像">
+                        <div style="display: block;">
+                            <img style="width:100%;margin-bottom:20px;" src="../../images/zy2y_banner.jpg" alt=""/>
+                            <img style="width:100%;margin-bottom:20px;" src="../../images/zy2y_banner.jpg" alt=""/>
+                            <img style="width:100%;margin-bottom:20px;" src="../../images/zy2y_banner.jpg" alt=""/>
+                        </div>
+                        <table style="display: none" width="100%" border="0" cellspacing="0" class="report">
+                            <caption><h2>市一医院检查报告单</h2></caption>
+                            <thead width="100%">
+                            <tr>
+                                <th align="left" colspan="2">尿常规门诊</th>
+                                <th align="right" colspan="2">No.22091000328</th>
+                            </tr>
+                            </thead>
+                            <tbody class="report-info">
+                            <tr>
+                                <td width="20%">姓名：<span>王无</span></td>
+                                <td width="20%">姓别：<span>男</span></td>
+                                <td width="20%">年龄：<span>46</span></td>
+                                <td width="20%">样本编号：<span>264456</span></td>
+                            </tr>
+                            <tr>
+                                <td>样本类型：<span>尿液</span></td>
+                                <td>门诊号：<span>22</span></td>
+                                <td>科室：<span>泌尿科</span></td>
+                                <td>年龄：<span>46</span></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td colspan="4">
+                                    <table class="report-con" width="100%">
+                                        <tr class="report-tit">
+                                            <td class="report-no"></td>
+                                            <td width="25%">检验项目</td>
+                                            <td width="10%">结果</td>
+                                            <td width="15%">参考范围</td>
+                                            <td width="15%">单位</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="report-no">1</td>
+                                            <td class="report-obj">酸碱度（干化学）</td>
+                                            <td class="report-res">8.5<em>↑</em></td>
+                                            <td class="report-range">5.0-8.0</td>
+                                            <td class="report-unit"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="report-obj">亚硝酸盐（干化学）</td>
+                                            <td class="report-res">阴性</td>
+                                            <td class="report-range">阴性</td>
+                                            <td class="report-unit"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="report-obj">葡萄糖（干化学）</td>
+                                            <td class="report-res">阴性</td>
+                                            <td class="report-range">阴性</td>
+                                            <td class="report-unit"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="report-no">11</td>
+                                            <td class="report-obj">白细胞（干化学）</td>
+                                            <td class="report-res">阴性</td>
+                                            <td class="report-range">阴性</td>
+                                            <td class="report-unit"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td class="report-obj">白细胞（干化学）</td>
+                                            <td class="report-res">阴性</td>
+                                            <td class="report-range">阴性</td>
+                                            <td class="report-unit"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td class="report-obj">红细胞（镜检）</td>
+                                            <td class="report-res">阴性</td>
+                                            <td class="report-range">0-3</td>
+                                            <td class="report-unit">每高倍镜</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td width="25%"><span>送检医生：</span><span>藤原</span></td>
+                                <td width="25%"><span>检验者：</span><span>柯建飞</span></td>
+                                <td width="25%"><span>审核者：</span><span>倪爱青</span></td>
+                                <td width="25%"></td>
+                            </tr>
+                            <tr>
+                                <td width="25%"><span>送检时间：</span><span>2014-09-05 11:29:58</span></td>
+                                <td width="25%"><span>检验时间：</span><span>2014-09-05 12:20:07</span></td>
+                                <td width="25%"><span>报告时间：</span><span>2014-09-05 12:55:15</span></td>
+                                <td width="25%"><span>报告时间：</span><span>2014-09-05 12:55:15</span></td>
+                            </tr>
+                            <tr class="warning">
+                                <td colspan="4"><em>*</em>本系统提供的体检数据来源于各医院，仅供方便查询参考使用，不具法律效力，如有疑问请以各医院纸质报告为准</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+<script src="../../js/con-drag.js" type="text/javascript"></script>
+<script src="../../js/scrollbar/jquery-ui.min.js"></script>
+<script src="../../js/scrollbar/jquery.mousewheel.min.js"></script>
+<script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type='text/javascript'>
+    (function ($) {
+        $(document).ready(function () {
+            $(".search-doctor").blur(function(){
+                if(this.value==""){
+                    $(this).val("请输入医生姓名");
+                }else{
+                    $(this).val();
+                }
+            })
+
+            $(".cstt-searchbar-ul li a").click(function(){
+                var text=$(this).html();
+                $(".cstt-chosen").html(text);
+                $(this).parent().parent().hide();
+            });
+            $(".chat-head div").click(function(){
+                var id = $(this).attr("class");
+                if(id == "private-chat-box2"){
+                    $(".private-chat-box2").hide();
+                    $(".private-chat-box").show();
+                    $(".chat-doctor").show();
+                }else{
+                    $(".private-chat-box").hide();
+                    $(".private-chat-box2").show();
+                    $(".chat-doctor").hide();
+                    $(".talk-to").hide();
+                }
+            });
+            $(".chat-head p").click(function(){
+                    $(this).siblings(".private-chat-box2").show();
+                    $(this).siblings(".private-chat-box").hide();
+                    $(".chat-doctor").hide();
+                    $(".chat-doctor").hide();
+                    $(".talk-to").hide();
+            });
+            $(".chat-doctor span b").click(function(){
+                $(this).addClass("chat-with");
+                $(".chat-doctor").hide();
+                $(".private-chat-box").hide();
+                $(".private-chat-box2").show();
+                $(this).parent().siblings().find("b").removeClass("chat-with");
+                var text = $(this).text();
+                $(".talk-to span").text(text);
+                $(".talk-to").show();
+            })
+            $(".cstt-jg-usual a").click(function(){
+                var text=$(this).html();
+                $(".cstt-chosen").html(text);
+            })
+            var $cst=$(".cstt-chosen").val();
+            if($cst!=null){
+                $(".cstt-chose-doc").show();
+            }else{
+                $(".cstt-chose-doc").hide();
+            }
+
+
+            $(".cstt-friends").on("click",function(){
+                var nameText = $(this).find(".cstt-fri-name").text();
+                var newTag = $('<span class="cstt-inv-name"></span>');
+                var $input = $(this).children("input[type=checkbox]").is(':checked');
+                if ($input==false) {
+                    $(this).addClass('current').append("<i></i>");
+                    $(this).children("input[type=checkbox]").attr('checked',true);
+                    $(".cstt-invited-div").append(newTag);
+                    newTag.css("opacity","0").animate({opacity:'1'},500).html( '<em>'+ nameText +'</em>'+'<a class="del"></a>');
+                };
+            })
+            $(".cstt-invited").on("click","span",function(){
+                var nText = $(this).find("em").text();
+                $(this).hide();
+
+            })
+            $.divselect(".user-select",".user-select-ul",".user-select-span");
+
+        });
+        $(".invitation-btn").click(function(){
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-rim', //加上边框
+                shade: 0.6, //遮罩透明度
+                title: '邀请专家',
+                shift: 1, //0-6的动画形式，-1不开启
+                area: ['890px', '500px'], //宽高
+                content:$(".invitation-pop")
+            });
+        });
+        $("#diagnosisWrite,#diagnosisTalk").click(function(){
+            var id = $(this).attr("id");
+            $(".con-room-right").find("#"+id+"-content").show();
+            $(".con-room-right").find("#"+id+"-content").siblings().hide();
+        })
+
+    })(jQuery);
+</script>
+<script>
+    function init(){
+        var clickX, leftOffset, inx, nextW;
+        var dragging = false;
+        var doc = document;
+        var labBtn = $("#consultation-room").find('label');
+        var wrapWidth = $("#consultation-room").width();
+        var topH =$(".con-big-left-top").height();
+
+        $("#consultation-room").height(document.body.clientHeight  - 36);
+        $("#consultation-room>ul>li").height(document.body.clientHeight  - 36);
+        $("#meeting-dotor-list").height($(document).height() - 36);
+        $(".diagnosisTalk-top").height(($(document).height() - 36)*0.65);
+        $(".room-center-top").height($(".con-room-center").height()*0.2-20);
+        $(".room-left-bottom").height($(".con-room-center").height()*0.7-20);
+
+//        $(".data-list-box").height("100%");
+
+        $(".diagnosisTalk-bottom").height(($(document).height() - 36)*0.35);
+        $("#meeting-dotor-list").mCustomScrollbar();
+        $(".room-center-top").mCustomScrollbar();
+        $(".con-room-right-top").mCustomScrollbar();
+        $(".my-diagnosis").mCustomScrollbar();
+//        $(".data-list-box").mCustomScrollbar();
+        var heightT = $(".con-room-right-top").height();
+        $(".con-room-left-bottom").height($(window).height()-heightT-40);
+        $(".con-room-left-bottom").mCustomScrollbar();
+
+
+
+
+        labBtn.bind('mousedown', function () {
+                    dragging = true;
+                    leftOffset = $("#consultation-room").offset().left;
+                    inx = $(this).index('label');
+                    var centerW =$(".con-room-center").width()
+                }
+        );
+
+        doc.onmousemove = function (e) {
+            if (dragging) {
+                //--------------------------------------------
+                clickX = e.pageX;
+                //判断第几个拖动按钮
+                if (inx == 0) {
+////						$(".con-room-right").width($("#consultation-room").width()-10-$(".con-room-left").width()-$(".con-room-center").width())
+                    //第一个拖动按钮左边不出界
+                    if (clickX > leftOffset) {
+                        var rw = $(".con-room-right").width()
+                        labBtn.eq(inx).css('left', clickX - 4 - leftOffset + 'px');//按钮移动
+                        labBtn.eq(inx+1).css('left', $(".con-room-left").width()+$(".con-room-center").width()-4+'px');//按钮移动
+
+                        labBtn.eq(inx).prev().width(clickX-4);
+//                        nextW2 = clickX - leftOffset;
+                        labBtn.eq(inx).next().width(wrapWidth - clickX - rw);
+                    } else {
+                        labBtn.eq(inx).css('left', '0px');
+                    }
+                    if (clickX < 200) {
+//                        dragging = false;
+                        labBtn.eq(inx).css('left', '194px');
+                        labBtn.eq(inx).prev().width(200-4);
+                        labBtn.eq(inx).next().width(wrapWidth - 200 - rw);
+                    }
+                    if (clickX >= 450) {
+                        labBtn.eq(inx).css('left', '446px');
+                        labBtn.eq(inx).prev().width(450-4);
+                        labBtn.eq(inx).next().width(wrapWidth - 450 - rw);
+                    }
+                    var height = $(".other-diagnosis-head").height();
+                    $(".con-room-left-bottom").height($(".con-room-center").height()*0.65-height);
+                    $(".con-room-left-bottom").mCustomScrollbar();
+                } else {
+                    var lw = $(".con-room-left").width();
+                    //第二个拖动按钮左边不出界
+                    if ((clickX) > labBtn.eq(inx - 1).offset().left) {
+                        labBtn.eq(inx).css('left', clickX -4+ 'px'); //按钮移动
+
+                        labBtn.eq(inx).prev().width((clickX - 4 - lw) + 'px');
+                        nextW = clickX - leftOffset;
+                        labBtn.eq(inx).next().width(wrapWidth - nextW + 'px');
+                    }
+
+                    if (clickX <= (wrapWidth /2)) {
+
+                        //第二个按钮右边不出界
+//                        dragging = false;
+                        labBtn.eq(inx).css('left', wrapWidth/2 + 'px'); //减去按钮的宽度
+                        //第二个按钮左右容器，右边不出界
+                        labBtn.eq(inx).prev().width((wrapWidth/2) - lw);
+                        labBtn.eq(inx).next().width(wrapWidth/2-3);
+                    }
+                    if (clickX >= (wrapWidth - 300)) {
+                        //第二个按钮右边不出界
+//                        alert("xx")
+//                        dragging = false;
+                        labBtn.eq(inx).css('left', wrapWidth - 300 + 'px'); //减去按钮的宽度
+                        //第二个按钮左右容器，右边不出界
+                        labBtn.eq(inx).prev().width(wrapWidth - lw - 300);
+                        labBtn.eq(inx).next().width('298px');
+                    }
+                }
+            }
+        };
+
+        $(doc).mouseup(function (e) {
+            dragging = false;
+            e.cancelBubble = true;
+        })
+
+
+        $(".con-room-left-top a").click(function () {
+            $(this).removeClass("un").addClass("meeting-on");
+            $(this).siblings().removeClass("meeting-on").addClass("un");
+            var id = $(this).attr("id");
+            $("." + id).siblings().hide();
+            $("." + id).show();
+        })
+        $(".data-type span").click(function () {
+            $(this).parent().siblings().find("span").removeClass("data-on");
+            $(this).addClass("data-on");
+            var id = $(this).attr("id");
+            $("." + id + "-list").show();
+            $("." + id + "-list").siblings().hide();
+        })
+        $("#other-doctor-list li").click(function(){
+            var index = $(this).index();
+            $(this).find("div").addClass("diagnosis-on");
+            $(this).siblings().find("div").removeClass("diagnosis-on");
+            $("#other-diagnosis-list li:eq("+index+")").show();
+            $("#other-diagnosis-list li:eq("+index+")").siblings().hide();
+
+        });
+    }
+
+
+    $(function () {
+        $(window).resize(function(){
+            location.reload();
+
+        });
+
+
+        init();
+
+
+
+        $(".con-room-left-top a").click(function () {
+            $(this).removeClass("un").addClass("meeting-on");
+            $(this).siblings().removeClass("meeting-on").addClass("un");
+            var id = $(this).attr("id");
+            $("." + id).siblings().hide();
+            $("." + id).show();
+        })
+        $(".data-type span").click(function () {
+            $(this).parent().siblings().find("span").removeClass("data-on");
+            $(this).addClass("data-on");
+            var id = $(this).attr("id");
+            $("." + id + "-list").show();
+            $("." + id + "-list").siblings().hide();
+        })
+        $("#other-doctor-list li").click(function(){
+            var index = $(this).index();
+            $(this).find("div").addClass("diagnosis-on");
+            $(this).siblings().find("div").removeClass("diagnosis-on");
+            $("#other-diagnosis-list li:eq("+index+")").show();
+            $("#other-diagnosis-list li:eq("+index+")").siblings().hide();
+
+        });
+    })
+</script>
+
+<script>
+    //消息闪动
+    function shake(ele, cls, times) {
+        var i = 0, t= false, o =ele.attr("class")+" ", c ="", times=times||2;
+        if(t) return;
+
+        t= setInterval(function() {
+            i++;
+            c = i%2 ? o+cls: o;
+            ele.attr("class", c);
+
+            if(i==2*times) {
+                clearInterval(t);
+                ele.removeClass(cls);
+            }
+        }, 200);
+    };
+
+
+    $(function(){
+        shake($("#diagnosisTalk"),"diagnosisTalk",8);
+    })
+</script>
+
+</body>
+</html>

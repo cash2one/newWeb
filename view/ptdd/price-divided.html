@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../css/fjpt.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+    <script src="../../js/jquery.select.js"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>        
+          <li><a href="#"><span class="nav-icon3"></span>影像</a></li> 
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li> 
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box">
+    <aside class="left-column mm-menu">
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 本地影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 推送记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>报告岗位<p>post setting</p></dt>
+                <dd class="column-icon column-job"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 报告岗位管理</a></li>
+                    <li class="last"><a href="#">· 权限组管理</a></li>
+                    <li><a href="#">· 账号管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>设置管理<p>settings</p></dt>
+                <dd class="column-icon column-set"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="column-spe-ul" style="margin-top:14px;">
+                    <li><a href="#">· 合作医院管理</a></li>
+                    <li class="last"><a href="#">· 修改密码</a></li>
+                    <li><a href="#">· 业务授权管理</a></li>
+                    <li class="last"><a href="#">· 信息设置</a></li>
+                    <li><a href="#">· 历史影像回溯</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+
+ <section class="user-right wrapper">
+     <span class="mm-menu-toggle"></span>
+
+     <div class="breadcrumbs"><span class="bread-fir"><a href="">后台管理 &gt;&gt;&gt;</a></span><span class="bread-sec">分成比例设置 </span></div>
+
+<div class="new-coo">
+   <div class="coo-config-tit clearfix"><h3>平台分配比例：</h3><input type="button" class="navy-btn view-divided" value="查看分成比例"/></div>
+        <div class="coo-step coo-config-hos">
+            <h3>选择医疗机构</h3> 
+            <div class="config-searchbar">
+            <input name="name" type="text" onclick="this.value=''" class="blue-input text" value="请输入机构关键词">
+            <input type="button" value="查询" class="magnifier">
+            </div>
+                <div class="config-search-resault">
+                    <ul class="clearfix">
+                        <li><input type="radio" >南通瑞慈医院</li>
+                        <li class="checked"><input type="radio" >内蒙附一</li>
+                        <li><input type="radio" >浙一医院</li>
+                        <li><input type="radio" >上海交通大学附属第九人民医院</li>                   
+                        <li class="checked"><input type="radio" >上海儿童医院</li><li><input type="radio" >上海交通大学附属第九人民医院</li>
+                        <li><input type="radio" >南通瑞慈医院</li>
+                        <li><input type="radio" >内蒙附一</li>
+                        <li><input type="radio" >浙一医院</li>
+                        <li><input type="radio" >上海交通大学附属第九人民医院</li>                   
+                        <li><input type="radio" >上海儿童医院</li><li><input type="radio" >上海交通大学附属第九人民医院</li>          
+                     </ul>
+                 </div>
+        </div>
+        <div class="coo-step coo-config-work clearfix">
+        <h3>选择支持业务</h3>
+            <div class="fl">
+                <p class="title-coo-step-check">提供业务：</p>
+                <div class="form-checkbox">
+                    <ul>
+                        <li>
+                            <input type="checkbox" value="male" name="set" class="checkbox">
+                            <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>远程报告</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="male" name="set" class="checkbox">
+                            <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>远程会诊</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="male" name="set" class="checkbox">
+                            <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>双向转诊</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <div class="fl">
+                 <p class="title-coo-step-check">影像过滤: </p>
+                 <div class="form-checkbox">
+                     <ul>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>全选</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>MR</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>DR/DX/CR</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>CT</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>RF</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>MG</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>全选</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>MR</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>DR/DX/CR</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>CT</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>RF</span>
+                         </li>
+                         <li>
+                             <input type="checkbox" value="male" name="set" class="checkbox">
+                             <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><span>MG</span>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+            <div class="fl">
+                <p class="title-coo-step-check">是否自动申请书写报告：</p>
+                <div class="form-checkbox">
+                    <ul>
+                        <li>
+                            <input type="radio" value="male" name="set" class="radio">
+                            <span>是</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="male" name="set" class="radio">
+                            <span>否</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="coo-step coo-config-price">
+        <h3>专家价格设置</h3> 
+            <div class="config-price">
+                <p>本机构可分配额度<span>3</span>元，分配专家金额</p>
+            <input type="button" class="price-add coo-price-change"/>
+            </div>
+
+                <table class="price-setting" width="90%">
+                    <thead>
+                    <tr>
+                        <th>检查类型</th>
+                        <th>可分配额度（元）</th>
+                        <th>机构所得（元）</th>
+                        <th>医生所得（元）</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CT</td>
+                            <td>50.00</td>
+                            <td>30.00</td>
+                            <td>10.00</td>
+                            <td><a href="javascript:;" class="coo-price-change">修改</a><a href="">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>DR/DX</td>
+                            <td>20.00</td>
+                            <td>12.00</td>
+                            <td>10.00</td>
+                            <td><a href="javascript:;" class="coo-price-change">修改</a><a href="">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>MR</td>
+                            <td>90.00</td>
+                            <td>65.00</td>
+                            <td>10.00</td>
+                            <td><a href="javascript:;" class="coo-price-change">修改</a><a href="">删除</a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+        </div>
+
+        <input type="button" class="confirm-btn navy-btn" value="保存并发起申请"/>
+</div>
+ </section>
+</div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+<!-- 价格助手 -->
+    <div class="price-ass clearfix" style="display:none;">
+        <table class="price-setting">
+            <thead>
+            <tr>
+                <th>检查类型</th>
+                <th>可分配额度（元）</th>
+                <th>机构所得（元）</th>
+                <th>平台分成（元）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <select name="">
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX</option>
+                        <option value="">MR</option>
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX/DR</option>
+                        <option value="">MR</option>
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX</option>
+                        <option value="">MR</option>
+                    </select>
+                </td>
+                <td><input type="text" value="100.00" disabled /></td>
+                <td><input type="text" value="80.00"/></td>
+                <td><input type="text" value="20.00"/></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="btn-block"><input type="button" class="navy-btn pop-btn" value="保存"/> <input type="button" class="grey-btn pop-btn m0" value="取消"/>
+        </div>
+    </div>
+
+
+  <div class="divided" style="display:none;">
+        <table class="price-setting">
+            <thead>
+            <tr>
+                <th>检查类型</th>
+                <th>服务种类</th>
+                <th>诊断种类</th>
+                <th>可分配金额（元）</th>
+                <th>申请方（元）</th>
+                <th>诊断机构（元）</th>
+                <th>平台（元）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>CR</td>
+                <td>远程报告</td>
+                <td>影像诊断</td>
+                <td><span>7.00</span></td>
+                <td><span>2.50</span></td>
+                <td><span>1.00</span></td>
+                <td><span>0.00</span></td>
+            </tr>
+            <tr>
+                <td>DR</td>
+                <td>远程报告</td>
+                <td>影像诊断</td>
+                <td><span>7.00</span></td>
+                <td><span>2.50</span></td>
+                <td><span>1.00</span></td>
+                <td><span>0.00</span></td>
+            </tr>
+            <tr>
+                <td>MR</td>
+                <td>远程报告</td>
+                <td>影像审核</td>
+                <td><span>7.00</span></td>
+                <td><span>2.50</span></td>
+                <td><span>1.00</span></td>
+                <td><span>0.00</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <!-- 价格助手 end -->
+
+        <script>
+
+            $('.coo-price-change').on('click', function(){
+                layer.open({
+                    type: 1,
+                    title:"价格设置",
+                    closeBtn: 1,
+                    shade:0.2,
+                    area: ['440px', ''],
+                    content:$('.price-ass')
+                })
+            });
+            $('.view-divided').on('click', function(){
+                layer.open({
+                    type: 1,
+                    title:false,
+                    closeBtn: 1,
+                    shade:0.2,
+                    area: ['800px', ''],
+                    content:$('.divided')
+                })
+            });
+            $('.price-ass input[type=text]').on('click',function(){
+                $(this).val('');
+            })
+
+        </script>
+        <script>
+            (function(){
+                $.divselect(".user-select",".user-select-ul",".user-select-span");
+
+            })()
+        </script>
+
+        <script>
+            $('.form-checkbox li').click(function(){
+                var $input = $(this).children('.checkbox');
+                if($input.is(':checked') == false){
+                    $input.attr("checked",true);
+                    $input.siblings("img").removeClass('checkbox-normal').addClass('checkbox-checked');
+                }else{
+                    $input.attr("checked",false);
+                    $input.siblings("img").removeClass('checkbox-checked').addClass('checkbox-normal');
+                }
+            })
+        </script>
+    </div>
+</body>
+</html>

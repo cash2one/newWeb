@@ -1,0 +1,13 @@
+[0713/165116:INFO:CONSOLE(0)] "Unsafe JavaScript attempt to access frame with URL file:///C:/Program%20Files%20(x86)/Common%20Files/Adobe/CEPServiceManager4/extensions/Cutterman/index.html from frame with URL http://www.cutterman.cn/app/Cutterman/content/index.html?t=1436777476307. Domains, protocols and ports must match.
+," source: (0)
+[0713/165116:INFO:CONSOLE(0)] "create jsx_dir failed," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.27(32)
+[0713/165116:INFO:CONSOLE(0)] "write constants.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.27(51)
+[0713/165117:INFO:CONSOLE(0)] "write library.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.27(51)
+[0713/165117:INFO:CONSOLE(0)] "write export.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.27(51)
+[0322/133251:WARNING:dns_config_service_win.cc(520)] Failed to read DnsHosts.
+[0322/133252:INFO:CONSOLE(0)] "Unsafe JavaScript attempt to access frame with URL file:///C:/Users/apple/AppData/Roaming/Adobe/CEPServiceManager4/extensions/Cutterman/index.html from frame with URL http://www.cutterman.cn/app/Cutterman/content/index.html?t=1458624771867&flag=1. Domains, protocols and ports must match.
+," source: (0)
+[0322/133252:INFO:CONSOLE(0)] "create jsx_dir failed," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(32)
+[0322/133252:INFO:CONSOLE(0)] "write constants.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0322/133252:INFO:CONSOLE(0)] "write library.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0322/133252:INFO:CONSOLE(0)] "write export.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <!--<link href="../../css/main.css?v=upd20161010" rel="stylesheet" type="text/css"/>-->
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20161010" rel="stylesheet" type="text/css"/>
+    <link href="../../css/settings.css?v=upd20161103" rel="stylesheet" type="text/css"/>
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <link rel="icon" href="../../js/layer/skin/layer.css">
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div class="pacs-body">
+    <div class="header pacs-settings-header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pacs-warp settings-box">
+        <h4 class="bread-settings">
+            <span><a href="pacs.html">云PACS</a> >><b style="color:#898989;">医生管理</b></span>
+        </h4>
+        <div class="settings-left">
+            <div class="pacs-settings-left settings-left-content">
+                <p><a href="settings-jigou-qyzjgl.html">签约专家管理</a></p>
+
+                <p><a href="settings-jigou-jgtkgl.html">机构条款管理</a></p>
+
+                <p><a href="settings-jigou-bggwgl.html">报告岗位管理</a></p>
+
+                <p><a href="settings-jigou-bgqxgl.html">报告权限管理</a></p>
+
+                <p><a href="settings-jigou-sz.html">历史影像回溯配置</a></p>
+
+                <p class="settings-on settings-click"><a href="settings-jigou-ysgl.html">医生管理</a></p>
+
+                <p><a href="settings-jigou-xxsz.html">信息设置</a></p>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="settings-right  pacs-settings-right">
+            <div style="display: block;" class="settings-right-content pacs-settings-right">
+                <div class="jigou-query-btn">
+                    <ul class="ylgl-list clearfix">
+                        <li>
+                            <span class="jigou-label">医院</span>
+                            <input type="text"/>
+                        </li>
+                        <li>
+                            <span style="position:relative;top:-11px;" class="jigou-label">按权限查</span>
+                            <div style="display: inline-block;">
+                                <div style="margin:0;" class="user-select pacs-select" >
+                                    <div class="grey-select" style="height: 26px;min-width: 80px;">
+                                        <span style="font-weight:400;" class="user-select-span select-1-span">全部会诊医院</span>
+                                        <i></i>
+                                    </div>
+                                    <ul class="user-select-ul select-1-ul" style="top:28px;width: 100%;z-index: 100; ">
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="jigou-label">医生姓名</span>
+                            <input type="text"/>
+                        </li>
+                        <li>
+                            <a class="jigou-btn" href="javaScript:void(0);">查询</a>
+                        </li>
+                    </ul>
+                    <ul class="ylgl-list clearfix">
+                        <li>
+                            <span style="position:relative;top:-11px;" class="jigou-label">科室</span>
+                            <div style="display: inline-block;">
+                                <i></i>
+                                <div style="margin:0;" class="user-select pacs-select" >
+                                    <div class="grey-select" style="height: 26px;min-width: 80px;">
+                                        <span style="font-weight:400;" class="user-select-span select-1-span">全部会诊医院</span>
+                                        <i></i>
+                                    </div>
+                                    <ul class="user-select-ul select-1-ul" style="top:28px;width: 100%;z-index: 100; ">
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span style="position:relative;top:-11px;" class="jigou-label">按岗位查</span>
+                            <div style="position:relative;z-index:2;display: inline-block;">
+                                <i></i><i></i>
+                                <div style="margin:0;" class="user-select pacs-select" >
+                                    <div class="grey-select" style="height: 26px;min-width: 80px;">
+                                        <span style="font-weight:400;" class="user-select-span select-1-span">全部会诊医院</span>
+                                        <i></i>
+                                    </div>
+                                    <ul class="user-select-ul select-1-ul" style="top:28px;width: 100%;z-index: 100; ">
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                        <li><a href="javaScript:void(0);">杭州</a></li>
+                                        <li><a href="javaScript:void(0);">南昌</a></li>
+                                        <li><a href="javaScript:void(0);">上海</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="jigou-label">联系方式</span>
+                            <input type="text"/>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jigou-content">
+                    <div class="account-list">
+
+                        <span class="account-list-tit">账号列表</span>
+                        <input type="button" class="green-btn account-role-btn" style="display:none" value="岗位权限分配">
+                        <table class="accountlist" cellspacing="0" border="0">
+                            <thead>
+                            <tr>
+                                <th width="10%">医生姓名</th>
+                                <th width="12%">电话</th>
+                                <th width="18%">岗位</th>
+                                <th width="20%">权限</th>
+                                <th width="5%">状态</th>
+                                <th width="45%">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    赵邑
+                                </td>
+                                <td>
+                                    13910922420
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>正常</td>
+                                <td >
+                                    <a class="purview-list-caozuo purview-list-hide" href="javascript:void(0);"
+                                       class="ckyy">隐藏</a>
+                                    <a class="purview-list-caozuo position-permission-set ckyy" href="javascript:void(0);">岗位权限组设置</a>
+                                    <a class="purview-list-caozuo doc-management" href="javascript:void(0);" onclick="docTree.docFuncDetail('','105224')" class="ckyy">菜单管理</a>
+                                    <a href="settings-info.html" target="_blank" class="con-act-a">设置管理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    赵邑1
+                                </td>
+                                <td>
+                                    13910922420
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>正常</td>
+                                <td >
+                                    <a class="purview-list-caozuo" href="javascript:void(0);"
+                                       class="ckyy">隐藏</a>
+                                    <a class="purview-list-caozuo position-permission-set ckyy" href="javascript:void(0);">岗位权限组设置</a>
+                                    <a class="purview-list-caozuo" href="javascript:void(0);" onclick="docTree.docFuncDetail('','105224')" class="ckyy">菜单管理</a>
+                                    <a href="settings-info.html" target="_blank" class="con-act-a">设置管理</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="page-list clearfix">
+                            <div class="page-right">
+                                <span class="pagen">本页共<a class="page-number">&nbsp;12&nbsp;</a>条记录&nbsp;/&nbsp;总共<a class="page-number">&nbsp;386&nbsp;</a>条记录</span>
+                            </div>
+                            <div class="page-left clearfix">
+                                <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                                <a href='#' class="pageimg page-prev"  onclick="gotoPageP(0)"  >上一页</a>
+                                <a href='#' class="big"><input type="text" value="1" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" id="paginationCPage" name="currentPage" class="page-to"/>
+                                    <span>/ &nbsp; 33</span>
+                                    <span class="page-go" onclick = "gotoPageByForm()">go</span>
+                                </a>
+                                <a href="#" class="pageimg page-next"  onclick="gotoPageP(2)" > 下一页</a>
+                                <a href="#" class="pageimg page-last" onclick="gotoPageP(33)">尾页</a>
+                            </div>
+
+
+                            <script language="javascript" type="text/javascript">
+                                function gotoPageByForm(){
+                                    var form = document.forms["form1"];
+                                    var page = 1;
+                                    if (form) {
+                                        page = form.paginationCPage.value;
+                                        //var reg = RegExp('/^\d+$/');
+                                        //if(!reg.test(page)){
+                                        //	page = 1;
+                                        //}
+                                        if(page==""){
+                                            page=1;
+                                        }
+                                    }
+                                    gotoPageP(page);
+                                }
+                                function gotoPageP(newPage) {
+                                    var f = document.forms["form1"];
+                                    if (f) {
+                                        for(var i=0;i<f.elements.length;i++){
+                                            if(f.elements[i].name=="currentPage"){
+                                                f.elements[i].value=newPage;
+                                            }
+                                        }
+                                        f.submit();
+                                    }
+                                }
+                            </script>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--弹出层-->
+    <div class="pacs-settings-right">
+        <!-- 更改角色分配 start-->
+        <div class="acc-role clearfix" id="acc_role" style="display:none;">
+            <div class="acc-doc-list" >
+                <div class="ztree" id="docTree"></div>
+            </div>
+            <div class="acc-post">
+                <h3>当前用户：<span id="docName_span"></span></h3>
+                <input type="hidden" name="doctorId" id="doctorId" />
+                <div class="acc-post-left">
+                    <h4>可分配岗位</h4>
+                    <div class="acc-block1">
+                        <div class="ztree" id="addPosts"></div>
+                    </div>
+                </div>
+                <div class="acc-post-mid">
+                    <input class="navy-btn movebtn" type="button" value="右移 →" onclick="postTree.moveCheckedNodes()"/>
+                    <input class="moveleft-btn movebtn" type="button" value="← 左移" onclick="postTree2.moveCheckedNodes()"/>
+                </div>
+                <div class="acc-post-right">
+                    <h4>已分配岗位</h4>
+                    <div class="acc-block2">
+                        <div class="ztree" id="postDocs"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="acc-purview">
+                <div class="acc-purview-left">
+                    <h4>可分配权限</h4>
+                    <div class="acc-block1">
+                        <div class="ztree" id="addRoles"></div>
+                    </div>
+                </div>
+                <div class="acc-purview-mid">
+                    <input class="navy-btn movebtn" type="button" value="右移 →" onclick="roleTree.moveCheckedNodes()"/>
+                    <input class="moveleft-btn movebtn" type="button" value="← 左移" onclick="roleTree2.moveCheckedNodes()"/>
+                </div>
+                <div class="acc-purview-right">
+                    <h4>已分配权限</h4>
+                    <div class="acc-block2">
+                        <div class="ztree" id="roleDocs"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="post-pop-btn">
+                <input type="button" class="navy-btn pop-btn" value="保存" onclick="docTree.submitSave('')"/>
+                <input type="button" class="grey-btn pop-btn" value="取消" style="margin-right:0;" onclick="closeLayer()"/>
+            </div>
+        </div>
+        <!-- 更改角色分配 end-->
+        <!--菜单管理-->
+
+        <div class="doc-menu-set form-checkbox" style="display: none;">
+            <form id="modifyDoc" action="hosDoc/saveDocFunc.htm" method="post" >
+                <input type="hidden" name="userId" id="userId" value="12127" />
+                <h3>高高高</h3>
+                <h4>
+                    <input disabled="disabled" id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                    <label for="">影像</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input disabled="disabled" id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">我的云盘</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">本院影像</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">获取影像</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">他人分享</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">分享历史</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">上传记录</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">报告统计</label>
+                    </li>
+                </ul>
+
+                <h4>
+                    <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                    <label for="">账户</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">我的账户</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">待确认</label>
+                    </li>
+                </ul>
+                <h4>
+                    <input type="checkbox" class="checkbox" name="moduals" value="2000" >
+                    <label for="moduals">会诊间</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">创建影像会诊</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">影像会诊记录</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">创建视频会诊</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">视频会诊记录</label>
+                    </li>
+                </ul>
+
+                <h4>
+                    <input type="checkbox" class="checkbox"  name="moduals" value="4000" >
+                    <label for="moduals">空中诊室</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">留言咨询</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">视频诊室</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">诊间预约</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">医院挂号</label>
+                    </li>
+                </ul>
+
+                <h4>
+                    <input type="checkbox" name="moduals" value="5000" class="checkbox" >
+                    <label for="moduals">病历查询</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label>按患者</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label>按类型</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="moduals" class="checkbox"  value="50004">
+                        <label for="">病历查询病历查询</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="moduals" class="checkbox"  value="50003">
+                        <label for="">会诊记录</label>
+                    </li>
+                </ul>
+
+
+                <h4>
+                    <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                    <label for="">联系人</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">我的联系人</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">关注我的患者</label>
+                    </li>
+                </ul>
+
+                <h4>
+                    <input type="checkbox" name="moduals"  value="2200"checked="checked">
+                    <label for="">影像报告</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input type="checkbox" name="moduals" class="checkbox" value="2203">
+                        <label for="">报告申请</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">本院报告</label>
+                    </li>
+                </ul>
+
+                <h4>
+                    <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                    <label for="">设置管理</label>
+                </h4>
+                <ul class="clearfix">
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">个人信息管理</label>
+                    </li>
+                    <li>
+                        <input id="" type="checkbox" name="moduals1" class="checkbox" value="80002">
+                        <label for="">排班设置</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="moduals" class="checkbox" value="80013">
+                        <label for="">排班价格设置</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="moduals" class="checkbox" value="80013">
+                        <label for="">签约管理</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="moduals" class="checkbox" value="80013">
+                        <label for="">短信设置</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="moduals" class="checkbox" value="80013">
+                        <label for="">修改密码</label>
+                    </li>
+                </ul>
+                <input class="navy-btn btn-size4" id="find" type="button" value="保存修改"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<!--<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>-->
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+
+<script>
+    $(function(){
+        jQuery.divselect(".user-select",".user-select-ul",".user-select-span");
+        //            高度控制
+        var rightH = $(".settings-right").height();
+        var windowH = document.body.clientHeight-124;
+        var height = $(".settings-box").height()-80;
+        height > windowH ? height = height :height=windowH;
+        rightH>height?$(".settings-right").height(rightH):$(".settings-right").height(height);
+        $(".jigou-tabs a").click(function(){
+            var index = $(this).index();
+            $(this).addClass("jigou-on");
+            $(this).siblings().removeClass("jigou-on");
+            $(".jigou-content"+index).siblings().hide();
+            $(".jigou-content"+index).show();
+        });
+        $('.position-permission-set').on('click', function(){
+            layer.open({
+                type: 1,
+                title:'岗位权限设置',
+                //shade:0.3,
+                area: ['690px', 'auto'],
+                content:$('#acc_role')
+            });
+        });
+        $('.doc-management').on('click', function(){
+            layer.open({
+                type: 1,
+                title:'菜单管理',
+                //shade:0.3,
+                area: ['630px', ''],
+                content:$('.doc-menu-set')
+            });
+        });
+
+        $(".purview-list-hide").on("click",function(){
+            layer.confirm('您确定要隐藏xxx吗', {
+                btn: ['确定','取消']
+            });
+        });
+
+    });
+</script>
+</body>
+</html>

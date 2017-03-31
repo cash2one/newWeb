@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>pacs外部页面</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/outside.css?v=upd20161123" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+    <link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+    <div id="fixed" class="outside-content outside-hide-head">
+        <div class="warp clearfix">
+            <div class="head-left">
+                <a class="logo" href="#"></a>
+            </div>
+            <div class="head-right">
+                <ul class="clearfix">
+                    <li>
+                        <a id="serve-hide-show" onMouseMove="move()" class="serve-show" href="javascript:void(0);">产品与服务<i class="arr-down"></i></a>
+                        <div id="serve-hide-hover" class="serve-hover">
+                            <i style="top:2px;" class="little-triangle"></i>
+                            <div class="serve-content">
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-pacs"></i>
+                                            <h3>云pacs系统</h3>
+                                            <p>兼具影像申请、报告书写、统计等常用功能</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-clinical"></i>
+                                            <h3>临床医生工作站</h3>
+                                            <p>临床医生的全方位检查检验结果工作站</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-con"></i>
+                                            <h3>远程会诊系统</h3>
+                                            <p>满足不同会诊需求远距离多模式远程会诊</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-outpatient"></i>
+                                            <h3>网络门诊</h3>
+                                            <p>热门专家提供在线留言咨询、视频会诊服务</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-disk"></i>
+                                            <h3>影像云盘</h3>
+                                            <p>影像的实时云备份和云应用</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-vertical"></i>
+                                            <h3>垂直专科门诊</h3>
+                                            <p>高效的领域内专科垂直诊断，名医汇聚八大专科</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-report"></i>
+                                            <h3>双向转诊</h3>
+                                            <p>满足基层首诊，分级诊疗的全流程追踪平台</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-region"></i>
+                                            <h3>区域定制化应用</h3>
+                                            <p>为全国不同地区个性化定制功能</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">帮助</a></li>
+                    <li>
+                        <div class="login-register ">
+                            <a href="#">登录</a>
+                            <b>|</b>
+                            <a href="#">注册</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="outside-content outside-head outside-pacs-head">
+        <div class="warp clearfix">
+            <div class="head-left">
+                <a class="logo" href="#"></a>
+            </div>
+            <div class="head-right">
+                <ul class="clearfix">
+                    <li>
+                        <a id="serve-show" class="serve-show" onMouseMove="move()" href="javascript:void(0);">产品与服务<i class="arr-down"></i></a>
+                        <div id="serve-hover" class="serve-hover">
+                            <div id="serve-content" class="serve-content">
+                                <i class="little-triangle"></i>
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-pacs"></i>
+                                            <h3>云pacs系统</h3>
+                                            <p>兼具影像申请、报告书写、统计等常用功能</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-clinical"></i>
+                                            <h3>临床医生工作站</h3>
+                                            <p>临床医生的全方位检查检验结果工作站</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-con"></i>
+                                            <h3>远程会诊系统</h3>
+                                            <p>满足不同会诊需求远距离多模式远程会诊</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-outpatient"></i>
+                                            <h3>网络门诊</h3>
+                                            <p>热门专家提供在线留言咨询、视频会诊服务</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-disk"></i>
+                                            <h3>影像云盘</h3>
+                                            <p>影像的实时云备份和云应用</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-vertical"></i>
+                                            <h3>垂直专科门诊</h3>
+                                            <p>高效的领域内专科垂直诊断，名医汇聚八大专科</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-report"></i>
+                                            <h3>双向转诊</h3>
+                                            <p>满足基层首诊，分级诊疗的全流程追踪平台</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="serve-region"></i>
+                                            <h3>区域定制化应用</h3>
+                                            <p>为全国不同地区个性化定制功能</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">帮助</a></li>
+                    <li style="display:none;">
+                        <div class="login-register head-login-register">
+                            <a href="#">登录</a>
+                            <b>|</b>
+                            <a href="#">注册</a>
+                        </div>
+                    </li>
+                    <li class="name-li" style="display:block;">
+                        <div>欢迎您，地地道道的</div>
+                    </li>
+                    <li style="display:block;">
+                        <a>退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner-animate-box">
+            <div class="banner-animate">
+                <div class="pacs-computer">
+                    <div id="div" class="computer-animate1">
+                        <div id="head1" class="head1"></div>
+                        <div id="head2" class="head2"></div>
+                        <div id="head3" class="head3"></div>
+                        <div id="head4" class="head4"></div>
+                        <div id="head5" class="head5"></div>
+                        <div id="head6" class="head6"></div>
+                    </div>
+                    <div id="div1" class=""><!--computer-animate2-->
+                        <div class="computer-animate2-1">
+                            <div id="animate3" class=""><!--computer-animate2-3--></div>
+                            <div id="animate4" class=""><!--computer-animate2-4--></div>
+                            <div id="animate2" class=""><!--computer-animate2-2--></div>
+                        </div>
+
+                    </div>
+                    <div id="div2" class=""><!--computer-animate3-->
+                        <div class="computer-animate3-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="animate-box">
+        <div class="outside-content white-content">
+            <div class="warp clearfix">
+                <div class="out-left out-img-content">
+                    <div class="blockcut-img blockcut-application"></div>
+                </div>
+                <div class="out-right pacs-introduction out-introduction-content">
+                    <h3>申请工作站</h3>
+                    <p>完善患者信息并进行报告申请，满足影像诊断，审核诊断，</p>
+                    <p>影像会诊多模式诊断需求。</p>
+                </div>
+            </div>
+        </div>
+        <div class="outside-content dark-content">
+            <div class="warp clearfix">
+                <div class="out-left pacs-introduction out-introduction-content">
+                    <h3>报告工作站</h3>
+                    <p>满足医生日常对本院报告及基层医院申请的报告进行查询、</p>
+                    <p>浏览、书写、审核的工具</p>
+                </div>
+                <div class="out-right out-img-content">
+                    <div class="blockcut-img blockcut-reportlist"></div>
+                </div>
+            </div>
+        </div>
+        <div class="outside-content white-content">
+            <div class="warp clearfix">
+                <div class="out-left out-img-content">
+                    <div class="blockcut-img blockcut-image"></div>
+                </div>
+                <div class="out-right pacs-introduction out-introduction-content">
+                    <h3>影像会诊</h3>
+                    <p>完善患者信息并进行报告申请，满足影像诊断，审核诊断，</p>
+                    <p>影像会诊多模式诊断需求。</p>
+                </div>
+            </div>
+        </div>
+        <div class="outside-content light-content">
+            <div class="warp clearfix">
+                <div class="out-left pacs-introduction out-introduction-content">
+                    <h3>统计工作站</h3>
+                    <p>按医院、医生、图像类型、报告属性等多维度科学统计，</p>
+                    <p>方便上下级医院进行结算</p>
+                </div>
+                <div class="out-right out-img-content">
+                    <div style="width:260px;background-position:-729px -23px;" class="blockcut-img blockcut-statics"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="out-pacs-foot out-foot">
+        <div class="footer warp">
+            <ul class="footer-text fl">
+                <li style="color:#fff;opacity:0.5;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</li>
+                <li class="padding"></li>
+                <li style="color:#fff;">客服电话：<h2>400-0571-574</h2>  &nbsp; &nbsp; &nbsp;ICP证  浙B-20140372 浙ICP备11059294号-3&nbsp; &nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202000272" style="color:#fff;display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../images/beian.png" style="float:left;">浙公网安备 33010202000272号<p></p></a> </li>
+                <li style="color:#fff;">联系地址：杭州市上城区中河中路198号绿都大厦4F、5F    &nbsp; &nbsp; &nbsp; </li>
+                <li style="margin-bottom:20px;color:#fff;">为了本站的正常浏览，建议您使用IE 9及以上的IE浏览器或chrome、firefox等浏览器</li>
+            </ul>
+            <ul class="footer-img clearfix">
+                <li><img src="../../images/doctor.png">专家版</li>
+                <li><img src="../../images/patient.png">大众版</li>
+            </ul>
+            <p style="color:#fff;opacity:0.5;font-size:12px;">
+                杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Science Co., Ltd.
+            </p>
+        </div>
+    </div>
+</body>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!--<script src="../../js/jquery.select.js" type="text/javascript"></script>-->
+<!--<script src="../../js/layer/layer.min.js" type="text/javascript"></script>-->
+<script src="../../js/jquery.rotate.min.js" type="text/javascript"></script>
+<script src="../../js/outside.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var tt = document.querySelector('#div');
+    var tt2 = document.querySelector('#div2');
+    var head1 = document.querySelector('#head1');
+    var head2 = document.querySelector('#head2');
+    var head3 = document.querySelector('#head3');
+    var head4 = document.querySelector('#head4');
+    var head5 = document.querySelector('#head5');
+    var head6 = document.querySelector('#head6');
+    var animate2 = document.querySelector('#animate2');
+    var animate3 = document.querySelector('#animate3');
+    var animate4 = document.querySelector('#animate4');
+    tt.addEventListener("webkitAnimationEnd", function(){ //动画结束时事件
+        this.classList.remove('computer-animate1');
+        head1.classList.remove('head1');
+        head2.classList.remove('head2');
+        head3.classList.remove('head3');
+        head4.classList.remove('head4');
+        head5.classList.remove('head5');
+        head6.classList.remove('head6');
+        animate2.classList.add('computer-animate2-2');
+        animate3.classList.add('computer-animate2-3');
+        animate4.classList.add('computer-animate2-4');
+    }, false);
+    animate2.addEventListener("webkitAnimationEnd",function(){
+        this.classList.remove('computer-animate2-2');
+        tt2.classList.add('computer-animate3');
+    },false)
+    animate3.addEventListener("webkitAnimationEnd",function(){
+        this.classList.remove('computer-animate2-3');
+    },false)
+    animate4.addEventListener("webkitAnimationEnd",function(){
+        this.classList.remove('computer-animate2-4');
+        tt2.classList.add('computer-animate3');
+    },false);
+    tt2.addEventListener("webkitAnimationEnd", function(){ //动画结束时事件
+        this.classList.remove('computer-animate3');
+        tt.classList.add('computer-animate1');
+        head1.classList.add('head1');
+        head2.classList.add('head2');
+        head3.classList.add('head3');
+        head4.classList.add('head4');
+        head5.classList.add('head5');
+        head6.classList.add('head6');
+    }, false);
+
+
+</script>
+<script>
+    window.onload = function(){
+//        fixed水平滚动
+        window.onscroll=function(){
+            var sl=-Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
+            document.getElementById('fixed').style.left=sl+'px';
+        };
+        var height = document.body.clientHeight;
+        if(height > 670){
+            if($(window).scrollTop() >= 0){
+                animate(".animate-box .outside-content",0);
+            };
+            if($(window).scrollTop()>100){
+                animate(".animate-box .outside-content",1);
+            };
+            if($(window).scrollTop()>200){
+                animate(".animate-box .outside-content",2);
+            };
+            if($(window).scrollTop()>300){
+                animate(".animate-box .outside-content",3);
+            };
+            $(window).scroll(function() {
+                scroll();
+                serveShow();
+            });
+        }else{
+            if($(window).scrollTop()>100){
+                animate(".animate-box .outside-content",0);
+            };
+            if($(window).scrollTop()>400){
+                animate(".animate-box .outside-content",1);
+            };
+            if($(window).scrollTop()>600){
+                animate(".animate-box .outside-content",2);
+            };
+            if($(window).scrollTop()>800){
+                animate(".animate-box .outside-content",3);
+            };
+            $(window).scroll(function() {
+                scroll();
+                serveShow();
+            });
+            serveShow();
+        }
+    };
+
+
+    //服务列表
+    var moveD = "";
+
+    $(".serve-show").hover(function(){
+        $(this).next().stop(true,true).slideDown(300);
+        $("#serve-hide-show").css("color","#1092d4");
+    },function(){
+        if(moveD == "d"){
+            $(this).next().show();
+            $("#serve-hide-show").css("color","#1092d4");
+            console.log(moveD)
+        }else{
+            $(this).next().stop(true,true).slideUp(300);
+            $("#serve-hide-show").css("color","#626262");
+            console.log(moveD)
+        }
+    });
+    $(".serve-hover").hover(function(){
+        $(this).show();
+    },function(){
+        $(this).stop(true,true).slideUp(300);
+        $("#serve-hide-show").css("color","#626262");
+        moveD = "";
+    });
+    var event_x,event_y;
+    $(document).mousemove(function(event) {
+        event_x = event.pageX;
+        event_y = event.pageY;
+    });
+
+    var sx,sy;
+    if (navigator.userAgent.indexOf('Firefox') >= 0) {
+        sx = event_x;
+        sy = event_y;
+    }else{
+        sx = event_x;
+        sy = event_y;
+    }
+</script>
+</html>

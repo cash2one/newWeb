@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd201600303" rel="stylesheet" type="text/css" />
+<link href="../../css/payment.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+
+
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script>
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>        
+          <li><a href="#"><span class="nav-icon3"></span>影像</a></li> 
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li> 
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box">
+    <aside class="left-column mm-menu">
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 本地影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 推送记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>报告岗位<p>post setting</p></dt>
+                <dd class="column-icon column-job"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 报告岗位管理</a></li>
+                    <li class="last"><a href="#">· 权限组管理</a></li>
+                    <li><a href="#">· 账号管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>设置管理<p>settings</p></dt>
+                <dd class="column-icon column-set"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="column-spe-ul" style="margin-top:14px;">
+                    <li><a href="#">· 合作医院管理</a></li>
+                    <li class="last"><a href="#">· 修改密码</a></li>
+                    <li><a href="#">· 业务授权管理</a></li>
+                    <li class="last"><a href="#">· 信息设置</a></li>
+                    <li><a href="#">· 历史影像回溯</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+
+ <section class="user-right wrapper">
+     <span class="mm-menu-toggle"></span>
+
+     <div class="breadcrumbs"><span class="bread-fir">后台管理 &gt;&gt;&gt;</span><span class="bread-sec">业务授权管理</span></div>
+
+   <div class="agency-table-tab">
+      <ul class="clearfix">
+      <li class="current" href="#">我发起的</li>
+      <li href="#">邀请我的</li>
+      </ul>
+    </div>
+
+<div class="agency-payment style-a-bg "style="display:block;">
+  <div class="state style-a-state" style="padding-top:10px; margin-left:10px; height:60px;">
+      <div class="left-text" style="margin-top:0;width:280px;">
+        <div class="style-a-query" style="width:280px;">
+         <span>医院查询</span>
+         <input type="text"  value="请输入医院名称" class="form-input inactive style-a-search" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"/>
+        </div>
+       </div>
+
+         <input type="button" class="lakeblue-btn style-a-btns" value="查 询"  />   <a href="new coopreation.html"><input type="button" class="green-btn style-a-btns" value="新增医院"></a><input type="button" class="navy-btn setting-default style-a-btns"  value="默认价格设置">
+
+    </div>
+
+  <div class="config-list list-style-a">
+
+		<table class="config-hos style-a" cellspacing="0" border="0">
+			<thead>
+				<tr>
+			    <th width="10%"><input type="checkbox" onClick="checkall()" name="checkall"></th>
+			    <th width="30%">合作医院</th>
+          <th width="15%">支付方式</th>
+			    <th width="15%">业务模式</th>
+          <th width="10%"><span class="state-select"><strong>状态</strong><i></i></span>
+              <div class="list-operate" style="width:10%;">
+                <ul>
+                   <li><a href="">已付款</a></li>
+                   <li><a href="">已回复</a></li>
+                   <li><a href="">未设置价格</a></li>
+               </ul>
+               </div></th>
+			    <th width="20%">操作</th>
+			    </tr>
+			</thead>
+		  	<tbody>
+		  		<tr>
+		  			<td ><input name="choose" type="checkbox"></td>
+		            <td>威海文登市立医院</td>
+                <td>线上支付</td>
+		            <td>远程报告</td>
+                <td>已完成</td>
+		            <td><a class="view-price" href="javascript:;">查看详情</a><a class="setting-price" href="javascript:;">价格设置</a><a class="" href="javascript:;">撤销</a></td>
+		  		</tr>
+		  		<tr>
+		  			<td ><input name="choose" type="checkbox"></td>
+                <td>威海文登市立医院</td>
+                <td>线上支付</td>
+                <td>远程报告</td>
+                <td>已完成</td>
+		            <td><a class="view-price" href="javascript:;">查看详情</a><a class="setting-price" href="javascript:;">价格设置</a><a class="" href="javascript:;">撤销</a></td>
+		  		</tr>
+		  	</tbody>
+		</table>
+        <div class="page-list">
+                  <div class="page-left">
+                      <a href='#' onclick="gotoPageP(1)" class="pageimg page-first">首页 </a>
+		            <a href='#' onclick="gotoPageP($prePage)" class="pageimg page-prev">上一页 </a>
+		            <!--
+		            <a href='#' class="page-num current">1</a> 
+		            <a href='#' class="page-num">2</a>
+		            <a href='#' class="page-elp">...</a> 
+		            -->
+		            <a href='#' class="big"><input type="text" value="1" name="queryString" id="queryString" class="page-to"/>
+		            <span>/ &nbsp; 1</span><span class="page-go">go</span> </a>
+		            <a href='#'  onclick="gotoPageP($nextPage)" class="pageimg page-next" >下一页</a>
+		            <a href='#' onclick="gotoPageP($tPage)" class="pageimg page-last">尾页 </a>
+            	 </div>
+                 <div class="page-right">   
+                      <span class="pagen">本页共<a class="page-number">&nbsp;3&nbsp;</a>条记录&nbsp;/&nbsp;总共<a class="page-number">&nbsp;3&nbsp;</a>条记录</span>
+                    <button type="button" class="btn1 navy-btn">批量撤销</button>
+                  </div>
+        </div>
+</div>
+</div>
+<div class="agency-payment style-a-bg" >
+  <div class="state style-a-state" style="padding-top:11px; height:60px;">
+      <div class="left-text" style="margin-top:0;width:280px;">
+        <div class="style-a-query" style="width:280px;">
+         <span>医院查询</span>
+         <input type="text"  value="请输入医院名称" class="form-input inactive style-a-search" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"/>
+        </div>
+       </div>
+
+         <input type="button" class="lakeblue-btn style-a-btns" value="查 询"  />  
+
+    </div>
+
+  <div class="config-list list-style-a">
+
+        <table class="config-hos style-a" cellspacing="0" border="0">
+            <thead>
+                <tr>
+                <th width="10%"><input type="checkbox" onClick="checkall()" name="checkall"></th>
+                <th width="30%">合作医院</th>
+          <th width="15%">支付方式</th>
+                <th width="15%">业务模式</th>
+          <th width="10%"><span class="state-select"><strong>状态</strong><i></i></span>
+              <div class="list-operate" style="width:10%;">
+                <ul>
+                   <li><a href="">已完成</a></li>
+                   <li><a href="">未完成</a></li>
+                   <li><a href="">未设置</a></li>
+               </ul>
+               </div></th>
+                <th width="20%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td ><input name="choose" type="checkbox"></td>
+                    <td>威海文登市立医院</td>
+                <td>线上支付</td>
+                    <td>远程报告</td>
+                <td>已完成</td>
+                    <td><a class="reply-price" href="javascript:;">查看详情</a><a href="javascript:;">撤销</a></td>
+                </tr>
+                <tr>
+                    <td ><input name="choose" type="checkbox"></td>
+                <td>威海文登市立医院</td>
+                <td>线上支付</td>
+                <td>远程报告</td>
+                <td>已完成</td>
+                    <td><a class="reply-price" href="javascript:;">查看详情</a><a href="javascript:;">撤销</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="page-list">
+                  <div class="page-left">
+                      <a href='#' onclick="gotoPageP(1)" class="pageimg page-first">首页 </a>
+                    <a href='#' onclick="gotoPageP($prePage)" class="pageimg page-prev">上一页 </a>
+                    <!--
+                    <a href='#' class="page-num current">1</a> 
+                    <a href='#' class="page-num">2</a>
+                    <a href='#' class="page-elp">...</a> 
+                    -->
+                    <a href='#' class="big"><input type="text" value="1" name="queryString" id="queryString" class="page-to"/>
+                    <span>/ &nbsp; 1</span><span class="page-go">go</span> </a>
+                    <a href='#'  onclick="gotoPageP($nextPage)" class="pageimg page-next" >下一页</a>
+                    <a href='#' onclick="gotoPageP($tPage)" class="pageimg page-last">尾页 </a>
+                 </div>
+                 <div class="page-right">   
+                      <span class="pagen">本页共<a class="page-number">&nbsp;3&nbsp;</a>条记录&nbsp;/&nbsp;总共<a class="page-number">&nbsp;3&nbsp;</a>条记录</span>
+                    <button type="button" class="btn1 navy-btn">批量撤销</button>
+                  </div>
+            </div>
+         </div>
+    </div>
+ </section>
+</div>
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+
+
+<!-- 查看详情 start-->
+<div class="price-set-detail clearfix" style="display:none;">
+    <div class="price-detial-block">
+        <h4>服务及价格明细：</h4>
+           <div class="price-info">
+           <ul>
+              <li><label>需求医院：</label><span>济南二院</span></li>
+              <li><label>执行医院：</label><span>山东影像所</span></li>
+              <li><label>交易方式：</label><span>线上支付</span></li>
+            </ul>
+            </div>
+                <table class="price-setting" width="90%">
+
+                    <thead>
+                    <tr>
+                        <th>检查类型</th>
+                        <th>服务总价（元）</th>
+                        <th>机构所得（元）</th>
+                        <th>平台分成（元）</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CT</td>
+                            <td>50.00</td>
+                            <td>30.00</td>
+                            <td>10.00</td>
+                        </tr>
+                        <tr>
+                            <td>DR/DX</td>
+                            <td>20.00</td>
+                            <td>12.00</td>
+                            <td>8.00</td>
+                        </tr>
+                        <tr>
+                            <td>MR</td>
+                            <td>90.00</td>
+                            <td>25.00</td>
+                            <td>65.00</td>
+                        </tr>
+                    </tbody>
+                    </table>
+   </div>
+    <div class="price-detial-block" style="border:0;">
+        <h4>医院回复结果：</h4>
+                <table class="price-setting" width="90%">
+                    <thead>
+                    <tr>
+                        <th>检查类型</th>
+                        <th>服务总价（元）</th>
+                        <th>结果</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CT</td>
+                            <td>50.00</td>
+                            <td>接受</td>
+                        </tr>
+                        <tr>
+                            <td>DR/DX</td>
+                            <td>20.00</td>
+                            <td>不接受</td>
+                        </tr>
+                        <tr>
+                            <td>MR</td>
+                            <td>90.00</td>
+                            <td>接受</td>
+                        </tr>
+                    </tbody>
+                    </table>
+    </div>
+</div>
+<!-- 查看详情 end-->
+<!-- 查看并回复 start-->
+<div class="price-reply clearfix" style="display:none;">
+        <h4>服务及价格明细：</h4>
+           <div class="price-info">
+           <ul>
+              <li><label>执行医院：</label><span>山东影像所</span></li>
+              <li><label>交易方式：</label><span>线上支付</span></li>
+            </ul>
+            </div>
+                <table class="price-setting" width="90%">
+
+                    <thead>
+                    <tr>
+                        <th>检查类型</th>
+                        <th>服务价格（元）</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CT</td>
+                            <td>50.00</td>
+                            <td><a href="javascript:;">接受</a><a href="javascript:;">拒绝</a></td>
+                        </tr>
+                        <tr>
+                            <td>DR/DX</td>
+                            <td>20.00</td>
+                            <td><a href="javascript:;">接受</a><a href="javascript:;">拒绝</a></td>
+                        </tr>
+                        <tr>
+                            <td>MR</td>
+                            <td>90.00</td>
+                            <td><a href="javascript:;">接受</a><a href="javascript:;">拒绝</a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+            <div class="btn-block" style="width:190px;"><input type="button" class="navy-btn pop-btn" value="保存并回复"/> <input type="button" class="grey-btn pop-btn m0" value="取消"/></div>
+  
+</div>
+<!-- 查看并回复 end-->
+
+
+<!-- 价格设置 start-->
+<div class="price-special clearfix" style="display:none;">
+           <div class="price-toolbar">
+            <input type="button" class="price-add coo-price-change"/>
+            </div>
+                <table class="price-setting" width="90%">
+
+                    <thead>
+                    <tr>
+                        <th>检查类型</th>
+                        <th>服务种类</th>
+                        <th>专家姓名</th>
+                        <th>报酬比例</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CT</td>
+                            <td>诊断报告</td>
+                            <td>张正</td>
+                            <td>60%</td>
+                            <td><a class="coo-price-change" href="javascript:;">修改</a><a href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>DR/DX/DR</td>
+                            <td>远程会诊</td>
+                            <td>李福</td>
+                            <td>50%</td>
+                            <td><a class="coo-price-change" href="javascript:;">修改</a><a href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>MR</td>
+                            <td>诊断报告</td>
+                            <td>杨四喜</td>
+                            <td>10%</td>
+                            <td><a class="coo-price-change" href="javascript:;">修改</a><a href="javascript:;">删除</a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+            <div class="btn-block"><input type="button" class="navy-btn pop-btn" value="提交"/> <input type="button" class="grey-btn pop-btn m0" value="取消"/>
+    </div>
+</div>
+
+<!-- 价格设置 end-->
+
+<!-- 默认价格设置 start-->
+<div class="price-default clearfix" style="display:none;">
+           <div class="price-toolbar">
+            <input type="button" class="price-add coo-dprice-change"/>
+            </div>
+                <table class="price-setting" width="90%">
+
+                    <thead>
+                    <tr>
+                        <th>检查类型</th>
+                        <th>服务种类</th>
+                        <th>专家姓名</th>
+                        <th>报酬比例</th>
+                        <th>实际所得</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CT</td>
+                            <td>诊断报告</td>
+                            <td>张正</td>
+                            <td>60%</td>
+                            <td>35.00</td>
+                            <td><a class="coo-dprice-change" href="javascript:;">修改</a><a href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>DR/DX/DR</td>
+                            <td>远程会诊</td>
+                            <td>李福</td>
+                            <td>50%</td>
+                            <td>15.00</td>
+                            <td><a class="coo-dprice-change" href="javascript:;">修改</a><a href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>MR</td>
+                            <td>诊断报告</td>
+                            <td>杨四喜</td>
+                            <td>10%</td>
+                            <td>5.00</td>
+                            <td><a class="coo-dprice-change" href="javascript:;">修改</a><a href="javascript:;">删除</a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+            <div class="btn-block"><input type="button" class="navy-btn pop-btn" value="提交"/> <input type="button" class="grey-btn pop-btn m0" value="取消"/>
+    </div>
+</div>
+<!-- 默认价格设置 end-->
+<!-- 价格助手 -->
+<div class="price-ass clearfix" style="display:none;">
+    <table class="price-setting">
+        <thead>
+            <tr>
+                <th>检查类型</th>
+                <th>服务总价（元）</th>
+                <th>机构所得（元）</th>
+                <th>平台分成（元）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select name="">
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX</option>
+                        <option value="">MR</option>
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX/DR</option>
+                        <option value="">MR</option>
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX</option>
+                        <option value="">MR</option>
+                    </select>
+                </td>
+                <td><input type="text" value="100.00"/></td>
+                <td><input type="text" value="80.00"/></td>
+                <td><input type="text" value="20.00"/></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-block"><input type="button" class="navy-btn pop-btn" value="保存"/> <input type="button" class="grey-btn pop-btn m0" value="取消"/>
+    </div>
+</div>
+<!-- 价格助手 end -->
+<!-- 默认价格助手 -->
+<div class="price-defa-ass clearfix" style="display:none;">
+    <table class="price-setting">
+        <thead>
+            <tr>
+                <th>检查类型</th>
+                <th>选择专家</th>
+                <th>服务种类</th>
+                <th>报酬比例（%）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select name="">
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX</option>
+                        <option value="">MR</option>
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX/DR</option>
+                        <option value="">MR</option>
+                        <option value="">RF</option>
+                        <option value="">CT</option>
+                        <option value="">DR/RX</option>
+                        <option value="">MR</option>
+                    </select>
+                </td>
+                <td><select name="">
+                        <option value="">张正</option>
+                        <option value="">马超</option>
+                        <option value="">魏嗡</option>
+                    </select></td>
+                <td><select name="">
+                        <option value="">远程报告</option>
+                        <option value="">远程会诊</option>
+                    </select></td>
+                <td><input type="text" value="35"/>%</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-block"><input type="button" class="navy-btn pop-btn" value="保存"/> <input type="button" class="grey-btn pop-btn m0" value="取消"/>
+    </div>
+</div>
+<!-- 默认价格助手 end -->
+
+
+<script>
+$(function(){ 
+
+    $(".agency-table-tab li").click( function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".agency-payment").eq($(".agency-table-tab li").index(this)).show().siblings(".agency-payment").hide(); 
+    }) 
+//tab选择器
+
+$('.view-price').on('click', function(){
+  layer.open({
+    type: 1,
+    title:'业务详情',
+    shade:false,
+    area: ['480px', ''],
+    content:$('.price-set-detail')
+});
+});
+$('.reply-price').on('click', function(){
+  layer.open({
+    type: 1,
+    title:'业务回复',
+    shade:false,
+    area: ['500px', ''],
+    content:$('.price-reply')
+});
+});
+
+$('.setting-price').on('click', function(){
+  layer.open({
+    type: 1,
+    title:'执行人员专项价格',
+    shade:false, 
+    area: ['380px', ''],
+    content:$('.price-special')
+});
+});
+$('.setting-default').on('click', function(){
+  layer.open({
+    type: 1,
+    title:'默认价格',
+    shade:false, 
+    area: ['820px', ''],
+    content:$('.price-default')
+});
+});
+$('.coo-dprice-change').on('click', function(){
+    layer.open({
+        type: 1,
+        title:false,
+        closeBtn: 1,
+        shade:0.2,
+        area: ['440px', ''],
+        content:$('.price-defa-ass')
+    })
+})
+$('.coo-price-change').on('click', function(){
+    layer.open({
+        type: 1,
+        title:false,
+        closeBtn: 1,
+        shade:0.2,
+        area: ['440px', ''],
+        content:$('.price-ass')
+    })
+})
+$('.price-ass input[type=text],.price-defa-ass input[type=text]').on('click',function(){
+    $(this).val('');
+})
+
+
+
+})
+
+</script>
+
+
+</div>
+
+</body>
+</html>

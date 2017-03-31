@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../../css/themes.css?v=upd20160307" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="../../js/jquery.slides.min.js"></script>
+    <script src="../../js/jquery.sidebar.js"></script>
+    <title>内蒙古影像会诊平台</title>
+    <script type="text/javascript">
+        (function() {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<header class="nmg-header rh-header ultrasonic-header">
+    <div class="m-width">
+        <div class="login-ent">
+            <a href="#" ><span>登 陆</span></a>
+            <a href="#" ><span>注 册</span></a>
+        </div>
+        <a href="#" class="logo"></a>
+    </div>
+</header>
+
+<div class="rh-main">
+    <div class="dep-banner ultrasonic-banner">
+    </div>
+    <div class="dep-content clearfix">
+        <h3 class="ult-depart">科室介绍</h3>
+        <div style="text-align: center;margin:30px 0; ">
+            <img src="../../images/themes/ultrasonic.png" alt=""/>
+            <p>内蒙古医科大学附属医院超声科全体合影</p>
+        </div>
+        <div class="rh-tab dep-artlice fl" >
+            <p>
+                内蒙古医科大学附属医院超声科目前共有医护人员111名，医生52名，护士长2名，
+                合同制护士2名，接诊14名，打字员39名。主任医师13名，副主任医师16名，主治
+                医师5名，医师18名，博士学位5名，特聘教授1名（李治安教授：北京安贞医院超声
+                科首席专家，海峡两岸医药卫生交流协会超声专家委员会主任委员）。科室共有高档
+                彩色多普勒超声诊断仪40台。共有6大专业学组：心脏大血管，外周血管，腹部，小
+                器官，妇产，介入超声组。能够开展所有超声检查项目：1、经胸超声心动图、经食管
+                超声心动图、右心声学造影、心肌造影、负荷超声心动图。2、经腹超声、经阴超声、
+                超声造影检查。3、肌骨神经、关节软骨超声检查。4、妇科及胎儿产前筛查、胎儿超
+                声心动图检查、羊水穿刺。5、介入超声诊断及治疗、射频超声治疗。6、胃肠超声检
+                查。7、小器官超声检查。6大专业学组分别与北京安贞医院、北京宣武医院、北京协
+                和医院、北京妇产医院、北京大学第三医院、北京301医院常年建立协作关系。进行疑
+                难病例会诊及专家讲座，每月科室都会邀请相关专业的专家来我科室进行讲座和疑难病
+                例会诊。科室工作人员以“精医厚德、福泽民众”院训严格要求，用精湛的技术为广大患
+                者服务。
+            </p>
+        </div>
+    </div>
+    <footer class="clearfix">
+        <section class="m-width">
+            <div class="footer-links footer-center " style="height:150px;">
+                <ul class="footer-type">
+                    <h5 style="margin-bottom: 5px;">医疗机构 |</h5>
+                    <h5><br/></h5>
+                    <h5>技术支持 |</h5>
+                </ul>
+                <ul class="footer-org" style="min-height: 64px;width:400px;">
+                    <li><a href="" alt="">内蒙古医科大学附属医院</a></li>
+                </ul>
+                <ul class="footer-org"  style="min-height: 64px;width:400px;">
+                    <li><a href="" alt="">全球影像网</a></li>
+                </ul>
+
+                <p>杭州联众医疗科技股份有限公司  Copyright @ Hangzhou Lianzhong Healthcare Technology Co. Ltd</p>
+            </div>
+
+        </section>
+    </footer>
+</div>
+<script>
+    (function(){
+        $(".lab-pathologys ul li").click(function(){
+            $(this).siblings().removeClass("check-on").find("a").css("color","#000");
+            $(this).addClass("check-on").find("a").css("color","#fff");
+            $(".lab-maincontent").eq($(".lab-pathologys ul li").index(this)).show().siblings(".lab-maincontent").hide();
+        });
+
+        $(".dep-content ul li a").click(function(){
+            $(this).parent().siblings().find("a").removeClass("dep-on");
+            $(this).addClass("dep-on");
+            $(".rh-tab").eq($(".dep-content ul li a").index(this)).show().siblings(".rh-tab").hide();
+
+        })
+    })()
+
+
+</script>
+
+</body>
+
+</html>

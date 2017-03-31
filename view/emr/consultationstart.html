@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160428" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../css/style.css"/>
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+              <div class="prop-tip">
+              <p class="tips-news">您有<span>1</span>条新短消息，<a href="">点击查看</a></p>
+              <p class="tips-cstt">您有<span>1</span>条新的会诊邀请，<a href="">点击查看</a></p>
+              <a class="icon-cross mini-close"></a>
+              </div>
+          </div>
+       </div>
+    </header>
+    <script type="text/javascript">
+    $(function () {
+        $(window).load(function(){
+            $(".prop-tip").slideDown(500);
+        })
+        $(".mini-close").click(function(){
+            $(".prop-tip").slideUp(200).animate({opacity:"0"});
+        })
+    })
+    </script>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>
+          <li><a href="#"><span class="nav-icon3"></span>影像</a></li>
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" style="position: relative">
+    <aside class=" mm-menu"  >
+        <div class="column-wide-block for-cwb" >
+            <dl class="mm-menu--items">
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul style="margin-top:14px;">
+                    <li><a href="#">· 个人影像</a></li>
+                    <li class="last"><a href="#">· 共享影像</a></li>
+                    <li><a href="#">· 获取影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 上传记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>空中诊室<p>air room</p></dt>
+                <dd class="column-icon column-air"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 留言咨询</a></li>
+                    <li class="last"><a href="#">· 视频诊室</a></li>
+                    <li><a href="#">· 诊间预约</a></li>
+                    <li class="last"><a href="#">· 医院挂号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>双向转诊<p>referral</p></dt>
+                <dd class="column-icon column-ref"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="">
+                    <li><a href="#">· 待办列表</a></li>
+                    <li class="last"><a href="#">· 转入记录</a></li>
+                    <li><a href="#">· 转出记录</a></li>
+                    <li class="last"><a href="#">· 患者跟踪</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl  class="clearfix">
+                    <dt>影像报告<p>report</p></dt>
+                    <dd class="column-icon column-rep"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 报告列表</a></li>
+                        <li><a href="#">· 报告书写</a></li>
+                        <li><a href="#">· 影像匹配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>病历查询<p>medical record</p></dt>
+                    <dd class="column-icon column-med"></dd>
+                </dl>
+                <div class="column-detail narrow-right">
+                    <ul>
+                        <li><a href="#">· 按患者查询</a></li>
+                        <li><a href="#">· 按类型查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl class="clearfix">
+                    <dt>联系人<p>contacts</p></dt>
+                    <dd class="column-icon column-cont"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul>
+                        <li><a href="#">· 我的联系人</a></li>
+                        <li><a href="#">· 关注我的患者</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>设置管理<p>settings</p></dt>
+                    <dd class="column-icon column-set"></dd>
+                </dl>
+                <div class="column-detail  narrow-right">
+                    <ul class="column-spe-ul" style="margin-top:14px;">
+                        <li><a href="#">· 个人信息</a></li>
+                        <li><a href="#">· 排班设置</a></li>
+                        <li><a href="#">· 价格设置</a></li>
+                        <li><a href="#">· 报告模板</a></li>
+                        <li><a href="#">· 短信设置</a></li>
+                        <li><a href="#">· 修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="../../js/jquery.sidebar.js"></script>
+ <section class="user-right wrapper">
+     <span class="mm-menu-toggle"></span>
+
+     <div class="breadcrumbs"><span class="bread-fir">电子病历&gt;&gt;&gt;</span>&nbsp;<span class="bread-fir">患者病历&gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">发起远程会诊</span></div>
+
+    <div class="cstt-content" >
+<!--     <h4><span class="current"><strong>STEP<i>1</i>&nbsp;&nbsp;</strong><em></em>选择需要邀请的机构（专家）</span><span>STEP2&nbsp;&nbsp;填写病例资料</span><span>STEP3&nbsp;&nbsp;添加会诊其他附件</span></h4> -->
+
+         <p class="cstt-invited" style="margin-bottom:40px;">
+            <i>已选择患者病例：</i><span class="cstt-inv-name"><em>王不帅</em>： 2015-03-22 <b>|</b> 门诊 <b>|</b> 呼吸科<a class="del"></a></span><span class="cstt-inv-name"><em>王不帅</em>： 2015-03-22 <b>|</b> 住院 <b>|</b> 呼吸科<a class="del"></a></span>
+         </p>
+
+        <div class="cstt-chose">
+      <div class="cstt-chose-jg cstt-js">
+        <h5 class=" clearfix">1.选择机构 <em>（必选）</em></h5>
+
+
+
+
+            <div class="cstt-sec-jg">
+                    <div class="cstt-sel-search">
+                        <input name="searchHosName" type="text" class="box-input search-text" id="" onfocus="this.style.backgroundColor='#f5f5f5';this.value=''" value="请输入关键字" onblur="this.style.backgroundColor='#f5f5f5';" onkeydown="remoteConsult.seachHosOnkeydown(event,'95710000');" style="background-color: rgb(245, 245, 245);"> 
+                        <input type="button" value="" class=" magnifier" onclick="remoteConsult.searchHos('95710000');">
+                    </div>
+                     <ul class="cstt-hos-list">
+                     <li><a href="#">南通瑞慈医院</a></li>
+                     <li><a href="#">内蒙附一</a></li>
+                     <li><a href="#">浙一医院</a></li>
+                     <li><a href="#">上海交通大学附属第九人民医院</a></li>                   
+                     <li><a href="#">上海儿童医院</a></li>            
+                  </ul>
+            </div>
+      </div>
+
+
+        <div class="cstt-chose-doc cstt-js">
+          <h5>2.选择本院专家<span>（可选）</span></h5>
+          <div class="cstt-cos">
+            <div class="clearfix" style="width:100%;">
+              <div class="cstt-searchbar">
+                  <input name="name" type="text"  class="box-input"  value="请输入医生姓名" style="width:200px;" />
+                  <input type="button" value="" class=" magnifier" />
+              </div>
+              <div style="float: right;height: 32px;width: 33%;margin-top: 10px;">
+                  <div class="user-select" style="margin-right:10px;width:46%;">
+                      <div class="grey-select">
+                          <span class="user-select-span">请选择</span>
+                          <i></i>
+                      </div>
+                      <ul class="user-select-ul" style="width:99%;">
+                          <li><a href="javascript:;">科室1</a></li>
+                          <li><a href="javascript:;">科室2</a></li>
+                          <li><a href="javascript:;">科室3</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="user-select" style="width: 46%;">
+                      <div class="grey-select">
+                          <span class="user-select-span">请选择</span>
+                          <i></i>
+                      </div>
+                      <ul class="user-select-ul" style="width:99%;">
+                          <li><a href="javascript:;">医院1</a></li>
+                          <li><a href="javascript:;">医院2</a></li>
+                          <li><a href="javascript:;">医院3</a></li>
+                      </ul>
+                  </div>
+              </div>
+                <div class="cstt-addnew-btn" style="display:none;"><input type="button"  value="+ 添加好友" class="blue-btn"/></div>
+            </div>
+
+            <div class="cstt-chose-doc clearfix" >
+              <ul class="" style="width:100%;">
+                  <li>            
+                  <div class="cstt-friends">
+                     <img src="../../images/user.jpg" alt="" />
+                     <p><span class="cstt-fri-name">张明1</span><span class="cstt-fri-zc">主任医师</span></p>
+                     <input type="checkbox" name="" value=""/>
+                     <p class="con-area">杭州市第一人民医院</p>
+                   </div>
+                  </li>
+                  <li>            
+                  <div class="cstt-friends">
+                     <img src="../../images/user.jpg" alt="" />
+                     <p><span class="cstt-fri-name">张明2</span><span class="cstt-fri-zc">主任医师</span></p>
+                      <input type="checkbox" name="" value=""/>
+                     <p class="con-area">杭州市第一人民医院</p>
+                   </div>
+                  </li>
+                  <li>            
+                  <div class="cstt-friends">
+                     <img src="../../images/user.jpg" alt="" />
+                     <p><span class="cstt-fri-name">张明3</span><span class="cstt-fri-zc">主任医师</span></p>
+                      <input type="checkbox" name="" value=""/>
+                     <p class="con-area">杭州市第一人民医院</p>
+                   </div>
+                  </li>
+                  <li>            
+                  <div class="cstt-friends">
+                     <img src="../../images/user.jpg" alt="" />
+                     <p><span class="cstt-fri-name">张明4</span><span class="cstt-fri-zc">主任医师</span></p>
+                      <input type="checkbox" name="" value=""/>
+                     <p class="con-area">杭州市第一人民医院</p>
+                   </div>
+                  </li>
+                  <li>            
+                  <div class="cstt-friends">
+                     <img src="../../images/user.jpg" alt="" />
+                     <p><span class="cstt-fri-name">张明5</span><span class="cstt-fri-zc">主任医师</span></p>
+                      <input type="checkbox" name="" value=""/>
+                     <p class="con-area">杭州市第一人民医院</p>
+                   </div>
+                  </li>
+                  <li>            
+                  <div class="cstt-friends">
+                     <img src="../../images/user.jpg" alt="" />
+                     <p><span class="cstt-fri-name">张明6</span><span class="cstt-fri-zc">主任医师</span></p>
+                      <input type="checkbox" name="" value=""/>
+                     <p class="con-area">杭州市第一人民医院</p>
+                   </div>
+                  </li>
+              </ul>
+            </div>
+
+
+            </div>
+
+          <p class="cstt-invited" style="margin-left:30px;">
+            <i>已选择本院专家：</i><span class="cstt-inv-name"><em>张医生</em><a class="del"></a></span><span class="cstt-inv-name"><em>张医生</em><a class="del"></a></span>
+         </p>
+            <div style="position: relative;">
+                <div class="pages clearfix">
+                    <span class="page-detail">共<strong>69</strong>条记录共<strong>7</strong>页</span>
+            <span>跳至第<input type="text" id="paginationCPage" name="currentPage" value="3" class="page-to"> 页<span>
+            <span><button type="submit" class="page-go" onclick="gotoPageByForm()">GO</button></span>
+                <a href="#" class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                <a href="#" class="pageimg page-prev" onclick="gotoPageP(2)">上一页</a>
+
+                                        <a href="#" class="page-num" onclick="gotoPageP(1)">1</a>
+
+
+                                        <a href="#" class="page-num" onclick="gotoPageP(2)">2</a>
+
+
+                                        <a href="#" class="page-num current">3</a>
+
+
+                                        <a href="#" class="page-num" onclick="gotoPageP(4)">4</a>
+
+
+                                        <a href="#" class="page-num" onclick="gotoPageP(5)">5</a>
+
+                                                        <a href="#" class="page-elp">...</a>
+                                                         <a href="#" class="pageimg page-next" onclick="gotoPageP(4)"> 下一页</a>
+                 <a href="#" class="pageimg page-last" onclick="gotoPageP(7)">尾页</a>
+            </span></span>
+                </div>
+            </div>
+
+      </div>
+            <div class="cstt-intext">
+        <h5 class=>3.会诊说明 <em>（必填）</em></h5>
+
+            <ul class="cstt-themes ">
+              <li><label for="">主题:</label><input onfocus="this.style.backgroundColor='#fff'" onblur="this.style.backgroundColor='#f5f5f5';" type="text" name="" value=""><em>*</em></li>
+              <li><label for="">会诊说明:</label><textarea name="" onfocus="this.style.backgroundColor='#fff';this.value=''" onblur="this.style.backgroundColor='#f5f5f5';">请输入会诊说明，包括使用病例的详细说明</textarea><em>*</em></li>
+
+            </ul>
+
+        </div>
+
+           <div class="cstt-sure"><a href="consultationstart2.html"><input type="button" class="navy-btn" value="发起会诊"/></a></div>
+ </div>
+
+    </div>
+ </section>
+</div>
+ <footer class="clearfix">
+    <div class="footer footer980">
+        <ul class="footer-text fl">
+          <li style="color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</li>
+          <li class="padding"></li>
+          <li>客服电话：<h2>400-0571-574</h2>  &nbsp; &nbsp; &nbsp;ICP证  浙B-20140372 浙ICP备11059294号-3&nbsp; &nbsp;<a target="-blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202000272" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../images/beian.png" style="float:left;">浙公网安备 33010202000272号<p></p></a> </li>
+          <li>联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; </li>
+          <li>杭州联众医疗科技股份有限公司  &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </li>
+        </ul>
+        <ul class="footer-img fr">
+          <li>专家版<img src="../images/2code.jpg"></li>
+          <li>大众版<img src="../images/2code.jpg"></li>
+        </ul>
+    </div>
+  </footer>
+</div>
+<script type="text/javascript">
+  $(function(){ 
+
+        $(".jg-search").click(function(){
+        $(".cstt-hos-list").show();
+        $(this).children('.box-input').val("");
+    });
+
+        $(".jg-search .box-input").blur(function(){
+            if(this.value==""){
+                $(this).val("请输入关键词");
+            }else{
+                 $(this).val();
+            }
+        }) 
+
+    $(".cstt-hos-list li a").click(function(){
+        var text=$(this).html();
+        $(".cstt-chosen").html(text);
+        $(this).parent().parent().hide();
+    })
+    $(".cstt-jg-usual a").click(function(){
+        var text=$(this).html();
+        $(".cstt-chosen").html(text);
+    })
+
+
+
+    $(".cstt-friends").on("click",function(){
+         var nameText = $(this).find(".cstt-fri-name").text();
+         var newTag = $('<span class="cstt-inv-name"></span>');
+         var $input = $(this).children("input[type=checkbox]").prop('checked');
+            if ($input==false) {
+                 $(this).css("background","#f5f5f5");
+                  $(this).children("input[type=checkbox]").prop('checked',true);
+                  $(".cstt-invited").append(newTag);
+                  newTag.css("opacity","0").animate({opacity:'1'},500).html( '<em>'+ nameText +'</em>'+'<a class="del"></a>');
+              };
+   }) 
+        $(".cstt-js").mouseover(function(){
+            $(this).css("border-color","#02c6e1");
+      })
+        $(".cstt-js").mouseout(function(){
+            $(this).css("border-color","#ddd");
+      })
+    $(".cstt-invited").on("click","span",function(){
+        var nText = $(this).find("em").text();
+       $(this).hide();
+       
+    })
+
+})
+</script>
+<script>
+    (function(){
+        $.divselect(".user-select",".user-select-ul",".user-select-span");
+    })()
+</script>
+</body>
+</html>

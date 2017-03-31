@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css" />
+<link href="../../css/emr.css?v=upd20160503" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>        
+          <li><a href="#"><span class="nav-icon3"></span>影像</a></li> 
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li> 
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" style="position: relative;">
+    <aside class=" mm-menu"  >
+        <div class="column-wide-block for-cwb" >
+            <dl class="mm-menu--items">
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul style="margin-top:14px;">
+                    <li><a href="#">· 个人影像</a></li>
+                    <li class="last"><a href="#">· 共享影像</a></li>
+                    <li><a href="#">· 获取影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 上传记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>空中诊室<p>air room</p></dt>
+                <dd class="column-icon column-air"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 留言咨询</a></li>
+                    <li class="last"><a href="#">· 视频诊室</a></li>
+                    <li><a href="#">· 诊间预约</a></li>
+                    <li class="last"><a href="#">· 医院挂号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>双向转诊<p>referral</p></dt>
+                <dd class="column-icon column-ref"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="">
+                    <li><a href="#">· 待办列表</a></li>
+                    <li class="last"><a href="#">· 转入记录</a></li>
+                    <li><a href="#">· 转出记录</a></li>
+                    <li class="last"><a href="#">· 患者跟踪</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl  class="clearfix">
+                    <dt>影像报告<p>report</p></dt>
+                    <dd class="column-icon column-rep"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 报告列表</a></li>
+                        <li><a href="#">· 报告书写</a></li>
+                        <li><a href="#">· 影像匹配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>病历查询<p>medical record</p></dt>
+                    <dd class="column-icon column-med"></dd>
+                </dl>
+                <div class="column-detail narrow-right">
+                    <ul>
+                        <li><a href="#">· 按患者查询</a></li>
+                        <li><a href="#">· 按类型查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl class="clearfix">
+                    <dt>联系人<p>contacts</p></dt>
+                    <dd class="column-icon column-cont"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul>
+                        <li><a href="#">· 我的联系人</a></li>
+                        <li><a href="#">· 关注我的患者</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>设置管理<p>settings</p></dt>
+                    <dd class="column-icon column-set"></dd>
+                </dl>
+                <div class="column-detail  narrow-right">
+                    <ul class="column-spe-ul" style="margin-top:14px;">
+                        <li><a href="#">· 个人信息</a></li>
+                        <li><a href="#">· 排班设置</a></li>
+                        <li><a href="#">· 价格设置</a></li>
+                        <li><a href="#">· 报告模板</a></li>
+                        <li><a href="#">· 短信设置</a></li>
+                        <li><a href="#">· 修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+     <span class="mm-menu-toggle"></span>
+
+ <section class="user-right wrapper">
+
+     <div class="breadcrumbs"><span class="bread-fir"><a href="">电子病历 &gt;&gt;&gt;</a></span><span class="bread-sec">患者查询</span></div>
+    
+        <div class="emr-patient">
+
+                <div class="emr-query">
+                    <div class="emr-select">
+                        <div class="user-select">
+                            <p>卡类型</p>
+                            <div class="grey-select">
+                                <span class="user-select-span ">请选择</span>
+                                <i></i>
+                            </div>
+                            <ul class="user-select-ul">
+                                <li><a href="javascript:;" selectid="1">社保卡/医保卡</a></li>
+                                <li><a href="javascript:;" selectid="2">农保卡</a></li>
+                                <li><a href="javascript:;" selectid="3">一号通卡</a></li>
+                                <li><a href="javascript:;" selectid="4">非一号通卡</a></li>
+                                <li><a href="javascript:;" selectid="5">其他</a></li>
+                            </ul>
+                        </div>
+                        <div class="user-select">
+                            <p>证件类型</p>
+                            <div class="grey-select">
+                                <span class="user-select-span ">请选择</span>
+                                <i></i>
+                            </div>
+                            <ul class="user-select-ul">
+                                <li><a href="javascript:;" selectid="1">身份证</a></li>
+                                <li><a href="javascript:;" selectid="2">军人证</a></li>
+                                <li><a href="javascript:;" selectid="3">护照</a></li>
+                                <li><a href="javascript:;" selectid="4">学生证</a></li>
+                                <li><a href="javascript:;" selectid="5">回乡证</a></li>
+                                <li><a href="javascript:;" selectid="6">驾驶证</a></li>
+                                <li><a href="javascript:;" selectid="7">其他</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul class="line">
+                        <li class="emr-sel-li">
+                           <label>卡号</label>
+                           <input type="text" class="grey-select" valu="" onfocus="inputonf.call(this);" onblur="inputonb.call(this);"  />
+                        </li>
+
+                        <li class="emr-sel-li">
+                           <label>证件号码</label>
+                           <input type="text"  class="grey-select" value="" onfocus="inputonf.call(this);" onblur="inputonb.call(this);" />
+                        </li>
+                    </ul>
+
+
+                    <ul class="line">
+                        <li class="emr-sel-li">
+                           <label>患者姓名</label>
+                           <input type="text"  class="grey-select" value="模糊搜索" onfocus="inputonf.call(this);" onblur="inputonb.call(this);" />
+                        </li>
+
+                        <li class="emr-sel-li">
+                           <label>病区</label>
+                           <input type="text"  class="grey-select" value="" onfocus="inputonf.call(this);" onblur="inputonb.call(this);" />
+                        </li>
+                        
+                    </ul>
+                     <ul class="line"><li><input type="button" class="emr-query-btn blue-btn" value="查询" /></li>
+                     </ul>
+                </div>
+ <!--          <div class="pa-traitment-his style-b-list" style="display:block;">
+                <h4 class="style-b-tit">患者检索结果</h4>
+                  <table class="pa-trait-table style-b-table" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                            <th width="15%">姓名</th>
+                            <th width="10%">性别</th>
+                            <th width="10%">患者类型</th>
+                            <th width="20%">出生日期</th>
+                            <th width="20%">民族</th>
+                            <th width="10%">婚否</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="location='patientlist.html'">
+                                <td>张国荣</td>
+                                <td>男</td>
+                                <td>本地人员</td>
+                                <td>19340506</td>
+                                <td>维吾尔族</td>
+                                <td>未婚</td>
+                            </tr>
+                            <tr onclick="location='patientlist.html'">
+                                <td>张国荣</td>
+                                <td>男</td>
+                                <td>本地人员</td>
+                                <td>19340506</td>
+                                <td>维吾尔族</td>
+                                <td>未婚</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+            <div class="page-list">
+                      <div class="page-left">
+                          <a href='#' onclick="gotoPageP(1)" class="pageimg page-first">首页 </a>
+                        <a href='#' onclick="gotoPageP($prePage)" class="pageimg page-prev">上一页 </a>
+                      
+                        <a href='#' class="page-num current">1</a> 
+                        <a href='#' class="page-num">2</a>
+                        <a href='#' class="page-elp">...</a> 
+                       
+                        <a href='#' class="big"><input type="text" value="1" name="queryString" id="queryString" class="page-to"/>
+                        <span>/ &nbsp; 1</span><span class="page-go">go</span> </a>
+                        <a href='#'  onclick="gotoPageP($nextPage)" class="pageimg page-next" >下一页</a>
+                        <a href='#' onclick="gotoPageP($tPage)" class="pageimg page-last">尾页 </a>
+                     </div>
+                     <div class="page-right">   
+                          <span class="pagen">本页共<a class="page-number">&nbsp;3&nbsp;</a>条记录&nbsp;/&nbsp;总共<a class="page-number">&nbsp;3&nbsp;</a>条记录</span>
+    
+                      </div>
+            </div>
+            </div> -->
+
+  <div class="pa-basecard">
+                      <ul class="clearfix">
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>      
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>   
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>  
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>  
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>   
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>    
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>
+                        <li onclick="location='patientlist.html'">
+                            <span class="pa-name">王金凤</span>
+                            <span class="pa-sex">女</span>
+                            <span class="pa-birth">19700606</span>
+                            <span class="pa-type">本地人员</span>
+                            <span class="pa-nation">汉族</span>
+                        </li>   
+                      </ul>
+                    </div>
+ </section>
+</div>
+<script> 
+$(function(){
+    $.divselect(".user-select",".user-select-ul",".user-select-span");
+
+}); 
+
+
+
+    function inputonf(o){
+        this.style.borderColor='#2aacc6',
+        this.style.boxShadow='0 0 3px #2aacc6',
+        this.style.color='#000',
+        this.value=''
+    }
+    function inputonb(o){
+        this.style.borderColor='#d7d7d7',
+        this.style.boxShadow='none',
+        this.style.color='#898989'
+    }
+//input框样式
+</script>
+  <footer class="clearfix">
+    <div class="footer footer980">
+        <ul class="footer-text fl">
+          <li style="color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</li>
+          <li class="padding"></li>
+          <li>客服电话：<h2>400-0571-574</h2>  &nbsp; &nbsp; &nbsp;ICP证  浙B-20140372 浙ICP备11059294号-3&nbsp; &nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202000272" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../images/beian.png" style="float:left;">浙公网安备 33010202000272号<p></p></a> </li>
+          <li>联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; </li>
+          <li>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </li>
+        </ul>
+        <ul class="footer-img fr">
+          <li>专家版<img src="#"></li>
+          <li>大众版<img src="#"></li>
+        </ul>
+    </div>
+  </footer>
+</body>
+</html>

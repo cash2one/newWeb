@@ -1,0 +1,1199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>全球影像机构签约界面</title>
+
+    <link href="../../css/layout.css?v=upd20160413" rel="stylesheet"  />
+    <link href="../../css/main.css?v=upd20160613" rel="stylesheet"  />
+    <link href="../../css/style.css?v=upd20160413" rel="stylesheet"  />
+    <link href="../../css/media.css?v=upd20160413" rel="stylesheet"  />
+    <link rel="icon" href="../../images/favicon.ico">
+
+    <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery.select.js" type="text/javascript"></script>
+    <script src="../../js/searchbar.js"></script>
+    <script src="../../js/highstock.js"></script>
+    <script>
+        (function() {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="bodymain">
+    <header>
+        <div class="user">
+            <div class="user-top">
+                <div class="user-tr">
+                    <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+                    <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+                    <div class="user-search">
+                        <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                        <ul class="select-mgul">
+                            <li><a href="#">联系人</a></li>
+                            <li><a href="#">影像</a></li>
+                        </ul>
+                        <div class="select-in">
+                            <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                        </div>
+                        <div class="search-btn"></div>
+                    </div>
+                </div>
+                <div class="user-tl">
+                    <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>
+            <ul class="nav-li">
+                <li><a href="#"><span class="nav-icon1"></span>桌面</a></li>
+                <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+                <li><a href="#"><span class="nav-icon5"></span>我的主页</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-box" style="position: relative">
+        <aside class=" mm-menu"  >
+            <div class="column-wide-block for-cwb" >
+                <dl class="mm-menu--items">
+                    <dt>影像<p>images</p></dt>
+                    <dd class="column-icon column-img"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 个人影像</a></li>
+                        <li class="last"><a href="#">· 共享影像</a></li>
+                        <li><a href="#">· 获取影像</a></li>
+                        <li class="last"><a href="#">· 本院影像</a></li>
+                        <li><a href="#">· 分享历史</a></li>
+                        <li class="last"><a href="#">· 上传记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>会诊间<p>consultation</p></dt>
+                    <dd class="column-icon column-cons"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 创建影像会诊</a></li>
+                        <li class="last"><a href="#">· 影像会诊记录</a></li>
+                        <li><a href="#">· 创建视频会诊</a></li>
+                        <li class="last"><a href="#">· 视频会诊记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>空中诊室<p>air room</p></dt>
+                    <dd class="column-icon column-air"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 留言咨询</a></li>
+                        <li class="last"><a href="#">· 视频诊室</a></li>
+                        <li><a href="#">· 诊间预约</a></li>
+                        <li class="last"><a href="#">· 医院挂号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>双向转诊<p>referral</p></dt>
+                    <dd class="column-icon column-ref"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul class="">
+                        <li><a href="#">· 待办列表</a></li>
+                        <li class="last"><a href="#">· 转入记录</a></li>
+                        <li><a href="#">· 转出记录</a></li>
+                        <li class="last"><a href="#">· 患者跟踪</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl  class="clearfix">
+                        <dt>影像报告<p>report</p></dt>
+                        <dd class="column-icon column-rep"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul style="margin-top:14px;">
+                            <li><a href="#">· 报告列表</a></li>
+                            <li><a href="#">· 报告书写</a></li>
+                            <li><a href="#">· 影像匹配</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>病历查询<p>medical record</p></dt>
+                        <dd class="column-icon column-med"></dd>
+                    </dl>
+                    <div class="column-detail narrow-right">
+                        <ul>
+                            <li><a href="#">· 按患者查询</a></li>
+                            <li><a href="#">· 按类型查询</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl class="clearfix">
+                        <dt>联系人<p>contacts</p></dt>
+                        <dd class="column-icon column-cont"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul>
+                            <li><a href="#">· 我的联系人</a></li>
+                            <li><a href="#">· 关注我的患者</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>设置管理<p>settings</p></dt>
+                        <dd class="column-icon column-set"></dd>
+                    </dl>
+                    <div class="column-detail  narrow-right">
+                        <ul class="column-spe-ul" style="margin-top:14px;">
+                            <li><a href="#">· 个人信息</a></li>
+                            <li><a href="#">· 排班设置</a></li>
+                            <li><a href="#">· 价格设置</a></li>
+                            <li><a href="#">· 报告模板</a></li>
+                            <li><a href="#">· 短信设置</a></li>
+                            <li><a href="#">· 修改密码</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <script src="../../js/jquery.sidebar.js"></script>
+
+        <section class="user-right wrapper">
+            <span class="mm-menu-toggle" value="点击隐藏"></span>
+
+            <div class="breadcrumbs"><span class="bread-fir">影像报告&gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">数据统计</span></div>
+
+            <div class="hos-sgin-list">
+                <div class="data-time"></div>
+
+                <div class="jschats data-line" style="display:block;position: relative;height:500px;background-color: #fff;">
+                    <div class="data-img-title">
+                        <h1 class="line-write"><span class="line-hos-name">xxxxx</span>医院影像数据统计</h1>
+                        <div style="float: right;margin-right: 27%;margin-top: 105px;">
+                            <a class="pie-img" style="margin-right: 10px;"><i class="data-img data-img-pie"></i> 饼图</a>
+                            <a class="bar-img"><i class="data-img data-img-bar"></i> 柱状图</a>
+                        </div>
+
+                    </div>
+                    <div id="container-line" style="height: 450px; width: 100%;"></div>
+                </div>
+                <div class="jschats data-pie" style="display:none;position: relative; background-color: #fff;">
+                    <div class="data-img-title">
+                        <p>05/21-06/21 : 总报告数 <span>144</span></p>
+                        <div style="float: right;margin-right: 30px;margin-top: 30px;">
+                            <a href="#" style="margin-right: 10px;" class="line-img"><i class="data-img data-img-line"></i> 折线图</a>
+                            <a class="bar-img"><i class="data-img data-img-bar"></i> 柱状图</a>
+                        </div>
+                    </div>
+                    <div class="chats-row">
+
+                        <div class="js-chats-col">
+                            <div class="jschats-pie-one" >
+                                <div id="container-pie1" style="width:497px;height:350px"></div>
+                            </div>
+                            <div class="jschats-pie-one">
+                                <div id="container-pie2" style="width:497px;height:350px"></div>
+                            </div>
+                        </div>
+                        <div class="js-chats-col">
+                            <div class="jschats-pie-one" >
+                                <div id="container-pie3" style="width:497px;height:350px"></div>
+                            </div>
+                            <div class="jschats-pie-one">
+                                <div id="container-pie4" style="width:497px;height:350px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-bj"></div>
+                </div>
+                <div class="jschats data-bar" style="display:none;position: relative; background-color: #fff;"">
+                <div class="data-img-title">
+                    <p>05/21-06/21 : 总报告数 <span>144</span></p>
+
+                    <div style="float: right;margin-right: 30px;margin-top: 30px;">
+                        <a style="margin-right: 10px;" class="line-img"><i class="data-img data-img-line"></i> 折线图</a>
+                        <a class="pie-img"><i class="data-img data-img-pie"></i> 饼图</a>
+                    </div>
+                </div>
+                <div class="chats-row">
+                    <div class="js-chats-col">
+                        <div class="jschats-pie-one">
+                            <div id="container-bar1" style="width:497px;height:350px"></div>
+                        </div>
+                        <div class="jschats-pie-one">
+                            <div id="container-bar2" style="width:497px;height:350px"></div>
+                        </div>
+                    </div>
+                    <div class="js-chats-col">
+                        <div class="jschats-pie-one">
+                            <div id="container-bar3" style="width:497px;height:350px"></div>
+                        </div>
+                        <div class="jschats-pie-one">
+                            <div id="container-bar4" style="width:497px;height:350px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+</div>
+
+
+
+
+<footer class="clearfix">
+    <div class="footer">
+
+        <ul class="footer-info">
+            <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+            <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+            <br>
+            <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+            <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+        </ul>
+
+    </div>
+</footer>
+<!--折线图-->
+<script type="text/javascript">$(function () {
+        $.getJSON('http://www.hcharts.cn/datas/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+
+            // Create the chart
+            $('#container-line').highcharts('StockChart', {
+                rangeSelector : {
+                    selected : 1,
+                    buttons: [{
+                        type: 'month',
+                        count: 1,
+                        text: '1月'
+                    }, {
+                        type: 'month',
+                        count: 3,
+                        text: '3月'
+                    }, {
+                        type: 'month',
+                        count: 6,
+                        text: '6月'
+                    },
+                        {
+                            type: 'year',
+                            count: 1,
+                            text: '1年'
+                        }, {
+                            type: 'all',
+                            text: '全部'
+                        }],
+                    buttonTheme:{
+                        style: {
+                            color: '#000'
+                        }
+                    },
+                    labelStyle: {
+                        color: 'silver',
+                        fontWeight: 'bold',
+                        display:'none'
+
+                    }
+                },
+
+                title : {
+                    text : ''
+                },
+                exporting: {
+                    enabled: false
+                },
+                yAxis: {
+                    opposite: false
+                },
+                credits:{
+                    enabled:false
+                },
+                series : [{
+                    name : 'AAPL Stock Price',
+                    data : data,
+                    marker : {
+                        enabled : false,
+                        radius : 3
+                    },
+                    shadow : false,
+                    tooltip : {
+                        valueDecimals : 2
+                    }
+                }]
+            });
+        });
+    });</script>
+<!--图标切换-->
+<script>
+    $(".pie-img").click(function(){
+        $(".data-pie").show();
+        $(".data-line").hide();
+        $(".data-bar").hide();
+        <!--影响报告-->
+        $(function () {
+            var chart;
+
+            $(document).ready(function () {
+
+                // Build the chart
+                $('#container-pie1').highcharts({
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: '影像报告',
+                        style:{
+                            color:'#7E7B85',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    tooltip: {
+                        pointFormat: '[{point.y}]'
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits:{
+                        enabled:false
+                    },
+                    legend:{
+                        itemStyle:{
+                            color:'#6D6B66'
+                        }
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                distance: 0,
+                                style: {
+                                    color: '#000'
+                                },
+                                format:'{point.name}  {point.y}'
+
+                            },
+                            showInLegend: true,
+                            colors: [
+                                '#BBE7E2',
+                                "#CBEBE5",
+                                "#00B5B4",
+                                "#00BFBA",
+                                "#00C9C3",
+                                "#00D0C7",
+                                "#4CD7CE"]
+                        },
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Browser share',
+                        data: [
+                            ["DR/CR/DX",   54],
+                            ["CT",       40],
+                            {
+                                name: 'US',
+                                y: 20,
+                                selected: true
+                            },
+                            ["MG",   12],
+                            ["NM",   10],
+                            ["XA",   4],
+                            ["MR",   18],
+                        ]
+                    }]
+                });
+            });
+
+        });
+        <!--就诊类别-->
+        $(function () {
+            var chart;
+
+            $(document).ready(function () {
+
+                // Build the chart
+                $('#container-pie2').highcharts({
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: '就诊类别',
+                        style:{
+                            color:'#7E7B85',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    tooltip: {
+                        pointFormat: '[{point.y}]'
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits:{
+                        enabled:false
+                    },
+                    legend:{
+                        itemStyle:{
+                            color:'#6D6B66'
+                        }
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                distance: 0,
+                                style: {
+                                    color: '#000'
+                                },
+                                format:'{point.name}  {point.y}'
+
+                            },
+                            showInLegend: true,
+                            colors: [
+                                "#EC7031",
+                                "#F3AC86",
+                                "#F5D4C5"]
+
+                        },
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Browser share',
+                        data: [
+                            ["急诊",   54],
+                            ["住院",       40],
+                            {
+                                name: '门诊',
+                                y: 20,
+                                selected: true
+                            }
+                        ]
+                    }]
+                });
+            });
+
+        });
+        <!--检查部位-->
+        $(function () {
+            var chart;
+
+            $(document).ready(function () {
+
+                // Build the chart
+                $('#container-pie3').highcharts({
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: '检查部位',
+                        style:{
+                            color:'#7E7B85',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    tooltip: {
+                        pointFormat: '[{point.y}]'
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits:{
+                        enabled:false
+                    },legend:{
+                        itemStyle:{
+                            color:'#6D6B66'
+                        }
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                distance: 0,
+                                style: {
+                                    color: '#000'
+                                },
+                                format:'{point.name}  {point.y}'
+
+                            },
+                            showInLegend: true,
+                            colors: [
+                                "#0078CB",
+                                "#0084CF",
+                                "#0097D7",
+                                "#00A9DC",
+                                "#47B8E1",
+                                "#B7DCEA",
+                                "#C7E6ED"]
+                        },
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Browser share',
+                        data: [
+                            ["检查部位1",  54],
+                            ["检查部位2",  40],
+                            {
+                                name: '检查部位3',
+                                y: 20,
+                                selected: true
+                            },
+                            ["检查部位4",  12],
+                            ["检查部位5",  10],
+                            ["检查部6", 4],
+                            ["检查部位7", 18],
+                        ]
+                    }]
+                });
+            });
+
+        });
+        <!--报告完成-->
+        $(function () {
+            var chart;
+
+            $(document).ready(function () {
+
+                // Build the chart
+                $('#container-pie4').highcharts({
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: '报告完成度',
+                        style:{
+                            color:'#7E7B85',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    tooltip: {
+                        pointFormat: '[{point.y}]'
+                    },
+                    legend:{
+                        itemStyle:{
+                            color:'#6D6B66'
+                        }
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits:{
+                        enabled:false
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                distance: 0,
+                                style: {
+                                    color: '#000'
+                                },
+                                format:'{point.name}  {point.y}'
+
+                            },
+                            showInLegend: true,
+                            colors: [
+                                "#ACCC37",
+                                "#D6E071",
+                                "#E3E6A6",
+                                "#F3F0D0"]
+                        },
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Browser share',
+                        data: [
+                            ["书写未审核",  61],
+                            ["修订",  54],
+                            {
+                                name: "无报告",
+                                y: 11,
+                                selected: true
+                            },
+                            ["审核",  72],
+
+                        ]
+                    }]
+                });
+            });
+
+        });
+
+    });
+    $(".line-img").click(function(){
+        $(".data-pie").hide();
+        $(".data-line").show();
+        $(function () {
+            $.getJSON('http://www.hcharts.cn/datas/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+
+                // Create the chart
+                $('#container-line').highcharts('StockChart', {
+                    rangeSelector : {
+                        selected : 1,
+                        buttons: [{
+                            type: 'month',
+                            count: 1,
+                            text: '1月'
+                        }, {
+                            type: 'month',
+                            count: 3,
+                            text: '3月'
+                        }, {
+                            type: 'month',
+                            count: 6,
+                            text: '6月'
+                        },
+                            {
+                                type: 'year',
+                                count: 1,
+                                text: '1年'
+                            }, {
+                                type: 'all',
+                                text: '全部'
+                            }],
+                        buttonTheme:{
+                            style: {
+                                color: '#000'
+                            }
+                        },
+                        labelStyle: {
+                            color: 'silver',
+                            fontWeight: 'bold',
+                            display:'none'
+
+                        }
+                    },
+
+                    title : {
+                        text : ''
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    yAxis: {
+                        opposite: false
+                    },
+                    credits:{
+                        enabled:false
+                    },
+                    series : [{
+                        name : 'AAPL Stock Price',
+                        data : data,
+                        marker : {
+                            enabled : false,
+                            radius : 3
+                        },
+                        shadow : false,
+                        tooltip : {
+                            valueDecimals : 2
+                        }
+                    }]
+                });
+            });
+        });
+        $(".data-bar").hide();
+    });
+    $(".bar-img").click(function(){
+        $(".data-pie").hide();
+        $(".data-line").hide();
+        $(".data-bar").show();
+        <!--影像类别-->
+        $(function () {
+            $('#container-bar1').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '影像类别',
+                    align: 'right',
+                    style:{
+                        color:'#7E7B85',
+                        fontWeight: 'bold'
+                    }
+                },
+                subtitle: {
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+                    pointFormat: '<b>{point.y}</b>'
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits:{
+                    enabled:false
+                },
+                series: [{
+                    name: 'Population',
+                    data: [
+                        {name: 'DR', y: 50,color:'#00C1CC'},
+                        {name: 'CT', y: 40,color:'#00C9CD'},
+                        {name: 'US', y: 30,color:'#00D1D3'},
+                        {name: 'MR', y: 20,color:'#4DDBD3'},
+                        {name: 'CX', y: 10,color:'#80E0DB'},
+                        {name: 'RF', y: 3,color:'#B1E1DD'},
+                    ],
+                    dataLabels: {
+                        enabled: true,
+                        rotation: 0,
+                        color: '#000',
+                        align: 'right',
+                        format: '{point.y:.1f}', // one decimal
+                        y: 0, // 10 pixels down from the top
+                        x:5,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+
+                    }
+                }]
+            });
+        });
+        <!--就诊类别-->
+        $(function () {
+            $('#container-bar2').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '就诊类别',
+                    align: 'right',
+                    style:{
+                        color:'#7E7B85',
+                        fontWeight: 'bold'
+                    }
+                },
+                subtitle: {
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+                    pointFormat: '<b>{point.y}</b>'
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits:{
+                    enabled:false
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0,
+                        pointWidth: 30
+                    }
+                },
+                series: [{
+                    name: 'Population',
+                    data: [
+                        {name: '门诊', y: 70,color:'#EC7031'},
+                        {name: '住院', y: 30,color:'#F3AC86'},
+                        {name: '急诊', y: 12,color:'#F5D4C5'}
+                    ],
+                    dataLabels: {
+                        enabled: true,
+                        rotation: 0,
+                        color: '#000',
+                        align: 'right',
+                        format: '{point.y:.1f}', // one decimal
+                        y: 0, // 10 pixels down from the top
+                        x:5,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+
+                    }
+                }]
+            });
+        });
+        <!--检查部位-->
+        $(function () {
+            $('#container-bar3').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '检查部位',
+                    align: 'right',
+                    style:{
+                        color:'#7E7B85',
+                        fontWeight: 'bold'
+                    }
+                },
+                subtitle: {
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+                    pointFormat: '<b>{point.y}</b>'
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits:{
+                    enabled:false
+                },
+                series: [{
+                    name: 'Population',
+                    data: [
+                        {name: '检查部位1', y: 50,color:'#0078CB'},
+                        {name: '检查部位2', y: 40,color:'#0084CF'},
+                        {name: '检查部位3', y: 30,color:'#0097D7'},
+                        {name: '检查部位4', y: 20,color:'#3FBBDF'},
+                        {name: '检查部位5', y: 10,color:'#7BCAE7'},
+                        {name: '检查部位6', y: 3,color:'#B7DCEA'},
+                    ],
+                    dataLabels: {
+                        enabled: true,
+                        rotation: 0,
+                        color: '#000',
+                        align: 'right',
+                        format: '{point.y:.1f}', // one decimal
+                        y: 0, // 10 pixels down from the top
+                        x:5,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+
+                    }
+                }]
+            });
+        });
+        <!--报告完整度-->
+        $(function () {
+            $('#container-bar4').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '报告完成度',
+                    align: 'right',
+                    style:{
+                        color:'#7E7B85',
+                        fontWeight: 'bold'
+                    }
+                },
+                subtitle: {
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+                    pointFormat: '<b>{point.y}</b>'
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits:{
+                    enabled:false
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0,
+                        pointWidth: 30
+                    }
+                },
+                series: [{
+                    name: 'Population',
+                    data: [
+                        {name: '书写未审核', y: 50,color:'#ACCC37'},
+                        {name: '审核', y: 40,color:'#D6E071'},
+                        {name: '修订', y: 30,color:'#E3E6A6'},
+                        {name: '无报告', y: 20,color:'#F3F0D0'},
+                    ],
+                    dataLabels: {
+                        enabled: true,
+                        rotation: 0,
+                        color: '#000',
+                        align: 'right',
+                        format: '{point.y:.1f}', // one decimal
+                        y: 0, // 10 pixels down from the top
+                        x:5,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+
+                    }
+                }]
+            });
+        });
+
+    });
+
+</script>
+<script>
+    $(function(){
+        $(".mm-menu-toggle").click(function(){
+            if($(".mm-menu").is(":hidden")){
+                $('#container-line').width("1200px");
+                $(function () {
+                    $.getJSON('http://www.hcharts.cn/datas/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+
+                        // Create the chart
+                        $('#container-line').highcharts('StockChart', {
+                            rangeSelector : {
+                                selected : 1,
+                                buttons: [{
+                                    type: 'month',
+                                    count: 1,
+                                    text: '1月'
+                                }, {
+                                    type: 'month',
+                                    count: 3,
+                                    text: '3月'
+                                }, {
+                                    type: 'month',
+                                    count: 6,
+                                    text: '6月'
+                                },
+                                    {
+                                        type: 'year',
+                                        count: 1,
+                                        text: '1年'
+                                    }, {
+                                        type: 'all',
+                                        text: '全部'
+                                    }],
+                                buttonTheme:{
+                                    style: {
+                                        color: '#000'
+                                    }
+                                },
+                                labelStyle: {
+                                    color: 'silver',
+                                    fontWeight: 'bold',
+                                    display:'none'
+
+                                }
+                            },
+
+                            title : {
+                                text : ''
+                            },
+                            exporting: {
+                                enabled: false
+                            },
+                            yAxis: {
+                                opposite: false
+                            },
+                            credits:{
+                                enabled:false
+                            },
+                            series : [{
+                                name : 'AAPL Stock Price',
+                                data : data,
+                                marker : {
+                                    enabled : false,
+                                    radius : 3
+                                },
+                                shadow : false,
+                                tooltip : {
+                                    valueDecimals : 2
+                                }
+                            }]
+                        });
+                    });
+                });
+                chart.redraw();
+
+            }else{
+                $('#container-line').width("1000px");
+                $(function () {
+                    $.getJSON('http://www.hcharts.cn/datas/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+
+                        // Create the chart
+                        $('#container-line').highcharts('StockChart', {
+                            rangeSelector : {
+                                selected : 1,
+                                buttons: [{
+                                    type: 'month',
+                                    count: 1,
+                                    text: '1月'
+                                }, {
+                                    type: 'month',
+                                    count: 3,
+                                    text: '3月'
+                                }, {
+                                    type: 'month',
+                                    count: 6,
+                                    text: '6月'
+                                },
+                                    {
+                                        type: 'year',
+                                        count: 1,
+                                        text: '1年'
+                                    }, {
+                                        type: 'all',
+                                        text: '全部'
+                                    }],
+                                buttonTheme:{
+                                    style: {
+                                        color: '#000'
+                                    }
+                                },
+                                labelStyle: {
+                                    color: 'silver',
+                                    fontWeight: 'bold',
+                                    display:'none'
+
+                                }
+                            },
+
+                            title : {
+                                text : ''
+                            },
+                            exporting: {
+                                enabled: false
+                            },
+                            yAxis: {
+                                opposite: false
+                            },
+                            credits:{
+                                enabled:false
+                            },
+                            series : [{
+                                name : 'AAPL Stock Price',
+                                data : data,
+                                marker : {
+                                    enabled : false,
+                                    radius : 3
+                                },
+                                shadow : false,
+                                tooltip : {
+                                    valueDecimals : 2
+                                }
+                            }]
+                        });
+                    });
+                });
+                chart.redraw();
+
+            }
+        });
+    });
+</script>
+
+</div>
+
+</body>
+</html>

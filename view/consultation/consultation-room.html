@@ -1,0 +1,1137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height:100%">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全球影像用户界面</title>
+    <link href="../../css/layout.css?v=upd20160510" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160510" rel="stylesheet" type="text/css"/>
+    <link href="../../css/consultation.css?v=upd20160825" rel="stylesheet" type="text/css"/>
+    <!-- <link href="../../css/media.css?v=upd20160326" rel="stylesheet" type="text/css" /> -->
+    <link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })();
+    </script>
+    <style>
+        .mCSB_inside>.mCSB_container {
+            margin-right: 16px;
+        }
+        .data-list-box .mCustomScrollBox{
+            width:100%;
+        }
+    </style>
+
+</head>
+<body >
+<div class="con-room-head clearfixed">
+    <div class="con-room-head-left fl">
+        <p>
+            远程会诊间——MORE
+            <i class="icon-peo-nub"></i><span>5</span>
+            <span class="time">2016-09-09 18:22</span>
+        </p>
+    </div>
+    <div class="con-room-head-right fr">
+        <i id="diagnosisWrite"></i>
+        <i id="diagnosisTalk" class=""></i>
+        <i id="outRoom"></i>
+        <i id="closeRoom"></i>
+    </div>
+</div>
+<div style="overflow: hidden" class="consultation-room" id='consultation-room'>
+    <ul class="clearfixed" >
+        <li class="con-room-left">
+            <div class="con-room-left-top">
+                <a id="meeting-dotor" class="meeting-on" href="#">与会医生</a>
+                <a id="meeting-data" class="un" href="#">会诊资料</a>
+            </div>
+            <div class="con-room-left-bottom">
+                <div  class="meeting-dotor">
+                    <a class="invitation-btn" href="javascript:;">邀请专家</a>
+                    <div id="meeting-dotor-list">
+                        <ul class="clearfixed">
+                            <li>
+                                <div class="doctor-video">
+                                    <div style="position:absolute;width:100px;height:78px;z-index:9">
+                                    </div>
+                                    <div class="video-content">
+                                        <!--<iframe style="position:absolute;width:10px;height:10px;z-index:8;"></iframe>-->
+                                        <!--<video style="width:100%;height:100%;" src="http://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>-->
+                                    </div>
+
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span>
+                                        <span class="room-master">主持人</span>
+                                        <i class="terminal-pc"></i>
+                                        <i class="icon-mike icon-voice"></i>
+                                        <i class="vedio-rotate"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="doctor-video">
+                                    <object type="application/x-shockwave-flash" data="http://demo.sc.chinaz.com//Files/DownLoad/flash2/201608/flash4716.swf" width="120" height="75" id="flashid" style="visibility: visible;"><param name="base" value="."><param name="wmode" value="Opaque"><param name="allowScriptAccess" value="always"><param name="quality" value="high"><param name="allowNetWorking" value="all"></object>
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span>
+                                        <span class="room-master">主持人</span>
+                                        <!-- <i class="terminal-pc"></i> -->
+                                        <i class="terminal-phone"></i>
+                                        <i class="icon-mike icon-voice"></i>
+                                        <i class="vedio-rotate"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="doctor-video">
+                                    <i class="icon icon-video"></i>
+                                    <i class="icon icon-voice"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span> 
+                                        <i class="terminal-pc"></i>
+                                        <i class="terminal-phone"></i>
+                                        <i class="icon-mike icon-voice"></i>
+                                        <i class="vedio-rotate"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="doctor-video">
+                                    <i class="icon icon-video"></i>
+                                    <i class="icon icon-voice"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span>
+                                        <i class="terminal-pc"></i>
+                                        <i class="terminal-phone"></i>
+                                        <i class="icon-mike icon-voice"></i>
+                                        <i class="vedio-rotate"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="doctor-video">
+                                    <i class="icon icon-video"></i>
+                                    <i class="icon icon-voice"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span>
+                                        <i class="terminal-pc"></i>
+                                        <i class="terminal-phone"></i>
+                                        <i class="icon-mike icon-voice"></i>
+                                        <i class="vedio-rotate"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="doctor-video">
+                                    <i class="icon icon-video"></i>
+                                    <i class="icon icon-voice"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span>
+                                        <i class="terminal-pc"></i>
+                                        <i class="terminal-phone"></i>
+                                        <i class="icon-mike icon-voice"></i>
+                                        <i class="vedio-rotate"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="doctor-video">
+                                    <i class="icon icon-video"></i>
+                                    <i class="icon icon-voice"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span>
+                                        <i class="terminal-pc"></i>
+                                        <i class="terminal-phone"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="doctor-video">
+                                    <i class="icon icon-video"></i>
+                                    <i class="icon icon-voice"></i>
+                                </div>
+                                <div class="doctor-info">
+                                    <p>
+                                        <span class="doctor-name">张医生</span>
+                                        <i class="terminal-pc"></i>
+                                        <i class="terminal-phone"></i>
+                                    </p>
+
+                                    <p class="clearfixed">
+                                        <span class="fl">放射科</span>
+                                        <span class="fr">主任医师</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="meeting-data" style="margin-top:60px">
+                    <div class="data-type-box clearfixed">
+                        <div class="data-type"><span id="shjy" class="data-on">生化检验</span></div>
+                        <div class="data-type"><span id="yxjc">影像检查</span></div>
+                        <div class="data-type"><span id="blws">病历文书</span></div>
+                    </div>
+                    <div class="data-list-box">
+                        <ul class="shjy-list">
+                            <li>目瞪口呆.jpg</li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院</span>
+                            </li>
+                        </ul>
+                        <ul class="yxjc-list">
+                            <li>一脸懵逼.jpg</li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院2</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院2</span>
+                            </li>
+                        </ul>
+                        <ul class="blws-list">
+                            <li>二脸懵逼.jpg</li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院1</span>
+                            </li>
+                            <li>
+                                <span>2016-09-09 18:33</span>
+                                <span>胸部检查</span>
+                                <span>内蒙古海军附属医院1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <label class="lab1 drag-label" id='lab1'></label>
+        <li class="con-room-center">
+            <div class="room-center-top">
+                <div class="patient-info">
+                    <div class="clearfixed">
+                        <span class="patient-name">姓名：<b>舟舟</b></span>
+                        <span class="patient-sex">性别：<b>男</b></span>
+                        <span class="patient-age">年龄：<b>23</b></span>
+                    </div>
+                    <p><b>会诊要求:</b></p>
+
+                    <p>会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求会诊要求</p>
+
+                    <p><b>病情描述:</b></p>
+
+                    <p>病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述病情描述</p>
+                </div>
+            </div>
+            <div id="box" class="room-center-bottom">
+                <div id="coor"><i></i></div>
+                <div class="report-main-content">
+                    <div class="report-main watermark">
+                        <input type="button" class="navy-btn fr" style="text-align:center; line-height:30px;" value="查看影像">
+                        <div style="width:98%;height:600px;">
+                            <img style="width:100%;" src="../../images/homebanner.jpg" alt=""/>
+                        </div>
+                        <table style="display: block;" width="100%" border="0" cellspacing="0" class="report">
+                            <caption><h2>市一医院检查报告单</h2></caption>
+                            <thead width="100%">
+                            <tr>
+                                <th align="left" colspan="2">尿常规门诊</th>
+                                <th align="right" colspan="2">No.22091000328</th>
+                            </tr>
+                            </thead>
+                            <tbody class="report-info">
+                            <tr>
+                                <td width="20%">姓名：<span>王无</span></td>
+                                <td width="20%">姓别：<span>男</span></td>
+                                <td width="20%">年龄：<span>46</span></td>
+                                <td width="20%">样本编号：<span>264456</span></td>
+                            </tr>
+                            <tr>
+                                <td>样本类型：<span>尿液</span></td>
+                                <td>门诊号：<span>22</span></td>
+                                <td>科室：<span>泌尿科</span></td>
+                                <td>年龄：<span>46</span></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr style="text-align: left">
+                                <td colspan="4">
+                                    <!--<table class="report-con" width="100%">-->
+                                        <!--<tr class="report-tit">-->
+                                            <!--<td class="report-no"></td>-->
+                                            <!--<td width="25%">检验项目</td>-->
+                                            <!--<td width="10%">结果</td>-->
+                                            <!--<td width="15%">参考范围</td>-->
+                                            <!--<td width="15%">单位</td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>-->
+                                            <!--<td class="report-no">1</td>-->
+                                            <!--<td class="report-obj">酸碱度（干化学）</td>-->
+                                            <!--<td class="report-res">8.5<em>↑</em></td>-->
+                                            <!--<td class="report-range">5.0-8.0</td>-->
+                                            <!--<td class="report-unit"></td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>-->
+                                            <!--<td>2</td>-->
+                                            <!--<td class="report-obj">亚硝酸盐（干化学）</td>-->
+                                            <!--<td class="report-res">阴性</td>-->
+                                            <!--<td class="report-range">阴性</td>-->
+                                            <!--<td class="report-unit"></td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>-->
+                                            <!--<td>3</td>-->
+                                            <!--<td class="report-obj">葡萄糖（干化学）</td>-->
+                                            <!--<td class="report-res">阴性</td>-->
+                                            <!--<td class="report-range">阴性</td>-->
+                                            <!--<td class="report-unit"></td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>-->
+                                            <!--<td class="report-no">11</td>-->
+                                            <!--<td class="report-obj">白细胞（干化学）</td>-->
+                                            <!--<td class="report-res">阴性</td>-->
+                                            <!--<td class="report-range">阴性</td>-->
+                                            <!--<td class="report-unit"></td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>-->
+                                            <!--<td>12</td>-->
+                                            <!--<td class="report-obj">白细胞（干化学）</td>-->
+                                            <!--<td class="report-res">阴性</td>-->
+                                            <!--<td class="report-range">阴性</td>-->
+                                            <!--<td class="report-unit"></td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>-->
+                                            <!--<td>13</td>-->
+                                            <!--<td class="report-obj">红细胞（镜检）</td>-->
+                                            <!--<td class="report-res">阴性</td>-->
+                                            <!--<td class="report-range">0-3</td>-->
+                                            <!--<td class="report-unit">每高倍镜</td>-->
+                                        <!--</tr>-->
+                                    <!--</table>-->
+                                </td>
+                            </tr>
+                            <tr style="text-align: left">
+                                <td colspan="4">
+                                    <p style="font-weight:900">影像所见：</p>
+                                    <p>内容内容内容内容内容</p>
+                                </td>
+                            </tr>
+                            <tr style="text-align: left">
+                                <td colspan="4">
+                                    <p style="font-weight:900">影像所得：</p>
+                                    <p>内容内容内容内容内容内容内容</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td width="25%"><span>送检医生：</span><span>藤原</span></td>
+                                <td width="25%"><span>检验者：</span><span>柯建飞</span></td>
+                                <td width="25%"><span>审核者：</span><span>倪爱青</span></td>
+                                <td width="25%"></td>
+                            </tr>
+                            <tr>
+                                <td width="25%"><span>送检时间：</span><span>2014-09-05 11:29:58</span></td>
+                                <td width="25%"><span>检验时间：</span><span>2014-09-05 12:20:07</span></td>
+                                <td width="25%"><span>报告时间：</span><span>2014-09-05 12:55:15</span></td>
+                                <td width="25%"><span>报告时间：</span><span>2014-09-05 12:55:15</span></td>
+                            </tr>
+                            <tr class="warning">
+                                <td colspan="4"><em>*</em>本系统提供的体检数据来源于各医院，仅供方便查询参考使用，不具法律效力，如有疑问请以各医院纸质报告为准</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+        <label class="lab2 drag-label"></label>
+        <li class="con-room-right">
+            <div id="diagnosisWrite-content">
+                <div class="con-room-right-top">
+                    <div class="my-diagnosis">
+                        <div style="width:96%;margin:0 auto;">我的诊断：</div>
+                        <textarea rows="7" style="display:none;border:none;margin-top:8px;width:100%;resize:none;"></textarea>
+                        <p>窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p>
+                    </div>
+                    <div class="my-diagnosis-foot">
+                        <div class="fr">
+                            <input id="notice" type="checkbox"/><lable for="notice">通知发起人</lable>
+                            <a class="btn-save" href="Javascript:;">保存</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="con-room-right-bottom">
+                    <div class="other-diagnosis">
+                        <div class="other-diagnosis-head">
+                            <ul id="other-doctor-list" class="clearfixed">
+                                <li><div class="diagnosis-on">张医生</div></li>
+                                <li><div>张医生</div></li>
+                                <li><div>张医</div></li>
+                                <li><div>张生</div></li>
+                                <li><div>张生医</div></li>
+                                <li><div>医生张</div></li>
+                                <li><div>医张生</div></li>
+                            </ul>
+                        </div>
+                        <div class="other-diagnosis">
+                            <div style="width:96%;margin:0 auto;">张医生：</div>
+                            <ul id="other-diagnosis-list">
+                                <li><p>122222222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心
+                                    律不122222222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律
+                                    不122222222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不
+                                    122222222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不1
+                                    22222222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不12
+                                    2222222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不1222
+                                    22222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不122222
+                                    222窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不12222222
+                                    2窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不122222222
+                                    窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不122222222窦
+                                    性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不122222222窦性
+                                    心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不122222222窦性心
+                                    22窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不窦性心律不</p></li>
+                                <li><p>2窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                <li><p>3窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                <li><p>4窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                <li><p>5窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                <li><p>6窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                                <li><p>7窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐窦性心律不齐</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="diagnosisTalk-content">
+                <div class="con-room-right-top diagnosisTalk-top">
+                    <p class="chat-time">2016-09-09 18:33</p>
+                    <p class="chat-notice">
+                        <i class="icon-notice"></i>
+                        通知：会诊间开启，发起人：<span>张医生</span>,
+                        被邀请人：<span>张医生、李医生、王医生、康怡生</span>
+                    </p>
+                    <div class="talk-to-me">
+                        <p><strong><b>王医生</b>对我说</strong> 2016-09-09 19:33:44</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="my-talk">
+                        <p><strong>我</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="other-talk">
+                        <p><strong>张医生</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="other-talk">
+                        <p><strong>张医生</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="other-talk">
+                        <p><strong>张医生</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="other-talk">
+                        <p><strong>张医生</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="other-talk">
+                        <p><strong>张医生</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="other-talk">
+                        <p><strong>张医生</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容</p>
+                    </div>
+                    <div class="other-talk">
+                        <p><strong>张医生</strong> 2016-09-09 19:43:12</p>
+                        <p class="chat-content">文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内
+                            容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字
+                            内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文
+                            字内容文字内容
+                        </p>
+                    </div>
+                </div>
+                <div class="con-room-right-bottom diagnosisTalk-bottom">
+                    <div class="chat-box">
+                        <div class="chat-head">
+                            <div class="private-chat-box">
+                                <i class="icon-chat-blue"></i>私聊
+                                <i class="icon-drop-down"></i>
+                            </div>
+                            <div class="private-chat-box2">
+                                <i class="icon-chat-white"></i>私聊
+                                <i class="icon-drop-down-white"></i>
+                            </div>
+                            <p class="private-chat-box3">
+                              所有人
+                            </p>
+                        </div>
+                        <div class="chat-doctor clearfixed">
+                            <span><b class="chat-with">张医生</b></span>
+                            <span><b>王医生</b></span>
+                            <span><b>李医生</b></span>
+                        </div>
+                        <p class="talk-to">我对 <span></span> 说：</p>
+                        <textarea id="talk-textarea" rows="7" style="height:100%;border:none;margin-top:8px;width:98%;margin-left:1%;resize:none;"></textarea>
+                        <div class="chat-foot">
+                            <a href="javascript:;">发送</a>
+                            <a href="javascript:;">关闭</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+</div>
+<!--邀请专家弹出层-->
+<div class="invitation-pop clearfixed">
+    <iframe style="position: absolute; visibility: inherit; top: -35px; left: 0px; width: 100%; height: 100%; z-index: 100; display: none;"></iframe>
+    <div class="fr">
+        <div class="select-content">
+            <div class="user-select">
+                <div class="grey-select">
+                    <span class="user-select-span">患者</span>
+                    <i></i>
+                </div>
+                <ul class="user-select-ul">
+                    <li><a href="javascript:;">患者</a></li>
+                    <li><a href="javascript:;">医生专家</a></li>
+                    <li><a href="javascript:;">医院/医疗机构</a></li>
+                </ul>
+            </div>
+        </div>
+        <input class="search-doctor" value="请输入医生姓名" type="text"/>
+        <a class="search-doctor-btn" href="javascript:;"></a>
+    </div>
+    <div class="cstt-doclist clearfix" >
+        <ul>
+            <li>
+                <div class="cstt-friends">
+                    <img src="../../images/user.jpg" alt="" />
+                    <p><span class="cstt-fri-name">张明1</span><span class="cstt-fri-zc">主任医师</span></p>
+                    <input type="checkbox" name="" value=""/>
+                    <p class="con-area">杭州市第一人民医院</p>
+                </div>
+            </li>
+            <li>
+                <div class="cstt-friends">
+                    <img src="../../images/user.jpg" alt="" />
+                    <p><span class="cstt-fri-name">张明2</span><span class="cstt-fri-zc">副主任医师，副教授</span></p>
+                    <input type="checkbox" name="" value=""/>
+                    <p class="con-area">杭州市第一人民医院</p>
+                </div>
+            </li>
+            <li>
+                <div class="cstt-friends">
+                    <img src="../../images/user.jpg" alt="" />
+                    <p><span class="cstt-fri-name">张明3</span><span class="cstt-fri-zc">主任医师</span></p>
+                    <input type="checkbox" name="" value=""/>
+                    <p class="con-area">杭州市第一人民医院</p>
+                </div>
+            </li>
+            <li>
+                <div class="cstt-friends">
+                    <img src="../../images/user.jpg" alt="" />
+                    <p><span class="cstt-fri-name">张明4</span><span class="cstt-fri-zc">主任医师</span></p>
+                    <input type="checkbox" name="" value=""/>
+                    <p class="con-area">杭州市第一人民医院</p>
+                </div>
+            </li>
+            <li>
+                <div class="cstt-friends">
+                    <img src="../../images/user.jpg" alt="" />
+                    <p><span class="cstt-fri-name">张明5</span><span class="cstt-fri-zc">主任医师</span></p>
+                    <input type="checkbox" name="" value=""/>
+                    <p class="con-area">杭州市第一人民医院</p>
+                </div>
+            </li>
+            <li>
+                <div class="cstt-friends">
+                    <img src="../../images/user.jpg" alt="" />
+                    <p><span class="cstt-fri-name">张明6</span><span class="cstt-fri-zc">主任医师</span></p>
+                    <input type="checkbox" name="" value=""/>
+                    <p class="con-area">杭州市第一人民医院</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="doctor-pages cstt-invited" style="position:relative;">
+        <div class="cstt-invited-div fl" style="height: 40px;padding-top: 20px;">
+            <i>已选择本院专家：</i>
+            <div class="pages consultation-pages">
+                <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                <a href='#' class="page-num current">1</a>
+                <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+            </div>
+        </div>
+    </div>
+    <a class="doctor-enter-btn" href="javascript:;">确定</a>
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+
+<script src="../../js/scrollbar/jquery-ui.min.js"></script>
+<script src="../../js/scrollbar/jquery.mousewheel.min.js"></script>
+<script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type='text/javascript'>
+    (function ($) {
+        $(document).ready(function () {
+            $(".search-doctor").blur(function(){
+                if(this.value==""){
+                    $(this).val("请输入医生姓名");
+                }else{
+                    $(this).val();
+                }
+            })
+
+            $(".cstt-searchbar-ul li a").click(function(){
+                var text=$(this).html();
+                $(".cstt-chosen").html(text);
+                $(this).parent().parent().hide();
+            });
+            $(".chat-head div").click(function(){
+                var id = $(this).attr("class");
+                if(id == "private-chat-box2"){
+                    $(".private-chat-box2").hide();
+                    $(".private-chat-box").show();
+                    $(".chat-doctor").show();
+                }else{
+                    $(".private-chat-box").hide();
+                    $(".private-chat-box2").show();
+                    $(".chat-doctor").hide();
+                    $(".talk-to").hide();
+                }
+            });
+            $(".chat-head p").click(function(){
+                    $(this).siblings(".private-chat-box2").show();
+                    $(this).siblings(".private-chat-box").hide();
+                    $(".chat-doctor").hide();
+                    $(".chat-doctor").hide();
+                    $(".talk-to").hide();
+            });
+            $(".chat-doctor span b").click(function(){
+                $(this).addClass("chat-with");
+                $(".chat-doctor").hide();
+                $(".private-chat-box").hide();
+                $(".private-chat-box2").show();
+                $(this).parent().siblings().find("b").removeClass("chat-with");
+                var text = $(this).text();
+                $(".talk-to span").text(text);
+                $(".talk-to").show();
+            })
+            $(".cstt-jg-usual a").click(function(){
+                var text=$(this).html();
+                $(".cstt-chosen").html(text);
+            })
+            var $cst=$(".cstt-chosen").val();
+            if($cst!=null){
+                $(".cstt-chose-doc").show();
+            }else{
+                $(".cstt-chose-doc").hide();
+            }
+
+
+            $(".cstt-friends").on("click",function(){
+                var nameText = $(this).find(".cstt-fri-name").text();
+                var newTag = $('<span class="cstt-inv-name"></span>');
+                var $input = $(this).children("input[type=checkbox]").is(':checked');
+                if ($input==false) {
+                    $(this).addClass('current').append("<i></i>");
+                    $(this).children("input[type=checkbox]").attr('checked',true);
+                    $(".cstt-invited-div").append(newTag);
+                    newTag.css("opacity","0").animate({opacity:'1'},500).html( '<em>'+ nameText +'</em>'+'<a class="del"></a>');
+                };
+            })
+            $(".cstt-invited").on("click","span",function(){
+                var nText = $(this).find("em").text();
+                $(this).hide();
+
+            })
+            $.divselect(".user-select",".user-select-ul",".user-select-span");
+
+        });
+        $(".invitation-btn").click(function(){
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-rim', //加上边框
+                shade: 0.6, //遮罩透明度
+                title: '邀请专家',
+                shift: 1, //0-6的动画形式，-1不开启
+                area: ['890px', '500px'], //宽高
+                content:$(".invitation-pop")
+            });
+        });
+        $("#diagnosisWrite,#diagnosisTalk").click(function(){
+            var id = $(this).attr("id");
+            $(".con-room-right").find("#"+id+"-content").show();
+            $(".con-room-right").find("#"+id+"-content").siblings().hide();
+        })
+
+    })(jQuery);
+</script>
+
+<script>
+    function mouseX(evt) {
+        if (evt.pageX) {return evt.pageX;}
+        else if(evt.clientX){
+            return evt.clientX + (document.documentElement.scrollLeft ?
+                            document.documentElement.scrollLeft :
+                            document.body.scrollLeft);
+        }else{return null;}
+    }
+    function init(){
+        $(".data-list-box").height($(window).height()-114);
+        $(".data-list-box").mCustomScrollbar();
+        $("#other-diagnosis-list").height($(window).height()-390);
+        $("#other-diagnosis-list").mCustomScrollbar();
+        var clickX, leftOffset, inx, nextW2, nextW;
+        var dragging = false;
+        var doc = document;
+        var labBtn = $("#consultation-room").find('label');
+        var wrapWidth = $("#consultation-room").width();
+
+        $("#consultation-room").height(document.body.clientHeight  - 36);
+        $("#consultation-room>ul>li").height(document.body.clientHeight  - 36);
+        $("#meeting-dotor-list").height($(document).height()*0.88 - 36);
+        $(".diagnosisTalk-top").height(($(document).height() - 36)*0.65);
+        $(".room-center-top").height($(".con-room-center").height()*0.2-20);
+        $(".room-left-bottom").height($(".con-room-center").height()*0.7-20);
+        $("#talk-textarea").css("max-height",$(".chat-box").height()-80);
+
+        $(".diagnosisTalk-bottom").height(($(document).height() - 36)*0.35);
+        $("#meeting-dotor-list").mCustomScrollbar();
+        $(".room-center-top").mCustomScrollbar();
+        $(".con-room-right-top").mCustomScrollbar();
+        $(".my-diagnosis").mCustomScrollbar();
+//        $(".report-main-content").height($(".room-center-bottom").height()-30);
+//        $(".room-center-bottom").mCustomScrollbar();
+
+
+
+
+//        labBtn.bind('mousedown', function () {
+//                    alert("xx")
+//                    dragging = true;
+//                    leftOffset = $("#consultation-room").offset().left;
+//                    inx = $(this).index('label');
+//                    var centerW =$(".con-room-center").width()
+//                }
+//        );
+        labBtn.mousedown(function () {
+                    dragging = true;
+                    leftOffset = $("#consultation-room").offset().left;
+                    inx = $(this).index('label');
+                    var centerW =$(".con-room-center").width()
+                }
+        );
+
+        doc.onmousemove = function (e) {
+            e = e || window.event;
+
+            if (dragging) {
+                $(".patient-sex").text(leftOffset);
+                //--------------------------------------------
+                if(e.pageX){
+                    clickX = e.pageX;
+                }else{
+                    clickX = e.clientX+document.body.scrollLeft + document.documentElement.scrollLeft;
+                }
+                //判断第几个拖动按钮
+                if (inx == 0) {
+////						$(".con-room-right").width($("#consultation-room").width()-10-$(".con-room-left").width()-$(".con-room-center").width())
+                    //第一个拖动按钮左边不出界
+                    if (clickX > leftOffset) {
+                        var rw = $(".con-room-right").width()
+                        labBtn.eq(inx).css('left', clickX - 4 - leftOffset + 'px');//按钮移动
+                        labBtn.eq(inx+1).css('left', $(".con-room-left").width()+$(".con-room-center").width()-4+'px');//按钮移动
+
+                        labBtn.eq(inx).prev().width(clickX-4);
+                        labBtn.eq(inx).next().width(wrapWidth - clickX - rw);
+                    } else {
+                        labBtn.eq(inx).css('left', '0px');
+                    }
+                    if (clickX < 200) {
+                        labBtn.eq(inx).css('left', '194px');
+                        labBtn.eq(inx).prev().width(200-4);
+                        labBtn.eq(inx).next().width(wrapWidth - 200 - rw);
+                    }
+                    if (clickX >= 450) {
+                        labBtn.eq(inx).css('left', '446px');
+                        labBtn.eq(inx).prev().width(450-4);
+                        labBtn.eq(inx).next().width(wrapWidth - 450 - rw);
+                    }
+                    if(clickX-4<310){
+                        $("#meeting-dotor-list ul").css({"width":"140px","margin":"0 auto"})
+                    }else{
+                        $("#meeting-dotor-list ul").css("width","100%")
+                    }
+
+                } else {
+                    var lw = $(".con-room-left").width();
+                    //第二个拖动按钮左边不出界
+                    if ((clickX) > labBtn.eq(inx - 1).offset().left) {
+                        labBtn.eq(inx).css('left', clickX -8+ 'px'); //按钮移动
+
+                        labBtn.eq(inx).prev().width((clickX - 4 - lw) + 'px');
+                        nextW = clickX - leftOffset;
+                        labBtn.eq(inx).next().width(wrapWidth - nextW + 'px');
+                    }
+
+                    if (clickX <= (wrapWidth /2)) {
+
+                        //第二个按钮右边不出界
+                        labBtn.eq(inx).css('left', wrapWidth/2 -4 + 'px'); //减去按钮的宽度
+                        //第二个按钮左右容器，右边不出界
+                        labBtn.eq(inx).prev().width((wrapWidth/2) - lw);
+                        labBtn.eq(inx).next().width(wrapWidth/2-3);
+                    }
+                    if (clickX >= (wrapWidth - 300)) {
+                        //第二个按钮右边不出界
+                        labBtn.eq(inx).css('left', wrapWidth - 300 + 'px'); //减去按钮的宽度
+                        //第二个按钮左右容器，右边不出界
+                        labBtn.eq(inx).prev().width(wrapWidth - lw - 300);
+                        labBtn.eq(inx).next().width('298px');
+                    }
+
+
+                }
+            }
+        };
+
+        $(doc).mouseup(function (e) {
+            dragging = false;
+            e.cancelBubble = true;
+        })
+
+        $(".data-type span").click(function () {
+            $(this).parent().siblings().find("span").removeClass("data-on");
+            $(this).addClass("data-on");
+            var id = $(this).attr("id");
+            $("." + id + "-list").show();
+            $("." + id + "-list").siblings().hide();
+        })
+        $("#other-doctor-list li").click(function(){
+            var index = $(this).index();
+            $(this).find("div").addClass("diagnosis-on");
+            $(this).siblings().find("div").removeClass("diagnosis-on");
+            $("#other-diagnosis-list li:eq("+index+")").show();
+            $("#other-diagnosis-list li:eq("+index+")").siblings().hide();
+
+        });
+
+        $(".icon-mike").click(function(){
+            if($(this).hasClass("icon-voice")){
+                $(this).removeClass("icon-voice").addClass("icon-mute");
+            }else{
+                $(this).addClass("icon-voice").removeClass("icon-mute");
+            }
+        })
+    }
+
+
+    $(function () {
+        $(window).resize(function(){
+//            $("body").css("height","100vh");
+//            var height = document.body.clientHeight;
+//            alert(document.body.clientHeight);
+//            alert(height);
+//            alert($("body").height());
+//
+//            var width = $(document).width();
+//            alert(width)
+//            $(".con-room-left").width(width*0.2);
+//            $(".con-room-center").width($width*0.6-8);
+//            $(".con-room-right").width(width*0.2);
+//            $("#consultation-room").height(height-36);
+//            $(".con-room-left").height(height - 36);
+//            $(".con-room-center").height(height - 36);
+//            $(".con-room-right").height(height - 36);
+//            $(".lab1").css("left",width*0.2);
+//            $(".lab2").css("left",width*0.8-10);
+            location.reload()
+
+        });
+
+
+        init();
+
+        if($("#meeting-dotor-list ul").width()<310){
+            $("#meeting-dotor-list ul").css({"width":"140px","margin":"0 auto"})
+        }else{
+            $("#meeting-dotor-list ul").css("width","100%")
+        }
+
+        $(".con-room-left-top a").click(function () {
+            var height=$(".con-room-left").height();
+            $(this).removeClass("un").addClass("meeting-on");
+            $(this).siblings().removeClass("meeting-on").addClass("un");
+            var id = $(this).attr("id");
+            if(id == "meeting-data"){
+                var mHeight = $(".con-room-left-bottom").height()
+                $("." + id).siblings().css({"position":"relative","left":"-2000px"});
+                $("." + id).css({"position":"absolute","margin-top":"00px","left":"0px","top":"0"});
+            }else{
+                $("." + id).siblings().css({"position":"relative","left":"-2000px"});
+                $("." + id).css({"position":"relative","left":"0px","top":"0"});
+            }
+
+        });
+        $(".data-type span").click(function () {
+            $(this).parent().siblings().find("span").removeClass("data-on");
+            $(this).addClass("data-on");
+            var id = $(this).attr("id");
+            $("." + id + "-list").show();
+            $("." + id + "-list").siblings().hide();
+        });
+        $("#other-doctor-list li").click(function(){
+            var index = $(this).index();
+            $(this).find("div").addClass("diagnosis-on");
+            $(this).siblings().find("div").removeClass("diagnosis-on");
+            $("#other-diagnosis-list li:eq("+index+")").show();
+            $("#other-diagnosis-list li:eq("+index+")").siblings().hide();
+
+        });
+    })
+</script>
+<script>
+
+    $(function () {
+        $(document).mousemove(function (e) {
+            if (!!this.move) {
+                var posix = !document.move_target ? {'x': 0, 'y': 0} : document.move_target.posix,
+                        callback = document.call_down || function () {
+                                    $(this.move_target).css({
+//										'top': e.pageY - posix.y,
+//										'left': e.pageX - posix.x
+                                    });
+                                };
+
+                callback.call(this, e, posix);
+                if(e.pageY > $(window).height()){
+                    $("#coor").css("top","0");
+                    $(".room-center-top").height($(window).height()-130)
+                }
+            }
+
+        }).mouseup(function (e) {
+            if (!!this.move) {
+                var callback = document.call_up || function () {
+                        };
+                callback.call(this, e);
+                $.extend(this, {
+                    'move': false,
+                    'move_target': null,
+                    'call_down': false,
+                    'call_up': false
+                });
+            }
+        });
+
+        var $box = $('#box').mousedown(function (e) {
+            var offset = $(this).offset();
+
+            this.posix = {'x': e.pageX - offset.left, 'y': e.pageY - offset.top};
+            $.extend(document, {'move': true, 'move_target': this});
+        }).on('mousedown', '#coor', function (e) {
+            var posix = {
+                'w': $box.prev(".room-center-top").width(),
+                'h': $box.prev(".room-center-top").height(),
+                'x': e.pageX,
+                'y': e.pageY
+            };
+
+
+            $.extend(document, {
+                'move': true, 'call_down': function (e) {
+                    $box.prev(".room-center-top").css({
+                        'height': Math.max(30, e.pageY - posix.y + posix.h) - 15
+
+                    })
+
+                    $(".report-main-content").height($(".room-center-bottom").height()*0.9-30);
+                    $(".report-main-content").mCustomScrollbar();
+
+
+                    $box.css({
+                        'height': $(".con-room-center").height() - Math.max(30, e.pageY - posix.y + posix.h)
+                    });
+
+                }
+
+            });
+            return false;
+        });
+    });
+
+    //资料区的拖拽
+
+</script>
+<script>
+    //消息闪动
+    function shake(ele, cls, times) {
+        var i = 0, t= false, o =ele.attr("class")+" ", c ="", times=times||2;
+        if(t) return;
+
+        t= setInterval(function() {
+            i++;
+            c = i%2 ? o+cls: o;
+            ele.attr("class", c);
+
+            if(i==2*times) {
+                clearInterval(t);
+                ele.removeClass(cls);
+            }
+        }, 200);
+    };
+
+
+    $(function(){
+        shake($("#diagnosisTalk"),"diagnosisTalk",8);
+    })
+</script>
+
+</body>
+</html>

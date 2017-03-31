@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/themes.css?v=upd20160527" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script src="../../js/jquery.slides.min.js"></script>
+<title>莆田市影像医生签约基层服务平台</title>
+<script type="text/javascript"> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<script type="text/javascript">
+	function goToByScroll(id){
+		$('html,body').animate({scrollTop: $("#"+id).offset().top-70},2000);
+	}
+</script>
+</head>
+<body>
+<header class="fjpt-header">
+	<div class="m-width">
+	      <div class="login-ent">
+             <a href="#" ><span>登 陆</span></a>
+             <a href="#" class="current"><span>注 册</span></a>
+           </div>
+          <a href="#" class="fjpt-logo"><span><img src="../../images/log.png"></span></a>
+
+ 	</div>
+</header>
+
+<!-- content开始-->
+<article>
+	<section class="fjpt-banner">
+	<div class="width980">
+		<h2></h2>
+		<div class="hm-login fl">
+			<div  style="display:none;">
+		      <h3>快捷登录</h3>
+			  <span style="color: red" id="loginError"></span>
+			  <div class="hm-sec-id">
+		        <span><input type="radio" name="loginType" id="loginTypeUser" value="1"><label for="loginTypeUser">用户</label></span>
+				<span><input type="radio" name="loginType" id="loginTypeDoc" value="2" checked="checked"><label for="loginTypeDoc">专家</label></span>
+				<span><input type="radio" name="loginType" id="loginTypeHos" value="3"><label for="loginTypeHos">机构</label></span>
+			  </div>
+		      <div class="hm-username"><i></i>
+				<input type="text" name="loginName" id="loginName" class="hm-input" value=""></div>
+		      <div class="hm-password"><i></i><input type="password" id="pwd" class="hm-input" value=""></div>
+			  <div class="hm-yzm">
+				<input id="checkCode" name="checkCode" value="" type="text" onkeydown="onkeydownLogin(event);"><img src="/code.htm?c=0.8931232910298473" title="看不清，换一张？" id="code" name="code" onclick="util.getCode('/code.htm');return false;" align="center" height="30" width="90" style="cursor:pointer">
+			  </div>
+			  	<a class="forget-pw" href="/findPwd/index.htm?userType=" style="z-index:1000;position:relative">忘记密码？</a>
+				<button class="dl-btn" onclick="sys.syncLogin();" id="" type="button">立即登录</button>
+			    <button class="reg-btn" onclick="location.href='/goPreg.htm'">用户注册</button>
+		     <a href="javascript:;" class="dsfdl">第三方平台登录 ></a>
+		    </div>
+		     <div class="login-threepart" >
+		     	<h4>第三方平台登录</h4>
+		     	<span class="wly"></span>
+		      <div class="hm-username"><i></i>
+				<input type="text" name="loginName" id="loginName" class="hm-input" value=""></div>
+		      <div class="hm-password"><i></i><input type="password" id="pwd" class="hm-input" value=""></div>
+		      <button class="dl-btn" onclick="sys.syncLogin();" id="" type="button" style="width:210px;">立即登录</button>
+		      <a href="#">影像云平台登录</a>
+		     </div>
+			</div>
+
+			</div>
+
+	<div class="hm-welcome fl" style="display:none;">
+    	<ul>
+	        <li class="welcome">
+	          <img src="http://www.eimageglobal.com/pImage/doctor/1266/img_201506170061915.png" onerror="util.nofind('/images/noUserPhoto.gif',this)" width="100" height="100" />
+	                               <p class="hm-un">欢迎您，<span title="江波" >江波</span></p><p class="hm-cpw"><a href="/user/modifyPass.htm" target="_blank"><i></i>修改密码</a></p>
+	        </li>
+	        <li class="hm-btn">
+	        <input type="button" onclick="window.location.href='/user/desk.htm'" class="hm-wel-btn" value='个人中心' style="background:#285181;"/>
+	        <input type="button" onclick="window.location.href='/logout.htm'" class="hm-wel-btn"  value='退出登录' style="margin-left:10px;" />
+	        </li>
+	        <li class="hm-mine">
+	          <a href="/airConsult/list.htm?regType=00" target="_blank">我的预约</a>
+	          <a href="/airConsult/list.htm?regType=02" target="_blank">我的咨询</a>
+	          <a href="/airConsult/list.htm?regType=01" target="_blank">我的会诊</a>
+	        </li>
+    	</ul>
+    </div>
+    </div>
+
+	</section>
+	<section class="fjpt-count width980">
+		<ul class="clearfix">
+			<li class="pt-one"><em>35 <span>家</span></em> <p>已注册机构数</p></li>
+			<li class="pt-two"><em>61235 <span>人</span></em><p>注册专家</p></li>
+			<li class="pt-three"><em>633 <span>例</span></em><p>平台总会诊数</p></li>
+			<li class="pt-four"><em>78 <span>例</span></em><p>今日新增会诊</p></li>
+			<li class="pt-five"><em>345 <span>人</span></em><p>在线专家</p></li>
+		</ul>
+	</section>
+
+	<section class="fjpt-hos-list">
+		<div class="fjpt-hos" id="fjpt-hos">
+			<ul class="fjpt-hos-name clearfix">
+				<li><a href="#"><img src="../../images/themes/hos1.jpg" /><em>莆田市第一医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医</p></a></li>
+				<li><a href="#"><img src="../../images/themes/hos2.jpg" /><em>莆田学院附属医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li style="margin-right:0;"><a href="#"><img src="../../images/themes/hos3.jpg" /><em>仙游市医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li><a href="#"><img src="../../images/themes/hos4.jpg" /><em>莆田市涵江医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li><a href="#"><img src="../../images/themes/hos3.jpg" /><em>仙游市医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li style="margin-right:0;"><a href="#"><img src="../../images/themes/hos4.jpg" /><em>莆田市涵江医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+			</ul>
+			<ul class="fjpt-hos-name clearfix">
+				<li><a href="#"><img src="../../images/themes/hos1.jpg" /><em>莆田市第一医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医</p></a></li>
+				<li><a href="#"><img src="../../images/themes/hos2.jpg" /><em>莆田学院附属医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li style="margin-right:0;"><a href="#"><img src="../../images/themes/hos3.jpg" /><em>仙游市医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li><a href="#"><img src="../../images/themes/hos4.jpg" /><em>莆田市涵江医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li><a href="#"><img src="../../images/themes/hos3.jpg" /><em>仙游市医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+				<li style="margin-right:0;"><a href="#"><img src="../../images/themes/hos4.jpg" /><em>莆田市涵江医院</em>
+				<p>市第三人民医院位于鄂尔多斯空港物流园区，是市人民政府与海军总医院合作共建，集特色医疗、教学科研、预防保健、康复医学为一体的现代化综合性公立医院</p></a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="fjpt-exp" id="fjpt-con">
+		<div class="fjpt-title m-width">
+			<h3>签约专家<span>CONTRACT&nbsp; DOCS</span></h3>
+			<ul>
+				<li><img src="../../images/themes/pho1.png" alt="专家姓名" >
+				<p class="exp-name">张某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>儿科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho2.png" alt="专家姓名" >
+				<p class="exp-name">王某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>呼吸内科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho3.png" alt="专家姓名" >
+				<p class="exp-name">李某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>心内科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho4.png" alt="专家姓名" >
+				<p class="exp-name">赵某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>体检与健康管理医学中心</em> 副主任医师</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="fjpt-title m-width">
+			<h3>推荐专家<span>RECOMMAND&nbsp; DOCS</span></h3>
+			<h4>鄂尔多斯xxx医院</h4>
+			<ul>
+				<li><img src="../../images/themes/pho1.png" alt="专家姓名" >
+				<p class="exp-name">张某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>儿科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho2.png" alt="专家姓名" >
+				<p class="exp-name">王某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>呼吸内科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho3.png" alt="专家姓名" >
+				<p class="exp-name">李某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>心内科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho4.png" alt="专家姓名" >
+				<p class="exp-name">赵某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>体检与健康管理医学中心</em> 副主任医师</span>
+				</li>
+			</ul>
+			<h4>鄂尔多斯xxx医院</h4>
+			<ul>
+				<li><img src="../../images/themes/pho5.png" alt="专家姓名" >
+				<p class="exp-name">徐某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>肿瘤科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho6.png" alt="专家姓名" >
+				<p class="exp-name">张 某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>关节与骨病专科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho11.jpg" alt="专家姓名" >
+				<p class="exp-name">徐某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>肿瘤科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho12.jpg" alt="专家姓名" >
+				<p class="exp-name">张 某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>关节与骨病专科</em> 副主任医师</span>
+				</li>
+			</ul>
+			<ul>
+				<li><img src="../../images/themes/pho7.jpg" alt="专家姓名" >
+				<p class="exp-name">张某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>儿科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho8.jpg" alt="专家姓名" >
+				<p class="exp-name">王某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>呼吸内科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho9.jpg" alt="专家姓名" >
+				<p class="exp-name">李某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>心内科</em> 副主任医师</span>
+				</li>
+				<li><img src="../../images/themes/pho10.jpg" alt="专家姓名" >
+				<p class="exp-name">赵某某</p>
+				<span class="sh-hosp">上海东方医院</span><span><em>体检与健康管理医学中心</em> 副主任医师</span>
+				</li>
+			</ul>
+		</div>
+
+
+	</section>
+</article>
+<!-- content结束 -->
+
+<footer class="clearfix">
+  <section class="m-width">
+	<div class="footer-links footer-center ">
+		<ul class="footer-type">
+			<h5>政治机构 |</h5>
+			<h5>医疗机构 |</h5>
+			<h5><br/></h5>
+			<h5>技术支持 |</h5>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">莆田市卫生局</a></li>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">莆田市第一医院</a></li>
+			<li><a href="" alt="">莆田学院附属医院</a></li>
+			<li><a href="" alt="">仙游市医院</a></li>
+			<li><a href="" alt="">莆田市涵江医院</a></li>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">全球影像网</a></li>
+		</ul>
+
+  			<p>杭州联众医疗科技股份有限公司  Copyright @ Hangzhou Lianzhong Healthcare Technology Co. Ltd</p>
+	</div>
+
+  </section>
+</footer>
+
+<script type="text/javascript">
+
+//title显示
+$(function(){
+
+	$(".banner-arw img").hide().fadeIn(2000);
+	$(".banner-cj").css({opacity:"0",top:"+=40px"}).animate({opacity:".5", top: "-=40px"},1800);
+	$(".banner-title").css({opacity:"0"}).delay(1500).animate({opacity:"1"},1800);
+})
+//箭头浮动
+$(function animateUD(){
+		$("#down-arrow").load().animate({top:"-=10px"},500)
+		.animate({top:"+=10px"},500,animateUD); 
+})
+
+
+//slide
+
+      $('#fjpt-hos').slidesjs({
+        width: 980,
+        height: 260,
+        play: {
+      effect: "slide",
+          active:true,
+          auto: true,
+          interval: 5000,
+          swap:false,
+          generateNextPrev:false,
+          pauseOnHover: true
+        },
+        effect: {
+          slide: {
+            speed: 4000
+          }
+        }
+
+    });
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css" />
+<link href="../../css/wdcq.css?v=upd20160919" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" />
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body class="wholedata">
+    <header class="wholedata-header">
+        <div class="wd-pa ">
+            <div class="wd-pa-left fl">
+            <a href="javascript:window.history.go(-1);" class="fl"><i class="wd-back"></i></a>
+                <p>
+                    <span class="wd-name">张惠荣</span>
+                    <span class="wd-sex">男</span>
+                    <span class="wd-age">64岁</span>
+                    <span class="wd-beds">3床12000334</span>
+                    <span class="wd-admi">入院22天</span>
+                    <a href="javascript:;" class="wd-consultation">发起会诊<i></i></a>
+                </p>
+                <p class="wd-pa-tel">电话：15857233331</p>
+            </div>
+             <div class="fr">
+                 <label class="disease">冠心病、冠脉支架置入术后</label>
+                 <label class="type">本市医保</label>
+                 <p class="allergy">暂无过敏史</p>
+             </div>
+        </div>
+    </header>
+
+    <aside class="wd-sidebar">
+        <i id="showAside" class="wd-list-icon"></i>
+        <div class="wd-list">
+            <h3>病程记录</h3>
+            <ul>
+                <li class="current">
+                    <h5>首次病程记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>入院记录</h5>
+                    <p>2016-08-04 10:24</p>
+                </li>
+            </ul>
+            <h3>查房记录</h3>
+            <ul>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-16 09:12</p>
+                </li>
+                <li>
+                    <h5>查房记录</h5>
+                    <p>2016-08-17 09:12</p>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="wholedata-content">
+        <nav>
+            <ul class="clearfix" id="wd-nav">
+                <li><i class="base"></i><span>基本信息</span></li>
+                <li><i class="mzcf"></i><span>门诊处方</span></li>
+                <!--<li><i class="twd"></i><span>体温单</span></li>-->
+                <!--<li><i class="blws"></i><span>病历文书</span></li>-->
+                <!--<li><i class="cqyz"></i><span>长期医嘱</span></li>-->
+                <!--<li><i class="lsyz"></i><span>临时医嘱</span></li>-->
+                <li><i class="jcbg"></i><span>检查报告</span></li>
+                <li><i class="hybg"></i><span>化验报告</span></li>
+                <li><i class="wswbg"></i><span>微生物报告</span></li>
+            </ul>
+            <div class="wd-nav-current"></div>
+        </nav>
+        
+        <div class="wholedata-block">
+            <div id="wd-base" class="wd-block wd-base"></div>
+            <div id="wd-mzcf" class="wd-block wd-mzcf"></div>
+            <div id="wd-twd" class="wd-block wd-twd"></div>
+            <div id="wd-blws" class="wd-block wd-blws"></div>
+            <div id="wd-cqyz" class="wd-block wd-cqyz"></div>
+            <div id="wd-lsyz" class="wd-block wd-lsyz"></div>
+            <div id="wd-jcbg" class="wd-block wd-jcbg"></div>
+            <div id="wd-hybg" class="wd-block wd-hybg"></div>
+            <div id="wd-wswbg" class="wd-block wd-wswbg"></div>
+        </div>
+
+    </div>
+
+    <div id="my-loading">
+        <div class="load-img"><img src="../../images/loadImg.gif" alt=""/></div>
+    </div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+<script src="../../js/scrollbar/jquery-ui.min.js"></script>
+<script src="../../js/scrollbar/jquery.mousewheel.min.js"></script>
+<script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+
+<script type='text/javascript'>
+    (function($){
+        $(document).ready(function(){
+            $(".wd-list").mCustomScrollbar();
+        });
+    })(jQuery);
+</script>
+<script>
+    $(function(){
+        $(window).load(function(){
+            $('.wholedata-content').height($(".wholedata").height()-80);
+            $('.wd-sidebar').height($('.wholedata-content').height());
+            $("#my-loading").height(document.body.offsetHeight);
+            $("#my-loading").width(document.body.offsetWidth);
+            $.ajax({
+                type : 'POST',
+                url : "wd-base.html",
+                dataType : "html",
+                async : false,
+                success : function(msg){
+                    $("#wd-base").html(msg);
+                }
+            });
+        }); //全局高度
+
+        $(document).ajaxStart(function(){
+            $("#my-loading").show();
+        }).ajaxStop(function(){
+            $("#my-loading").hide();
+        });
+
+        var asideShow = false;
+        $("#showAside").click(function(){
+            if(asideShow == false){
+                asideShow = true;
+                $(".wd-sidebar").animate({right:"0px"});
+            }else{
+                asideShow = false;
+                $(".wd-sidebar").animate({right:"-200px"});
+            }
+            var str = $(".wd-nav-current").css("left");
+            var url ="";
+            switch (str){
+                case "264px":
+                    url = "wd-blws.html";
+                    break;
+                case "660px":
+                    url = "wd-jcbg.json";
+                    break;
+                case "792px":
+                    url = "wd-hybg.html";
+                    break;
+                case "936px":
+                    url = "wd-wswbg.html";
+                    break;
+            }
+//            $.ajax({
+//                type : 'POST',
+//                url : url,
+//                dataType : "json",
+//                async : false,
+//                success : function(msg){
+//                    var inner = "";
+//                    for(var i=0;i<msg.length;i++){
+//                        inner += '<h3>'+msg[i].pro+'</h3>'+
+//                                '<ul>'+
+//                                '<li>'+
+//                                '<h5><a href="#jcbg'+i+'">'+msg[i].pro+'</a></h5>'+
+//                                '<p>'+msg[i].time+'</p>'+
+//                                '</li>'+
+//                                '</ul>';
+//                    }
+//                    $("#mCSB_1_container").html(inner);
+//                }
+//            });
+        });
+
+        $("#showAside").hide();
+        $("#wd-nav li").click(function(){
+            $(".wd-sidebar").animate({right:"-200px"});
+            var i = $(this).find("i").attr("class");
+            var url = "wd-"+ i +".html";
+            var json = "wd-"+ i +".json";
+            $(".wholedata-block div").html(" ");
+            //控制标签页样式
+            var index = $(this).index();
+            var len = $("#wd-nav li").length;
+            var left = "";
+            if(len > 5){
+                if(index == "0"){
+                    left += index + 1 + "%"
+                }else if(index == "1" || index == len-1){
+                    left += index * 11 + 1 + "%"
+                }else{
+                    left += index * 11  + "%"
+                }
+            }else{
+                if(index == "0"){
+                    left += index + 1 + "%"
+                }else if(index == len-1){
+                    left += index * 11 + 2 + "%"
+                }else{
+                    left += index * 11 + 1 + "%"
+                }
+            }
+            $(".wd-nav-current").animate({left:left});
+            //控制侧边栏
+            var isShow = $(this).find("i").attr("class");
+//            $(".wd-list").html(" ");
+            switch (isShow){
+                case "base":
+                    $("#showAside").hide();
+                    break;
+                case "mzcf":
+                    $("#showAside").hide();
+                    break;
+                case "twd":
+                    $("#showAside").hide();
+                    break;
+                case "cqyz":
+                    $("#showAside").hide();
+                    break;
+                case "lsyz":
+                    $("#showAside").hide();
+                    break;
+                case "blws":
+                    $("#showAside").show();
+                    break;
+                case "jcbg":
+                    $("#showAside").show();
+                    break;
+                case "hybg":
+                    $("#showAside").show();
+                    break;
+                case "wswbg":
+                    $("#showAside").show();
+                    break;
+            }
+            //ajax调用相应页面
+            var height = document.body.clientHeight;
+            $.ajax({
+                type:"POST",
+                url:url,
+                dataType: "html",
+                async: false,
+                success: function(msg) {
+                    $(".wd-"+ i).html(msg);
+                    var whoHeight =  document.body.scrollHeight ;
+                    if(height < whoHeight){
+                        $('.wholedata-content').css("height","auto");
+                    }else{
+                        $('.wholedata-content').height($(".wholedata").height()-80);
+                    }
+
+//                    检查报告页面事件
+                    $("#jcbg-type1 span").text($(".jcbg-type1").length);
+                    $("#jcbg-type2 span").text($(".jcbg-type2").length);
+                    $("#jcbg-type-all span").text($(".jcbg-type2").length + $(".jcbg-type1").length);
+
+                    $(".jcbg-tab").click(function(){
+                        var id = $(this).attr("id");
+                        $(this).siblings().removeClass("tab-on");
+                        $(this).addClass("tab-on");
+                        if(id != "jcbg-type-all"){
+                            $(".jcbg-head").hide();
+                            $(".jcbg-head").next().hide();
+                            $("." + id).show();
+                            $("." + id).next().show();
+                        }else{
+                            $(".jcbg-head").show();
+                            $(".jcbg-head").next().show();
+                        }
+                    });
+//                    检查报告页面事件
+                    $("#jcbg-type1 span").text($(".jcbg-type1").length);
+                    $("#jcbg-type2 span").text($(".jcbg-type2").length);
+                    $("#jcbg-type-all span").text($(".jcbg-type2").length + $(".jcbg-type1").length);
+
+                    $(".jcbg-tab").click(function(){
+                        var id = $(this).attr("id");
+                        $(this).siblings().removeClass("tab-on");
+                        $(this).addClass("tab-on");
+                        if(id != "jcbg-type-all"){
+                            $(".jcbg-head").hide();
+                            $(".jcbg-head").next().hide();
+                            $("." + id).show();
+                            $("." + id).next().show();
+                        }else{
+                            $(".jcbg-head").show();
+                            $(".jcbg-head").next().show();
+                        }
+                    });
+                },
+                complete:function(){
+
+                }
+            });
+            $.ajax({
+                type : 'POST',
+                url : json,
+                dataType : "json",
+                async : false,
+                success : function(msg){
+                    var inner = "";
+                    for(var i=0;i<msg.length;i++){
+                        inner += '<h3>'+msg[i].pro+'</h3>'+
+                                '<ul>'+
+                                '<li>'+
+                                '<h5><a href="#jcbg'+i+'">'+msg[i].pro+'</a></h5>'+
+                                '<p>'+msg[i].time+'</p>'+
+                                '</li>'+
+                                '</ul>';
+                    }
+                    $("#mCSB_1_container").html(inner);
+                }
+            });
+        })
+    })
+</script>
+</body>
+</html>

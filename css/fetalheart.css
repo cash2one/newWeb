@@ -1,0 +1,213 @@
+﻿/**
+*@Description: fetal heart css 消息调整
+*@Author:      xuy
+*@Update:      yys(2017-3-16 13:30)增加打印按钮
+**/
+
+/*common*/
+input.btn{width: 80px; height: 28px; line-height: 28px;border:0; border-radius: 2px; font-size: 15px; color: #fff;}
+.w1200{width: 1200px; margin: 0 auto;}
+a{text-decoration:none;}
+i{font-style: normal}
+.fl{float: left}
+.fr{float: right}
+.clearfixed{zoom: 1;}
+.clearfixed:after{content:"";height:0;clear: both;display:table;}
+.toe{display: inline-block; width:10em; white-space:nowrap; text-overflow: -o-ellipsis-lastline; text-overflow: ellipsis;overflow: hidden; vertical-align: middle;}
+
+.user-info a.message{color: #5f738a;margin-right: 0}
+.user-info .message em{color: #5f738a;}
+.user-info a.message i{ background:url(../images/fetalheart.png)no-repeat -185px 3px ;}
+.user-info a.alert i{background:url(../images/fetalheart.png) no-repeat -67px -69px;}
+.user-info a.alert{color: #ff8f2c;}
+
+
+/*head*/
+.fh-header{background: #bc807c;height:80px;}
+.fh-check{margin:0 auto;width:1200px;height:inherit;}
+.head-left a{float:left;margin:15px 4px 0 8px; width:141px; height:47px;}
+.head-left span{float:left;margin:25px 4px 0 8px; width:226px;height:28px; background:url(../images/wholedata.png) no-repeat 0 -294px;}
+.head-center .view-show{float:left; margin:15px 4px 0 75pt; height:47px; font-size:22px;color:#fff;line-height:47px;}
+.head-center b{float:left;margin:35px 2px 0 4px;width:10px; height:7px; background:url(../images/imgs.png) no-repeat -3px -86px;}
+.head-center .view-choose{float:left;margin:15px 4px 0;height:47px;color:#fff;font-size:14px;line-height:47px;}
+.head-right div{float:left;}
+.head-right .user-head img{margin:8px 4px 0;width:66px;height:65px;}
+.head-right .user-info{margin:8px 4px 0 14px; color: #fff;}
+.head-right .user-info p{font-size:14px;line-height:34px; max-width: }
+.head-right .user-info p a{margin:0 20px 0 0;color:#fff;}
+.message em{color: #bc807c;}
+/*.message i{display: inline-block;margin-left: 5px;width: 16px;height: 17px;background: url(../images/pacs.png) -58px -40px;}*/
+
+/*fh header*/
+.fh-check .head-left span{float:left; margin:25px 4px 0 8px; width: 150px; height:28px; background:url(../images/fetalheart.png) no-repeat;}
+
+
+/*tab*/
+.fhlist-title{width:240px;margin:80px auto 0;height:50px;clear:both; line-height:20px; font-size:14px; overflow:hidden;cursor: pointer;font-family: Microsoft Yahei,"Hiragino Sans GB","Hiragino Sans GB W3","SimSun",sans-serif;font-weight: bold;}
+.fhlist-title li{float:left;width:120px;height:40px;text-align:center;font-size:16px;font-weight:900;color:#888;}
+.fhlist-title .current{color:#285181;background:#fff;}
+
+/*query*/
+.fh-query{margin-top:0; width: 100%; height: 80px;}
+.fh-query .search{ padding-top: 25px;}
+.fh-query .search .grey-select{ background: #fff; margin-right: 10px; width: 100%;}
+.fh-query .user-select-span{width: 150px; line-height: 26px;}
+.fh-query label{font-size: 14px; color: #bc807c; font-weight: bold;}
+.fh-input{width: 200px; float: left;}
+.fh-input input{text-indent: 10px; border:1px solid #d7d7d7; height: 24px; line-height: 24px;}
+.fh-input1{width:200px;float:left;}
+.fh-input1 input{width:120px;text-indent: 10px; border:1px solid #d7d7d7; height: 24px; line-height: 24px;}
+div.update-time{max-width: 180px; width: 180px;}
+.fh-query .btn{vertical-align: middle; background:  #91b45d;}
+
+
+
+.add-con{display: inline-block;margin-left:15px;padding:5px 8px;background:#5da0d5;color:#fff;font-size: 14px; border-radius:2px;cursor:pointer;}
+.icon-add-con{display:inline-block;margin:0 5px -4px 0;width:18px;height:18px;background: url(../images/fetalheart.png) no-repeat -158px 0px}
+.fh-lists{display: none;}
+.fh-list{position: relative;margin-bottom: 50px; min-height: 390px;padding-bottom:7px; border:1px solid #ddd; background: #fff; box-shadow: 0 0 3px #aaa;}
+.fh-list-tit{display: block; position:relative; width: 100%; height: 40px;text-indent: 20px;font: 14px/40px Microsoft Yahei,sans-serif;}
+.fh-list-table{width: 100%;height: 350px;}
+table.fhlist{width: 100%; line-height:36px;border-bottom:none; background-image:url(../images/list_background_image.jpg);padding-left:18px; text-align: center;}
+.fhlist thead{line-height: 32px;background-color: #bc807c;font-weight: bold; color: #fff;}
+.fhlist tr{border-bottom: 1px solid #ddd; line-height: 28px;}
+.fhlist tbody tr:hover{background: #f8e8e8;}
+.fhlist td.replyed{color: #777}
+.fhlist td.no-reply{color: #ff8f2c;}
+.fhlist td a{padding:1%;margin:0 2%; color: #91b45d; font:bold 13px Microsoft Yahei,sans-serif;}
+.page-right .print{background: #bc807c;}
+.fhlist td .fh-list-info{color: #91b45d;}
+.fhlist td .fh-list-settle{color: #5da0d5;}
+.fhlist td .fh-list-detail{color: #285181;}
+.fhlist td .delete{color: #888;}
+
+/*新增用户*/
+.newuser{padding:15px; line-height: 24px; width:495px; display: none;}
+
+.pregnant-info li,.emergency li{position: relative; float: left; margin-left: 10px;font-size: 13px; margin-bottom:8px;}
+.pregnant-info li span,.emergency li span{display:block; float: left; color:#7d7d7d;width: 75px;}
+.pregnant-info li em{color: #ff8f2c; margin-left: 2px;}
+.pregnant-info li input,.emergency li input{text-indent: 5px; border:1px solid #d7d7d7;border-radius: 2px; margin-right: 20px; width: 140px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;height: 24px; line-height:24px; font:13px Microsoft Yahei,sans-serif;  }
+.pregnant-info li b{font-size: 12px; line-height: 16px;}
+input.img-btn{float:right;width:80px;height:30px;border:0; margin-right: 20px;}
+.pregnant-info li.fr{float: right;margin-right: 20px;}
+.pregnant-info .grey-select{width: 140px;margin-right: 20px;}
+.pregnant-info .grey-select span{width: 120px;color: #000;}
+.pregnant-info li .user-select li{margin-left: 0; font-size: 12px;}
+.pregnant-info li input[readonly]{background: #f5f5f5;color: #777;}
+
+.emergency{margin-top: 20px; width:480px; border:1px solid #bc807c;}
+.emergency h4{font-size: 14px;margin-top: -25px; margin-left: 5px; clear:both; width: 130px; padding:10px; line-height: 30px; color: #bc807c; background: #fff;}
+.emergency li{margin-left: 0;}
+.emergency li input{margin-right: 0;}
+.emergency li span{text-align: right;width:55px; padding-left: 20px;}
+.emergency li div span{text-align:left;}
+.emergency li .grey-select{min-width:70px;}
+.fh-pop-btn{width: 80px; height: 30px; margin:30px 10px; background:#91b45d; font-size: 15px; color: #fff; border-radius: 2px;}
+
+/*print*/
+.main-box{max-width: 1750px; min-width: 800px; overflow-y: hidden; background: #fff; margin: 0 auto; width: 800px;}
+.fhform{width: 100%; height: auto; min-width: inherit; margin:0 auto;}
+.fhform-head{width: 100%; height: 50px; border-bottom:1px solid #000; line-height: 50px; text-align: center; font-size: 20px;}
+.fhform-main{width: 100%; height: auto; }
+.fhform-left{width:550px; height: auto; padding: 10px 0 0 10px; /*float:left;*/}
+.fhform-left{width:700px; height: auto; padding: 10px 0 0 10px;}
+.fhform-left ul{width: auto; margin-bottom: 16px; height: auto;}
+.fhform-left ul li{float: left; width: 360px;font-size:18px;}
+.fhform-left .f-l-li{width: auto;}
+.f-l-retext{width: 100%; font-size:18px;}
+.f-l-text{margin-bottom:10px;width:98%; height:auto; border: 1px solid #000; border-radius: 3px; padding: 10px 1%; font-size:16px;}
+.f-l-text p{text-indent:36px;}
+.f-l-retext p{text-indent:36px;}
+.fhform-right{float: left; width: auto; height: auto; padding: 14px 0 0 30px;}
+.f-r-type{width: auto; height: auto; margin-bottom: 20px;}
+.f-r-type label{margin-right: 38px;}
+.f-r-type .typy-input{margin-right: 16px;}
+.f-r-table{width:600px; height: auto; padding-left: 7px; }
+.f-r-table h3{font-weight: normal; font-size: 14px; margin-left: 2px; }
+.f-r-table table{border-collapse: collapse; margin: 0 auto;}
+.f-r-table td{border: 1px solid #000; text-align: center; width: 90px; height: 31px;}
+.f-r-table .table-td{text-align: left; padding-left: 12px;}
+.f-r-conclusion{margin-top: 20px;}
+.f-r-conclusion  label{margin-right: 34px;}
+.fh-sign{float: right;}
+.fh-sign i{font-style: normal; border-bottom: 1px solid #000 ; text-decoration:underline;}
+.fh-footer1{margin-top: 15px; }
+.fh-footer2{margin-left: 42px;}
+#print-botton{position: absolute; top:20px; right:100px;}
+.print-haichart-box{margin:10px auto 0;width: 100%;}
+.doctor-sign{
+    width: 100%;
+    font-size: 16px;
+    text-align: right;
+}
+.doctor-sign img{
+    width: auto;
+    height: 50px;
+}
+
+/*图表*/
+.gravida-list span{text-indent: 6px;}
+.view-log{width: 880px; margin: 10px auto;}
+.view-log .view-log-head{width: 100%; height: 36px; line-height: 36px; color:#fff; background:#bc807c; font-size: 0;}
+.view-log .view-log-head span{display:inline-block;width:94px;font-size: 14px; text-indent: 6px;}
+span.data-state{width:94px;}
+span.data-start-time{width:94px;}
+span.data-name{width:94px;}
+span.data-age{width:94px;}
+span.data-pregnancy{width:94px;}
+span.data-childbirth{width:94px; line-height: 36px;}
+span.data-time{width:94px; line-height: 36px;}
+span.data-doc{width:94px; line-height: 36px;}
+span.data-pat{width:94px; line-height: 36px;}
+.view-log span{display: inline-block;}
+.view-log ul{width: 100%; font-size: 0; height: 200px; overflow-y: scroll;}
+.view-log ul li{padding: 2px 0; height: 36px; line-height: 36px; cursor: pointer;}
+.view-log ul span{float: left; font-size: 12px;}
+.highcharts-content{ margin-top:10px; width: 880px; }
+.highchart-box{width: 560px; height: 300px;}
+.consultation{ width: 280px;}
+.audio-info{width: 560px;}
+.audio-info p{height: 30px; line-height: 30px; color:#999; font-size: 16px; font-weight: 400; margin-right: 10px; text-indent: 6px;}
+.audio-info p span{color:#f00; font-weight: 600;}
+.audio-info p b{color:#000;}
+.playbtn{position: relative; top: -149px; left: 24px; display: block; width: 44px; height: 44px; background:url(../images/fetalheart.png) no-repeat -162px -25px; z-index: 99999998;}
+.suspendbtn{display: none; position: relative; top: -149px; left: 24px; display: block; width: 44px; height: 44px; background:url(../images/fetalheart.png) no-repeat -162px -79px; z-index: 99999999;}
+.consultation-box{position:relative;width: 100%; margin-bottom: 20px; overflow: hidden;}
+.consultation-box .title{color:#bc807c; font-size: 14px; font-weight: bold; line-height: 30px;}
+.consultation-box p{width: 90%; line-height: 1.5; margin: 6px 0; text-align: justify; font-size: 14px;}
+.consultation-patient span{float: left; margin-right: 10px; color:#898989; font-size: 12px;}
+.consultation-patient span:after{content: ","}
+#baby-container{position: relative; top:-40px; /*z-index: 9;*/}
+#uterine-container{position: relative; top:-78px; /*z-index: 19;*/}
+h6.detail-head{width: 100%; height:36px; line-height:36px; background:#bc807c; color:#fff; font-size: 14px;}
+h6.detail-head .fr{margin-right: 10px;}
+h6.detail-head span{margin:0 8px;}
+.fh-detail{margin: 20px auto; width: 96%;}
+.fh-detail .highcharts-content{width: 100%; background: #fff;}
+.fh-detail .highcharts-content .highchart-box{position: relative; width: 66%; min-width: 560px;}
+.chart-btn{position: absolute; bottom: -30px; right: 20px;}
+.chart-btn a{margin: 0 10px; border-radius:2px; padding: 6px 12px;}
+.fh-replay-btn{background: #5aa1d7; color:#fff;}
+.fh-mark-btn{background: #eee; color:#d9d9d9;}
+.fh-print-btn{border: 1px solid #eee;}
+.fh-detail .highcharts-content .consultation{width: 30%; min-width: 280px;}
+.fh-detail .highcharts-content .consultation-box div{height: 38px; line-height: 38px;}
+.fh-detail .highcharts-content .consultation-box div span{display: inline-block; width: 60px; height: 38px; line-height: 38px; font-size: 16px;}
+.fh-detail .highcharts-content .consultation-box div b{display: inline-block; width: 60px; height: 38px; line-height: 38px; text-align: center; font-size: 16px; font-weight: 600; color:#f00;}
+.doctor-reply{margin-top: 10px; display: inline-block; border-radius: 2px; padding: 6px 20px; color:#fff; background:#91b45d;}
+
+/*胎心打印按钮*/
+.fetal-heart-print{
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    display: block;
+    width: 28px;
+    height: 26px;
+    background: url(../images/fetalheart.png) no-repeat -213px 0;
+    cursor: pointer;
+}
+
+
+div.big{float:left;width:100px;}

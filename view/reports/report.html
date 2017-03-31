@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20170118" rel="stylesheet" type="text/css" />
+<link href="../../css/fjpt.css?v=upd20170118" rel="stylesheet" type="text/css" />
+<link href="../../css/icomoon.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/searchbar.js" type="text/javascript"></script>
+<script src="../../js/jquery.switchable.min.js" type="text/javascript"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+
+<style>
+          .toe{width: 60%;vertical-align: middle;}
+</style>
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+          <li><a href="#"><span class="nav-icon5"></span>我的主页</a></li>
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" style="position: relative">
+    <aside class=" mm-menu"  >
+        <div class="column-wide-block for-cwb" >
+            <dl class="mm-menu--items">
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul style="margin-top:14px;">
+                    <li><a href="#">· 个人影像</a></li>
+                    <li class="last"><a href="#">· 共享影像</a></li>
+                    <li><a href="#">· 获取影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 上传记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>空中诊室<p>air room</p></dt>
+                <dd class="column-icon column-air"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 留言咨询</a></li>
+                    <li class="last"><a href="#">· 视频诊室</a></li>
+                    <li><a href="#">· 诊间预约</a></li>
+                    <li class="last"><a href="#">· 医院挂号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>双向转诊<p>referral</p></dt>
+                <dd class="column-icon column-ref"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="">
+                    <li><a href="#">· 待办列表</a></li>
+                    <li class="last"><a href="#">· 转入记录</a></li>
+                    <li><a href="#">· 转出记录</a></li>
+                    <li class="last"><a href="#">· 患者跟踪</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl  class="clearfix">
+                    <dt>影像报告<p>report</p></dt>
+                    <dd class="column-icon column-rep"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 报告列表</a></li>
+                        <li><a href="#">· 报告书写</a></li>
+                        <li><a href="#">· 影像匹配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>病历查询<p>medical record</p></dt>
+                    <dd class="column-icon column-med"></dd>
+                </dl>
+                <div class="column-detail narrow-right">
+                    <ul>
+                        <li><a href="#">· 按患者查询</a></li>
+                        <li><a href="#">· 按类型查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl class="clearfix">
+                    <dt>联系人<p>contacts</p></dt>
+                    <dd class="column-icon column-cont"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul>
+                        <li><a href="#">· 我的联系人</a></li>
+                        <li><a href="#">· 关注我的患者</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>设置管理<p>settings</p></dt>
+                    <dd class="column-icon column-set"></dd>
+                </dl>
+                <div class="column-detail  narrow-right">
+                    <ul class="column-spe-ul" style="margin-top:14px;">
+                        <li><a href="#">· 个人信息</a></li>
+                        <li><a href="#">· 排班设置</a></li>
+                        <li><a href="#">· 价格设置</a></li>
+                        <li><a href="#">· 报告模板</a></li>
+                        <li><a href="#">· 短信设置</a></li>
+                        <li><a href="#">· 修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+
+
+ <section class="user-right wrapper">
+     <span class="mm-menu-toggle"></span>
+
+     <div class="breadcrumbs"><span class="bread-fir">报告 &gt;&gt;&gt;</span>&nbsp;<span class="bread-fir">报告查询</span> &gt;&gt;&gt;&nbsp;<span class="bread-sec">查询结果</span></div>
+    <div class="watermark">
+
+                <div style="display:none;" class="imc-report">
+                        <h1 class="report-title">团风县人民医院</h1>
+                        <h2 class="report-title">影像检查报告</h2>
+                       <input class="lakeblue-btn fr report-print"  value="打印">
+                        <div class="reportcm-top">
+                            <div><label>CT号：</label><span>HS10899</span></div>
+                        </div>
+                        <div class="reportcm-mid">
+                            <ul class="u4">
+                                <li><label>姓名：</label><div class="toe">王无</div></li>
+                                <li><label>性别：</label><span>男</span></li>
+                                <li><label>年龄：</label><span>6</span></li>
+                                <li><label>门诊号：</label><div class="toe">156212022045</div></li>
+
+                            </ul>
+                            <ul class="u4">
+                                <li><label>住院号：<!-- 门诊号：--></label><span>152508</span></li>
+                                <li><label>病室：</label><span>185病区</span></li>
+                                <li><label>床号：</label><span>63</span></li>
+                                <li><label>患者编号：</label><span>4871453</span></li>
+                            </ul>
+                            <ul class="u3">
+                                <li><label>科别：</label><div class="toe">我的科室名称长</div></li>
+                                <li><label>送诊医生：</label><span>王一飞</span></li>
+                                <li><label>检查单号：</label><span>4871453</span></li>
+                            </ul>
+                            <ul class="u3">
+                                <li><label>检查时间：</label><span>2016年03月04日</span></li>
+                                <li style="width:66%;"><label>检查部位：</label><div class="toe">锁骨正位（左）</di></li>
+                            </ul>
+
+                        <div class="reportcm-cont">
+                            <label>影像所见</label>
+                            <div class="reportcm-see">
+                            <p>
+                                影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见</p>
+                            </div>
+                            <label>影像所得</label>
+                            <div class="reportcm-see">
+                            <p>
+                                影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见影像所见</p>
+                            </div>
+                        </div>
+                        </div>
+                            <ul class="reportcm-foot">
+                              <li><label>报告医师：</label><span>藤原</span></li>
+                              <li><label>审核医师：</label><span>柯建飞</span></li>  
+                              <li style="width:25%;"><label>签名：</label><span>柯建飞</span><img src="../../images/doc-sign.png" class="signiture" alt="" title="某医生"></li>  
+                              <li style="width:35%;"><label>报告时间：</label><span>2014年09月05日 11:29</span></li>
+                            </ul>
+                        <p class="reportcm-exp" style="margin-top:20px;">此报告仅供本院医生参考，不做证明用</p>
+                        <p class="reportcm-exp">本报告由<img src="../../images/tm.jpg">提供技术支持</p>
+                 
+                </div>
+
+      <div style="display:none;" class="imc-report">
+        <div class="reportpt">
+          <input class="lakeblue-btn fr" style="text-align:center; line-height:30px;" value="打印">
+          <!-- <img src="../../images/android code.png" alt=""  style="position:absolute;top:0;width:120px; " /> -->
+             <h1 style="marin-bottom:30px;">莆田市医学影像云诊断报告</h1>
+                <div class="reportpt-top">
+                <ul>
+                  <li>送检医院：<span>黄石镇中性卫生院</span></li>
+                  <li>云诊断医院：<span>莆田市第一医院</span></li>
+                </ul>
+                  <div><label>摄片号：</label><span>HS10899</span></div>
+                </div>
+
+              <div class="reportpt-mid">
+                <ul>
+                  <li><label>姓名：</label><span>王无</span></li>
+                  <li><label>性别：</label><span>男</span></li>  
+                  <li><label>年龄：</label><span>6</span></li> 
+                  <li style="width:31%;"><label>病历号：</label><span>4871453</span></li> 
+                </ul>
+                <ul class="u2">
+                  <li><label>检查部位：</label><span>锁骨正位（左）</span></li> 
+                  <li><label>检查时间：</label><span>2016-03-04</span></li>
+                </ul>
+
+                    <div class="reportpt-cont">
+                        <label>扫描所见:</label>
+                        <div class="reportpt-see">
+                            <p>
+                                左锁骨中外1/3处骨折复查，骨折端略向下位移，可见明显骨痂形成。
+                            </p>
+
+                        </div>
+                        <label>印象:</label>
+                        <div class="reportpt-see">
+                            <p>
+                                左锁骨中外1/3处骨折后改变。
+                            </p>
+                         
+                        </div>
+                    
+                    </div>
+
+              
+                <ul class="reportpt-foot">
+                  <li><label>报告医师：</label><span>藤原</span></li>
+                  <li><label>审核医师：</label><span>柯建飞</span></li>  
+                  <li style="width:35%;"><label>报告时间：</label><span>2014-09-05 11:29:58</span></li>
+                </ul>
+                <p class="reportpt-exp">****** 此报告仅供本院医生参考，不做证明用 ******</p>
+
+         
+              </div>
+
+        </div>
+
+    </div>
+
+
+ <div style="display:block;" class="lc-report">
+
+  <div class="reportcm">
+      <input class="lakeblue-btn fr" style="text-align:center; line-height:30px;" value="打印">
+<!--       <img src="../../images/avatar.png" alt="医院logo" title="医院logo" style="position:absolute;left:25%;width:100px; " /> -->
+         <h1 class="report-title">临沧市妇幼保健院</h1>
+         <h2 class="report-title">DR 检 查 报 告 单</h2>
+
+            <div class="reportcm-top reportlc-top">
+
+              <div><label>影像号：</label><span>1303</span></div>
+              <div><label>设备名称：</label><span>XXXX</span></div>
+            </div>
+
+          <div class="reportcm-mid reportlc-mid">
+            <ul class="u4">
+              <li><label>姓名：</label><span>王无</span></li>
+              <li><label>性别：</label><span>男</span></li>  
+              <li><label>年龄：</label><span>7y</span></li> 
+              <li><label>曝光：</label><span>计算机X线摄像2次</span></li> 
+              
+            </ul>
+            <ul class="u4">
+              <li><label>申请科室：<!--住院号：--><!-- 门诊号：--></label><span>儿科</span></li> 
+              <li class="u4-1"><label>床号：</label><span>12</span></li> 
+              <li class="u4-1"><label>住院号：</label><span>17000352</span></li>  
+              <!--<li><label>患者编号：</label><span>4871453</span></li> -->
+            </ul>
+            <ul class="u3">
+              <li><label>检查部位：</label><span>胸部正侧位</span></li> 
+              <!--<li><label>送诊医生：</label><span>王一飞</span></li>  
+              <li><label>检查单号：</label><span>4871453</span></li> -->
+            </ul>
+            <ul class="u2">
+              <li><label>检查方式：</label><span>平片</span></li>
+              <li><label>激光片：</label><span>XX</span></li> 
+            </ul>
+            <ul class="u3">
+              <li><label>临床诊断：</label><span>待查</span></li>
+              
+            </ul>
+           
+
+                <div class="reportcm-cont reportlc-cont">
+                    <label>影像所见:</label>
+                    <div class="reportcm-see  reportlc-see ">
+                        <p>
+                            左锁骨中外1/3处骨折复查，骨折端略向下位移，可见明显骨痂形成。左锁骨中外1/3处骨折复查，骨折端略向下位移，可见明显骨痂形成。左锁骨中外1/3处骨折复查，骨折端略向下位移，可见明显骨痂形成。
+                        </p>
+
+                    </div>
+                    <!--<label>影像所得:</label>
+                    <div class="reportcm-see" style="height:330px;">
+                        <p>
+                            左锁骨中外1/3处骨折后改变。
+                        </p>
+                     
+                    </div>-->
+                </div>
+                
+                <div class="reportcm-cont reportlc-cont reportlc">
+                    <label>诊断意见:</label>
+                    <div class="reportcm-see reportlc-see">
+                        <p>
+                           双肺、心、膈未见明显异常x线征象
+                        </p>
+
+                    </div>
+                    <!--<label>影像所得:</label>
+                    <div class="reportcm-see" style="height:330px;">
+                        <p>
+                            左锁骨中外1/3处骨折后改变。
+                        </p>
+                     
+                    </div>-->
+                </div>
+
+          </div>
+
+          
+            <div class="reportcm-foot  reportlc-foot">
+                <ul class="reportlc-foot-ul">
+              <li><label>诊断：</label><span class="line">杨光伟</span></li>
+              <li><label>审核：</label><span class="line">熊文永</span></li>  
+              <li style="width: 22%;"><label >复查：</label><span class="line">XXX</span><!--<img src="../../images/doc-sign.png" class="signiture" alt="" title="某医生">--></li>  
+              <li style="width: 28%; "><label>登记：</label><span></span></li>
+              </ul>
+              <ul class="reportlc-foot-ul">
+              <li><label>签名：</label><span></span></li>
+              <li><label>签名：</label><span></span></li>  
+              <li style="width: 22%;"><label>签名：</label><span></span><!--<img src="../../images/doc-sign.png" class="signiture" alt="" title="某医生">--></li>  
+              <li style="width: 28%; "><label>检查：</label><span>2017-01-16 11:39:00</span></li>
+              </ul>
+            </div>
+            <ul class="reportlc-bottom">
+                <li >【此报告仅供本院医生参考，确认以临床病理为准】</li>
+                <li  style="width: 28%;">报告：</label><span>2017-01-16 11:29:00</span></li>
+            </ul>
+           
+     
+
+
+</div>
+  </div>
+
+
+
+  <!-- 旧报告模板弃用    
+  <input class="navy-btn fr" style="text-align:center; line-height:30px;" value="查看影像">
+          <table width="100%" border="0" cellspacing="0" class="report">
+          <caption><h2>市一医院检查报告单</h2></caption>
+          <thead  width="100%">
+            <tr>
+              <th align="left" colspan="2">尿常规门诊</th>
+              <th align="right" colspan="2">No.22091000328</th>
+            </tr>
+          </thead>
+          <tbody class="report-info">
+            <tr>
+              <td width="20%">姓名：<span>王无</span></td>
+              <td width="20%">姓别：<span>男</span></td>  
+              <td width="20%">年龄：<span>46</span></td> 
+              <td width="20%">样本编号：<span>264456</span></td> 
+            </tr>
+            <tr>
+              <td>样本类型：<span>尿液</span></td> 
+              <td>门诊号：<span>22</span></td>
+              <td>科室：<span>泌尿科</span></td>
+              <td>年龄：<span>46</span></td>  
+            </tr>
+          </tbody>
+          <tbody>
+              <tr>
+                  <td colspan="4">
+                          <table class="report-con" width="100%">
+                            <tr class="report-tit">
+                              <td class="report-no"></td>
+                              <td width="25%">检验项目</td>
+                              <td width="10%">结果</td>  
+                              <td width="15%">参考范围</td>
+                              <td width="15%">单位</td>  
+                            </tr>
+                            <tr>
+                              <td class="report-no">1</td>
+                              <td class="report-obj">酸碱度（干化学）</td>
+                              <td class="report-res">8.5<em>↑</em></td>
+                              <td class="report-range">5.0-8.0</td>
+                              <td class="report-unit"></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td class="report-obj">亚硝酸盐（干化学）</td>
+                              <td class="report-res">阴性</td>
+                              <td class="report-range">阴性</td>
+                              <td class="report-unit"></td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td class="report-obj">葡萄糖（干化学）</td>
+                              <td class="report-res">阴性</td>
+                              <td class="report-range">阴性</td>
+                              <td class="report-unit"></td>
+                            </tr>
+                            <tr>
+                              <td class="report-no">11</td>
+                              <td class="report-obj">白细胞（干化学）</td>
+                              <td class="report-res">阴性</td>  
+                              <td class="report-range">阴性</td>  
+                              <td class="report-unit"></td>
+                            </tr>
+                            <tr>
+                              <td>12</td>
+                              <td class="report-obj">白细胞（干化学）</td>
+                              <td class="report-res">阴性</td>  
+                              <td class="report-range">阴性</td>  
+                              <td class="report-unit"></td> 
+                            </tr>
+                            <tr>
+                              <td>13</td>
+                              <td class="report-obj">红细胞（镜检）</td>
+                              <td class="report-res">阴性</td>  
+                              <td class="report-range">0-3</td>  
+                              <td class="report-unit">每高倍镜</td>
+                            </tr>
+                          </table>
+                  </td>
+              </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>送检医生：<span>藤原</span></td>
+              <td>检验者：<span>柯建飞</span></td>  
+              <td>审核者：<span>倪爱青</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>送检时间：<span>2014-09-05 11:29:58</span></td>
+              <td>检验时间：<span>2014-09-05 12:20:07</span></td>  
+              <td>报告时间：<span>2014-09-05 12:55:15</span></td>
+              <td>报告时间：<span>2014-09-05 12:55:15</span></td> 
+            </tr>
+              <tr class="warning"><td colspan="4"><em>*</em>本系统提供的体检数据来源于各医院，仅供方便查询参考使用，不具法律效力，如有疑问请以各医院纸质报告为准</td></tr>
+          </tfoot>
+        </table> -->
+      </div>
+
+    <a href="reportinquire.html"><input type="button" name="" value="返回" class="blue-btn back-btn"></a>
+
+ </div>
+ </section>
+</div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+
+
+</div>
+
+<script type="text/javascript">
+function selectAll(checkbox) {
+               $('input[type=checkbox]').prop('checked', $(checkbox).prop('checked'));
+            }
+</script> 
+<script type="text/javascript">
+  $(function(){ 
+    $(".aycan-tit>li").hover( 
+        function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".user-items").eq($(".aycan-tit>li").index(this)).show().siblings(".user-items").hide(); 
+        } 
+    ) 
+}) 
+
+  //旧的tab标签 IE7、8下有bug
+  // $(function(){
+  //   $(".aycan-tit").switchable(".user-items",{
+  //     triggers:'li',
+  //     currentCls:'current'
+  //   });
+  // }); 
+</script>
+</body>
+</html>

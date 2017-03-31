@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>全球影像用户界面</title>
+    <link href="../../css/layout.css?v=upd20160405" rel="stylesheet" type="text/css" />
+    <link href="../../css/main.css?v=upd20160405" rel="stylesheet" type="text/css" />
+    <link href="../../css/fjpt.css?v=upd20160405" rel="stylesheet" type="text/css" />
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../js/scrollbar/jquery.mCustomScrollbar.min.css"/>
+    <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../js/layer/layer.js" type="text/javascript"></script>
+    <script src="../../js/jquery.drag.js" type="text/javascript" ></script>
+    <script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="../../js/scrollbar/jquery.mousewheel.min.js"></script>
+    <script src="../../js/jquery.sidebar.js"></script>
+    <script>
+        (function() {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i]);
+            };
+
+            $("ul:first").dragsort();
+            layer.config({
+                path: 'layer/',    //layer.js所在的目录，可以是绝对目录，也可以是相对目录
+                shift: 1, //默认动画风格
+                extend:'skin/espresso/style.css',
+                skin: 'layer-ext-espresso' //默认皮肤
+            });
+        })()
+    </script>
+    <style type="text/css">
+        .html-body-overflow
+        {
+            overflow-x:hidden;
+            overflow-y:hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="bodymain">
+    <header>
+        <div class="user">
+            <div class="user-top">
+                <div class="user-tr">
+                    <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+                    <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+                    <div class="user-search">
+                        <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                        <ul class="select-mgul">
+                            <li><a href="#">联系人</a></li>
+                            <li><a href="#">影像</a></li>
+                        </ul>
+                        <div class="select-in">
+                            <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                        </div>
+                        <div class="search-btn"></div>
+                    </div>
+                </div>
+                <div class="user-tl">
+                    <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="fjpt-nav">
+        <div class="nav">
+            <div class="fl fjpt-nav-left"><a href="../../main.html"><img src="../../images/log.png"></a></div>
+            <div class="fl fjpt-nav-main">
+                <p>某某某某某某某某某某某医院</p>
+                <div class="fjpt-nav-main-content">
+
+                </div>
+            </div>
+            <div class="fl fjpt-nav-right">
+                <p>
+                    <span>某某某某某某某某某某某医院</span>
+                    <a href="#">冻结金额：<span>3</span>元</a>
+                </p>
+                <p>
+                    未确认报告：<span>3</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-box" style="position: relative">
+        <aside class=" mm-menu"  >
+            <div class="column-wide-block for-cwb" >
+                <dl class="mm-menu--items">
+                    <dt>影像<p>images</p></dt>
+                    <dd class="column-icon column-img"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 个人影像</a></li>
+                        <li class="last"><a href="#">· 共享影像</a></li>
+                        <li><a href="#">· 获取影像</a></li>
+                        <li class="last"><a href="#">· 本院影像</a></li>
+                        <li><a href="#">· 分享历史</a></li>
+                        <li class="last"><a href="#">· 上传记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>会诊间<p>consultation</p></dt>
+                    <dd class="column-icon column-cons"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 创建影像会诊</a></li>
+                        <li class="last"><a href="#">· 影像会诊记录</a></li>
+                        <li><a href="#">· 创建视频会诊</a></li>
+                        <li class="last"><a href="#">· 视频会诊记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>空中诊室<p>air room</p></dt>
+                    <dd class="column-icon column-air"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 留言咨询</a></li>
+                        <li class="last"><a href="#">· 视频诊室</a></li>
+                        <li><a href="#">· 诊间预约</a></li>
+                        <li class="last"><a href="#">· 医院挂号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>双向转诊<p>referral</p></dt>
+                    <dd class="column-icon column-ref"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul class="">
+                        <li><a href="#">· 待办列表</a></li>
+                        <li class="last"><a href="#">· 转入记录</a></li>
+                        <li><a href="#">· 转出记录</a></li>
+                        <li class="last"><a href="#">· 患者跟踪</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl  class="clearfix">
+                        <dt>影像报告<p>report</p></dt>
+                        <dd class="column-icon column-rep"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul style="margin-top:14px;">
+                            <li><a href="#">· 报告列表</a></li>
+                            <li><a href="#">· 报告书写</a></li>
+                            <li><a href="#">· 影像匹配</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>病历查询<p>medical record</p></dt>
+                        <dd class="column-icon column-acc"></dd>
+                    </dl>
+                    <div class="column-detail narrow-right">
+                        <ul>
+                            <li><a href="#">· 按患者查询</a></li>
+                            <li><a href="#">· 按类型查询</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl class="clearfix">
+                        <dt>联系人<p>contacts</p></dt>
+                        <dd class="column-icon column-lman"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul>
+                            <li><a href="#">· 我的联系人</a></li>
+                            <li><a href="#">· 关注我的患者</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>设置管理<p>settings</p></dt>
+                        <dd class="column-icon column-set"></dd>
+                    </dl>
+                    <div class="column-detail  narrow-right">
+                        <ul class="column-spe-ul" style="margin-top:14px;">
+                            <li><a href="#">· 个人信息</a></li>
+                            <li><a href="#">· 排班设置</a></li>
+                            <li><a href="#">· 价格设置</a></li>
+                            <li><a href="#">· 报告模板</a></li>
+                            <li><a href="#">· 短信设置</a></li>
+                            <li><a href="#">· 修改密码</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <span class="mm-menu-toggle"></span>
+        <section class="user-right wrapper" >
+
+            <div class="breadcrumbs"><span class="bread-fir">我的桌面 &gt;&gt;&gt;</span>&nbsp;<span class="bread-sec"></span></div>
+            <div class="desktop clearfix" >
+                <div class="desk-pi">
+                    <dl>
+                        <dt><a href=""><img src="../../images/avatar.png" alt="个人头像" /></a> </dt>
+                        <dd><a href="#">影像<em>23</em></a></dd>
+                        <dd><a href="#">共享<em>14</em></a></dd>
+                        <dd><a href="#">报告<em>8</em></a></dd>
+                        <dd><a href="#">会诊<em>16</em></a></dd>
+                        <dd><a href="#">关注<em>48</em></a></dd>
+                    </dl>
+                </div>
+
+
+                <div class="desk-quickenter">
+                    <div class="desk-iconshow clearfix">
+                        <span  class="fr" id="desk-manage">+ 管理</span>
+                        <h3>快速入口</h3>
+                        <ul class="desk-quick-list desk-enter-ul">
+                            <li><div><i class="icon-bg1"></i><p>挂号预约</p></div></li>
+                            <li><div><i class="icon-bg2"></i><p>获取影像</p></div></li>
+                            <li><div><i class="icon-bg3"></i><p>视频诊室</p></div></li>
+                            <li><div><i class="icon-bg4"></i><p>诊间预约</p></div></li>
+                            <li><div><i class="icon-bg5"></i><p>个人云盘</p></div></li>
+                            <li><div><i class="icon-bg6"></i><p>共享影像</p></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="desk-iconlist" class="desk-enter-pop" style="display:none;">
+                    <h3>已选：</h3>
+                    <ul id="desk-enterlist2" class="desk-enter-ul">
+                        <li><div><i class="icon-bg1"></i><p>挂号预约</p></div></li>
+                        <li><div><i class="icon-bg2"></i><p>获取影像</p></div></li>
+                        <li><div><i class="icon-bg3"></i><p>视频诊室</p></div></li>
+                        <li><div><i class="icon-bg4"></i><p>诊间预约</p></div></li>
+                        <li><div><i class="icon-bg5"></i><p>个人云盘</p></div></li>
+                        <li><div><i class="icon-bg6"></i><p>共享影像</p></div></li>
+                    </ul>
+                    <h3>待选：</h3>
+                    <ul id="desk-enterlist1"  class="desk-enter-ul">
+                        <li><div><i class="icon-bg6"></i><p>共享影像</p></div></li>
+                        <li><div><i class="icon-bg7"></i><p>分享历史</p></div></li>
+                        <li><div><i class="icon-bg8"></i><p>上传影像</p></div></li>
+                        <li><div><i class="icon-bg9"></i><p>留言咨询</p></div></li>
+                        <li><div><i class="icon-bg10"></i><p>我的联系人</p></div></li>
+                        <li><div><i class="icon-bg11"></i><p>我关注的医生</p></div></li>
+                        <li><div><i class="icon-bg12"></i><p>收件箱</p></div></li>
+                        <li><div><i class="icon-bg13"></i><p>发件箱</p></div></li>
+                        <li><div><i class="icon-bg14"></i><p>个人信息</p></div></li>
+                        <li><div><i class="icon-bg15"></i><p>成员管理</p></div></li>
+                        <li><div><i class="icon-bg16"></i><p>修改密码</p></div></li>
+                        <li><div><i class="icon-bg17"></i><p>隐私管理</p></div></li>
+                        <li><div><i class="icon-bg18"></i><p>影像报告</p></div></li>
+                        <li><div><i class="icon-bg19"></i><p>院内影像</p></div></li>
+                        <li><div><i class="icon-bg20"></i><p>病例查询</p></div></li>
+                        <li><div><i class="icon-bg21"></i><p>个人案例</p></div></li>
+                        <li><div><i class="icon-bg22"></i><p>创建影像会诊</p></div></li>
+                        <li><div><i class="icon-bg23"></i><p>影像会诊记录</p></div></li>
+                        <li><div><i class="icon-bg24"></i><p>视频会诊记录</p></div></li>
+                        <li><div><i class="icon-bg25"></i><p>创建视频会诊</p></div></li>
+                        <li><div><i class="icon-bg26"></i><p>报告模板</p></div></li>
+                        <li><div><i class="icon-bg27"></i><p>历史影像回溯设置</p></div></li>
+                        <li><div><i class="icon-bg28"></i><p>个人信息</p></div></li>
+                        <li><div><i class="icon-bg29"></i><p>排版设置</p></div></li>
+                        <li><div><i class="icon-bg30"></i><p>待办列表</p></div></li>
+                        <li><div><i class="icon-bg31"></i><p>转入记录</p></div></li>
+                        <li><div><i class="icon-bg32"></i><p>转出记录</p></div></li>
+                        <li><div><i class="icon-bg33"></i><p>患者跟踪</p></div></li>
+                        <li><div><i class="icon-bg34"></i><p>本地影像</p></div></li>
+                        <li><div><i class="icon-bg35"></i><p>专家团队</p></div></li>
+                        <li><div><i class="icon-bg36"></i><p>权限报告管理</p></div></li>
+                        <li><div><i class="icon-bg46"></i><p>推送设置</p></div></li> 
+                        <li><div><i class="icon-bg38"></i><p>我的账户</p></div></li>
+                        <li><div><i class="icon-bg39"></i><p>报告权限管理</p></div></li>
+                        <li><div><i class="icon-bg40"></i><p>医生管理</p></div></li>
+                        <li><div><i class="icon-bg41"></i><p>报告岗位管理</p></div></li>
+                        <li><div><i class="icon-bg42"></i><p>报告申请</p></div></li>
+                        <li><div><i class="icon-bg43"></i><p>报告书写</p></div></li>
+                        <li><div><i class="icon-bg44"></i><p>本院报告</p></div></li>
+                        <li><div><i class="icon-bg45"></i><p>待确认</p></div></li>
+                        <li><div><i class="icon-bg37"></i><p>推送记录</p></div></li>
+                        <li><div><i class="icon-bg47"></i><p>合作医院设置</p></div></li>
+                        <li><div><i class="icon-bg48"></i><p>机构条款管理</p></div></li>
+                        <li><div><i class="icon-bg49"></i><p>签约管理</p></div></li>
+                    </ul>
+                </div>
+
+                <script type="text/javascript">
+                    $("#desk-manage").click(function(){
+                        layer.open({
+                            type:1,
+                            title:false,
+                            shade:0.3,
+                            area: ['700px', '600px'],
+                            scrollbar: false,
+                            content:$('#desk-iconlist')
+                        })
+                    });
+                    $("#desk-enterlist1, #desk-enterlist2").dragsort({ dragSelector: "div", dragBetween: true, dragEnd: saveOrder, placeHolderTemplate: "<li class='placeHolder'><div></div></li>" });
+
+                    function saveOrder() {
+                        var data = $("#desk-enterlist1 li").map(function() { return $(this).children().html(); }).get();
+                        $("input[name=list1SortOrder]").val(data.join("|"));
+                    };
+
+                    
+    $(window).load(function(){
+        $(".desk-update").mCustomScrollbar({
+            scrollButtons:{
+                enable:false,
+                scrollType:"continuous",
+                scrollSpeed:20,
+                scrollAmount:40
+            },
+            horizontalScroll:false
+        });
+    });
+                </script>
+                <div style="width:100%;height:250px;">
+                    <div class="desk-notice">
+                        <h3>最新预约</h3>
+                        <ul>
+                            <li><a href=""><span>患者1</span> 预约了您的<span>视频诊室</span> <em>2016-03-22 星期四 14:30</em> <span>第4号</span></a></li>
+                            <li><a href=""><span>患者3</span> 预约了您的<span>门诊</span> <em>2016-04-02 星期六 14:00</em> <span>第14号</span></a></li>
+                            <li><a href=""><span>患者2</span> 预约了您的<span>门诊</span> <em>2016-04-02 星期六 14:00</em> <span>第15号</span></a></li>
+                            <li><a href=""><span>患者2</span> 预约了您的<span>门诊</span> <em>2016-04-02 星期六 14:00</em> <span>第15号</span></a></li>
+                            <li><a href=""><span>患者2</span> 预约了您的<span>门诊</span> <em>2016-04-02 星期六 14:00</em> <span>第15号</span></a></li>
+                        </ul>
+                        </ul>
+                        </ul>
+                    </div>
+
+                    <div class="desk-update">
+                        <h3 style="font-size: 16px;color: #000;">产品功能和升级</h3>
+                        <ul class="ulll">
+                            <li><h3 class="update-month">4月</h3></li>
+                            <li>
+                                <i class="update-disk" ></i>
+                                <a href="" style="position: relative">
+                                    <span class="update-day">4.08</span>
+                                    <span class="update-hover">emr支持ibase集群与包年包月付费</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="update-disk"></i>
+                                <a href="">
+                                    <span class="update-day" >4.07</span>
+                                    <span  class="update-hover">云解析企业版智能解析升级上级</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="update-disk"></i>
+                                <a href="">
+                                    <span class="update-day" >4.07</span>
+                                    <span  class="update-hover">云解析企业版智能解析升级上级</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="update-disk"></i>
+                                <a href="">
+                                    <span class="update-day" >4.07</span>
+                                    <span   class="update-hover">云解析企业版智能解析升级上级</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="ulll">
+                            <li><h3 class="update-month">3月</h3></li>
+                            <li>
+                                <i class="update-disk" ></i>
+                                <a href="" style="position: relative">
+                                    <span class="update-day">4.08</span>
+                                    <span class="update-hover">emr支持ibase集群与包年包月付费</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="update-disk"></i>
+                                <a href="">
+                                    <span class="update-day" >4.07</span>
+                                    <span class="update-hover">云解析企业版智能解析升级上级</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="update-disk"></i>
+                                <a href="">
+                                    <span class="update-day" >4.07</span>
+                                    <span  class="update-hover">云解析企业版智能解析升级上级</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="update-disk"></i>
+                                <a href="">
+                                    <span class="update-day" style="margin-top: 10px;">4.07</span>
+                                    <span  class="update-hover">云解析企业版智能解析升级上级</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+<!--引导页-->
+    <div class="guide-page">
+        <a href="javascript:;" class="guide-x" ></a>
+        <!--模块一-->
+        <div class="guide-block1" style="display: block;">
+            <img src="../../images/guide-img1.png" alt=""/>
+        </div>
+        <!--模块二-->
+        <div class="guide-block guide-block2" style="display: none;">
+            <img src="../../images/guide-block2-img1.png" alt="" class="guide-block-img guide-block2-img1"/>
+            <div class="guide-block2-img2">
+                <img src="../../images/guide-block2-img2.png" alt="" class="block2-btn"/>
+            </div>
+        </div>
+        <!--模块三-->
+        <div class=" guide-block guide-block3" style="display:none;">
+            <img src="../../images/guide-block3-img1.png" alt="" class="guide-block-img guide-block3-img1"/>
+            <img src="../../images/guide-block3-img2.png" alt="" class="guide-block-img guide-block3-img2"/>
+            <div class="guide-block2-img2" style="">
+                <img src="../../images/guide-block2-img2.png" alt="" class="block3-btn"/>
+            </div>
+        </div>
+        <!--模块四-->
+        <div class="guide-block guide-block4" style="display: none;">
+            <img src="../../images/guide-block4-img1.png" alt="" style="" class="guide-block-img guide-block4-img1"/>
+            <img src="../../images/guide-block4-img2.png" alt="" style="" class="guide-block-img guide-block4-img2"/>
+            <img src="../../images/guide-block4-img3.png" alt="" style="" class="guide-block-img guide-block4-img3"/>
+            <img src="../../images/guide-block4-img4.png" alt="" style="" class="guide-block-img guide-block4-img4"/>
+            <div class="guide-block2-img2" style="">
+                <img src="../../images/guide-block2-img2.png" alt="" class="block4-btn"/>
+            </div>
+        </div>
+        <!--模块五-->
+        <div class="guide-block guide-block5" style="display: none;">
+            <img src="../../images/guide-block5-img1.png" alt="" style="" class="guide-block-img guide-block5-img1"/>
+            <img src="../../images/guide-block5-img2.png" alt="" style="" class="guide-block-img guide-block5-img2"/>
+            <img src="../../images/guide-block5-img3.png" alt="" style="" class="guide-block-img guide-block5-img3"/>
+            <img src="../../images/guide-block5-img5.png" alt="" style="" class="guide-block-img guide-block5-img4"/>
+            <div class="guide-block2-img2" style="">
+                <img src="../../images/guide-block5-img4.png" alt="" class="block5-btn"/>
+            </div>
+        </div>
+    </div>
+
+    <script>
+//        禁止滚动条
+        function hideen(){
+            $(document.body).toggleClass("html-body-overflow");
+        }
+        hideen();
+
+        window.onload=function(){
+            $(".guide-block1").animate({opacity:'0'},2000);
+            setTimeout(function(){
+                $(".guide-block2").show();
+            },2000)
+
+        };
+
+
+        $(".block2-btn").click(function(){
+            $(".guide-block2").hide();
+            $(".guide-block3").show();
+
+        });
+        $(".block3-btn").click(function(){
+            $(".guide-block3").hide();
+            $(".guide-block4").show();
+
+        });
+        $(".block4-btn").click(function(){
+            $(".guide-block4").hide();
+            $(".guide-block5").show();
+        });
+
+        $(".guide-x").click(function(){
+            $(".guide-page").css("display","none");
+            $(document.body).toggleClass("html-body-overflow");
+        });
+
+        $(".block5-btn").click(function(){
+            $(".guide-page").css("display","none");
+            $(document.body).toggleClass("html-body-overflow");
+
+        })
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160930" rel="stylesheet" type="text/css"/>
+<link href="../../css/consultation.css?v=upd20160930" rel="stylesheet" type="text/css"/>
+<link href="../../css/style.css?v=upd20160930" rel="stylesheet" type="text/css"/>
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="bodymain">
+    <header>
+        <div class="head-part-2">
+            <div class="warp clearfixed" >
+                <div class="head-left fl">
+                    <a href="#" class="head-logo"><img src="../../images/log.png" alt=""/></a>
+                    <span class="font-ychz"></span>
+                </div>
+                <div class="head-right fr">
+                    <div class="user-head">
+                        <img src="../../images/user.jpg" alt=""/>
+                    </div>
+                    <div class="user-info">
+                        <p>欢迎您，<span>用户名</span></p>
+
+                        <p>
+                            <a href="javascript:;">返回首页</a>
+                            <a href="javascript:;">帮助</a>
+                            <a href="javascript:;">退出</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <div class="warp clearfixed" style="position: relative;background:#fff;min-height:90%;">
+        <div class="wrapper new-cstt">
+            <div class="cstt-breadcrumbs">
+                <span class="bread-fir"><a href="">首页 &gt;&gt;&gt;</a></span>&nbsp;
+                <span class="bread-fir"><a href="">远程会诊记录 &gt;&gt;&gt;</a></span>&nbsp;
+                <span class="bread-sec">发起新会诊</span>
+            </div>
+
+            <div class="step-type1 cstt-step">
+            <ul>
+               <li class="finish"><a href="#"><i>1</i>选择会诊间类型</a></li>
+               <li class="finish"><a href="#"><i>2</i>选择需要邀请的专家</a></li>
+               <li class="current"><a href="#"><i>3</i>填写病历资料</a></li>
+            </ul>
+        </div>
+        
+        <div class="cstt-selected">
+            <ul class="clearfix">
+                <li>交互会诊间（协同模式）</li>
+                <li>乌海市乌达区中心医院</li>
+                <li><span>王昌伟</span>，<span>张朝阳</span>，<span>闻而让</span>，<span>李秋</span>，<span>赵敏</span></li>
+            </ul>
+        </div>
+        <div class="cstt-unfilled cstt-grey-bg">
+        <h5>· 填写病历资料及会诊说明</h5>
+            <ul class="cstt-inputs  clearfix">
+                <li><label>主       题<em>*</em></label><input type="text"  value="" name="" style="width:300px;" /></li>
+                <li style="margin-right:0px;"><label>会诊时间<em>*</em></label><input type="text"  value="" name="" style="width:300px;" /><img onclick="WdatePicker({el:'studyDateStart',maxDate:'%y-%M-%ld'})" style="cursor:pointer" src="../../js/My97DatePicker/skin/datePicker.gif"></li><br>
+                <li style="margin-right:0px;"><label>会诊要求</label><input type="text"  value="" name="" style="width:782px;" /></li><br>
+                <li style="margin-right:50px;"><label>患者姓名<em>*</em></label><input type="text"  value="" name="" style="width:215px;" /></li>
+                <li style="margin-right:50px;"><label>性       别<em>*</em></label>
+                    <div class="switch">
+                        <input type="checkbox" name="male" checked><input type="checkbox" name="female">
+                        <span class="switch-btn switch-left chosen">男</span>
+                        <span class="switch-btn switch-right">女</span>
+                    </div>
+                </li>
+                <li style="margin-right:0px;"><label>年       龄<em>*</em></label><input type="text"  value="" name=""  style="width:175px;" /></li><br>
+                <li style="margin-right:0px;"><label>病情描述<em>*</em></label><textarea name="" id=""></textarea></li>
+                <span class="tip" style="margin-top:-50px;">您尚未选择时间</span>
+                <span class="tip" style="margin-top:30px;">您尚未填写完整患者资料</span>
+            </ul>
+        </div>
+        <div class="cstt-unfilled cstt-blue-bg">
+        <h5>· 选择相关影像</h5>
+                <a href="javascript:;" id="from-wdyp"  class="cstt-chose-btn">从我的云盘选择</a><a href="javascript:;" id="from-byyx" class="cstt-chose-btn">从本院影像选择</a>
+            <h6>已选择</h6>
+                    <table width="100%" border="0" cellspacing="0" class="table-cstt">
+                    <thead>
+                    <tr>
+                      <th width="8%">来源</th>
+                      <th width="20%">检查序号</th>
+                      <th width="12%">患者姓名 </th>
+                      <th width="10%">部位</th>
+                      <th width="25%">医院 </th>
+                      <th width="15%">获取时间</th>
+                      <th width="10%">操作</th>
+                    </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td colspan="7" style="height:100px;color:#a0a0a0;">尚未选择影像</td>
+                         </tr>
+                     </tbody>
+                   <!--  <tbody>
+                     <tr>
+                        <td>我的云盘</td>
+                      <td>rmefr 4-Sinus-234-444201-3359</td>
+                      <td>Zhang Zhuo Fang</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#" class="orange-text">移除</a></td>
+                    </tr>
+                     <tr>
+                        <td>我的云盘</td>
+                      <td>rmefr 4-Sinus-234-444201-3359</td>
+                      <td>Zhang Zhuo Fang</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#" class="orange-text">移除</a></td>
+                    </tr>
+                     <tr>
+                        <td>本院影像</td>
+                      <td>rmefr 4-Sinus-234-444201-3359</td>
+                      <td>Zhang Zhuo Fang</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#" class="orange-text">移除</a></td>
+                    </tr>
+                     <tr>
+                        <td>本院影像</td>
+                      <td>rmefr 4-Sinus-234-444201-3359</td>
+                      <td>Zhang Zhuo Fang</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#" class="orange-text">移除</a></td>
+                    </tr>
+                     <tr>
+                        <td>本院影像</td>
+                      <td>rmefr 4-Sinus-234-444201-3359</td>
+                      <td>Zhang Zhuo Fang</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>5</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#" class="orange-text">移除</a></td>
+                    </tr>
+                    </tbody> -->
+                    </table>
+        </div>
+
+
+        <div class="cstt-unfilled cstt-grey-bg">
+        <h5>· 上传其他附件</h5>
+            <div class="cstt-dis-block">
+  
+                    <ul class="cstt-dis-tab fl">
+                        <li class="current">生化检验</li>
+                        <li>影像检查</li>
+                        <li>病历文书</li>
+                    </ul>
+
+                <div class="cstt-dis-tag-block2" style="display:inline-block;">
+                                <div class="air-img">
+                                    <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                    <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                    <input type="button" value="删除">
+                                </div>
+                                <div class="air-img">
+                                    <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                    <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                    <input type="button" value="删除">
+                                </div>
+                                <div class="air-img">
+                                    <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                    <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                    <input type="button" value="删除">
+                                </div><div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div>
+                                <div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div><div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div><div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div>
+                             <div class="cstt-imgup"><a><i></i> 点击上传</a></div>
+                </div>
+                <div class="cstt-dis-tag-block2" style="display:none;">
+                      <div class="cstt-imgup"><a><i></i> 点击上传</a></div>
+                </div>
+                <div class="cstt-dis-tag-block2" style="display:none;">
+                                <div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div>
+                                <div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div>
+                                <div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div>
+                                <div class="air-img">
+                                <p class="air-img-border"><img src="../../images/pic1.jpg" alt=""><span><a>删除</a></span></p>
+                                 <input type="text" value="文件名" class="form-input inactive" onfocus="onf(this);" onblur="onb(this);">
+                                <input type="button" value="删除">
+                            </div>
+                               <div class="cstt-imgup"><a><i></i> 点击上传</a></div>
+              
+    
+                </div>
+            </div>
+        </div>
+
+        
+            <div class="two-btn clearfix">
+            <a href="consultationstart1.html"><input type="button" class="btn" value="上一步"/></a>
+            <a href="consultationstart3.html"><input type="button" class="btn" value="确定提交" style="background:#4865a2" /></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="cstt-chose-img byyx"  style="display:none;">
+    <div class="cstt-query clearfix">
+                  <span class="cstt-query-left">
+                    <div class="contit cstt-search cloud-img">
+                          <span class="center-title">患者ID</span>
+                        <input name="remotePatientId" id="remotePatientId" value="" type="text" >
+                    </div>
+                    <div class="contit cstt-search">
+                         <span class="center-title">开始时间</span>
+                         <span class="query-time" style="max-width:170px; width:100%;"><input name="studyDateStart" id="studyDateStart" value="开始时间" type="text" readonly="readonly">
+                            <img onclick="WdatePicker({el:'studyDateStart',maxDate:'%y-%M-%ld'})" style="cursor:pointer" src="../../js/My97DatePicker/skin/datePicker.gif">
+                        </span>
+                    </div>
+                    <div class="contit cstt-search">
+                    <span class="center-title">结束时间</span>
+                        <span class="query-time" style="max-width:170px;width:100%;"><input name="studyDateEnd" id="studyDateEnd" value="结束时间" type="text" readonly="readonly">
+                            <img onclick="WdatePicker({el:'studyDateEnd',maxDate:'%y-%M-%ld'})" style="cursor:pointer" src="../../js/My97DatePicker/skin/datePicker.gif">
+                        </span>
+                    </div>
+                    <div class="contit cstt-search cloud-img">
+                        <span class="center-title">患者姓名</span>
+                        <input name="patientName" id="patientName" value="患者姓名" type="text" onblur="if(this.value=='') this.value='患者姓名';" onfocus="if(this.value=='患者姓名') this.value=''">
+                    </div>
+
+                    <div class="contit cstt-search  cloud-img">
+                    <span class="center-title">检查编号</span>
+                        <input name="accessNumber" id="accessNumber" value="检查编号" type="text"  onblur="if(this.value=='') this.value='检查编号';" onfocus="if(this.value=='检查编号') this.value=''">
+                    </div>
+<!--                 <div class="cstt-search">
+                    <div class="user-select" style="width:auto;">
+                    <div class="grey-select">
+                         <span class="user-select-span con3-mgsw">报告类型</span><i></i>
+                        </div>
+                        <ul class=" user-select-ul" style="width: 99%;">
+                            <li onclick=""><a href="javascript:void(0);">全部</a></li>
+                            <li onclick=""><a href="javascript:void(0);">无报告</a></li>
+                            <li onclick=""><a href="javascript:void(0);">有报告</a></li>
+                            <li onclick=""><a href="javascript:void(0);">有报告且未审核</a></li>
+                            <li onclick=""><a href="javascript:void(0);">有报告且已审核</a></li>         
+                        </ul>
+                    </div>
+                </div> -->
+                    </span>
+                  <span class="cstt-query-right">
+                  <div class="query-type">
+  <!--                 <div class="center-title  clearfix"  style="width:100%;">影像类型：</div> -->
+                     <ul class=" clearfix">
+                        <li><input type="checkbox" name="modality" value="DR,CR,DX"><span>DR/CR/DX</span></li>
+                        <li><input type="checkbox" name="modality" value="SC"><span>SC</span></li>
+                        <li><input type="checkbox" name="modality" value="CT"><span>CT</span></li>
+                        <li><input type="checkbox" name="modality" value="US"><span>US</span></li>
+                        <li><input type="checkbox" name="modality" value="MR"><span>MR</span></li>
+                        <li><input type="checkbox" name="modality" value="MG"><span>MG</span></li>                 
+                        <li><input type="checkbox" name="modality" value="NM"><span>NM</span></li>
+                        <li><input type="checkbox" name="modality" value="PT"><span>PT</span></li>
+                        <li><input type="checkbox" name="modality" value="XA"><span>XA</span></li>
+                        <li><input type="checkbox" name="modality" value="RF"><span>RF</span></li>
+                        <li><input type="checkbox" name="modality" value="SR"><span>SR</span></li>
+                        <li><input type="checkbox" name="modality" value="OT"><span>OT</span></li>
+                     </ul>
+                     </div>
+                        <span class="cstt-search-btn"><input type="button" value=" 搜索" ></span>
+                  </span>
+                    </div>
+
+               <table width="100%" border="0" cellspacing="0" class="table-cstt table-cstt-pop">
+                    <thead style="border:0;">
+                    <tr>
+                      <th width="8%">选择</th>
+                      <th width="20%">检查序号</th>
+                      <th width="12%">患者姓名 </th>
+                      <th width="10%">部位</th>
+                      <th width="25%">医院 </th>
+                      <th width="15%">获取时间</th>
+                      <th width="10%">操作</th>
+                    </tr>
+                     </thead>
+                    <tbody>
+                     <tr>
+                        <td><input type="checkbox" name="" /></td>
+                      <td>D20160518037</td>
+                      <td>Zhang Zhuo Fang</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#">阅片</a></td>
+                    </tr>
+                     <tr>
+                        <td><input type="checkbox" name="" /></td>
+                      <td>D20160518037</td>
+                      <td>Qian Qiu Sheng/2091419</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#">阅片</a></td>
+                    </tr>
+                     <tr>
+                        <td><input type="checkbox" name="" /></td>
+                      <td>D20160518037</td>
+                      <td>Qian Qiu Sheng/2091419</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#">阅片</a></td>
+                    </tr>
+                     <tr>
+                        <td><input type="checkbox" name="" /></td>
+                      <td>D20160518037</td>
+                      <td>Qian Qiu Sheng/2091419</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>2012-08-02 17:33:23</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#">阅片</a></td>
+                    </tr>
+                     <tr>
+                        <td><input type="checkbox" name="" /></td>
+                      <td>D20160518037</td>
+                      <td>Qian Qiu Sheng/2091419</td>
+                      <td>Head</td>
+                      <td>上海交大医学院附属第九人民医院</td>
+                      <td>5</td>
+                      <td class="table-text"><a href="#">浏览</a><a href="#">阅片</a></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <div class="pages consultation-pages" style="left:40%;right:auto;">
+<!--                         <span>跳至第<input type="text" id="paginationCPage" name="currentPage" value="1" class="page-to"/> 页</span>
+                        <span><button type="submit" style="background:#4865a2;" class="page-go" onclick="gotoPageByForm()">GO</button></span> -->
+                        <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                        <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                        <a href='#' class="page-num current">1</a>
+                        <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                        <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                    </div>
+
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){
+        $(".cstt-dis-tab li").click(
+                function(){
+                    $(this).addClass("current").siblings().removeClass("current");
+                    $(".cstt-dis-tag-block2").eq($(".cstt-dis-tab li").index(this)).css("display","inline-block").siblings(".cstt-dis-tag-block2").css("display","none");
+
+                    var h = $(".cstt-dis-tag-block2").eq($(".cstt-dis-tab li").index(this)).height();
+                     var H=h+53;
+                    $(".cstt-dis-tab").css("height",H)
+                    console.log(  $(".cstt-dis-tag").height())
+
+        });
+        $(".cstt-dis-block2 .air-fj .air-img input[type='button']").click(function(){
+            $(this).parent().hide();
+            });//附件切换
+        $(".switch").click(function(){
+            if($(".switch-left").hasClass('chosen')==true){
+                $(".switch-left").removeClass('chosen');
+                $("input[name=male]").attr("checked",false);
+                $(".switch-right").addClass('chosen');
+                $("input[name=female]").attr("checked",true);
+            }else{
+                $(".switch-right").removeClass('chosen');
+                $("input[name=female]").attr("checked",false);
+                $(".switch-left").addClass('chosen');
+                $("input[name=male]").attr("checked",true);
+            }
+        }) //性别switch
+
+        $(".table-cstt tr").click(function(){
+            var $input = $(this).find("input[type=checkbox]");
+            if($input.is(":checked") == false){
+                $input.prop("checked",true);
+                $(this).addClass('current');
+            }else{
+                $input.removeAttr("checked");
+                 $(this).removeClass('current');
+            }
+        })
+})
+    $.divselect(".user-select",".user-select-ul",".user-select-span");
+</script>
+<script type="text/javascript">
+
+        $('#from-byyx').on('click', function(){
+              layer.open({
+                type: 1,
+                title:'选取影像',
+                shade:0.3,
+                skin: 'layui-layer-rim', 
+                area: ['800px', '600px'],
+                content:$('.byyx')
+            })
+        })
+
+        function onf(obj){
+            $(obj).css({
+                "border-color":"#5ca0d5",
+                "box-shadow":"0 0 3px #5ca0d5",
+                "color":"#000"
+            })
+        }
+        function onb(obj){
+            $(obj).css({
+                "border-color":"#d7d7d7",
+                "box-shadow":"none",
+                "color":"#898989"
+            })
+        }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/emr.css?v=upd20160427" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css" />
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet"  />
+<link href="../../js/ztree/ztreemetroStyle.css?v=upd20160402" rel="stylesheet" />
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/scrollbar/jquery.mousewheel.min.js"></script>
+<script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script>
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>        
+          <li><a href="#"><span class="nav-icon6"></span>便民查询</a></li> 
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li> 
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" style="position: relative;">
+    <aside class=" mm-menu"  >
+        <div class="column-wide-block for-cwb" >
+            <dl class="mm-menu--items">
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul style="margin-top:14px;">
+                    <li><a href="#">· 个人影像</a></li>
+                    <li class="last"><a href="#">· 共享影像</a></li>
+                    <li><a href="#">· 获取影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 上传记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>空中诊室<p>air room</p></dt>
+                <dd class="column-icon column-air"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 留言咨询</a></li>
+                    <li class="last"><a href="#">· 视频诊室</a></li>
+                    <li><a href="#">· 诊间预约</a></li>
+                    <li class="last"><a href="#">· 医院挂号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>双向转诊<p>referral</p></dt>
+                <dd class="column-icon column-ref"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="">
+                    <li><a href="#">· 待办列表</a></li>
+                    <li class="last"><a href="#">· 转入记录</a></li>
+                    <li><a href="#">· 转出记录</a></li>
+                    <li class="last"><a href="#">· 患者跟踪</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl  class="clearfix">
+                    <dt>影像报告<p>report</p></dt>
+                    <dd class="column-icon column-rep"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 报告列表</a></li>
+                        <li><a href="#">· 报告书写</a></li>
+                        <li><a href="#">· 影像匹配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>病历查询<p>medical record</p></dt>
+                    <dd class="column-icon column-med"></dd>
+                </dl>
+                <div class="column-detail narrow-right">
+                    <ul>
+                        <li><a href="#">· 按患者查询</a></li>
+                        <li><a href="#">· 按类型查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl class="clearfix">
+                    <dt>联系人<p>contacts</p></dt>
+                    <dd class="column-icon column-cont"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul>
+                        <li><a href="#">· 我的联系人</a></li>
+                        <li><a href="#">· 关注我的患者</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>设置管理<p>settings</p></dt>
+                    <dd class="column-icon column-set"></dd>
+                </dl>
+                <div class="column-detail  narrow-right">
+                    <ul class="column-spe-ul" style="margin-top:14px;">
+                        <li><a href="#">· 个人信息</a></li>
+                        <li><a href="#">· 排班设置</a></li>
+                        <li><a href="#">· 价格设置</a></li>
+                        <li><a href="#">· 报告模板</a></li>
+                        <li><a href="#">· 短信设置</a></li>
+                        <li><a href="#">· 修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+     <span class="mm-menu-toggle"></span>
+
+ <section class="user-right wrapper">
+     <div class="breadcrumbs"><span class="bread-fir">电子病历 &gt;&gt;&gt;</span><span class="bread-sec">患者病历</span></div>
+
+    <div class="emr-main">
+        <div class="emr-pa-card">
+           <!--  <img src="../../images/user.jpg" alt="" class="emr-pa-img" /> -->
+            <ul class="clearfix">
+                <li><label>姓名</label><span class="pa-name">王不帅</span></li>
+                <li><label>性别</label><span>男</span></li>
+                <li><label>年龄</label><span>35</span></li>
+                <li><label>手机</label><span>13846552663</span></li>
+                <li><label>卡类型</label><span>城市医保</span></li>
+                <li><label>卡号</label><span>355106550298922</span></li>
+                <li><label>证件类型</label><span>身份证</span></li>
+                <li><label>证件号码</label><span>330120198505262105</span></li>
+                <li><label>地址</label><span style="width:330px;">杭州市下城区德胜西路239号金洲花园20幢3单元1823室</span></li>
+            </ul>
+        </div>
+
+    <div class="emr-tab">
+        <div class="emr-search fr">
+        <div>
+         <input type="text" class="grey-select emr-searchbar" value="请输入关键词" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none',this.style.color='#d7d7d7'"/>
+        </div>
+         <input type="button" class="lakeblue-btn emr-searchbtn" value="查 询" />
+        </div>
+      <ul class="clearfix">
+      <li class="current" href="#">门诊</li>
+      <li href="#">住院</li>
+      </ul>
+
+    </div>
+
+        <div class="emr-patient-his">
+            <div class="pa-traitment-his style-b-list" style="display:block;">
+
+                    <table class="pa-trait-table style-b-table" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                            <th width="5%"><input type="checkbox" onClick="checkall()" name="checkall"></th>
+                            <th width="15%">就诊日期</th>
+                            <th width="10%">科室</th>
+                            <th width="10%">主治医生</th>
+                            <th width="30%">症状描述</th>
+                            <th width="10%">病人去向</th>
+                            <th width="20%">操作</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" onClick="checkall()" name="checkall"></td>
+                                <td>2015-03-22</td>
+                                <td>肾内科</td>
+                                <td>张国荣</td>
+                                <td><div class="emr-of">浙一门诊DR,这二门诊DR,市一急诊DR，浙一急诊DR,这二会诊DR,市一急诊DR</div></td>
+                                <td>出院</td>
+                                <td><a class="xq" href="javascript:;">详情</a><a class="" href="javascript:;">发起会诊</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" onClick="checkall()" name="checkall"></td>
+                                <td>2015-03-22</td>
+                                <td>内科</td>
+                                <td>汪涛</td>
+                                <td><div class="emr-of">尿频、腹痛、多尿、乏力</div></td>
+                                <td>回家静养</td>
+                                <td><a class="xq" href="javascript:;">详情</a><a class="" href="javascript:;">发起会诊</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+             <div class="pa-traitment-his style-b-list">
+
+                    <table class="pa-trait-table style-b-table" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                            <th width="5%"><input type="checkbox" onClick="checkall()" name="checkall"></th>
+                            <th width="12%">入院时间</th>
+                            <th width="12%">出院时间</th>
+                            <th width="10%">入院科室</th>
+                            <th width="10%">出院科室</th>
+                            <th width="10%">主治医生</th>
+                            <th width="21%">现病史</th>
+                            <th width="20%">操作</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" onClick="checkall()" name="checkall"></td>
+                                <td>2015-05-25</td>
+                                <td>2015-06-03</td>
+                                <td align="right">骨科</td>
+                                <td>骨科</td>
+                                <td>顾医生</td>
+                                <td><div class="emr-of">病史描述病史描述病史描述病，史描述病史描述病史描述</div></td>
+                                <td><a class="" href="javascript:;">详情</a><a class="" href="javascript:;">发起会诊</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" onClick="checkall()" name="checkall"></td>
+                                <td>2015-05-25</td>
+                                <td>2015-06-03</td>
+                                <td>内科</td>
+                                <td>肾内科</td>
+                                <td>王一舒</td>
+                                <td><div class="emr-of">病史描述病史描述病史描述病，史描述病史描述病史描述</div></td>
+                                <td><a class="" href="javascript:;">详情</a><a class="" href="javascript:;">发起会诊</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+
+            <div class="page-list">
+                    
+                     <div class="page-right">   
+                          <span class="pagen">本页共<a class="page-number">&nbsp;3&nbsp;</a>条记录&nbsp;/&nbsp;总共<a class="page-number">&nbsp;3&nbsp;</a>条记录</span>
+                        <button type="button" class="print">以选中的检查发起会诊</button>
+                      </div>
+                <div class="page-left">
+                          <a href='#' onclick="gotoPageP(1)" class="pageimg page-first">首页 </a>
+                        <a href='#' onclick="gotoPageP($prePage)" class="pageimg page-prev">上一页 </a>
+                        <!--
+                        <a href='#' class="page-num current">1</a> 
+                        <a href='#' class="page-num">2</a>
+                        <a href='#' class="page-elp">...</a> 
+                        -->
+                        <a href='#' class="big"><input type="text" value="1" name="queryString" id="queryString" class="page-to"/>
+                        <span>/ &nbsp; 1</span><span class="page-go">go</span> </a>
+                        <a href='#'  onclick="gotoPageP($nextPage)" class="pageimg page-next" >下一页</a>
+                        <a href='#' onclick="gotoPageP($tPage)" class="pageimg page-last">尾页 </a>
+                     </div>
+            </div>
+        </div>
+
+<script>
+  $(function(){ 
+    $(".emr-tab li").click(function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".pa-traitment-his").eq($(".emr-tab li").index(this)).show().siblings(".pa-traitment-his").hide(); 
+        }); 
+    }) ;
+</script>
+  </div>
+ </section>
+</div>
+
+ <footer class="clearfix">
+    <div class="footer footer980">
+        <ul class="footer-text fl">
+          <li style="color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</li>
+          <li class="padding"></li>
+          <li>客服电话：<h2>400-0571-574</h2>  &nbsp; &nbsp; &nbsp;ICP证  浙B-20140372 浙ICP备11059294号-3&nbsp; &nbsp;<a target="-blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202000272" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../images/beian.png" style="float:left;">浙公网安备 33010202000272号<p></p></a> </li>
+          <li>联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; </li>
+          <li>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </li>
+        </ul>
+        <ul class="footer-img fr">
+          <li>专家版<img src="../images/2code.jpg"></li>
+          <li>大众版<img src="../images/2code.jpg"></li>
+        </ul>
+    </div>
+  </footer>
+
+
+
+
+
+
+<div class="emr-det clearfix" style="display:none;">
+    <div class="emr-details emr-clinic-details">
+        <ul class="emr-pa-all">
+            <li><span>姓名：</span><input type="text" value="王不帅"/></li>
+            <li><span>年龄：</span><input type="text" value="35"/></li>
+            <li><span>发病日期：</span><input type="text" /></li>
+            <li><span>诊断日期：</span><input type="text" /></li>
+            <li><span>就诊日期：</span><input type="text" value="2016-02-11"/></li>
+            <li><span>科室：</span><input type="text" value="呼吸科门诊"/></li>
+            <li><span>主治医生：</span><input type="text" value="医生1"/></li>
+            <li><span>病床号：</span><input type="text" value="A4-771"/></li>
+            <li><span>密级：</span><input type="text" value="等级1"/></li>
+        </ul>
+        <ul class="emr-pa-comp">
+            <li><span>病人主诉：</span><div>测试测试测试，测试测试测试测试测试测试；</div></li>
+            <li><span>症状描述：</span> <div><p>s糖类抗原偏高，可能是肿瘤相关标记物偏高。</p><p>建议进一步检查</p><p></p><p></p></div>
+            </li>
+            <li><span>现病史：</span><div></div></li>
+            <li><span>既往史：</span><div></div></li>
+            <li><span>主要诊断：</span><div></div></li>
+            <li><span>治疗意见：</span><div></div></li>
+
+        </ul>
+    </div>
+    <div class="emr-det-left">
+      <div class="emr-det-lists">
+        <ul class="emr-little-tab">
+            <li class="current">相关检查</li>
+            <li>处方</li>
+        </ul>
+      
+                            <div id="firstpane" class="menu-list" style="display:block;">
+                                <h3 class="menu-head current">检验</h3>
+                                <div class="emr-det-list menu-body" style="display:none">
+                                    <table border="0" cellspacing="0" >
+<!--                                        <thead>
+                                        <tr>
+                                            <th width="30%">检查时间</th>
+                                            <th width="20%">检查项目</th>
+                                            <th width="50%">临床诊断</th>
+                                        </tr>
+                                        </thead> -->
+                                        <tbody><tr>
+                                            <td>2016-02-11</td>
+                                            <td>血常规</td>
+                                            <td><div class="emr-l-of">营养不良性贫血营养不良性贫血</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2015-02-11</td>
+                                            <td>尿常规</td>
+                                            <td><div class="emr-l-of">尿道炎</div></td>
+                                        </tr>
+                                        <tr class="current">
+                                            <td>2015-02-11</td>
+                                            <td>CT影像</td>
+                                            <td><div class="emr-l-of">弥散性肺炎</div></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="menu-head current">电生理</h3>
+
+                                <div class="emr-det-list menu-body" style="display:none">
+                                    <table border="0" cellspacing="0" >
+<!--                                        <thead>
+                                        <tr>
+                                            <th width="30%">检查时间</th>
+                                            <th width="20%">检查项目</th>
+                                            <th width="50%">临床诊断</th>
+                                        </tr>
+                                        </thead> -->
+                                        <tbody><tr>
+                                            <td>2016-02-11</td>
+                                            <td>血常规</td>
+                                            <td><div class="emr-l-of">营养不良性贫血营养不良性贫血</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2015-02-11</td>
+                                            <td>尿常规</td>
+                                            <td><div class="emr-l-of">尿道炎</div></td>
+                                        </tr>
+                                        <tr class="current">
+                                            <td>2015-02-11</td>
+                                            <td>CT影像</td>
+                                            <td><div class="emr-l-of">弥散性肺炎</div></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div id="secondpane" class="menu-list">
+                                <h3 class="menu-head current">检查</h3>
+
+                                <div class="emr-det-list menu-body" style="display:none">
+                                    <table border="0" cellspacing="0" >
+                                        <tbody><tr>
+                                            <td>2016-02-11</td>
+                                            <td>血常规</td>
+                                            <td><div class="emr-l-of">营养不良性贫血营养不良性贫血</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2015-02-11</td>
+                                            <td>尿常规</td>
+                                            <td><div class="emr-l-of">尿道炎</div></td>
+                                        </tr>
+                                        <tr class="current">
+                                            <td>2015-02-11</td>
+                                            <td>CT影像</td>
+                                            <td><div class="emr-l-of">弥散性肺炎</div></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="menu-head current">影像</h3>
+
+                                <div class="emr-det-list menu-body" style="display:none">
+                                    <table border="0" cellspacing="0" >
+                                        <tbody><tr>
+                                            <td>2016-02-11</td>
+                                            <td>血常规</td>
+                                            <td><div class="emr-l-of">营养不良性贫血营养不良性贫血</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2015-02-11</td>
+                                            <td>尿常规</td>
+                                            <td><div class="emr-l-of">尿道炎</div></td>
+                                        </tr>
+                                        <tr class="current">
+                                            <td>2015-02-11</td>
+                                            <td>CT影像</td>
+                                            <td><div class="emr-l-of">弥散性肺炎</div></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+      </div>
+    </div>
+
+    
+    <div class="emr-det-right">
+          <h3> CT 检查报告单</h3>
+        <div class="emr-det-content type1" style="display:none;">
+          <ul class="emr-rep-base clearfix">
+            <li><span>检查号：</span><input type="text" value="CTP15504"/></li>
+            <li><span>检查部位：</span><input type="text" value="胸部平扫"/></li>
+            <li><span>科室：</span><input type="text" value="呼吸科门诊"/></li>
+            <li><span>病床号：</span><input type="text" value="A4-771"/></li>
+            <li><span>病人号：</span><input type="text" value="A42015504"/></li>
+            <!-- <li><span>样本类型：</span><input type="text" value="尿液"/></li> -->
+          </ul>  
+          <ul class="emr-rep-proj clearfix">
+            <li><span>检查方法：</span><div class="res-con"><p>胸部平扫</p><p>间距2-5mm</p></div></li>
+            <li><span>影像所见：</span><div class="res-con"><p>两肺纹理略增多，各支气管腔通畅，肺门及纵膈未见明显增大淋巴结；胸膜等未见明显增厚等异常</p></div></li>
+            <li><span>诊断结果：</span><div class="res-con"><p>两肺散在渗出性病变，请结合临床，治疗后复查</p></div></li>
+          </ul>  
+          <ul class="emr-rep-docs clearfix">
+              <li><span>送检医生：</span><input type="text" /></li>
+              <li><span>报告医生：</span><input type="text" /></li>
+              <li><span>审核医生：</span><input type="text" /></li>
+          </ul>
+        </div>
+
+       <div class="emr-det-content type2" style="display:none">
+          <ul class="emr-rep-base clearfix">
+            <li><span>检查号：</span><input type="text" value="CTP15504"/></li>
+            <li><span>检查部位：</span><input type="text" value="胸部平扫"/></li>
+            <li><span>科室：</span><input type="text" value="呼吸科门诊"/></li>
+            <li><span>病床号：</span><input type="text" value="A4-771"/></li>
+            <li><span>病人号：</span><input type="text" value="A42015504"/></li>
+            <li><span>样本类型：</span><input type="text" value="尿液"/></li>
+          </ul>  
+            <div>
+                <table width="100%" class="emr-rep-table">
+                    <thead>
+                        <tr>
+                            <th width="10%"></th>
+                            <th width="30%">检验项目</th>
+                            <th width="20%">结果</th>
+                            <th width="25%">参考范围</th>
+                            <th width="15%">单位</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tac">1</td>
+                            <td>酸碱度（干化学）</td>
+                            <td>8.5↑</td>
+                            <td>5.0-8.0</td>
+                            <td>%</td>
+                        </tr>
+                        <tr>
+                            <td class="tac">2</td>
+                            <td>乙肝表面抗体</td>
+                            <td></td>
+                            <td>阴性</td>
+                            <td>阴性</td>
+                        </tr>
+                        <tr>
+                            <td class="tac">3</td>
+                            <td>白细胞（干化学）</td>
+                            <td>11.84↑</td>
+                            <td>4.0~10.0</td>
+                            <td>10 ^ 9/L</td>
+                        </tr>
+                        <tr>
+                            <td class="tac">4</td>
+                            <td>平均血红蛋白浓度</td>
+                            <td>300</td>
+                            <td>320~360</td>
+                            <td>g/L</td>
+                        </tr>
+                       <tr>
+                            <td class="tac">1</td>
+                            <td>酸碱度（干化学）</td>
+                            <td>8.5↑</td>
+                            <td>5.0-8.0</td>
+                            <td>%</td>
+                        </tr>
+                        <tr>
+                            <td class="tac">2</td>
+                            <td>乙肝表面抗体</td>
+                            <td></td>
+                            <td>阴性</td>
+                            <td>阴性</td>
+                        </tr>
+                        <tr>
+                            <td class="tac">3</td>
+                            <td>白细胞（干化学）</td>
+                            <td>11.84↑</td>
+                            <td>4.0~10.0</td>
+                            <td>10 ^ 9/L</td>
+                        </tr>
+                        <tr>
+                            <td class="tac">4</td>
+                            <td>平均血红蛋白浓度</td>
+                            <td>300</td>
+                            <td>320~360</td>
+                            <td>g/L</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+          <ul class="emr-rep-docs clearfix">
+              <li><span>送检时间：</span><input type="text" value="2015-05-11 12:55:17"/></li>
+              <li><span>检验时间：</span><input type="text" /></li>
+              <li><span>报告时间：</span><input type="text" /></li>    
+              <li><span>送检医生：</span><input type="text" /></li>
+              <li><span>报告医生：</span><input type="text" /></li>
+              <li><span>审核医生：</span><input type="text" /></li>
+          </ul>
+        </div>
+
+        <div class="emr-det-content type3" style="display: none">
+            <ul class="emr-rep-base clearfix">
+                <li><span>姓名：</span><input type="text" value="杨小男"/></li>
+                <li><span>性别：</span><input type="text" value="男"/></li>
+                <li><span>年龄：</span><input type="text" value="67岁"/></li>
+                <li><span>费别：</span><input type="text" value="企业退休"/></li>
+                <li><span>门诊(住院)病历号：</span><input type="text" value="623090159901367"/></li>
+                <li><span>科别(床号)：</span><input type="text" value="眼科专家门诊"/></li>
+                <li><span>地址：</span><input type="text" value="长兴"/></li>
+                <li><span>电话：</span><input type="text" value="135876728"/></li>
+                <li><span>临床(初步)诊断：</span><input type="text" value="角膜炎"/></li>
+                <li><span>处方日期：</span><input type="text" value="2016年4月1日"/></li>
+            </ul>
+            <div class="emr-rep-docs clearfix">
+
+                <ul><span style="font-size: 18px;">RP:</span>
+                    <li>
+                        <p class="type3-p1"><span>左氧氟沙星滴眼液(可乐必妥)</span><span>24.4毫克/5毫升*1</span> <span style="margin-left: 34px;">1支</span></p>
+                        <p class="type3-p2"><span>用法：</span> <span>0.1毫克</span> <span>滴眼</span> <span>每天3次</span></p>
+                    </li>
+                    <li>
+                        <p class="type3-p1"><span>左氧氟沙星滴眼液(可乐必妥)</span><span>24.4毫克/5毫升*1</span> <span style="margin-left: 34px;">1支</span></p>
+                        <p class="type3-p2"><span>用法：</span> <span>0.1毫克</span> <span>滴眼</span> <span>每天3次</span></p>
+                    </li>
+                    <li>
+                        <p class="type3-p1"><span>左氧氟沙星滴眼液(可乐必妥)</span><span>24.4毫克/5毫升*1</span> <span style="margin-left: 34px;">1支</span></p>
+                        <p class="type3-p2"><span>用法：</span> <span>0.1毫克</span> <span>滴眼</span> <span>每天3次</span></p>
+                    </li>
+                    <li>
+                        <p class="type3-p1"><span>左氧氟沙星滴眼液(可乐必妥)</span><span>24.4毫克/5毫升*1</span> <span style="margin-left: 34px;">1支</span></p>
+                        <p class="type3-p2"><span>用法：</span> <span>0.1毫克</span> <span>滴眼</span> <span>每天3次</span></p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+<!--3结束-->
+
+        <div class="emr-det-content type4" style="display: block">
+            <div>
+                <table width="100%" class="emr-rep-table">
+                    <thead>
+                    <tr>
+                        <th width="3%"></th>
+                        <th width="10%">下达时间</th>
+                        <th width="47%">医嘱明细</th>
+                        <th width="7%">医师签名</th>
+                        <th width="10%">执行时间</th>
+                        <th width="6%">下达人</th>
+                        <th width="6%">执行人</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="tac">1</td>
+                        <td>2016-05-05 16:24:01</td>
+                        <td><span style="margin-right: 10px;">[0.9%250]氯化钠注射液(非pvc膜+双管双塞)</span><span style="margin-right: 10px;">0.9%/250毫升</span><br/><span style="margin-right: 10px;">QD</span><span style="margin-right: 10px;">250毫升</span><span style="margin-right: 10px;">1毫升</span><span style="margin-right: 10px;">静滴</span></td>
+                        <td>吴伟宏</td>
+                        <td>2016-05-09 09:24:01</td>
+                        <td>吴伟宏</td>
+                        <td>吴伟宏</td>
+                    </tr>
+                    <tr>
+                        <td class="tac">2</td>
+                        <td>2016-05-05 16:24:01</td>
+                        <td><span style="margin-right: 10px;">[0.9%250]氯化钠注射液(非pvc膜+双管双塞)</span><span style="margin-right: 10px;">0.9%/250毫升</span><br/><span style="margin-right: 10px;">QD</span><span style="margin-right: 10px;">250毫升</span><span style="margin-right: 10px;">1毫升</span><span style="margin-right: 10px;">静滴</span></td>
+                        <td>吴伟宏</td>
+                        <td>2016-05-09 09:24:01</td>
+                        <td>吴伟宏</td>
+                        <td>吴伟宏</td>
+                    </tr>
+                    <tr>
+                        <td class="tac">3</td>
+                        <td>2016-05-05 16:24:01</td>
+                        <td><span style="margin-right: 10px;">[0.9%250]氯化钠注射液(非pvc膜+双管双塞)</span><span style="margin-right: 10px;">0.9%/250毫升</span><br/><span style="margin-right: 10px;">QD</span><span style="margin-right: 10px;">250毫升</span><span style="margin-right: 10px;">1毫升</span><span style="margin-right: 10px;">静滴</span></td>
+                        <td>吴伟宏</td>
+                        <td>2016-05-09 09:24:01</td>
+                        <td>吴伟宏</td>
+                        <td>吴伟宏</td>
+                    </tr>
+                    <tr>
+                        <td class="tac">4</td>
+                        <td>2016-05-05 16:24:01</td>
+                        <td><span style="margin-right: 10px;">[0.9%250]氯化钠注射液(非pvc膜+双管双塞)</span><span style="margin-right: 10px;">0.9%/250毫升</span><br/><span style="margin-right: 10px;">QD</span><span style="margin-right: 10px;">250毫升</span><span style="margin-right: 10px;">1毫升</span><span style="margin-right: 10px;">静滴</span></td>
+                        <td>吴伟宏</td>
+                        <td>2016-05-09 09:24:01</td>
+                        <td>吴伟宏</td>
+                        <td>吴伟宏</td>
+                    </tr>
+                    <tr>
+                        <td class="tac">5</td>
+                        <td>2016-05-05 16:24:01</td>
+                        <td><span style="margin-right: 10px;">[0.9%250]氯化钠注射液(非pvc膜+双管双塞)</span><span style="margin-right: 10px;">0.9%/250毫升</span><br/><span style="margin-right: 10px;">QD</span><span style="margin-right: 10px;">250毫升</span><span style="margin-right: 10px;">1毫升</span><span style="margin-right: 10px;">静滴</span></td>
+                        <td>吴伟宏</td>
+                        <td>2016-05-09 09:24:01</td>
+                        <td>吴伟宏</td>
+                        <td>吴伟宏</td>
+                    </tr>
+                    <tr>
+                        <td class="tac">6</td>
+                        <td>2016-05-05 16:24:01</td>
+                        <td><span style="margin-right: 10px;">[0.9%250]氯化钠注射液(非pvc膜+双管双塞)</span><span style="margin-right: 10px;">0.9%/250毫升</span><br/><span style="margin-right: 10px;">QD</span><span style="margin-right: 10px;">250毫升</span><span style="margin-right: 10px;">1毫升</span><span style="margin-right: 10px;">静滴</span></td>
+                        <td>吴伟宏</td>
+                        <td>2016-05-09 09:24:01</td>
+                        <td>吴伟宏</td>
+                        <td>吴伟宏</td>
+                    </tr>
+                    <tr>
+                        <td class="tac">7</td>
+                        <td>2016-05-05 16:24:01</td>
+                        <td><span style="margin-right: 10px;">[0.9%250]氯化钠注射液(非pvc膜+双管双塞)</span><span style="margin-right: 10px;">0.9%/250毫升</span><br/><span style="margin-right: 10px;">QD</span><span style="margin-right: 10px;">250毫升</span><span style="margin-right: 10px;">1毫升</span><span style="margin-right: 10px;">静滴</span></td>
+                        <td>吴伟宏</td>
+                        <td>2016-05-09 09:24:01</td>
+                        <td>吴伟宏</td>
+                        <td>吴伟宏</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+
+
+        <input type="button" class="navy-btn fl"  value="相关影像"/>
+
+    </div>
+</div>
+<!-- 2结束 -->
+
+
+
+
+
+<script>
+$('.pa-trait-table .xq').on('click', function(){
+  layer.open({
+    type: 1,
+    title:'门诊详情',
+    shade:0.3,
+    skin: 'layui-layer-rim',
+    area: ['870px',''],
+    content:$('.emr-det')
+});
+}); //详情
+
+$(".menu-list").mCustomScrollbar({
+    axis:"yx",
+    scrollInertia:0,
+    mouseWheelPixels:40
+});
+
+
+$(".emr-det-content,.emr-details").mCustomScrollbar({
+    axis:"yx",
+    scrollInertia:0,
+    mouseWheelPixels:40
+}); //滚动条控件调用
+
+</script>
+
+<script>
+  $(function() {
+    // $(".emr-pa-card ul").width($(".emr-pa-card").width()-162);
+    // $(window).resize(function(){
+    //     $(".emr-pa-card ul").width($(".emr-pa-card").width()-162);
+    // })
+
+
+    $(".emr-little-tab li").click( function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".menu-list").eq($(".emr-little-tab li").index(this)).show().siblings(".menu-list").hide(); 
+    }) 
+  })
+</script>
+<script>
+    $(document).ready(function(){
+
+        $("#firstpane .menu-body:eq(0)").show();
+        $("#firstpane h3.menu-head").click(function(){
+            $(this).addClass("current").next("div.menu-body").slideToggle().siblings("div.menu-body").hide();
+            $(this).siblings().removeClass("current");
+        });
+
+        $("#secondpane .menu-body:eq(0)").show();
+        $("#secondpane h3.menu-head").mouseover(function(){
+            $(this).addClass("current").next("div.menu-body").slideDown().siblings("div.menu-body").show();
+            $(this).siblings().removeClass("current");
+        });
+    //资料区的风琴栏
+    });
+</script>
+
+</div>
+
+</body>
+</html>

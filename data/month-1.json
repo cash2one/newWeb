@@ -1,0 +1,153 @@
+{
+  "JSChart" : {
+	"datasets" : [
+	  {
+		"type" : "line",
+		"data" : [
+		  {
+			"unit" : "5天",
+			"value" : "5"
+		  },
+		  {
+			"unit" : "10天",
+			"value" : "16"
+		  },
+		  {
+			"unit" : "15天",
+			"value" : "31"
+		  },
+		  {
+			"unit" : "20天",
+			"value" : "27"
+		  },
+		  {
+			"unit" : "25天",
+			"value" : "52"
+		  }
+		]
+	  }
+	],
+	"optionset" : [
+	  {
+		"set" : "setAxisColor",
+		"value" : "'#C8C4BF'"
+	  },
+	  {
+		"set" : "setAxisNameColor",
+		"value" : "'#4A4A4A'"
+	  },
+	  {
+		"set" : "setAxisNameFontSize",
+		"value" : "10"
+	  },
+	  {
+		"set" : "setAxisPaddingBottom",
+		"value" : "60"
+	  },
+	  {
+		"set" : "setAxisPaddingLeft",
+		"value" : "180"
+	  },
+	  {
+		"set" : "setAxisPaddingRight",
+		"value" : "170"
+	  },
+	  {
+		"set" : "setAxisPaddingTop",
+		"value" : "65"
+	  },
+	  {
+		"set" : "setAxisValuesColor",
+		"value" : "'#656565'"
+	  },
+	  {
+		"set" : "setAxisValuesNumberX",
+		"value" : "6"
+	  },
+	  {
+		"set" : "setGrid",
+		"value" : "true"
+	  },
+	  {
+		"set" : "setGridOpacityY",
+		"value" : "0"
+	  },
+	  {
+		"set" : "setLineColor",
+		"value" : "'#00AEC4'"
+	  },
+	  {
+		"set" : "setShowYValues",
+		"value" : "true"
+	  },
+	  {
+		"set" : "setTitle",
+		"value" : "'一月明细报告'"
+	  },
+	  {
+		"set" : "setTitleColor",
+		"value" : "'#505050'"
+	  },
+	  {
+		"set" : "setSize",
+		"value" : "1000, 500"
+	  },
+	  {
+		"set" : "setTextPaddingBottom",
+		"value" : "20"
+	  },
+	  {
+		"set" : "setTextPaddingLeft",
+		"value" : "120"
+	  },
+	  {
+		"set" : "setTextPaddingTop",
+		"value" : "15"
+	  },
+	  {
+		"set" : "setFlagRadius",
+		"value" : "6"
+	  },
+	  {
+		"set" : "setBackgroundColor",
+		"value" : "'#fff'"
+	  },
+	  {
+		"set" : "setTooltipBackground",
+		"value" : "'#00AEC4'"
+	  },
+	  {
+		"set" : "setFlagColor",
+		"value" : "'#C6EAF1'"
+	  },
+	  {
+		"set" : "setFlagFillColor",
+		"value" : "'#00AEC4'"
+	  },
+	  {
+		"set" : "setTooltipFontColor",
+		"value" : "'#fff'"
+	  },
+	  {
+		"set" : "setLineWidth",
+		"value" : "3"
+	  },
+	  {
+		"set" : "setAxisReversed",
+		"value" : "true"
+	  },
+	  {
+		"set" : "setAxisNameX",
+		"value" : "''"
+	  },
+	  {
+		"set" : "setAxisNameY",
+		"value" : "''"
+	  },
+	  {
+		"set" : "setFontFamily",
+		"value" : "'Microsoft YaHei'"
+	  }
+	]
+  }
+}

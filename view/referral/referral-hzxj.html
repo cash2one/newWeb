@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="write-ref clearfix" id="huizhuan">
+
+    <div class="write-ref-left">
+      <div class="write-ref-resault cun">
+        <h3>待转诊病人信息列表 <a class="c-un">↑</a></h3>
+        <ul style="display:block">
+         <h4 class="clearfix"><label for="">病人姓名</label><label for="">转诊单号</label></h4>
+         <li><a href="#"><span class="refrs-left">张庆伟</span><span>3208219</span></a></li>
+         <li><a href="#"><span class="refrs-left">张波</span><span>3145213</span></a></li>
+        <div class="ref-pages page-list">
+            <span class="page-left">
+            <a href='#' onclick="gotoPageP(1)" class="pageimg page-first">首页 </a>
+            <a href='#' onclick="gotoPageP($prePage)" class="pageimg page-prev">上一页 </a>
+            <a href='#' class="big"><input type="text" value="1" name="queryString" id="queryString" class="page-to"/>
+            <span>/ &nbsp; 1</span><span class="page-go">go</span> </a>
+            <a href='#'  onclick="gotoPageP($nextPage)" class="pageimg page-next" >下一页</a>
+            <a href='#' onclick="gotoPageP($tPage)" class="pageimg page-last">尾页 </a>
+            </span>
+        </div>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="write-ref-right">
+        <div class="write-ref-info cun form-other">
+          <h3>患者基本信息 <a class="c-un">↑</a></h3>
+          <ul class="clearfix"  style="display:block;">
+            <li><span>转诊单号：</span><input type="text" /></li>
+            <li><span>姓名<em>*</em>：</span><input type="text" /></li>
+              <li>
+                  <span style="width:40px;">性别：</span>
+                  <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <span style="width: 30px;    text-align: center">男</span></a>
+              </li>
+              <li>
+                  <a><input type="radio" value="" name="" class="radio" id="chose2" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <span style="width: 30px;    text-align: center">女</span></a>
+              </li>
+            <li><span>病历号<em>*</em>：</span><input type="text"/></li>
+            <div ></div>
+            <li ><span>出生日期：</span><input type="text" style="width:100px;" value="请选择时间" onClick="WdatePicker()"/>
+            </li>
+            <li><span>联系电话：</span><input type="text" /></li>
+            <li><span>住址：</span><input type="text" value="" style="width:210px;" /></li>
+            <li><span>参保类别：</span><select name="">
+              <option value="">城镇居民</option>
+              <option value="">现役军人</option>
+              <option value="">农民</option>
+            </select></li>
+            <li><span>卡号：</span><input type="text" value=""/></li>
+            <li><span>证件类型：</span><select name="">
+              <option value="">身份证号</option>
+              <option value="">军人证</option>
+            </select></li>
+            <li><span>证件号码：</span><input type="text" value=""/></li>
+          </ul>
+        </div>
+        <div class="write-ref-in cun form-other">
+          <h3>转入医院信息 <a class="c-un">↑</a></h3>
+          <ul class="clearfix"  style="display:block;">
+            <li><span>转入医院：</span><select name="" style="width:200px;">
+              <option value="">浙江大学医学院附属第一医院</option>
+              <option value="">云影像会诊中心</option>
+              <option value="">浙江大学医学院附属邵逸夫医院</option>
+            </select></li>
+            <li><span>拟转科室：</span><select name="" style="width:150px;">
+              <option value="">老年病中心内科病房</option>
+              <option value="">内科</option>
+              <option value="">肿瘤内科</option>
+              <option value="">内分泌代谢病科</option>
+            </select></li>
+
+              <li>
+                  <span>转诊目的<em>*</em>：</span>
+                  <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <span style="width: 30px;    text-align: center">转诊</span></a>
+              </li>
+              <li>
+                  <a><input type="radio" value="" name="" class="radio" id="chose2" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <span style="width: 30px;    text-align: center">转检</span></a>
+              </li>
+              <li>
+                  <a><input type="radio" value="" name="" class="radio" id="chose2" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <span style="width: 30px;    text-align: center">转院</span></a>
+              </li>
+
+            <li><span>分诊护士：</span><input type="text" style="width:80px;" /></li>
+            <li><span>联系电话：</span><input type="text" /></li>
+          </ul>
+        </div>
+        <div class="write-ref-out cun">
+          <h3>转出医院信息 <a class="c-un">↑</a></h3>
+          <ul class="clearfix" style="display:block;">
+            <li><span>转出医院：</span><input type="text" /></li>
+            <li><span>转出科室：</span><input type="text" /></li>
+            <li><span>联系电话：</span><input type="text" /></li>
+            <div class="clearfix"></div>
+            <li><span>转诊医生<em>*</em>：</span><input type="text" /></li>
+            <li><span>医生电话：</span><input type="text" /></li>
+            <li><span>转诊时间：</span><input type="text" value="请选择时间" onClick="WdatePicker()"/></li>
+
+            <li><span>转诊原因<em>*</em>：</span><select name="" style="width:460px;">
+              <option value="">临床各急科危重症，社区服务卫生机构难以实施有效救治病例</option>
+              <option value="">精神障碍疾病的急性发作期</option>
+              <option value="">患恶性肿瘤需要手术、化疗者</option>
+              <option value="">疾病诊治超出本机构核准诊疗登记科目的病例，因技术、设备条件限制不能处理的病例</option>
+            </select></li>
+            <li><span style="text-align:center;">主要诊断及用药信息<em>*</em></span><textarea name="" id="" cols="30" rows="10"></textarea></li>
+            <li><span style="text-align:center;">治疗经过及康复建议<em>*</em></span><textarea name="" id="" cols="30" rows="10"></textarea></li>
+
+          </ul>  
+        </div>
+    
+        <div class="referral-btns">
+        <!-- <input type="button" class="navy-btn report-btn fl" value="打印"/> -->
+        <input type="reset" class="green-btn report-btn fr"  style="margin-right:0;" value="重置"/>
+        <input type="button" class="lakeblue-btn report-btn fr"  value="保存"/>
+        <input  type="button" class="navy-btn report-btn fr" id="ref-go" value="请求回转">
+        </div>
+    </div>
+</div>
+<script>
+
+    $('.form-other li a').click(function(){
+        $(this).find('.radio').attr("checked",true).next('input').addClass('radio-checked');
+        $(this).parent().siblings().find('.radio').attr("checked",false).next('input').removeClass('radio-checked').addClass('radio-normal');
+    });
+
+</script>
+</body>
+</html>

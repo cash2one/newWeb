@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20161010" rel="stylesheet" type="text/css"/>
+    <link href="../../css/settings.css?v=upd20161103" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <link href="../../js/ztree/ztreemetroStyle.css?v=upd20160402" rel="stylesheet"/>
+    <link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../js/jquery.imgareaselect-0.9.10/css/imgareaselect-default.css"/>
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div class="pacs-body">
+    <div class="header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pacs-warp settings-box">
+        <h4 class="bread-settings">
+            <span><a href="pacs.html">云PACS</a> >><b style="color:#898989;">设置</b></span>
+        </h4>
+        <div class="settings-left">
+            <div class="pacs-settings-left settings-left-content">
+                <p id="info" class="settings-on settings-click"><a href="#">个人信息</a></p>
+                <p id="scheduling"><a href="settings-scheduling.html">排班设置</a></p>
+                <p id="pricesetting"><a href="settings-pricesetting.html">排班价格设置</a></p>
+                <p id="report"><a href="settings-scheduling.html">报告模版</a></p>
+                <p id="sign"><a href="settings-sign.html">签约管理</a></p>
+                <p id="sms"><a href="settings-sms.html">短信设置</a></p>
+                <p id="pass"><a href="settings-pass.html">修改密码</a></p>
+                <span class="settings-split"></span>
+                <p id="contacts"><a href="settings-contacts.html">我的联系人</a></p>
+                <p id="patients"><a href="settings-patients.html">关注我的患者</a></p>
+                <span class="settings-split"></span>
+                <p id="account"><a href="settings-account.html">我的账户</a></p>
+                <p id="order"><a href="settings-order.html">待确认订单</a></p>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="settings-right  pacs-settings-right">
+            <div style="display: block;" class="settings-right-content pacs-settings-right">
+                <div class="user-main">
+                    <div class="user-avatar">
+                        <div class="user-upav">
+                            <img src="../../images/useimg.png" style="float: left;max-width: 120px;">
+                            <input type="button" value="更换头像" class="user-upbtn settings-blue-btn" id="change-user">
+                        </div>
+                        <div class="user-upav-right">
+                            <ul>
+                                <li>
+                                    <span>昵称：</span>
+                                    <input type="text" value="大云" class="user-name"/>
+                                </li>
+                                <li>
+                                    <span>邮箱：</span>
+
+                                    <p style="color:#ff8f2c;">未添加邮箱账户名</p>
+                                    <!--<input type="text" readonly="readonly" onfocus="this.blur()" class="user-none" value="13***@qq.com" title="">-->
+                                    <a href="#"  class="sys-text" class="">修改</a>
+                                </li>
+                                <li>
+                                    <span>手机：</span>
+                                    <input type="text" onfocus="this.blur()" class="user-none" value="138*****579" title="">
+                                    <a href="#"  class="sys-text" class="">修改</a>
+                                </li>
+                                <li>
+                                    <span style="float:left;height:40px;line-height: 40px;">个人签名：</span>
+                                    <img style="width:auto;height:40px;" src="../../images/doc-sign.png" alt=""/>
+                                    <a href="#" id="signChange" style="margin-top:10px;" class="sys-text">修改</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="user-bottom">
+                        <div class="user-input">
+                            <p>所属医院 :</p>
+                            <input type="text" value="云影像会诊中心" onfocus="this.blur()"/>
+                        </div>
+                        <div class="user-input" style="padding-left: 40px;width:280px;">
+                            <p>所属科室 :</p>
+                            <input type="text" value="影像中心" onfocus="this.blur()"/>
+                        </div>
+
+                        <div class="user-input">
+                            <p>ipad用户 :</p>
+                            <input type="text" value="未开通" onfocus="this.blur()"/>
+                        </div>
+                        <div class="user-input" style="padding-left: 40px;width:280px;">
+                            <p>职称 :</p>
+                            <input type="text" value="高级康复治疗师" onfocus="this.blur()"/>
+                        </div>
+
+                        <div class="user-address">
+                            <p>擅长：</p>
+                            <textarea></textarea>
+                        </div>
+                        <p class="submit-btn">
+                            <input name=" " type="button" class="loginbut settings-green-btn" value="确定提交"
+                                   style=" width:240px; height:35px;"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--选择头像-->
+    <div class="user-layer" id="user-layer" style="display:none; z-index: 19892015;">
+        <div class="user-layer-main">
+            <input type="file" accept="image/jpeg,image/png" id="userPhoto" class="file" name="userPhoto" value="" onchange="util.ajaxImgUpload('/user/uploadup.htm','userPhoto','loading','userPhotoPath');">
+            <input type="button" class="user-upbtn2" value="选择上传的图片">
+            <p>选一张您喜欢的图片做头像吧。支持peg和png格式，大小不超过1M.</p>
+            <div class="uesr-img-select">
+
+                <p>点击并拖动下方方块，调整头像大小</p>
+                <div style=" width:280px; height:280px;float: left; margin-right: 60px; z-index: 19892015;"  >
+                    <img id="photo" src="../../images/2code.jpg" style="width:auto; height:auto;">
+                </div>
+
+                <p style="margin-top: 34px;">头像预览</p>
+                <div id="preview" style="width:135px; height:135px; overflow:hidden; float:left;z-index: 19892015;">
+                    <div style="width:100px;heght:100px;">
+                        <img src="../../images/2code.jpg" style="width:135px; height:135px;">
+                    </div>
+                </div>
+            </div>
+
+            <input type="button" value="确定" class="blue-btn user-succes"/>
+        </div>
+    </div>
+    <!--签名修改-->
+    <div class="user-layer" id="user-sign-layer" style="display:none; z-index: 19892015;">
+        <div class="user-layer-main">
+            <input type="file" accept="image/jpeg,image/png" id="userSignPhoto" class="file" name="userPhoto" value="" onchange="util.ajaxImgUpload('/user/uploadup.htm','userPhoto','loading','userPhotoPath');">
+            <input type="button" class="user-upbtn2" value="选择上传的图片">
+            <p>选一张您的签名。支持peg和png格式，大小不超过1M.</p>
+            <span style="position: relative;top:-16px;">签名范例：</span><img style="margin-top:20px;height:40px;" src="../../images/demo-sign.png" alt=""/>
+            <div class="uesr-img-select">
+                <p>点击并拖动下方方块，调整签名大小，<b class="color-orange">剪裁尽量紧贴文字边缘。</b></p>
+                <div style=" width:315px; height:200px;float: left; margin-right: 60px; z-index: 19892015;"  >
+                    <img id="signPhoto" src="../../images/doc-sign.png" style="width:100%; height:100%;">
+                </div>
+                <form id='coordinates_form' action="/profile/upload-photo/save" method="post">
+                    <input type='hidden' name='x' class='x' value='0'/>
+                    <input type='hidden' name='y' class='y' value='0'/>
+                    <input type='hidden' name='w' class='w' value='282'/>
+                    <input type='hidden' name='h' class='h' value='211'/>
+                </form>
+
+                <p style="margin-top: 34px;">签名预览</p>
+                <div id="signPreview" style="width:135px; height:135px; overflow:hidden; float:left;z-index: 19892015;">
+                    <img   src="../../images/doc-sign.png" style="width:135px; height:135px;">
+                </div>
+            </div>
+
+            <input type="button" value="确定" class="blue-btn user-succes"/>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/ztree/jquery.ztree.min.js" type="text/javascript"></script>
+<!--头像截取插件-->
+<script src="../../js/jquery.imgareaselect-0.9.10/scripts/jquery.imgareaselect.pack.js"></script>
+
+<script>
+    $(function(){
+        //            高度控制
+        resize();
+        $(window).resize(function() {
+            resize();
+        });
+        function resize(){
+            var rightH = $(".settings-right").height();
+            var windowH = document.body.clientHeight-124;
+            var height = $(".settings-box").height()-80;
+            height > windowH ? height = height :height=windowH;
+            rightH>height?$(".settings-right").height(rightH):$(".settings-right").height(height);
+        }
+        $("#signChange").click(function(){
+            layer.open({
+//                个人签名：
+            });
+        });
+        $("#change-user").click(function(){
+            layer.open({
+                type:1,
+                title:false,
+                shade:0.3,
+                area: ['720px', '600px'],
+                scrollbar: false,
+                content:$('#user-layer'),
+                end: function(){
+                    $(".imgareaselect-selection").parent().css({
+                        display:'none'
+                    });
+                    $(".imgareaselect-outer").css({
+                        display:'none'
+                    })
+                }
+            });
+        });
+        $(document).ready(function() {
+            $('#photo').imgAreaSelect({
+                aspectRatio: '1:1',
+                handles: true,
+                fadeSpeed: 200,
+                onSelectEnd : preview,
+                zIndex:99999999,
+                onSelectChange: preview
+            });
+            $('#signPhoto').imgAreaSelect( {handles:true,aspectRatio : '4:3', fadeSpeed:200,onSelectEnd : signPreview,zIndex:99999999});
+        });
+
+
+//        =============================
+
+//        =============================
+
+
+        // 如果加上aspectRatio: '1:1'，$('#photo').imgAreaSelect( {aspectRatio: '1:1',handles:true, fadeSpeed:200, onSelectEnd : preview});则选取区域固定为正方形。
+        function preview(img, selection)
+        {
+            if(!selection.width || !selection.height){
+                return;
+            }
+            var scaleX = 135 / selection.width;
+            var scaleY = 135 / selection.height;
+
+            $('#preview img').css({
+                width: Math.round(scaleX * 280),
+                height: Math.round(scaleY * 280),
+                marginLeft: -Math.round(scaleX * selection.x1),
+                marginTop: -Math.round(scaleY * selection.y1)
+            });
+        }
+        function signPreview(img, selection)
+        {
+            if(!selection.width || !selection.height){
+                return;
+            }
+
+            var div=$("#signPreview");
+            width=div.outerWidth();
+            height=div.outerHeight()-50;
+            var scaleX = width / selection.width;
+            var scaleY = height / selection.height;
+
+            var imgActualWidth, imgActualHeight;
+            var img = new Image();
+            img.src = document.getElementById('signPhoto').src;
+            imgActualWidth = img.width;
+            imgActualHeight = img.height;
+
+            $('#signPreview img').css( {
+                width : Math.round(scaleX *imgActualWidth ),
+                height: Math.round(scaleY *imgActualHeight ),
+                marginLeft: -Math.round(scaleX * selection.x1),
+                marginTop: -Math.round(scaleY * selection.y1)
+            });
+        }
+    });
+</script>
+</html>

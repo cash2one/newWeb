@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20161010" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+    <style>
+        .mCSB_inside>.mCSB_container {
+            margin-right: 1px;
+        }
+    </style>
+</head>
+<body class="pacs-image-con-body">
+
+<div class="header">
+    <div class="header-content">
+        <div class="head-left fl clearfixed">
+            <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+            <span></span>
+        </div>
+        <div class="head-center fl clearfixed">
+            <span class="view-show">统计工作站 <b></b></span>
+            <div class="change-box">
+                <ul>
+                    <li><a href="pacs-application.html">申请工作站</a></li>
+                    <li><a href="pacs-consultation.html">影像会诊</a></li>
+                    <li><a href="pacs-reportlist.html">报告工作站</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="head-right fl clearfixed">
+            <div class="user-head">
+                <img src="../../images/user.jpg" alt=""/>
+            </div>
+            <div class="user-info">
+                <p>
+                    欢迎您，<span>用户名</span>
+                    <a href="#" class="message"><i></i> <em>99+</em></a>
+                </p>
+                <p>
+                    <a href="javascript:;">返回桌面</a>
+                    <a href="javascript:;">帮助</a>
+                    <a href="javascript:;">退出</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="pacs-warp">
+    <h4>
+        <span><a href="pacs.html">云PACS</a> >><b style="color:#898989;">统计工作站</b></span>
+    </h4>
+    <div class="statistics-left">
+        <div class="statistics-left-part1">
+            <h4><i class="icon-title"></i>数据统计</h4>
+            <div class="rules"></div>
+            <ul id="nav-list1" class="statistics-left-list">
+                <li id="nav-li1" class=" "><a href="pacs-statistics-table1.html">影像统计</a></li>
+                <li id="nav-li2" class=""><a href="pacs-statistics-table2.html">阴阳性统计</a></li>
+                <!--<li>-->
+                <!--&lt;!&ndash;<span></span><a href="javascript:;"><i></i>危机报告统计<b></b></a>&ndash;&gt;-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="statistics-left-part2">
+            <h4><i class="icon-title"></i>业务统计</h4>
+            <div class="rules"></div>
+            <ul id="nav-list2" class="statistics-left-list">
+                <li id="nav-li3"  style="background:#928abd;" class="stat-on1"><a href="pacs-statistics-table3.html">会诊申请工作量统计</a></li>
+                <li id="nav-li3-1"><a href="pacs-statistics-table3-1.html">诊断申请工作量统计</a></li>
+                <li id="nav-li4" class=""><a href="pacs-statistics-table4.html">报告工作量统计</a></li>
+                <li id="nav-li5" class=""><a href="pacs-statistics-table5.html">会诊工作量统计</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--右侧-->
+    <div class="statistics-right">
+        <div class="statistics-content">
+            <div class="statistics-query-box">
+                <div style="display: block;" class="query" id="query3">
+                    <p>送检医院:<p/>
+                    <div class="select-1 fl">
+                        <div class="user-select statistics-select">
+                            <div class="grey-select" style="min-width: 80px;">
+                                <span class="user-select-span select-1-span">影像类型</span>
+                                <i></i>
+                            </div>
+                            <ul class="user-select-ul select-1-ul" style="width: 100%;z-index: 100; ">
+                                <li><a href="javascript:;">杭州</a></li>
+                                <li><a href="javascript:;">南昌</a></li>
+                                <li><a href="javascript:;">上海</a></li>
+                                <li><a href="javascript:;">杭州</a></li>
+                                <li><a href="javascript:;">南昌</a></li>
+                                <li><a href="javascript:;">上海</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="select-1 fl">
+                        <i></i>
+                        <div class="user-select statistics-select">
+                            <div class="grey-select" style="min-width: 80px;">
+                                <span class="user-select-span select-1-span">报告时间</span>
+                                <i></i>
+                            </div>
+                            <ul class="user-select-ul select-1-ul" style="width: 100%;z-index: 100; ">
+                                <li><a href="javascript:;">杭州</a></li>
+                                <li><a href="javascript:;">南昌</a></li>
+                                <li><a href="javascript:;">上海</a></li>
+                                <li><a href="javascript:;">杭州</a></li>
+                                <li><a href="javascript:;">南昌</a></li>
+                                <li><a href="javascript:;">上海</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="stat-time-box fl">
+                        <input class="Wdate" onFocus="WdatePicker({lang:'zh-cn'})"/>
+                        <b>～</b>
+                        <input class="Wdate" onFocus="WdatePicker({lang:'zh-cn'})"/>
+                    </div>
+                </div>
+                <div class="statistics-btn-box fr">
+                    <a class="statistics-btn" href="javascript:;">统计</a>
+                </div>
+            </div>
+            <div class="table-caption clearfixed">
+                <h3 class="stat-table-head">云诊断中心影像数量统计</h3>
+                <div  style="display:none;" class="stat-table-tabs">
+                    <ul class="clearfixed">
+                        <li><a class="stat-table-change" href="javascript:;">本院发起</a></li>
+                        <li><a href="javascript:;">他院申请</a></li>
+                    </ul>
+                </div>
+                <div class="stat-table-title">
+                    <span>2016-09-09</span>
+                    <b>~</b>
+                    <span>2016-09-09</span>
+                </div>
+            </div>
+            <div class="statistics-table-box1">
+                <ul style="background:#9683af;" class="statistics-table-head clearfix">
+                    <li style="width:20%;">申请医院</li>
+                    <li style="width:16%;">已申请</li>
+                    <li style="width:16%;">诊断中</li>
+                    <li style="width:16%;">已诊断</li>
+                    <li style="width:16%;">已取消</li>
+                    <li style="width:16%;">合计</li>
+                </ul>
+                <div class="statistics-table-box">
+                    <div style="height:100%;" id="table-box3" class="table-box4">
+                        <table class="result-table">
+                            <thead>
+                            <tr>
+                                <th width="20%"></th>
+                                <th width="16%"></th>
+                                <th width="16%"></th>
+                                <th width="16%"></th>
+                                <th width="16%"></th>
+                                <th width="16%"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>内蒙古海军医院</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td>合计</td>
+                                <td>2008</td>
+                                <td>2008</td>
+                                <td>11</td>
+                                <td>28</td>
+                                <td>28</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+
+<script>
+    $(function () {
+        //        表格隔行变色
+        $(".table-box4 table tbody tr:even").addClass("tr-bg-white");
+        $(".table-box4 table tbody tr:odd").addClass("tr-bg-grey");
+        $(".table-box4 table tbody tr td:last-child").addClass("tr-font-weight");
+
+        var height = $(window).height() - 80 -42;
+        $(".statistics-left").height(height);
+        $(".statistics-right").height(height);
+
+        //statistics-table-box高度，滚动条调用
+        height = document.body.clientHeight;
+        $(".statistics-table-box").height(height-360);
+        $(".statistics-table-box").mCustomScrollbar();
+
+        $.divselect(".statistics-select", ".user-select-ul", ".user-select-span");
+    })
+</script>
+</body>
+</html>

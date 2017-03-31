@@ -1,0 +1,74 @@
+{
+	"JSChart" : {
+		"datasets" : [
+			{
+				"type" : "bar",
+				"data" : [
+					{
+						"unit" : "检查部位1",
+						"value" : "50"
+					},
+					{
+						"unit" : "检查部位2",
+						"value" : "40"
+					},
+					{
+						"unit" : "检查部位3",
+						"value" : "30"
+					},
+					{
+						"unit" : "检查部位4",
+						"value" : "20"
+					},
+					{
+						"unit" : "检查部位5",
+						"value" : "10"
+					},
+					{
+						"unit" : "检查部位6",
+						"value" : "2"
+					}
+				]
+			}
+		],
+		"colorset" : [
+		  	"#C7E6ED",
+			"#0078CB",
+			"#0084CF",
+			"#00A9DC",
+			"#47B8E1",
+			"#7BCAE7",
+		    "#B7DCEA"
+		],
+	  "optionset" : [
+		{
+		  "set": "setSize",
+		  "value": "499,252"
+		},
+		{
+		  "set": "setBarSpacingRatio",
+		  "value": "50"
+		},
+		{
+		  "set": "setTitle",
+		  "value": "'检查部位'"
+		},
+		{
+		  "set": "setTitlePosition",
+		  "value": "'right'"
+		},
+		{
+		  "set" : "setAxisNameX",
+		  "value" : "''"
+		},
+		{
+		  "set" : "setAxisNameY",
+		  "value" : "''"
+		},
+		{
+		  "set" : "setFontFamily",
+		  "value" : "'Microsoft YaHei'"
+		}
+	  ]
+	}
+}

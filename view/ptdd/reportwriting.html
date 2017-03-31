@@ -1,0 +1,1256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+
+<link href="../../css/layout.css?v=upd20160410" rel="stylesheet" type="text/css" />
+<link href="../../css/fjpt.css?v=upd20160608" rel="stylesheet" type="text/css" />
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160721" rel="stylesheet" type="text/css" />
+<link href="../../css/media.css?v=upd20160413" rel="stylesheet" type="text/css" />
+<link href="../../js/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet"  />
+<link href="../../js/ztree/ztreemetroStyle.css?v=upd20160402" rel="stylesheet" />
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/searchbar.js" type="text/javascript"></script>
+<script src="../../js/resize.js" type="text/javascript"></script>
+<!-- <script src="../../js/jquery.resizableColumns.js" type="text/javascript"></script> -->
+<script src="../../js/scrollbar/jquery.mousewheel.min.js"></script>
+<script src="../../js/scrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script src="../../js/respond.js"></script>
+<script src="../../js/ztree/jquery.ztree.min.js" type="text/javascript"></script>
+<script> 
+ (function() {
+         if (! 
+         /*@cc_on!@*/
+         0) return;
+         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+         var i= e.length;
+         while (i--){
+             document.createElement(e[i]);
+         } 
+    })(); 
+</script>
+  <script language="Javascript">
+   var zTreeObj;
+   // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+   var setting = {};
+   // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+   var zNodes = [
+   {name:"用户模板", open:true, children:[
+      {name:"CT"}, {name:"MR"}, {name:"DR"}, {name:"CX"}]}
+   ];
+   $(document).ready(function(){
+      zTreeObj = $.fn.zTree.init($("#ztree"), setting, zNodes);
+
+   });
+  </script>
+<style type="text/css">
+/*table {empty-cells: show;border-collapse: collapse;border-spacing: 0;}
+.rc-handle-container{position: relative;}
+.rc-handle{position: absolute; width: 7px;cursor: ew-resize;cursor: e-resize;*cursor: pointer; margin-left: -3px;}*/
+._mCS_1 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width: 4px;background: #285181;border-radius: 5px;}
+._mCS_1 .mCSB_scrollTools .mCSB_draggerRail{width: 1px; background-color: #285181;}
+._mCS_2 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{height: 4px;background: #285181;border-radius: 5px;}
+._mCS_2 .mCSB_scrollTools .mCSB_draggerRail{height: 1px; background-color: #285181;}
+.mCSB_inside>.mCSB_container{margin-right: 16px;}
+</style>
+</head>
+<body>
+<div class="bodymain">
+ 
+    <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+<!--               <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div> -->
+            </div>
+            <div class="user-tl">
+           <a class="fl" href="#"><img style="height: 32px;margin-top:6px" src="../../images/log.png" alt=""/></a><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+
+
+<div class="main-box" style="background:transparent;">
+   <!--      <aside class=" mm-menu"  >
+            <div class="column-wide-block for-cwb" >
+                <dl class="mm-menu--items">
+                    <dt>影像<p>images</p></dt>
+                    <dd class="column-icon column-img"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 个人影像</a></li>
+                        <li class="last"><a href="#">· 共享影像</a></li>
+                        <li><a href="#">· 获取影像</a></li>
+                        <li class="last"><a href="#">· 本院影像</a></li>
+                        <li><a href="#">· 分享历史</a></li>
+                        <li class="last"><a href="#">· 上传记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>会诊间<p>consultation</p></dt>
+                    <dd class="column-icon column-cons"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#" class="current">· 创建影像会诊</a></li>
+                        <li class="last"><a href="#">· 影像会诊记录</a></li>
+                        <li><a href="#">· 创建视频会诊</a></li>
+                        <li class="last"><a href="#">· 视频会诊记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>空中诊室<p>air room</p></dt>
+                    <dd class="column-icon column-air"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 留言咨询</a></li>
+                        <li class="last"><a href="#">· 视频诊室</a></li>
+                        <li><a href="#">· 诊间预约</a></li>
+                        <li class="last"><a href="#">· 医院挂号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>双向转诊<p>referral</p></dt>
+                    <dd class="column-icon column-ref"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul class="">
+                        <li><a href="#">· 待办列表</a></li>
+                        <li class="last"><a href="#">· 转入记录</a></li>
+                        <li><a href="#">· 转出记录</a></li>
+                        <li class="last"><a href="#">· 患者跟踪</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl  class="clearfix">
+                        <dt>影像报告<p>report</p></dt>
+                        <dd class="column-icon column-rep"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul style="margin-top:14px;">
+                            <li><a href="#">· 报告列表</a></li>
+                            <li><a href="#">· 报告书写</a></li>
+                            <li><a href="#">· 影像匹配</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>病历查询<p>medical record</p></dt>
+                        <dd class="column-icon column-med"></dd>
+                    </dl>
+                    <div class="column-detail narrow-right">
+                        <ul>
+                            <li><a href="#">· 按患者查询</a></li>
+                            <li><a href="#">· 按类型查询</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl class="clearfix">
+                        <dt>联系人<p>contacts</p></dt>
+                        <dd class="column-icon column-cont"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul>
+                            <li><a href="#">· 我的联系人</a></li>
+                            <li><a href="#">· 关注我的患者</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>设置管理<p>settings</p></dt>
+                        <dd class="column-icon column-set"></dd>
+                    </dl>
+                    <div class="column-detail  narrow-right">
+                        <ul class="column-spe-ul" style="margin-top:14px;">
+                            <li><a href="#">· 个人信息</a></li>
+                            <li><a href="#">· 排班设置</a></li>
+                            <li><a href="#">· 价格设置</a></li>
+                            <li><a href="#">· 报告模板</a></li>
+                            <li><a href="#">· 短信设置</a></li>
+                            <li><a href="#">· 修改密码</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <script src="../../js/jquery.sidebar.js"></script>
+ -->
+ <section class="user-right wrapper pt-sys" style="position:relative; min-width:1100px;">
+<!-- <span class="mm-menu-toggle"></span> -->
+<div class="breadcrumbs"><span class="bread-fir">第三方影像远程会诊中心交换平台 &gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">兜底池</span></div>
+
+        <p class="pt-overage">账户余额：<strong>251.00</strong>元</p>
+
+		<div class="pt-statistics clearfix" style="height:100px;">
+        <ul class="ptdd-set-btn">
+        <span>有新签约申请，<a href="javascript:;">点击查看</a></span>
+            <li><input id="platform" type="button" value="切换平台" name="" class="c-btns"/> <i></i></li>
+            <li><input id="scheduling" type="button" value="排班认领" name="" class="c-btns" /><i></i></li>
+        </ul>
+        <ul class="write-pt-btn write-pt-dd-btn">
+            <li><input type="button" value="申请单" name="" class="rep-btns" id="requisition"/></li>
+              <li><input id="accessImage" type="button" value="调阅影像" name="" class=" rep-btns" /></li>
+              <li>
+                <input type="button" value="上一个" name="" class="rep-btns" > </li>
+              <li>
+                <input type="button" value="下一个" name="" class="rep-btns" style="margin-right:0;" />
+              </li>
+              <li><input type="button" value="打印预览" name="" class="rep-btns" /></li>
+            <li><input id="accessAgain" type="button" value="二次获取" name="" class=" rep-btns" /></li>
+            <li><input type="button" value="签名" name="" class="lakeblue-btn rep-btns" style="width:80px;" />
+                   <div class="writecheck"><input type="checkbox" value="书写并审核" name=""  /><label>书写并审核</label></div> 
+              </li>
+          </ul>
+		  <dl style="width:580px; overflow:hidden;">
+		  	<dt class="ptdd-title clearfix" >
+                <h1 style=" color:#fff;">莆田肿瘤医院会诊中心 </h1>
+                <!-- <h3 class="ptdd-tit">联众影像云</h3> -->
+            </dt>
+		  	<dd class="ptdd-dd">
+		  		<span>总会诊数：<em>34</em></span>
+		  		<span>抢单数：<em>68</em></span>
+		  		<span>指派数：<em>12</em></span>
+<!-- 		  	<span>回退数：<em>2</em></span>
+		  		<span>超时数：<em>0</em></span> -->
+                <span>今日排班：<em>9:00-10:00</em></span>
+                <span>责任医生：<em>章名</em></span>
+		  	</dd>
+		  </dl>
+          
+		</div>
+
+
+
+  <div class="write-pt-left">
+  <div class="pt-grab-list">
+
+  	    <table border="0" cellspacing="0" >
+          <thead>
+          <tr>
+          <th width="45%">检查时间</th>
+          <th width="15%">类型</th>
+          <th width="25%">检查部位</th>
+          <th width="20%">操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>2015-21-12 14:44:33</td>
+              <td>CT</td>
+              <td>头颅平扫</td>
+              <td><a href="" class="doudi">兜</a></td>
+          </tr>
+           <tr class="current">
+              <td>2015-21-12 14:44:33</td>
+              <td>CT</td>
+              <td>头颅平扫</td>
+              <td><a href="" class="doudi">兜</a></td>
+          </tr>
+          <tr>
+              <td>2015-21-12 14:44:33</td>
+              <td>CT</td>
+              <td>头颅平扫</td>
+              <td><a href="" class="doudi">兜</a></td>
+          </tr>
+          <tr>
+              <td>2015-21-12 14:44:33</td>
+              <td>CT</td>
+              <td>头颅平扫</td>
+              <td><a href="" class="doudi">兜</a></td>
+          </tr>
+          <tr>
+              <td>2015-21-12 14:44:33</td>
+              <td>CT</td>
+              <td>头颅平扫</td>
+              <td><a class="doudi" href="">兜</a></td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+      <ul class="write-rep-tab  clearfix">
+          <li class="current">检查列表</li>
+          <li>书写模板</li>
+          <a class="green-text search" style="float: right;margin-right: 20px;">搜索</a>
+      </ul>
+
+    <div class="rep-list rep-tab-con" style="display:block;">
+
+        <!--高级搜索-->
+        <div class="aycan-query  clearfix advanced-search">
+          <span class="aycan-query-left">
+       <div class="contit aycan-search query-long">
+           <span class="center-title">送检医院:</span>
+           <p class="hos-sxtit blue-select-se">
+               <span class="hos-mgsw">请选择</span>
+               <span class="hos-mgbt"></span>
+           </p>
+           <ul class="hos-mgul">
+               <li><a href="#">上海公共卫生临床中心</a></li>
+               <li><a href="#">南昌大学第一附属医院</a></li>
+               <li><a href="#">杭州市第一人民医院</a></li>
+               <li><a href="#">上海公共卫生中心</a></li>
+               <li><a href="#">南昌大学第一附属医院</a></li>
+               <li><a href="#">杭州市第一人民医院</a></li>
+               <li><a href="#">上海公共卫生中心</a></li>
+               <li><a href="#">南昌南昌南昌大学第一附属医院</a></li>
+               <li><a href="#">杭州市第一人民医院</a></li>
+           </ul>
+       </div>
+          <div class="contit aycan-search">
+              <span class="center-title">患者姓名：</span>
+              <input name="name" type="text" class="" id="" value="">
+          </div>
+         <div class="contit aycan-search">
+             <span class="center-title">病历号：</span>
+             <input name="name" type="text" class="" id="userid" value="">
+         </div>
+           <div class="clearfix" style="display:block;"></div>
+          <div class="contit aycan-search query-long">
+              <span class="center-title">送检科室:</span>
+              <p class="con0-sxtit blue-select-se">
+                  <span class="con0-mgsw">请选择</span>
+                  <span class="con0-mgbt"></span>
+              </p>
+              <ul class="con0-mgul">
+                  <li><a href="#">放射科</a></li>
+                  <li><a href="#">心内科</a></li>
+                  <li><a href="#">心外科</a></li>
+                  <li><a href="#">很长很长名字的科</a></li>
+                  <li><a href="#">肿瘤科</a></li>
+                  <li><a href="#">老年病科</a></li>
+              </ul>
+          </div>
+
+
+          <div class="contit aycan-search">
+              <span class="center-title">患者ID：</span>
+              <input name="name" type="text" class="" id="userid" value="">
+          </div>
+
+
+
+
+        <div class="contit aycan-search">
+            <span class="center-title">就诊类型:</span>
+            <p class="con3-sxtit blue-select-se">
+                <span class="con3-mgsw">请选择</span>
+                <span class="con3-mgbt"></span>
+            </p>
+            <ul class="con3-mgul">
+                <li><a href="#">门诊</a></li>
+                <li><a href="#">住院</a></li>
+                <li><a href="#">体检</a></li>
+            </ul>
+        </div>
+
+          <div class="clearfix" style="display:block;"></div>
+
+          <div class="contit aycan-search query-long">
+              <span class="center-title">送检时间：</span>
+              <input name="name" type="text" class="" id="" value="" onclick="WdatePicker()">
+          </div>
+          <span></span>
+          <div class="contit aycan-search">
+              <span class="center-title" style="visibility: hidden">~ </span>
+              <input name="name" type="text" class="" id="" value="">
+          </div>
+          <div class="contit aycan-search">
+              <span class="center-title">检查号：</span>
+              <input name="name" type="text" id="" value="">
+
+          </div>
+          </span>
+          <span class="aycan-query-mid" style="width:100%;">
+            <div class="query-type">
+                <span class="center-title">影像类型：</span>
+                <ul class="clearfix">
+                    <li><input type="checkbox"><span>DR/CR/DX</span></li>
+                    <li><input type="checkbox"><span>SC</span></li>
+                    <li><input type="checkbox"><span>CR</span></li>
+                    <li><input type="checkbox"><span>CT</span></li>
+                    <li><input type="checkbox"><span>US</span></li>
+                    <li><input type="checkbox"><span>MG</span></li>
+                    <li><input type="checkbox"><span>MR</span></li>
+                    <li><input type="checkbox"><span>NM</span></li>
+                    <li><input type="checkbox"><span>PT</span></li>
+                    <li><input type="checkbox"><span>XA</span></li>
+                    <li><input type="checkbox"><span>RF</span></li>
+                    <li><input type="checkbox"><span>SR</span></li>
+                    <li><input type="checkbox"><span>DR</span></li>
+                    <li><input type="checkbox"><span>OT</span></li>
+                    <li><input type="checkbox"><span>RG</span></li>
+                </ul>
+            </div>
+                </span>
+
+                <span class="aycan-query-right" style="width:100%; padding-top: 10px;">
+                 <div class="query-condition">
+                     <span class="center-title">其他过滤条件：</span>
+                     <ul class="report-condition clearfix">
+                         <li><input type="checkbox" value="我的报告"> 我的报告</li>
+                         <li><input type="checkbox" value="已打印"> 已审核</li>
+                         <li><input type="checkbox" value="已打印"> 已打印</li>
+                     </ul>
+                 </div>
+                <input type="button" class="blue-btn report-querybtn" value=" 查 询" style="margin:20px 0 0 0; width:200px;">
+               <!-- <input type="button" class="blue-btn" value=" 岗位选择"> -->
+                </span>
+
+        </div>
+        <script>
+            $(".advanced-search").hide();
+            $(".search").click(function(){
+                var pull01=$(".advanced-search");
+                if(pull01.css("display")=="none"){pull01.fadeIn("fast")}else{pull01.fadeOut("fast")};
+            });
+
+        </script>
+      <div class="rep-list-tab">
+
+
+      <div class="rep-list-search" style="float:right; display:inline;margin-top:10px;">
+          <input type="hidden" name="excludeHosId" value=""> 
+          <input type="hidden" name="searchType" id="searchType" value="0"> 
+          <input type="text" name="keyword" id="keyword" class="search-input" style="width:80px;"> 
+          <input type="button" name="searchBtn" class="navy-btn" value="查询" onclick="initRptClearShow();">
+        </div>
+
+        <ul>
+          <li class="current">待书写</li>
+          <li style=" margin-right:0;">已书写</li>
+          <li style=" margin-right:0;">已完成</li>
+        </ul>
+
+      </div>
+
+      <div class="rep-table">
+      <table border="0" cellspacing="0" class="rep-list" id="rep-list" data-resizable-columns-id="rep-list">
+          <thead>
+          <tr>
+          <th width="10%" data-resizable-column-id="name">姓名</th>
+          <th width="5%" data-resizable-column-id="sex">性别</th>
+          <th width="5%"  data-resizable-column-id="age">年龄</th>
+          <th width="10%"  data-resizable-column-id="type">就诊类型</th>
+          <th width="30%"  data-resizable-column-id="hos">送检医院</th>
+          <th width="10%"  data-resizable-column-id="parts">检查部位</th>
+          <th width="10%"  data-resizable-column-id="state">状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>杨涵龙</td>
+              <td>女</td>
+              <td>26</td>
+              <td>住院</td>
+              <td>莆田学院附属医院</td>
+              <td>头颅平扫</td>
+              <td>已书写</td>
+          </tr>
+           <tr class="current">
+              <td>Zhang wang jiang</td>
+              <td>男</td>
+              <td>67</td>
+              <td>门诊</td>
+              <td>莆田学院附属医院</td>
+              <td>头颅平扫</td>
+              <td>已申请</td>
+          </tr>
+          <tr>
+              <td>杨涵龙</td>
+              <td>女</td>
+              <td>26</td>
+              <td>住院</td>
+              <td>莆田学院附属医院</td>
+              <td>头颅平扫</td>
+              <td>已书写</td>
+          </tr>
+          <tr>
+              <td>Zhang wang jiang</td>
+              <td>男</td>
+              <td>67</td>
+              <td>门诊</td>
+              <td>莆田学院附属医院</td>
+              <td>头颅平扫</td>
+              <td>已申请</td>
+          </tr>
+          </tbody>
+      </table>
+      </div>
+
+      <div class="page-list" style="height:25px;padding-top:5px;">
+        <input type="hidden" id="currentPage" value="1">
+              <span class="page-left">
+              <a href="javascript:void(0);" onclick="firstPage()" class="pageimg page-first">首页 </a>
+              <a href="javascript:void(0);" onclick="prePage()" class="pageimg page-prev">上一页 </a>
+              <a href="javascript:void(0);" class="big"><input type="text" value="1" name="queryString" id="queryString" class="page-to">
+              <span>/ &nbsp;</span><span id="totalPage">1</span><span class="page-go" onclick="queryPage()">go</span> </a>
+              <a href="javascript:void(0);" onclick="nextPage()" class="pageimg page-next">下一页</a>
+              <a href="javascript:void(0);" onclick="endPage()" class="pageimg page-last">尾页 </a>
+              </span>
+           </div>
+    </div>
+    <div class="rep-mod rep-tab-con">
+      <div style="width:100%;height:620px; overflow:auto;">
+
+      这里塞z-tree
+
+      </div>
+    </div>
+  </div>
+
+
+    <div class="write-pt-mid">
+    	<div class="w-rep-info">
+        <div class="clearfix" style="width:100%;">
+        <h4>患者资料</h4>
+        <b class="c-grey" id="inspection"><i class="icon-histroy"></i><span>历史检查</span></b>
+        <b class="c-brown" id="patientinfo"><i class="icon-detail"></i><span>患者详情</span></b>
+        </div>
+          <ul class="clearfix"  >
+            <li><span>病历号：</span><input type="text"  value="3243245932"/></li>
+            <li><span>姓名<em>*</em>：</span><input type="text"  value="zhang yen^shuang"/></li>
+            <li><span>性别<em>*</em>：</span><input type="text" value="女" /></li>
+            <li><span>患者编号：</span><input type="text"/></li>
+            <li><span>检查编号：</span><input type="text"/></li>
+            <li><span>就诊类别：</span><input type="text"  value="未知"/></li>
+            <li><span>联系电话：</span><input type="text" /></li>
+            <li><span>检查部位：</span><input type="text" value=""/></li>
+          </ul>
+         </div>
+         <div class="w-rep-fill" style="padding-bottom:10px;">
+         <h4>影像所见</h4> 
+         <b class="c-green" id="reptemplate"><i class="icon-save"></i><span>存为模板</span></b>
+         <b class="c-or"><i class="icon-clear"></i><span>清空已写</span></b>
+          <ul>
+            <li><textarea name="" id="" placeholder="请填写..." onfocus="this.style.color='#000'"></textarea></li>
+          </ul>
+         </div>
+         <div class="w-rep-fill" style="border:0;">
+         <h4>诊断结果</h4>
+         <div class="check-yyx"><ul>
+           <li><input type="radio" name="yinyangxing" /> <a href="javascript:;">- 阴性</a></li>
+           <li style="border:0;"><input type="radio" name="yinyangxing" /><a href="javascript:;">+ 阳性</a></li>
+         </ul></div>
+         <b class="c-or"><i class="icon-clear"></i><span>清空已写</span></b>
+
+         <b class="c-grey more"><i class="icon-ell"></i><span>更多</span>
+            <iframe frameborder="0" scrolling="no" class="coveriframe-1"></iframe>
+            <div class="more-ope">
+                <ul>
+                    <li><a href="">追加摄片</a></li>
+                    <li><a href="">重新摄片</a></li>
+                    <li><a href="">回科</a></li>
+                    <li><a href="">危急报告</a></li>
+                    <li><a href="">报告回退</a></li>
+                </ul>
+            </div>
+         </b>
+
+          <ul>
+            <li><textarea name="" id="" placeholder="请填写..." onfocus="this.style.color='#000'"></textarea></li>
+          </ul>
+         </div>
+
+<script>
+  $(function(){
+    $('.check-yyx li').click(function(){
+      $(this).find('input').attr("checked",true).next().addClass('checked');
+      $(this).siblings().find('input').attr("checked",false).next().removeClass('checked');
+    })
+  })
+</script>
+         <div class="w-rep-sig">
+          <ul>
+            <li><span>报告医生：</span><input type="text" value="" name="" class=""></li>
+            <li><span>审核医生：</span><input type="text" value="" name="" class=""></li>
+            <li class="bgsj"><input type="text" value="2015-03-11" name="" class=""><span>报告时间：</span></li>
+          </ul>
+         </div>
+
+    </div>
+    <!-- <div class="write-rep-right">
+      
+
+        <ul class="write-rep-attr" style="display:none;">
+        <h4>报告属性</h4>
+          <li><input type="radio" name="yinyang"/><span>阴性</span><input type="radio" name="yinyang"/><span>阳性</span></li>
+          <li><input type="radio" name="rep-sx"/><span>随访</span></li>
+          <li><input type="radio" name="rep-sx"/><span>危机报告</span></li>
+          <li><input type="radio" name="rep-sx"/><span>视教</span></li>
+        </dd>
+      </ul>
+    </div> -->
+ </section>
+</div>
+
+
+
+
+<footer class="clearfix">
+  <div class="footer">
+
+ <ul class="footer-info">
+           <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+           <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+           <br>
+      <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+           <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+          </ul>
+
+    </div>
+</footer>
+
+
+
+<!-- 弹窗 平台切换-->
+<div class="platform-change" style="display:none;">
+    <a class="current-platform" href="javaScript:void(0);">平台一平台一平平台</a>
+    <a href="javaScript:void(0);">平台二</a>
+    <a href="javaScript:void(0);">平台三</a>
+</div>
+<!-- 弹窗 排班认领-->
+<div class="scheduling" style="display: none;">
+       <div class="ptdd-schedu clearfix" style="box-shadow:none; margin:0;">
+                <div class="ptdd-sche-time">
+                    <ul>
+                        <li></li>
+                        <li>
+                            <span>2016-12-11</span>
+                            <p>星期一</p>
+                        </li>
+                        <li>
+                            <span>2016-12-11</span>
+                            <p>星期二</p>
+                        </li>
+                        <li>
+                            <span>2016-12-11</span>
+                            <p>星期三</p>
+                        </li>
+                        <li>
+                            <span>2016-12-11</span>
+                            <p>星期四</p>
+                        </li>
+                        <li>
+                            <span>2016-12-11</span>
+                            <p>星期五</p>
+                        </li>
+                        <li>
+                            <span>2016-12-11</span>
+                            <p>星期六</p>
+                        </li>
+                        <li style="margin-bottom:0;border-bottom:0;">
+                            <span>2016-12-11</span>
+                            <p>星期日</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ptdd-sche-week  ptdd-doc-sche" style="border-right:0;">
+                    <ul>
+                        <div class="time">0:00~4:00</div>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><span class="orange-text">医院指派</span></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                    </ul>
+                    <ul>
+                        <div class="time">4:00~8:00</div>
+                        <li><span class="orange-text">医院指派</span></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><span>已认领</span><a></a></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                    </ul>
+                    <ul>
+                        <div class="time">8:00~12:00</div>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><span>已认领</span><a></a></li>
+                        <li><span>已认领</span><a></a></li>
+                    </ul>
+                    <ul>
+                        <div class="time">12:00~16:00</div>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                    </ul>
+                    <ul>
+                        <div class="time">16:00~20:00</div>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                    </ul>
+                    <ul>
+                        <div class="time">20:00~24:00</div>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                        <li><input type="button" class="renling" value="认领"></li>
+                    </ul>
+                </div>
+  
+          </div>
+
+</div>
+<!-- 弹窗 申请单-->
+<div class="requisition" style="display:none;">
+ <ul class="write-rep-info clearfix">
+      <li><span>病历号：</span><input type="text" /></li>
+        <li><span>就诊类型：</span><input type="text" /></li>
+        <li><span>检查编号：</span><input type="text" /></li>
+        <li><span>患者编号：</span><input type="text" /></li>
+        <li><span>姓名<em>*</em>：</span><input type="text" /></li>
+        <li><span>性别<em>*</em>：</span><input type="text" /></li>
+        <li><span>年龄<em>*</em>：</span><input type="text" /></li>
+        <li><span>送检医院：</span><input type="text" value="浙江大学附属第一人民医院" readonly="" /></li>
+        <li><span>送检科室：</span><input type="text" /></li>
+        <li><span>住院号：</span><input type="text" /></li>
+        <li><span>隐私等级：</span><input type="text" value="0" /></li>
+        <li><span>辅助检查：</span><input type="text" /></li>
+        <li><span>检查部位<em>*</em>：</span><input type="text" value="头部"/></li>
+           <div class="clearfix"></div>
+        <li><span>申请医生<em>*</em>：</span><input type="text" /></li>
+        <li><span>医生电话<em>*</em>：</span><input type="text" /></li>
+        <li><span>申请日期：</span><input type="text" /></li>
+        <li style="margin-top:10px;" ><span>临床诊断：</span>
+      <textarea name="" id="" class="" rows="2"></textarea>
+        </li>
+        <li ><span>过敏史：</span>
+      <textarea name="" id="" class="" rows="4"></textarea>
+        </li>
+     <li>
+      <span>病史描述：</span>
+      <textarea name="" id="" class="" rows="8"></textarea>
+      </li>
+        <input type="button" name="" value="附图" class="lakeblue-btn img-btn" style="">
+    </ul>
+    
+    <ul class="write-rep-fj" style="display:none;">
+        <li><img src="../../images/downloadBanner1.jpg" alt="" /></li>
+    </ul>
+  
+
+  </div>
+<!-- 弹窗 患者资料-->
+<div class="patientinfo" style="display:none;">
+ <ul class="write-rep-info clearfix">
+      <li><span>病历号：</span><input type="text" /></li>
+        <li><span>就诊类型：</span><input type="text" /></li>
+        <li><span>检查编号：</span><input type="text" /></li>
+        <li><span>患者编号：</span><input type="text" /></li>
+        <li><span>姓名<em>*</em>：</span><input type="text" /></li>
+        <li><span>性别<em>*</em>：</span><input type="text" /></li>
+        <li><span>年龄<em>*</em>：</span><input type="text" /></li>
+        <li><span>送检医院：</span><input type="text" /></li>
+        <li><span>送检科室：</span><input type="text" /></li>
+        <li><span>住院号：</span><input type="text" /></li>
+        <li><span>隐私等级：</span><input type="text" value="0" /></li>
+        <li><span>申请日期：</span><input type="text" /></li>
+    </ul>
+  </div>
+<!-- 弹窗 历史检查详情-->
+<div class="historydetail" style="display:none;">
+ 	<ul class="view-rep-detail clearfix">
+        <li><span>姓名：</span><input type="text" /></li>
+        <li><span>性别：</span><input type="text" /></li>
+        <li><span>年龄：</span><input type="text" /></li>
+        <li><span>报告医生：</span><input type="text" /></li>
+        <li><span>审核医生：</span><input type="text" /></li>
+        <li><span>类型：</span><input type="text" /></li>
+        <li><span>检查部位：</span><input type="text" /></li>
+        <li><span>辅助检查：</span><input type="text" /></li>
+    </ul>
+ 	<ul class="view-rep-detail clearfix">
+        <li><span style="float:none;">影像所见：</span>
+        <div>
+			<p> 肝内胆管、胆总管、胆囊结石。</p>
+			<p>  肝内外胆管扩张伴管壁强化，胰管扩张，胆囊增大。</p>
+			<p> 动脉期肝脏强化不均匀，肝脏小囊肿，肝脏周围少量积液。</p>
+			<p>  结合临床。</p>
+			<p> 肝内胆管、胆总管、胆囊结石。</p>
+			<p>  肝内外胆管扩张伴管壁强化，胰管扩张，胆囊增大。</p>
+			<p> 动脉期肝脏强化不均匀，肝脏小囊肿，肝脏周围少量积液。</p>
+			<p>  结合临床。</p>
+			<p> 肝内胆管、胆总管、胆囊结石。</p>
+			<p>  肝内外胆管扩张伴管壁强化，胰管扩张，胆囊增大。</p>
+			<p> 动脉期肝脏强化不均匀，肝脏小囊肿，肝脏周围少量积液。</p>
+			<p>  结合临床。</p>
+		</div>
+        </li>
+    </ul>
+ 	<ul class="view-rep-detail clearfix">
+        <li><span style="float:none;">诊断结果：</span>
+        <div style="max-height:150px;">
+			<p> 肝内胆管、胆总管、胆囊结石。</p>
+			<p>  肝内外胆管扩张伴管壁强化，胰管扩张，胆囊增大。</p>
+		</div>
+        </li>
+    </ul>
+  </div>
+
+<!-- 弹窗 相关检查-->
+<div class=" inspection" style="display:none; ">
+    <div class="rep-related">
+     <table border="0" cellspacing="0" class="rep-related-list" id="" data-resizable-columns-id="rep-related-list">
+          <thead>
+          <tr>
+          <th width="10%">检查编号</th>
+          <th width="20%">检查时间</th>
+          <th width="10%">检查部位</th>
+          <th width="10%">审核医生</th>
+          <th width="35%">影像诊断</th>
+          <th width="15%">操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>02002342342</td>
+              <td>2015-02-12 13:33:55</td>
+              <td>头颅平扫</td>
+              <td>赵建军</td>
+              <td class="over-long"><div class="toe">未见明显异常x线征象，测试长度，测试未见明显异常x线征象，测试长度，测试</div></td>
+              <td><a href="javascript:;" class="view-his-detail">详情</a><a href="">阅片</a></td>
+          </tr>
+           <tr class="current">
+              <td>02002342342</td>
+              <td>2015-02-12 13:33:55</td>
+              <td>MRCP</td>
+              <td>赵建军</td>
+              <td>肝内胆管、总胆管扩张伴随多</td>
+              <td><a href="javascript:;" class="view-his-detail">详情</a><a href="">阅片</a></td>
+          </tr>
+           <tr>
+              <td>02002342342</td>
+              <td>2015-02-12 13:33:55</td>
+              <td>MRCP</td>
+              <td>赵建军</td>
+              <td>肝内胆管、总胆管扩张伴随多</td>
+              <td><a href="javascript:;" class="view-his-detail">详情</a><a href="">阅片</a></td>
+          </tr>
+          <tr>
+              <td>05612e6342</td>
+              <td>2015-02-12 13:33:55</td>
+              <td>头颅平扫</td>
+              <td>赵建军</td>
+              <td class="over-long"><div class="toe">未见明显异常x线征象，测试长度，测试未见明显异常x线征象，测试长度，测试</div></td>
+              <td><a href="javascript:;" class="view-his-detail">详情</a><a href="">阅片</a></td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+<!-- 弹窗 病历收藏-->
+<div class="collection clearfix" style="display:none;">
+ <ul class="write-rep-colt">
+
+        <li><span>收藏类别</span>
+            <select name="">
+              <option value="">感兴趣的病例</option>
+              <option value="">疑难病例</option>
+              <option value="">论文案例</option>
+            </select></li>
+     <li style="margin-top:10px;">
+      <span>备注</span>
+      <textarea name="" id="" class="" rows="8"></textarea>
+      </li>
+    </ul>
+       
+    <input type="button" value="关闭" class="navy-btn colt-btn"/><input type="button" value="提交" class="navy-btn colt-btn"/>
+  </div>
+<!-- 弹窗 存为模板-->
+ <div class="reptemplate" style="display:none;">
+      <div class="select-type">
+        <em>模板分类</em>
+        <ul  id="ztree" class="ztree"></ul>
+      </div>
+
+    <div class="report-arrow"><a class="arrow-left"></a></div>
+    <div class="report-half">
+         <div class="write-model">
+          <h3>模板属性</h3>
+          <ul class="write-mod-title">
+            <li><span>模板标题：</span><input type="text" /></li>
+          </ul>
+        </div>
+        <div class="check-methods">
+          <h3>检查方法</h3>
+          <textarea name="" id="" class=""></textarea>
+        </div>
+        <div class="check-imgview">
+          <h3>影像所见</h3>
+          <textarea name="" id="" class=""></textarea>
+        </div>
+        <div class="check-resault">
+          <h3>诊断意见</h3>
+          <textarea name="" id="" class=""></textarea>
+        </div>
+        <div class="report-btns">
+          <input type="button" class="navy-btn report-btn fr" value="保存"/>
+        </div>
+    </div>
+ </div>
+ 
+
+<!-- 右下角小弹窗 -->
+<div class="rb-pop" style="display:none;">
+  <div class="tips-div tips-warn" style="border:0;">
+    <i class="tips-ico tips-ico0 "></i>您有新的会诊单
+  </div>
+</div>
+<!--调用影像弹窗-->
+<div class="image-pop">
+    <table class="image-table">
+        <thead>
+        <tr>
+            <th>序列号</th>
+            <th>检查号</th>
+            <th>检查时间</th>
+            <th>部位</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="#">1(studypk)</a></td>
+            <td><a href="#">1231242</a></td>
+            <td><a href="#">2014-5-5 18:44</a></td>
+            <td><a href="#">胸部平扫</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--二次调阅弹出loading窗口-->
+<div class="loading-img">
+    <div class="loading-box">
+        <img src="../../images/loadingwhite.gif" alt=""/>
+        <p>获取中，请稍后...</p>
+        <div><b>*</b>从医院获取影像需要<span>2</span>~<span>3</span>分钟，请耐心等待，在此期间无法对报告进行更改</div>
+    </div>
+    <div class="accessAgain" style="display:none">
+        <p>成功获取到以下影像序列，点击查看:</p>
+        <table class="image-table">
+            <thead>
+            <tr>
+                <th>序列号</th>
+                <th>检查号</th>
+                <th>检查时间</th>
+                <th>部位</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="#">1(studypk)</a></td>
+                <td><a href="#">1231242</a></td>
+                <td><a href="#">2014-5-5 18:44</a></td>
+                <td><a href="#">胸部平扫</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+        //     $("table").resizableColumns({});
+        // }); //表格拖动
+	$(".pt-grab-list").mCustomScrollbar({
+				horizontalScroll:false,
+                scrollInertia:0,
+                mouseWheelPixels:40
+    });
+	$(".rep-table").mCustomScrollbar({
+				horizontalScroll:true,
+                scrollInertia:0,
+                mouseWheelPixels:40
+    }); 
+
+ $('#requisition').on('click', function(){
+  layer.open({
+    type: 1,
+    title:false,
+    shade:false,
+    skin: 'layui-layer-rim', 
+    area: ['auto', '550px'],
+    content:$('.requisition')
+});
+})
+//平台切换
+ $('#platform').on('click', function(){
+  layer.open({
+        type: 1,
+        title:"平台选择",
+        shade: 0.5,
+        skin: 'layui-layer-rim',
+        area: ['400px', '320px'],
+        content:$('.platform-change')
+    });
+});
+//弹窗电子申请单
+ $('#patientinfo').on('click', function(){
+  layer.open({
+        type: 1,
+        title:false,
+        shade:false,
+        skin: 'layui-layer-rim',
+        area: ['auto', '300px'],
+        content:$('.patientinfo')
+    });
+});
+//排班认领
+ $('#scheduling').on('click', function(){
+  layer.open({
+        type: 1,
+        title:"排班认领",
+        shade:0.5,
+        skin: 'layui-layer-rim',
+        area: ['780px', '580px'],
+        content:$('.scheduling')
+    });
+});
+  $('.renling').on('click', function(){
+    layer.msg('是否认领 星期二 12:00~16:00的排班？', {
+      time: 0,//不自动关闭
+      shade:0.8
+      ,btn: ['确定', '取消']
+      })
+
+  });
+//弹窗 二次获取
+$("#accessAgain").on("click",function(){
+    layer.open({
+        type: 1,
+        title:"二次获取",
+        shade:false,
+        skin: 'layui-layer-rim',
+        area: ['560px','auto'],
+        content:$('.loading-img')
+    });
+    setTimeout('$(".loading-box").hide();$(".accessAgain").show();',2000)
+//    $(".loading-img").show(100);
+//    setTimeout('$(".loading-box").hide(100);' +
+//            'layer.open({type: 1,title:"二次获取",skin: "layui-layer-rim", area: ["560px","auto" ], content:$(".loading-img")});',2000);
+});
+//弹窗 患者资料
+ $('#inspection').on('click', function(){
+  layer.open({
+    type: 1,
+    title:false,
+    shade:0.2,
+    skin: 'layui-layer-rim', 
+    area: ['800px', '300px'],
+    content:$('.inspection')
+});
+})
+// //弹窗 历史检查
+//  $('.view-his-detail').on('click', function(){
+//   layer.open({
+//     type: 1,
+//     title:false,
+//     shade:0.2,
+//     skin: 'layui-layer-rim', 
+//     area: ['450px', ''],
+//     content:$('.historydetail')
+// });
+// })
+// //弹窗 历史检查详情
+//   $('#collection').on('click', function(){
+//   layer.open({
+//     type: 1,
+//     title:false,
+//     shade:false,
+//     skin: 'layui-layer-rim', 
+//     area: ['400px', 'auto'],
+//     content:$('.collection')
+// });
+// })
+//弹窗，调阅影像
+$("#accessImage").on("click",function(){
+    layer.open({
+        type: 1,
+        title:'调阅影像',
+        skin: 'layui-layer-rim',
+        area: ['560px','auto' ],
+        content:$('.image-pop')
+    });
+})
+
+//弹窗 病历收藏
+$('#reptemplate').on('click', function(){
+  layer.open({
+    type: 1,
+    title:'存为报告模板',
+    skin: 'layui-layer-rim',
+    area: ['auto', '560px'],
+    content:$('.reptemplate')
+});
+})
+
+//弹窗您有新的会诊单
+ $(window).load(function(){
+  layer.open({
+    type: 1,
+    title:'提醒',
+    offset:'rb',
+    shade:false,
+    area:['300px',''],
+    skin: 'layui-layer-rim',
+    content:$('.rb-pop')
+});
+})
+
+		$('.img-btn').click(function(){
+		  $('.write-rep-fj').show();
+		  $('.requisition').css('width','800px');
+		})
+})
+
+
+</script>
+
+<script type="text/javascript">
+  $(function(){ 
+    $(".write-rep-tab li").click( 
+        function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".rep-tab-con").eq($(".write-rep-tab li").index(this)).show().siblings(".rep-tab-con").hide(); 
+    }) 
+
+    $(window).load(function(){
+        $(".mm-menu").hide();
+        $(".wrapper").width("96%");
+        $(".mm-menu-toggle").css({"left":"0","background-position":"0 center"});
+    })
+    $(".write-pt-btn .lakeblue-btn,.write-pt-btn .writecheck").hover(function(){
+        $(".write-pt-btn .writecheck").toggle();
+        })
+}) 
+
+</script>
+
+
+<script>
+$(function(){
+
+$('.rep-list-search .orange-btn').click(function(){
+
+	function listHide(){
+						$('.rep-list').hide();
+						$('.rep-mod').show();
+						$('.rep-list-search .orange-btn').val('书写模板');
+						};
+
+	function listShow(){
+						$('.rep-mod').hide();
+						$('.rep-list').show();
+						$('.rep-list-search .orange-btn').val('检查列表');
+						};
+	
+	$('.rep-mod').is(':hidden') ? $(listHide()) : $(listShow());
+
+
+})
+
+//----------- 更多 -------------
+    $('.write-pt-mid b.more').hover(function(){
+        $('.more-ope').show(200);
+        $('.coveriframe-1').show();
+    },function(){
+        $('.more-ope').hide();
+        $('.coveriframe-1').hide();
+    })
+
+//----------------左侧栏宽度-------------------------
+	$('.write-pt-left').resize(function(){
+
+		   if( $(this).width()<327){
+		   	$('.rep-list-tab li').css({'padding':'10px 5px','font-size':'12px','margin-right':'0'});
+		   }
+		   else if($(this).width()<255){
+		   	$('.rep-list-tab li').css({'padding':'10px 0','margin-right':'0'});
+		   }
+		   else{
+		   	$('.rep-list-tab li').css({'padding':'10px','font-size':'14px'});
+		   }
+	})
+
+//----------------中部底栏宽度-------------------------
+    $('.w-rep-sig').resize(function(){
+    if($(this).width()>286){
+        $('.w-rep-sig li').css({'width':'33%'});
+    }else if($(this).width()<386) {
+        $('.w-rep-sig li').css({'width':'33%'});
+    }
+    else{}
+    })
+
+//----------------存为模板收缩展开-------------------------
+      $('.report-arrow a').on('click', function(){
+        var state =$('.select-type').css('display');
+        if(state == "block"){
+          $('.select-type').hide(200);
+          $('.report-arrow a').removeClass('arrow-left').addClass('arrow-right');
+          $('.report-half').css('width','90%');
+          $('.write-model').css('width','98%');
+        }
+        else{
+          $('.select-type').show(200);
+          $('.report-arrow a').removeClass('arrow-right').addClass('arrow-left');
+          $('.report-half').css('width','53%');
+          $('.write-model').css('width','53%');
+        }
+      })
+
+})
+</script>
+
+</body>
+</html>

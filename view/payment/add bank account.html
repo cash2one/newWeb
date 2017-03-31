@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160418" rel="stylesheet" type="text/css" />
+<link href="../../css/payment.css?v=upd20160419" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../css/style.css"/>
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/jquery.poshytip.min.js" type="text/javascript"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+          <li><a href="#"><span class="nav-icon5"></span>我的主页</a></li>
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" >
+    <aside class="left-column mm-menu">
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 本地影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 推送记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>报告岗位<p>post setting</p></dt>
+                <dd class="column-icon column-job"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 报告岗位管理</a></li>
+                    <li class="last"><a href="#">· 权限组管理</a></li>
+                    <li><a href="#">· 账号管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>设置管理<p>settings</p></dt>
+                <dd class="column-icon column-set"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="column-spe-ul" style="margin-top:14px;">
+                    <li><a href="#">· 合作医院管理</a></li>
+                    <li class="last"><a href="#">· 修改密码</a></li>
+                    <li><a href="#">· 业务授权管理</a></li>
+                    <li class="last"><a href="#">· 信息设置</a></li>
+                    <li><a href="#">· 历史影像回溯</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+
+
+
+ <section class="user-right wrapper">
+
+     <div class="breadcrumbs"><span class="bread-fir"><a href="">账户 &gt;&gt;&gt; </a></span><span class="bread-fir"><a href="">提现 &gt;&gt;&gt; </a></span><span class="bread-sec">填写银行账户信息</span></div>
+    
+
+        <div class="cash-new-bank form-other">
+        <h4>选择开户银行：</h4>
+        <ul class=" clearfix banks">
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="gsyh">中国工商银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="nyyh">中国农业银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="jtyh">中国交通银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="jsyh">中国建设银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="msyh">中国民生银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="zgyh">中国银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="zsyh">招商银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="payh">平安银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="pfyh">浦发银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="gfyh">广发银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="zxyh">中信银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="ycyh">中国邮政储蓄银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="shyh">上海银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="zjyh">浙商银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"><i class="bjyh">北京银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="njyh">南京银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> <i class="gdyh">中国光大银行</i></a>
+            </li>
+            <li>
+                <a><input type="radio" value="" name="" class="radio" id="chose1" ><input type="image"  class="radio-normal" src="http://www.xcwljy.cn/images/pixel.gif"> ><i class="sfyh">深圳发展银行</i></a>
+            </li>
+            <li class="other"><a href="javscript:;"><input type="radio" name="banks"/>选择其他银行
+        </ul>
+
+         <ul class="other-bank clearfix">
+             <li><label>开户银行：</label><input type="text" value="" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'" />
+             </li><span class="add-tip"> 请正确填写开户行名，错误填写将导致提现失败</span>
+         </ul>
+         <input type="button" class="lakeblue-btn next-btn" value="下一步" />
+        </div>
+
+
+        <div class="cash-new-acc">
+            <div ><label>开户银行：</label><span>中国工商银行</span></div>
+            <ul class="new-acc-fill clearfix">
+                <li><label>开户人姓名：</label><input type="text" value="" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'" /></li>
+
+                <li><label>开户行所在地：</label>
+                <select name="" id="">
+                    <option value="">浙江</option>
+                </select>
+                <select name="" id="">
+                    <option value="">杭州</option>
+                </select>
+                </li>
+                <li><label>填写支行名称：</label><input type="text" value="" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"/><span class="add-tip"> 请正确填写并核对支行信息</span></li>
+                <li><label>银行卡号：</label><input type="text" value=""onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'" /></li><span class="add-tip"><i class="correct"></i></span>
+                <li><label>确认银行卡号：</label><input type="text" value="" onfocus="this.style.borderColor='#2aacc6',this.style.boxShadow='0 0 3px #2aacc6',this.style.color='#000'" onblur="this.style.borderColor='#d7d7d7',this.style.boxShadow='none'"/></li><span class="add-tip"><i class="wrong"></i> 与已填卡号不一致</span>
+            </ul>
+            <input type="button" class="navy-btn next-btn"value="保存提交" style="margin-left:100px;" />
+        </div>
+      
+
+        
+ </section>
+</div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+
+
+<script>
+$(function(){
+    
+    $('.other-bank input,.new-acc-fill input').each(function(){
+        var html = $(this).parent().next('.add-tip').html();
+        $(this).poshytip({
+            content:html,
+            className:'tip-yellowsimple',
+            showOn:'focus',
+            alignTo: 'target',
+            alignX: 'right',
+            alignY: 'center',
+            offsetX: 5,
+            fade:true
+        })
+    })//tips效果 可不用
+
+
+        $("li.other").click(function(){
+            var onHidden =  $(".other-bank").is(":hidden");
+            $(".other-bank").slideToggle();
+            $(this).find("em")[onHidden ? "addClass":"removeClass"]("checked");
+        }) //选择其他银行效果
+
+
+
+        $(".cash-new-bank .next-btn").click(function(){
+            $(".cash-new-bank").hide();
+            $(".cash-new-acc").show();
+
+        })
+    $(".banks li").click(function(){
+      $(this).find("input[type=radio]").attr("checked",true);
+    })
+})
+
+
+
+</script>
+    <script>
+
+        $('.form-other li a').click(function(){
+            $(this).find('.radio').attr("checked",true).next('input').addClass('radio-checked');
+            $(this).parent().siblings().find('.radio').attr("checked",false).next('input').removeClass('radio-checked').addClass('radio-normal');
+        });
+
+    </script>
+</body>
+</html>

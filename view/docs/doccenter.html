@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>全球影像用户界面</title>
+    <link href="../../css/layout.css?v=upd20160405" rel="stylesheet" type="text/css" />
+    <link href="../../css/main.css?v=upd20160405" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../../images/favicon.ico">
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+    <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../js/searchbar.js" type="text/javascript"></script>
+    <script src="../../js/layer/layer.js"></script>
+    <script>
+        (function() {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+    <style>
+        .user-area1.on .user-cheack ul{display: block;}
+    </style>
+</head>
+<body>
+<div class="bodymain">
+
+    <header>
+        <div class="user">
+            <div class="user-top">
+                <div class="user-tr">
+                    <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+                    <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+                    <div class="user-search">
+                        <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                        <ul class="select-mgul">
+                            <li><a href="#">联系人</a></li>
+                            <li><a href="#">影像</a></li>
+                        </ul>
+                        <div class="select-in">
+                            <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                        </div>
+                        <div class="search-btn"></div>
+                    </div>
+                </div>
+                <div class="user-tl">
+                    <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>
+            <ul class="nav-li">
+                <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+                <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>
+                <li><a href="#"><span class="nav-icon3"></span>影像</a></li>
+                <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="main-box">
+        <aside class=" mm-menu"  >
+            <div class="column-wide-block for-cwb" >
+                <dl class="mm-menu--items">
+                    <dt>影像<p>images</p></dt>
+                    <dd class="column-icon column-img"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 个人影像</a></li>
+                        <li class="last"><a href="#">· 共享影像</a></li>
+                        <li><a href="#">· 获取影像</a></li>
+                        <li class="last"><a href="#">· 本院影像</a></li>
+                        <li><a href="#">· 分享历史</a></li>
+                        <li class="last"><a href="#">· 上传记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>会诊间<p>consultation</p></dt>
+                    <dd class="column-icon column-cons"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 创建影像会诊</a></li>
+                        <li class="last"><a href="#">· 影像会诊记录</a></li>
+                        <li><a href="#">· 创建视频会诊</a></li>
+                        <li class="last"><a href="#">· 视频会诊记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>空中诊室<p>air room</p></dt>
+                    <dd class="column-icon column-air"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 留言咨询</a></li>
+                        <li class="last"><a href="#">· 视频诊室</a></li>
+                        <li><a href="#">· 诊间预约</a></li>
+                        <li class="last"><a href="#">· 医院挂号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>双向转诊<p>referral</p></dt>
+                    <dd class="column-icon column-ref"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul class="">
+                        <li><a href="#">· 待办列表</a></li>
+                        <li class="last"><a href="#">· 转入记录</a></li>
+                        <li><a href="#">· 转出记录</a></li>
+                        <li class="last"><a href="#">· 患者跟踪</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl  class="clearfix">
+                        <dt>影像报告<p>report</p></dt>
+                        <dd class="column-icon column-rep"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul style="margin-top:14px;">
+                            <li><a href="#">· 报告列表</a></li>
+                            <li><a href="#">· 报告书写</a></li>
+                            <li><a href="#">· 影像匹配</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>病历查询<p>medical record</p></dt>
+                        <dd class="column-icon column-med"></dd>
+                    </dl>
+                    <div class="column-detail narrow-right">
+                        <ul>
+                            <li><a href="#">· 按患者查询</a></li>
+                            <li><a href="#">· 按类型查询</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl class="clearfix">
+                        <dt>联系人<p>contacts</p></dt>
+                        <dd class="column-icon column-cont"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul>
+                            <li><a href="#">· 我的联系人</a></li>
+                            <li><a href="#">· 关注我的患者</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl  class="clearfix" style="border:0;">
+                        <dt>设置管理<p>settings</p></dt>
+                        <dd class="column-icon column-set"></dd>
+                    </dl>
+                    <div class="column-detail  narrow-right">
+                        <ul class="column-spe-ul" style="margin-top:14px;">
+                            <li><a href="#">· 个人信息</a></li>
+                            <li><a href="#">· 排班设置</a></li>
+                            <li><a href="#">· 价格设置</a></li>
+                            <li><a href="#">· 报告模板</a></li>
+                            <li><a href="#">· 短信设置</a></li>
+                            <li><a href="#">· 修改密码</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <script src="../../js/jquery.sidebar.js"></script>
+
+        <section class="user-right wrapper">
+            <span class="mm-menu-toggle"></span>
+
+            <div class="breadcrumbs"><span class="bread-fir">个人帐户设置 &gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">个人信息管理</span></div>
+
+            <div class="user-main">
+                <div class="user-avatar">
+                    <div class="user-upav">
+                        <img src="../../images/useimg.png" style="float: left;max-width: 120px;">
+                        <input type="button" value="更换头像" class="user-upbtn green-btn" id="change-user" >
+                    </div>
+                    <div class="user-upav-right">
+                        <ul>
+                            <li>
+                                <span>昵称：</span>
+                                <input type="text" value="大云" class="user-name"/>
+                            </li>
+                            <li>
+                                <span>邮箱：</span>
+                                <input type="text" readonly="readonly" onfocus="this.blur()" class="user-none" value="13***@qq.com" title="">
+                                <a href="#" class="navy-btn">修改</a>
+                            </li>
+                            <li>
+                                <span>手机：</span>
+                                <input type="text" onfocus="this.blur()" class="user-none" value="138*****579" title="">
+                                <a href="#" class="navy-btn">修改</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="user-bottom">
+                    <div class="user-input">
+                        <p>所属医院 :</p>
+                        <input type="text" value="云影像会诊中心" onfocus="this.blur()"/>
+                    </div>
+                    <div class="user-input" style="padding-left: 40px;width:280px;">
+                        <p>所属科室 :</p>
+                        <input type="text" value="影像中心" onfocus="this.blur()"/>
+                    </div>
+
+                    <div class="user-input">
+                        <p>ipad用户 :</p>
+                        <input type="text" value="未开通" onfocus="this.blur()"/>
+                    </div>
+                    <div class="user-input" style="padding-left: 40px;width:280px;">
+                        <p>职称 :</p>
+                        <input type="text" value="高级康复治疗师" onfocus="this.blur()"/>
+                    </div>
+
+                    <div class="user-address">
+                        <p>擅长：</p>
+                        <textarea></textarea>
+                    </div>
+                    <p class="submit-btn">
+                        <input name=" " type="button" class="loginbut navy-btn" value="确定提交" style=" width:240px; height:35px;"/>
+                    </p>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+    </div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+
+<!--layer    -->
+    <div class="user-layer" id="user-layer" style="display: none;">
+        <div class="user-layer-main">
+            <input type="file" accept="image/jpeg,image/png" id="userPhoto" class="file" name="userPhoto" value="" onchange="util.ajaxImgUpload('/user/uploadup.htm','userPhoto','loading','userPhotoPath');">
+            <input type="button" class="user-upbtn2" value="选择上传的图片">
+            <p>选一张您喜欢的图片做头像吧。支持peg和png格式，大小不超过1M.</p>
+            <div class="uesr-img-select">
+                <p>拖动下方小方块，调整头像大小</p>
+                <div class="user-img-big">
+                    <img src="../../images/imgs/homemedical.png" id="target" alt="" />
+                </div>
+                <p style="margin-left: 61px;margin-top: 52px">头像预览</p>
+                    <div id="preview-pane">
+                        <div class="preview-container">
+                            <img src="../../images/imgs/homemedical.png" class="jcrop-preview" alt="" />
+                        </div>
+                    </div>
+            </div>
+
+            <input type="button" value="确定" class="blue-btn user-succes"/>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(function(){
+        $('.center-intext').children('span').click(function(){
+            $(this).hide().next().show().focus();
+        })
+    })
+
+</script>
+
+<script>
+    layer.config({
+        path: 'layer/',    //layer.js所在的目录，可以是绝对目录，也可以是相对目录
+        extend:'skin/espresso/style.css',
+        skin: 'layer-ext-espresso' //默认皮肤
+    });
+    $("#change-user").click(function(){
+        layer.open({
+            type:1,
+            title:false,
+            shade:0.3,
+            area: ['700px', '600px'],
+            scrollbar: false,
+            content:$('#user-layer')
+        })
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //focusblur
+        jQuery.focusblur = function(focusid) {
+            var focusblurid = $(focusid);
+            var defval = focusblurid.val();
+            focusblurid.focus(function(){
+                var thisval = $(this).val();
+                if(thisval==defval){
+                    $(this).val("");
+                }
+            });
+            focusblurid.blur(function(){
+                var thisval = $(this).val();
+                if(thisval==""){
+                    $(this).val(defval);
+                }
+            });
+        };
+        /*下面是调用方法*/
+        jQuery.focusblur("#frsearch");
+    });
+</script>
+<script type="text/javascript">
+    jQuery(function($){
+
+        // Create variables (in this scope) to hold the API and image size
+        var jcrop_api,
+                boundx,
+                boundy,
+
+        // Grab some information about the preview pane
+                $preview = $('#preview-pane'),
+                $pcnt = $('#preview-pane .preview-container'),
+                $pimg = $('#preview-pane .preview-container img'),
+
+                xsize = $pcnt.width(),
+                ysize = $pcnt.height();
+
+        console.log('init',[xsize,ysize]);
+
+        $('#target').Jcrop({
+            onChange: updatePreview,
+            onSelect: updatePreview,
+            aspectRatio: xsize / ysize
+        },function(){
+            // Use the API to get the real image size
+            var bounds = this.getBounds();
+            boundx = bounds[0];
+            boundy = bounds[1];
+            // Store the API in the jcrop_api variable
+            jcrop_api = this;
+
+            // Move the preview into the jcrop container for css positioning
+            $preview.appendTo(jcrop_api.ui.holder);
+        });
+
+        function updatePreview(c)
+        {
+            if (parseInt(c.w) > 0)
+            {
+                var rx = xsize / c.w;
+                var ry = ysize / c.h;
+
+                $pimg.css({
+                    width: Math.round(rx * boundx) + 'px',
+                    height: Math.round(ry * boundy) + 'px',
+                    marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                    marginTop: '-' + Math.round(ry * c.y) + 'px'
+                });
+            }
+        };
+
+    });
+
+
+</script>
+</body>
+</html>

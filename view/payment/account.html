@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../css/payment.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160405" rel="stylesheet" type="text/css" />
+<link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<!-- respond.js for IE less than 9 -->
+ <!--[if lt IE 9]>
+<script src="../../js/respond.js" type="text/javascript"></script>
+<![endif]-->
+<script> -
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+          <li><a href="#"><span class="nav-icon5"></span>我的主页</a></li>
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box">
+    <aside class="left-column mm-menu">
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 本地影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 推送记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>报告岗位<p>post setting</p></dt>
+                <dd class="column-icon column-job"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 报告岗位管理</a></li>
+                    <li class="last"><a href="#">· 权限组管理</a></li>
+                    <li><a href="#">· 账号管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>设置管理<p>settings</p></dt>
+                <dd class="column-icon column-set"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="column-spe-ul" style="margin-top:14px;">
+                    <li><a href="#">· 合作医院管理</a></li>
+                    <li class="last"><a href="#">· 修改密码</a></li>
+                    <li><a href="#">· 业务授权管理</a></li>
+                    <li class="last"><a href="#">· 信息设置</a></li>
+                    <li><a href="#">· 历史影像回溯</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+     <span class="mm-menu-toggle"></span>
+    <script src="../../js/jquery.sidebar.js"></script>
+
+
+<section class="user-right wrapper">
+     <span class="mm-menu-toggle"></span>
+
+     <div class="breadcrumbs"><span class="bread-fir"><a href="">个人管理 &gt;&gt;&gt;</a></span></span><span class="bread-sec">我的账户</span></div>
+    
+
+            <div class="account-open"  style="display:block;">
+                    <h4>支付账户尚未开通，请先开通账户</h4>
+                    <input type="button" class="openaccount navy-btn" value="开通账户" /> 
+            </div>
+
+
+    <ul class="acc-tab clearfix"   style="display:block;">
+        <li class="current">用户账户</li>
+        <li>信用点账户</li>
+    </ul>
+
+        <div class="account"  style="display:block;">
+            <div class="u-account account-type"  style="display:block;">
+                <div class="acc-info">
+                    <h4>账户余额（元） </h4>
+                    <span>1140.00</span>
+                    <input type="button" class="orange-btn" value="查询明细" /> 
+                    <input type="button" class="green-btn" value="提现" /> 
+                </div>
+                
+                <div class="acc-list">
+                    <div class="acc-list-tab">
+                        <ul class="clearfix">
+                            <li class="current">收入</li>
+                            <li>支出</li>
+                            <li>提现记录</li>
+                        </ul>
+                    </div>
+
+                    <div class="acc-recrods" style="display:block;"><table cellspacing="0" border="0" >
+                        <thead>
+                            <tr>
+                                <th width="20%">日期</th>
+                                <th width="25%">流水号</th>
+                                <th width="25%">信息</th>
+                                <th width="15%">金额</th>
+                                <th width="15%">余额</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="revenue"><i>+</i>20.00</td>
+                                        <td>1140.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="revenue"><i>+</i>20.00</td>
+                                        <td>1120.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="revenue"><i>+</i>20.00</td>
+                                        <td>1100.00</td>
+                                    </tr>
+                            </tbody>
+                    </table></div>
+                    <div class="acc-recrods"><table cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th width="20%">日期</th>
+                                <th width="25%">流水号</th>
+                                <th width="25%">信息</th>
+                                <th width="15%">金额</th>
+                                <th width="15%">余额</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="exp"><i>-</i>50.00</td>
+                                        <td>1520.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="exp"><i>-</i>50.00</td>
+                                        <td>1570.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="exp"><i>-</i>50.00</td>
+                                        <td>1620.00</td>
+                                    </tr>
+                            </tbody>
+                    </table></div>
+                    <div class="acc-recrods"><table cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th width="20%">申请日期</th>
+                                <th width="40%">信息</th>
+                                <th width="20%">到账日期</th>
+                                <th width="10%">状态</th>
+                                <th width="10%">金额</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>转出到银行卡 中国工商银行[3022]</td>
+                                        <td>2016-02-21 12:38</td>
+                                        <td>提现成功</td>
+                                        <td class="exp"><i>-</i>50.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>转出到支付宝账户 xx*****@126.com</td>
+                                        <td>2016-02-21 12:38</td>
+                                        <td>提现成功</td>
+                                        <td class="exp"><i>-</i>20.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>转出到支付宝账户 xx*****@126.com</td>
+                                        <td>未到账</td>
+                                        <td>提现失败</td>
+                                        <td class="exp"><i>-</i>20.00</td>
+                                    </tr>
+                            </tbody>
+                    </table></div>
+                </div>
+            </div>
+            <div class="c-account account-type">
+                <div class="acc-info">
+                    <h4>账户余额（点） </h4>
+                    <span>33440</span>
+                    <input type="button" class="lakeblue-btn" value="充值" />  
+                </div>
+                <div class="acc-list">
+                    <div class="acc-list-tab">
+                        <ul class="clearfix">
+                            <li class="current">收入</li>
+                            <li>支出</li>
+                        </ul>
+                    </div>
+
+                    <div class="acc-recrods" style="display:block;"><table cellspacing="0" border="0" >
+                        <thead>
+                            <tr>
+                                <th width="20%">日期</th>
+                                <th width="25%">流水号</th>
+                                <th width="25%">信息</th>
+                                <th width="15%">金额</th>
+                                <th width="15%">余额</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="revenue"><i>+</i>20.00</td>
+                                        <td>10400</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="revenue"><i>+</i>20.00</td>
+                                        <td>10000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="revenue"><i>+</i>20.00</td>
+                                        <td>10230</td>
+                                    </tr>
+                            </tbody>
+                    </table></div>
+                    <div class="acc-recrods"><table cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th width="20%">日期</th>
+                                <th width="25%">流水号</th>
+                                <th width="25%">信息</th>
+                                <th width="15%">金额</th>
+                                <th width="15%">余额</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="exp"><i>-</i>50.00</td>
+                                        <td>10200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="exp"><i>-</i>50.00</td>
+                                        <td>10250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-02-18 12:38</td>
+                                        <td>255203298708</td>
+                                        <td>报告申请</td>
+                                        <td class="exp"><i>-</i>50.00</td>
+                                        <td>10300</td>
+                                    </tr>
+                            </tbody>
+                    </table></div>
+                </div>
+            </div>
+        </div>
+ </section>
+</div>
+
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer-info">
+                <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+                <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+                <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+
+                <!-- 开通账户 start-->
+                <div class="open-step1">
+                    <h5>若需开通账户，请先验证您的手机</h5>
+                    <p><label>验证码将发送到：</label><span>15*****15</span></p>
+                    <p class="clearfix"><label>请输入验证码：</label><input type="text" value=""/><i class="correct"></i></p>
+                    <input type="button" class="navy-btn acc-step-btn nextstep" value="下一步"/>
+                </div>
+
+
+                <div class="open-step2">
+                    <h5>请设置并妥善保管您的交易密码</h5>
+                        
+                    <p class="clearfix"><label>设置交易密码：</label><input type="text"  style="width:120px;" value=""/><i class="wrong"></i></p>
+                    <h6>请设置包含字母、数字并不少于8位数的密码</h6>
+                    <br>
+                    <input type="button" class="navy-btn acc-step-btn" value="提交并开通"/>
+                </div>
+                <!-- 开通账户 end-->
+
+
+
+
+
+
+<script>
+    $(".acc-list-tab li").click( function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".acc-recrods").eq($(".acc-list-tab li").index(this)).show().siblings(".acc-recrods").hide(); 
+    }) 
+    $(".acc-tab li").click( function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $(".account-type").eq($(".acc-tab li").index(this)).show().siblings(".account-type").hide(); 
+    }) 
+$('.openaccount').on('click', function(){
+    layer.open({
+        type: 1,
+        title:'开通账户',
+        closeBtn: 1,
+        shade:false,
+        area: ['400px', ''],
+        content:$('.open-step1')
+    })
+})
+$('.nextstep').on('click', function(){
+    layer.open({
+        type: 1,
+        title:'设置交易密码',
+        closeBtn: 1,
+        shade:0.2,
+        area: ['400px', ''],
+        content:$('.open-step2')
+    })
+})
+</script>
+</body>
+</html>

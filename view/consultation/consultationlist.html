@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全球影像用户界面</title>
+    <link href="../../css/layout.css?v=upd20160929" rel="stylesheet" type="text/css"/>
+    <link href="../../css/consultation.css?v=upd20160929" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160929" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div class="">
+    <header>
+        <div class="head-part-2">
+            <div class="warp clearfixed">
+                <div class="head-left fl">
+                    <a href="#" class="head-logo"><img src="../../images/log.png" alt=""/></a>
+                    <span class="font-ychz"></span>
+                </div>
+                <div class="head-right fr">
+                    <div class="user-head">
+                        <img src="../../images/user.jpg" alt=""/>
+                    </div>
+                    <div class="user-info">
+                        <p><b>欢迎您，</b>
+                        <span>我的个天用户名你取这么长名字干嘛</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                        </p>
+
+                        <p>
+                            <a href="javascript:;">返回首页</a>
+                            <a href="javascript:;">帮助</a>
+                            <a href="javascript:;">退出</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="warp clearfixed" style="position: relative">
+        <div class="wrapper">
+            <div class="cstt-breadcrumbs">
+                <span class="bread-fir">首页&gt;&gt;&gt;</span>&nbsp;
+                <span class="bread-sec">远程会诊记录</span>
+            </div>
+            <div class="warp clearfixed" style="position: relative;">
+                <ul class="aycan-tit">
+                    <li class="current">邀请我的</li>
+                    <li>我发起的</li>
+                </ul>
+                <div class="add-con"><i class="icon icon-add-con"></i>发起新会诊</div>
+                <div class="user-items" style="clear:none;">
+                    <table width="1198px" border="0" class="table-con">
+                        <thead>
+                        <tr class="table-tit table-cstt-tit">
+                            <th width="14%">会诊号</th>
+                            <th width="14%">开会时间</th>
+                            <th width="24%">主题</th>
+                            <th width="10%">发起人</th>
+                            <th class="room-type" width="10%">
+                                会诊间类型<i class="drop-down"></i>
+                                <ul class="drop-list">
+                                    <li class="room-type-fjh">非交互式</li>
+                                    <li class="room-type-jhpt">交互式（普通）</li>
+                                    <li class="room-type-jhxt">交互式（协同）</li>
+                                </ul>
+                            </th>
+                            <th class="status-type" width="10%">
+                                状态<i class="drop-down"></i>
+                                <ul class="drop-list">
+                                    <li class="status-type-processing">进行中</li>
+                                    <li class="status-type-finish">已完成</li>
+                                    <li class="status-type-close">待审核</li>
+                                    <li class="status-type-close">待开启</li>
+                                    <li class="status-type-finish">待上传报告</li>
+                                    <li class="status-type-close">已上传报告</li>
+                                </ul>
+                            </th>
+                            <th width="15%">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">郑明风</td>
+                            <td class="table-text">
+                                <span class="fjh">非交互式</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="processing">待审核</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+                                <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a>
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">郑明风</td>
+                            <td class="table-text">
+                                <span class="fjh">非交互式</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="finish">已上传报告</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+                                <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a>
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">郑明风</td>
+                            <td class="table-text">
+                                <span class="fjh">非交互式</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="finish">进行中</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+<!--                                 <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a> -->
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">郑明风</td>
+                            <td class="table-text">
+                                <span class="fjh">非交互式</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="processing">待上传报告</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+<!--                                 <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a> -->
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">郑明风</td>
+                            <td class="table-text">
+                                <span class="jhpt">交互式（普通）</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="close">已完成</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+                                <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a>
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">郑明风</td>
+                            <td class="table-text">
+                                <span class="jhxt">交互式（协同）</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="processing">待开启</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+                                <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a>
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                        <div class="pages consultation-pages">
+                            <span style="display: inline-block;height:32px;line-height:32px;">跳至第<input type="text" id="paginationCPage" name="currentPage" value="1" class="page-to"/> 页</span>
+                            <span style="display: inline-block;height:24px;line-height:24px;"><button type="submit" style="background:#4865a2;" class="page-go" onclick="gotoPageByForm()">GO</button></span>
+                            <span>
+                                <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                                <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                                <a href='#' class="page-num current">1</a>
+                                <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                                <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                            </span>
+                        </div>
+
+                </div>
+
+
+                <div class="user-items" style="display:none;">
+                    <table width="1198px" border="0" class="table-con">
+                        <thead>
+                        <tr class="table-tit table-cstt-tit">
+                            <th width="16%">会诊号</th>
+                            <th width="16%">开会时间</th>
+                            <th width="28%">主题</th>
+                            <th class="room-type" width="12%">
+                                会诊间类型<i class="drop-down"></i>
+                                <ul class="drop-list">
+                                    <li class="room-type-fjh">非交互式</li>
+                                    <li class="room-type-jhpt">交互式（普通）</li>
+                                    <li class="room-type-jhxt">交互式（协同）</li>
+                                </ul>
+                            </th>
+                            <th class="status-type" width="12%">
+                                状态<i class="drop-down"></i>
+                                <ul class="drop-list">
+                                    <li class="status-type-processing">进行中</li>
+                                    <li class="status-type-finish">已完成</li>
+                                    <li class="status-type-close">待审核</li>
+                                    <li class="status-type-close">待开启</li>
+                                    <li class="status-type-finish">待上传报告</li>
+                                    <li class="status-type-close">已上传报告</li>
+                                </ul>
+                            </th>
+                            <th width="16%">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">
+                                <span class="fjh">非交互式</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="finish">进行中</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+                                <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a>
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">
+                                <span class="jhpt">交互式（普通）</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="finish">已上传报告</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+                                <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a>
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-text">1008910086</td>
+                            <td class="table-text">2012-08-02 17:33:23</td>
+                            <td class="table-text"><div class="toe">脑瘫案例</div></td>
+                            <td class="table-text">
+                                <span class="jhxt">交互式（协同）</span>
+                            </td>
+                            <td class="table-text">
+                                <span class="close">已完成</span>
+                            </td>
+                            <td class="table-text align-left">
+                                <a class="btn-detail" href="con_details.html"><i class="icon-detail"></i>详情</a>
+                                <a class="btn-audit" href="#"><i class="icon-audit"></i>审核</a>
+                                <a class="btn-into" href="javascript:;"><i class="icon-into"></i>进入</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pages consultation-pages">
+                        <!--<span class="page-detail">当前第<strong>6</strong>页 / 共<strong>6</strong>页</span>-->
+                        <!--<span>跳至第<input type="text" id="paginationCPage" name="currentPage" value="1" class="page-to"/> 页</span>-->
+                        <!--<span><button type="submit" style="background:#4865a2;" class="page-go" onclick="gotoPageByForm()">GO</button></span>-->
+                        <!--<a href="#if($!queryString)?pageNum=$!page.previousPageNumber&$!queryString#else?pageNum=$!page.previousPageNumber#end"-->
+                        <!--class="page-prev unable">-->
+                        <!--</a>-->
+
+                        <!--<b class="current">&lt;!&ndash; $!page.thisPageNumber &ndash;&gt;1</b>-->
+                        <!--<b>2</b>-->
+                        <!--<input type="hidden" value="$!queryString" name="queryString" id="queryString"/>-->
+                        <!--<a href="#if($!queryString)?pageNum=$!page.nextPageNumber&$!queryString#else?pageNum=$!page.nextPageNumber#end"-->
+                        <!--class="page-next">-->
+                        <!--</a>-->
+                        <span>跳至第<input type="text" id="paginationCPage" name="currentPage" value="1" class="page-to"/> 页</span>
+                        <span><button type="submit" style="background:#4865a2;" class="page-go" onclick="gotoPageByForm()">GO</button></span>
+                        <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                        <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                        <a href='#' class="page-num current">1</a>
+                        <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                        <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!--<script src="../../js/messagetip.js" type="text/javascript"></script>-->
+
+<script type="text/javascript">
+    $(function () {
+
+        $(".aycan-tit>li").click(
+                function () {
+                    $(this).addClass("current").siblings().removeClass("current");
+                    $(".user-items").eq($(".aycan-tit>li").index(this)).show().siblings(".user-items").hide();
+                }
+        )
+        $(".room-type,.status-type").click(function(e){
+            $(this).find("ul").show();
+            $(this).css({
+                "border":"1px solid #5da0d5",
+                "background":"#fff"
+            });
+            e.stopPropagation();
+            $(document).on("click",function(){
+                $(".drop-list").hide();
+                $(".table-con th").css({
+                    "border":"none",
+                    "background":"#e9f3fc",
+                    "border-bottom":"1px solid #469ce7"
+                });
+            });
+        })
+        $(".drop-list li").click(function(e){
+            var className = $(this).attr("class");
+            var str = className.split("-");
+            var name = str[str.length-1];
+            $(this).parents("ul").hide();
+            $(this).parents("th").css({"border":"none", "background":"#e9f3fc","border-bottom":"1px solid #469ce7"});
+            $("."+name).parents("tr").show();
+            $("."+name).parents("tr").siblings().hide();
+            e.stopPropagation();
+        })
+    })
+</script>
+
+<script>
+//消息闪动
+    function shake(ele, cls, times) {
+    var i = 0, t= false, o =ele.attr("class")+" ", c ="", times=times||2;
+    if(t) return;
+
+    t= setInterval(function() {
+        i++;
+        c = i%2 ? o+cls: o;
+        ele.attr("class", c);
+
+        if(i==2*times) {
+            clearInterval(t);
+            ele.removeClass(cls);
+        }
+    }, 200);
+};
+
+
+$(function(){
+shake($(".message"),"alert",8);
+})
+</script>
+</body>
+</html>

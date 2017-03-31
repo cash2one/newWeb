@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160714" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20160714" rel="stylesheet" type="text/css" />
+<link href="../../js/layer/skin/layer.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/searchbar.js" type="text/javascript"></script>
+<script  src="../../js/layer/layer.min.js" type="text/javascript" charset="utf-8"></script>
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+
+</head>
+<body>
+<div class="bodymain">
+
+    <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>桌面</a></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a></li>
+          <li><a href="#"><span class="nav-icon3"></span>影像</a></li>
+          <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box" style="position: relative">
+    <aside class=" mm-menu"  >
+        <div class="column-wide-block for-cwb" >
+            <dl class="mm-menu--items">
+                <dt>影像<p>images</p></dt>
+                <dd class="column-icon column-img"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul style="margin-top:14px;">
+                    <li><a href="#">· 个人影像</a></li>
+                    <li class="last"><a href="#">· 共享影像</a></li>
+                    <li><a href="#">· 获取影像</a></li>
+                    <li class="last"><a href="#">· 本院影像</a></li>
+                    <li><a href="#">· 分享历史</a></li>
+                    <li class="last"><a href="#">· 上传记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>会诊间<p>consultation</p></dt>
+                <dd class="column-icon column-cons"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 创建影像会诊</a></li>
+                    <li class="last"><a href="#">· 影像会诊记录</a></li>
+                    <li><a href="#">· 创建视频会诊</a></li>
+                    <li class="last"><a href="#">· 视频会诊记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>空中诊室<p>air room</p></dt>
+                <dd class="column-icon column-air"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul>
+                    <li><a href="#">· 留言咨询</a></li>
+                    <li class="last"><a href="#">· 视频诊室</a></li>
+                    <li><a href="#">· 诊间预约</a></li>
+                    <li class="last"><a href="#">· 医院挂号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block for-cwb">
+            <dl>
+                <dt>双向转诊<p>referral</p></dt>
+                <dd class="column-icon column-ref"></dd>
+            </dl>
+            <div class="column-detail">
+                <ul class="">
+                    <li><a href="#">· 待办列表</a></li>
+                    <li class="last"><a href="#">· 转入记录</a></li>
+                    <li><a href="#">· 转出记录</a></li>
+                    <li class="last"><a href="#">· 患者跟踪</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl  class="clearfix">
+                    <dt>影像报告<p>report</p></dt>
+                    <dd class="column-icon column-rep"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 报告列表</a></li>
+                        <li><a href="#">· 报告书写</a></li>
+                        <li><a href="#">· 影像匹配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>病历查询<p>medical record</p></dt>
+                    <dd class="column-icon column-med"></dd>
+                </dl>
+                <div class="column-detail narrow-right">
+                    <ul>
+                        <li><a href="#">· 按患者查询</a></li>
+                        <li><a href="#">· 按类型查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="column-wide-block">
+            <div class="column-narrow-block">
+                <dl class="clearfix">
+                    <dt>联系人<p>contacts</p></dt>
+                    <dd class="column-icon column-cont"></dd>
+                </dl>
+                <div class="column-detail narrow-left">
+                    <ul>
+                        <li><a href="#">· 我的联系人</a></li>
+                        <li><a href="#">· 关注我的患者</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-narrow-block">
+                <dl  class="clearfix" style="border:0;">
+                    <dt>设置管理<p>settings</p></dt>
+                    <dd class="column-icon column-set"></dd>
+                </dl>
+                <div class="column-detail  narrow-right">
+                    <ul class="column-spe-ul" style="margin-top:14px;">
+                        <li><a href="#">· 个人信息</a></li>
+                        <li><a href="#">· 排班设置</a></li>
+                        <li><a href="#">· 价格设置</a></li>
+                        <li><a href="#">· 报告模板</a></li>
+                        <li><a href="#">· 短信设置</a></li>
+                        <li><a href="#">· 修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script src="../../js/jquery.sidebar.js"></script>
+
+    <section class="user-right wrapper">
+        <span class="mm-menu-toggle"></span>
+
+        <div class="breadcrumbs"><span class="bread-fir">个人帐户设置 &gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">价格排班设置</span></div>
+
+
+  	<div class="set-sdu-tab">
+    	<a href="#" class="current">院内预约排班</a>
+    	<a href="#">空中诊室排班</a>
+    	<a href="#">诊间预约排班</a>
+    </div>
+    <div ><input type="button" name="" value="查看排班详情" class="lakeblue-btn set-detail-btn" ></div>
+	<div style="clear:both;"></div>
+	    <div class="set-schedu ">
+	      <table border="0" cellspacing="0"  class="set-table">
+	        <thead>
+	          <tr height="40">
+	          <th width="7%" rowspan="2" style="height:80px;vertical-align:middle;"></th>
+	          <th width="28%">上午</th>
+	          <th width="28%">下午</th>
+	          <th width="28%">晚上</th>
+	          <th width="7%" rowspan="2" style="height:80px;vertical-align:middle;">操作</th>
+	          </tr>
+	          <tr height="30" style="border-top:1px solid #ddd;">
+	          <th>         
+	              <span class="set-table-tit time-see-tit">时间</span>
+	              <span class="set-table-tit count-see-tit">人数</span>
+	              <span class="set-table-tit statu-see-tit">状态</span>
+	          </th>
+	          <th>
+	              <span class="set-table-tit time-see-tit">时间</span>
+	              <span class="set-table-tit count-see-tit">人数</span>
+	              <span class="set-table-tit statu-see-tit">状态</span>
+	          </th>
+	          <th>
+	              <span class="set-table-tit time-see-tit">时间</span>
+	              <span class="set-table-tit count-see-tit">人数</span>
+	              <span class="set-table-tit statu-see-tit">状态</span>
+	          </th>
+	        </thead>
+	        <tbody>
+	        	<tr style="height:10%" class="">
+ 					<td class="td-week">星期一</td>
+ 					<td class="set-am">
+						<span class="time-see">07:30~9:00</span>
+						<span class="count-see">3</span>   
+						<span class="statu-see"><a class="set-st-op dn-st"></a></span>
+ 					</td>
+ 					<td class="set-pm">
+						<span class="time-see">12:30~16:00</span>
+						<span class="count-see">3</span>   
+						<span class="statu-see"><a class="set-st-op dn-st"></a></span>
+ 					</td>
+ 					<td class="set-nt">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td><span class="set-edit"><a href="javascript:;">修改</a></span></td>
+ 				</tr>
+        		<tr style="height:10%" class="">
+ 					<td class="td-week">星期二</td>
+ 					<td class="set-am">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td class="set-pm">
+						<span class="time-see">12:30~16:00</span>
+						<span class="count-see">3</span>   
+						<span class="statu-see"><a class="set-st-op dn-op"></a></span>
+ 					</td>
+ 					<td class="set-nt">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td><span class="set-edit"><a href="javascript:;">修改</a></span></td>
+ 				</tr>
+        		<tr style="height:10%" class="">
+ 					<td class="td-week">星期三</td>
+ 					<td class="set-am">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td class="set-pm">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td class="set-nt">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td><span class="set-edit"><a href="javascript:;">修改</a></span></td>
+ 				</tr>
+        <tr style="height:10%" class="">
+ 					<td class="td-week">星期四</td>
+ 					<td class="set-am">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td class="set-pm">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+  					<td class="set-nt">
+						<span class="time-see">21:30~23:00</span>
+						<span class="count-see">3</span>   
+						<span class="statu-see"><a class="set-st-op dn-op"></a></span>
+ 					</td>
+ 					<td><span class="set-edit"><a href="javascript:;">修改</a></span></td>
+ 				</tr>
+        <tr style="height:10%" class="">
+ 					<td class="td-week">星期五</td>
+ 					<td class="set-am">
+						<span class="time-see">09:30~11:30</span>
+						<span class="count-see">9</span>   
+						<span class="statu-see"><a class="set-st-op dn-op"></a></span>
+ 					</td>
+ 					<td class="set-pm">
+						<span class="time-see">12:30~16:00</span>
+						<span class="count-see">3</span>   
+						<span class="statu-see"><a class="set-st-op dn-op"></a></span>
+ 					</td>
+ 					<td class="set-nt">
+						<span class="time-see"></span>
+						<span class="count-see"></span>   
+						<span class="statu-see"></span>
+ 					</td>
+ 					<td><span class="set-edit"><a href="javascript:;">修改</a></span></td>
+ 				</tr>
+        <tr style="height:10%" class="">
+          <td class="td-week" style="color:#ff0000;">星期六</td>
+          <td class="set-am">
+            <span class="time-see"></span>
+            <span class="count-see"></span>   
+            <span class="statu-see"></span>
+          </td>
+          <td class="set-pm">
+            <span class="time-see"></span>
+            <span class="count-see"></span>   
+            <span class="statu-see"></span>
+          </td>
+            <td class="set-nt">
+            <span class="time-see">21:30~23:00</span>
+            <span class="count-see">3</span>   
+            <span class="statu-see"><a class="set-st-op dn-op"></a></span>
+          </td>
+          <td><span class="set-edit"><a href="javascript:;">修改</a></span></td>
+        </tr>
+        <tr style="height:10%" class="">
+          <td class="td-week" style="color:#ff0000;">星期日</td>
+          <td class="set-am">
+            <span class="time-see"></span>
+            <span class="count-see"></span>   
+            <span class="statu-see"></span>
+          </td>
+          <td class="set-pm">
+            <span class="time-see"></span>
+            <span class="count-see"></span>   
+            <span class="statu-see"></span>
+          </td>
+            <td class="set-nt">
+            <span class="time-see"></span>
+            <span class="count-see"></span>   
+            <span class="statu-see"></span>
+          </td>
+          <td><span class="set-edit"><a href="javascript:;">修改</a></span></td>
+        </tr>
+	        </tbody>
+	      </table>
+	    </div>
+
+    <div class="set-schedu" style="display:none;">
+    </div>
+ 
+ </section>
+
+</div>
+
+<footer class="clearfix">
+  <div class="footer footer1000">
+   <div class="footer-w">
+      <ul class="footer-info">
+       <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp;   浙ICP备11059294号-3 </p>
+       <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+       <br>
+       <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+      </ul>
+   </div>
+</div>
+</footer>
+
+<div class="time-select scheme-edit-selector layer-pageContent" style="display: none;">
+		<div class="time-start">
+		    <label>时间段：</label>
+		    <span>
+		    	<label style="width:70px;margin-left:-20px;"><input type="radio" value="0" name="timeSign">上午</label>
+		    	<label style="width:70px;"><input type="radio" value="1" name="timeSign">下午</label>
+		    	<label style="width:70px;"><input type="radio" value="2" name="timeSign">晚上</label>
+		    </span>
+	    </div>
+	 <form name="docSchemeEdit">
+        <input type="hidden" name="schemeId">
+  		<input type="hidden" name="schemeWeek">
+  		<input type="hidden" name="timeSign">
+		<input type="hidden" id="mod-section">
+		<input type="hidden" name="regType">
+		<div class="time-end">
+		    <label>开始时间：</label>
+		    <select name="startStr"><option value="" >请先选择时间段</option></select>
+	    </div>
+	    <div class="time-end">
+		    <label>结束时间：</label>
+		    <select name="endStr"><option value="">请先选择时间段</option></select>
+	    </div>
+	    <div class="time-end">
+	    	<label>人数：</label>
+	    	<input type="text" name="count" style="width: 220px; height: 30px; border:0; background: #efefef;">
+	    </div>
+	    <input type="button" value="确定提交" class="navy-btn submit" style="margin-left:120px;" onclick="modScheme(this)">
+	    <input type="button" value="删除排班" class="grey-btn submit" id="del-btn" onclick="delScheme(this)" disabled="disabled">
+	</form>
+</div>
+
+
+<div class="doc-menu-set form-checkbox">
+<form id="modifyDoc" action="hosDoc/saveDocFunc.htm" method="post" >
+<input type="hidden" name="userId" id="userId" value="12127" />
+<h3>高高高</h3>
+
+        <h4>影像</h4>
+                <ul class="clearfix">
+                    <li>我的云盘</li>
+                    <li>本院影像</li>
+                    <li>获取影像</li>
+                    <li>他人分享</li>
+                    <li>分享历史</li>
+                    <li>上传记录</li>
+                    <li>报告统计</li>
+                </ul>
+
+        <h4>账户</h4>
+            <ul class="clearfix">
+                <li>我的账户</li>
+                <li>待确认</li>
+            </ul>
+        <h4>
+            <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" class="checkbox" name="moduals" value="2000" >会诊间</h4>
+            <ul class="clearfix">
+                <li>创建影像会诊</li>
+                <li>影像会诊记录</li>
+                <li>创建视频会诊</li>
+                <li>视频会诊记录</li>
+            </ul>
+
+        <h4> <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" class="checkbox"  name="moduals" value="4000" >空中诊室</h4>
+            <ul class="clearfix">
+                <li>留言咨询</li>
+                <li>视频诊室</li>
+                <li>诊间预约</li>
+                <li>医院挂号</li>
+            </ul>
+
+        <h4> <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" name="moduals" value="5000" class="checkbox" >病历查询</h4>
+            <ul class="clearfix">
+                <li>按患者</li>
+                <li>按类型</li>
+                <li> <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" name="moduals" class="checkbox"  value="50004">病历查询病历查询</li>
+                <li> <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" name="moduals" class="checkbox"  value="50003">会诊记录</li>
+            </ul>
+
+
+        <h4>联系人</h4>
+            <ul class="clearfix">
+                <li>我的联系人</li>
+                <li>关注我的患者</li>
+            </ul>
+
+        <h4>
+        <img class="checkbox-checked" src="http://www.xcwljy.cn/images/pixel.gif">
+        <input type="checkbox" name="moduals"  value="2200"
+         checked="checked">影像报告</h4>
+            <ul class="clearfix">
+                <li> <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" name="moduals" class="checkbox" value="2203">报告申请</li>
+                <li>本院报告</li>
+            </ul>
+
+        <h4>设置管理</h4>
+            <ul class="clearfix">
+                <li>个人信息管理</li>
+                <li>  <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" name="moduals" class="checkbox" value="80002">排班设置</li>
+                <li>  <img class="checkbox-normal" src="http://www.xcwljy.cn/images/pixel.gif"><input type="checkbox" name="moduals" class="checkbox" value="80013">排班价格设置</li>
+                <li>签约管理</li>
+                <li>短信设置</li>
+                <li>修改密码</li>
+            </ul>
+
+              <input class="navy-btn btn-size4" id="find" type="button" value="保存修改"/>
+</form>
+
+</div>
+
+
+<script>
+//tab选择器
+ $(function(){ 
+    $(".set-sdu-tab a").hover(function(){ 
+        $(this).addClass("current").siblings().removeClass("current"); 
+        $(".set-schedu").eq($(".set-sdu-tab a").index(this)).show().siblings(".set-schedu").hide(); 
+    }) 
+   $('.set-st-op').on('click', function(){
+   		if ($(this).hasClass('dn-op')) {
+   			$(this).removeClass('dn-op').addClass('dn-st');
+        $(this).parent('span').prevAll().css('color','#ddd');
+   		} else{
+   			$(this).removeClass('dn-st').addClass('dn-op');
+        $(this).parent('span').prevAll().css('color','#000');
+   		};
+   })
+
+
+
+    $('.set-edit a').on('click', function(){
+      $.layer({
+        type: 1,
+        shadeClose: false,
+        shade: [0.5, '#000'],
+        area: ['420px', '250px'],
+        closeBtn:[1, true],
+        zIndex: 1100,
+        title: false,
+        border: [0],
+        page: $('.time-select')
+       }) 
+    })//layer
+
+     $('.form-checkbox li,.form-checkbox h4').click(function(){
+                var $input = $(this).children('.checkbox');               
+                if($input.is(':checked') == false){
+                    $input.attr("checked",true);
+                    $input.prev().removeClass('checkbox-normal').addClass('checkbox-checked');
+                }else{
+                    $input.attr("checked",false);
+                    $input.prev().removeClass('checkbox-checked').addClass('checkbox-normal');
+                }
+        })//选择框css
+})
+</script>
+
+</div>
+</body>
+</html>

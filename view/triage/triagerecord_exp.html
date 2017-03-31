@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+<link href="../../css/triage.css" rel="stylesheet" type="text/css" />
+<link href="../../css/boxy/css/boxy.css" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+    <script type="text/javascript" src="../../js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.boxy.js"></script>
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<!--[if !IE]><!--><script> 
+if (/*@cc-on!@*/false) { 
+document.documentElement.className+='ie10'; 
+} 
+</script><!--<![endif]--> 
+</head>
+<body>
+<div class="bodymain">
+   <header>
+      <div class="user">
+       <div class="user-top">
+            <div class="user-tr">
+             <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+             <a href="#"><img src="../../images/user.jpg" title="个人账户" /></a>
+              <div class="user-search">
+                   <div class="select-sxtit"><span class="select-mgsw" >联系人</span><span class="select-mgbt" ></span></div>
+                     <ul class="select-mgul">
+                     <li><a href="#">联系人</a></li>
+                     <li><a href="#">影像</a></li>
+                     </ul>
+                   <div class="select-in">
+                    <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索" />
+                   </div>
+                   <div class="search-btn"></div>
+              </div>
+            </div>
+            <div class="user-tl">
+            <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+            </div>
+          </div>
+       </div>
+    </header>
+    <nav>
+        <div class="nav">
+           <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>    
+          <ul class="nav-li">
+          <li><a href="#"><span class="nav-icon1 nav-first"></span>我的桌面</a><i>/</i></li>
+          <li><a href="#"><span class="nav-icon2"></span>联系人</a><i>/</i></li>        
+          <li><a href="#"><span class="nav-icon3"></span>影像</a><i>/</i></li> 
+          <li><a href="#"><span class="nav-icon4"></span>消息</a><i></i></li> 
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="main-box">
+  <aside class="user-left" id="left-block">
+  <div class="user-left-b">
+   <p><a href="#">影像</a><span></span></p>
+    <ul class="user-left-l"> 
+    <li><a href="../image/myaycan.html">· 个人影像</a></li>
+    <li class="bottom"><a href="../sendaycan.html">· 共享影像</a></li>
+    <li><a href="../image/myaycan.html">· 共享历史</a></li>
+    </ul>
+    <p><a href="../portraitmg.html">联系人</a><span></span></p>
+    <ul class="user-left-l"> 
+    <li><a href="main.html">· 患者</a></li>
+    <li><a href="addmain.html">· 专家</a></li>
+    <li><a href="addmain.html">· 机构</a></li>
+    </ul>
+    <p><a href="reservels.html">预约挂号</a><span></span></p>
+    <ul class="user-left-l"> 
+    <li><a href="reservels.html">· 预约查询</a></li>
+    </ul>
+    <p><a href="../reports/reportinquire.html">检查报告</a><span></span></p>
+    <ul class="user-left-l"> 
+    <li><a href="../reports/reportinquire.html">· 报告查询</a></li>
+    <li><a href="../reports/reportsls.html">· 我的报告</a></li>
+    </ul>
+    <p><a href="usermain">个人帐户设置</a><span></span></p>
+    <ul class="user-left-l"> 
+    <li><a href="usertable.html">· 个人信息管理</a></li>
+    <li><a href="userpass.html">· 密码管理</a></li>
+    <li><a href="userinfor.html">· 消息通知设置</a></li>
+    <li><a href="userid.html">· 患者ID设置</a></li>
+    <li><a href="userys.html">· 隐私设置</a></li>
+    </ul>
+  </div>
+  </aside>
+
+
+ <section class="user-right">
+    <div class="breadcrumbs"><span class="bread-fir">预约挂号 &gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">预约查询</span></div>
+    <div class="sortby ">
+    <p class="sortby-right">   
+    <input name="name" type="text"  class="blue-input" id="pat-name" value="患者姓名、预约金额搜索" />
+    <input type="button" value="" class=" magnifier" />
+    </p>
+    <p class="sortby-left"><strong>按状态查询：</strong>
+      <input type="button"  value="全部" onclick="user.querySeekByState('seekForm',0);"/>
+      <input type="button"  value="待分诊" onclick="user.querySeekByState('seekForm',3);"/>
+      <input type="button"  value="已分诊" onclick="user.querySeekByState('seekForm',4);"/>
+      <input type="button"  value="待就医" onclick="user.querySeekByState('seekForm',5);"/>
+      <input type="button"  value="已就医" onclick="user.querySeekByState('seekForm',6);"/>
+      <input type="button"  value="已关闭" onclick="user.querySeekByState('seekForm',7);"/>
+      <input type="button"  value="已完成" onclick="user.querySeekByState('seekForm',8);"/>
+      </p>
+
+      </div>
+    <div class="aycan-hist">
+     <table width="100%" border="0" cellspacing="0" class="table-con tri-hist">
+          <tr class="table-tit">
+          <td width="12%">提交时间</td>
+          <td width="8%">患者姓名</td>
+          <td width="15%">手机号码</td>
+          <td width="35%">主诉</td>
+          <td width="7%">预约金</td>
+          <td width="8%">状态</td>
+          <td width="15%">操作</td>
+          </tr>
+          <tr >
+          <td colspan="6"  width="85%">
+          <a href="#patient-det" class="tri-pd">
+              <table width="100%" border="0" cellspacing="0"  rowspan="2" >
+              <tr>
+              <td width="14%">2014-09-18 17:12:11</td>
+              <td width="9.5%">王二</td>
+              <td width="18%">15845550123</td>
+              <td width="40%" >老年退行性双膝骨关节炎、非常严</td>
+              <td width="8%"><strong>1980.00</strong></td>
+              <td width="9%">已分诊</td>
+              </tr>
+              </table>
+          </a>
+          </td>
+          <td class="table-text"  width="15%"><a href="#fz" class="boxy">分诊</a> <a href="#ts" class="boxy">关闭</a> <a href="#ts" class="boxy">待复诊</a> <a href="#ts" class="boxy">诊毕</a></td>
+          </tr>
+          <tr>
+          <td colspan="6" width="85%">
+          <a href="#patient-det" class="tri-pd">
+              <table width="100%" border="0" cellspacing="0">
+              <tr>
+              <td width="14%">2014-09-15 17:12:11</td>
+              <td width="9.5%">张海涛</td>
+              <td width="18%">15845550123</td>
+              <td width="40%" >
+              <div class="tri-ell2" id="tri-ell2">老年退行性双膝骨关节炎、非常严重、现己行走艰难、针对这种情况老年退行性双膝骨关节炎、非常严重、现己行走艰难、针对这种情况老年退行性双
+              </div></td>
+              <td width="8%"><strong>1580.00</strong></td>
+              <td width="9%">待分诊</td>
+              </tr>
+              </table>
+          </a>
+          </td>
+          <td class="table-text" width="15%"><a href="#fz" class="boxy">分诊</a> <a href="#ts" class="boxy">关闭</a> <a href="#ts" class="boxy">待复诊</a> <a href="#ts" class="boxy">诊毕</a></td>
+          </tr>
+      </table>
+          <div class="pages">
+          <span class="page-detail">当前第<strong>1</strong>页 / 共<strong>1</strong>页<span>
+          <span class="page-detail">共<strong>3</strong>条记录</span>
+          <span>跳至第<input type="text" id="paginationCPage" name="currentPage" value="1" class="page-to"/> 页<span>
+          <span><button type="submit"  class="page-go" onclick = "gotoPageByForm()">GO</button></span>
+
+              <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+              <a href='#' class="pageimg page-prev"  onclick="gotoPageP(0)"  >上一页</a>
+              <a href='#' class="page-num current">1</a> 
+              <a href="#" class="pageimg page-next"  onclick="gotoPageP(2)" > 下一页</a>
+              <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+            </div>  
+
+
+   </div>   
+ </section>
+</div>
+
+<footer class="clearfix">
+  <div class="footer footer1000">
+   <div class="footer-w">
+      <ul class="footer-links">
+      <li><a href="">腾讯微博</a><i></i></li>
+      <li><a href="">新浪微博</a><i>/</i></li>
+      <li><a href="">友情链接</a><i>/</i></li>
+      <li><a href="">企业邮箱</a><i>/</i></li>
+      <li><a href="">法律声明</a><i>/</i></li>
+      <li><a href="">联系我们</a><i>/</i></li>
+      </ul>
+      <ul class="footer-info">
+       <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp;   浙ICP备11059294号-3 </p>
+       <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+       <br>
+       <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+      </ul>
+    </div>
+    </div>
+</footer>
+
+</div>
+<!-- boxy -->
+<div id="ts" style="display:none">  
+        <div class="sendbox">
+           <p>是否【关闭本条咨询】/【设为待复诊】/【设为已诊毕】？</p>
+           <span><input id="submitBtn" type="button" value="确定" class="grey-but" onclick="Boxy.get(this).hide();" />&nbsp;&nbsp;<input id="submitBtn" type="button" value="取消" class="grey-but" onclick="Boxy.get(this).hide();" /></span>
+        </div>
+</div>
+<div id="patient-det" style="display:none">  
+        <div class="sendbox pa-detail">
+        <ul class="tri-maxbox">
+           <li><label>患者姓名：</label><em>张国涛</em></li>
+           <li><label>性别：</label><em>男</em></li>
+           <li><label>年龄：</label><em>58</em></li>
+           <li><label>身份证号：</label><em>330101195606110722</em></li>
+           <li><label>手机：</label><em>15012345678</em></li>
+           <li><label>验证码：</label><em>78drw3</em></li>
+           <li><label>诊金：</label><em>1500.00 </em>元</li>
+           <li><label>过往诊史：</label><em>舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法</em></li>
+           <li><label>症状描述：</label><em>舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法舅舅老年退行性双膝骨关节炎、非常严重、现已行走困难，针对这种病况，他不愿继续采用西医疗法</em></li>
+           </ul>
+           <span><input id="submitBtn" type="button" value="分诊" class="grey-but" onclick="Boxy.get(this).hide();" />&nbsp;&nbsp;<input id="submitBtn" type="button" value="取消" class="grey-but" onclick="Boxy.get(this).hide();" /></span>
+        </div>
+</div>
+<div id="fz" style="display:none">  
+        <div class="sendbox fenzhen addone">
+     <ul>
+     <li><label>推荐科室：</label><select name="">
+         <option value="">请选择</option>
+         <option value="">老年病科</option>
+         <option value="">儿科</option>
+     </select></li>
+     <li><label>推荐医生：</label><select name="">
+         <option value="">请选择</option>
+         <option value="">医生1</option>
+         <option value="">医生3</option>
+     </select></li>
+     <li><label>建议诊疗费：</label><input type="text" name="" value=""></li>
+     <li style="position:relative;"><label>建议预约时间：</label><input type="text" name="" value=""><img class="tri-timepicker" onclick="WdatePicker({el:'studyDateStart'})" style="cursor:pointer" src="/js/DateTimePicker/skin/datePicker.gif"></li>
+     <li><label>补充说明：</label><textarea name="" id=""></textarea></li>
+           <span class="fengzhen-btn"><input id="submitBtn" type="button" value="确定提交" class="grey-but" onclick="Boxy.get(this).hide();" /></span>
+        </div>
+</div>
+
+<script>
+$(function(){
+    $(".boxy").boxy({title: "分诊",modal:true});
+    $(".tri-pd").boxy({title: "提示2",modal:true});
+  })
+</script>
+</body>
+
+</html>

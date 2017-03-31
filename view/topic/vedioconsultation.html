@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script src="../../js/parallaxis.js"></script>
+<title>医生主页</title>
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+
+</head>
+
+<body>
+
+
+<div class="download">
+<div class="head-spc">
+    <div class="black-head width1200" >
+        <ul class="black-headright fr">
+          <li><a href=""><img src="../../images/user.jpg" alt="" /><span>你好，患者1</span></a></li>
+
+          <li><a href="" class="last"><span>[退出]</span></a></li>
+        </ul>
+      <div class="logo-black fl" style="margin-top:10px;"><a href="#"></a></div>
+    </div>
+</div>
+    <div class="icr-bg">
+      <div class="icr-banner"  >
+      </div>
+    </div>
+<script>
+      $(function() {
+        $(window).load(function(){
+          $('.icr-banner').animate({opacity:'1'},1000);
+        })
+      })
+</script>
+
+
+<div class="icr">
+    <div class="width980" >
+
+        <div class="icr-cont pa" before="opacity:0;top:60;" after="opacity:1;top:-20;" delay="3000" speed="6000">
+            <span class="icr-line"></span>
+            <div class="icr-step icr-step1">
+                    <i></i>               
+                    <em class="icr-icon1"></em>
+                    <img src="../../images/icr1.png" />
+                    <p>选择疑难影像</p>
+            </div>
+            <div class="icr-step icr-step2">
+               
+                    <i></i>               
+                    <em class="icr-icon2"></em>
+                    <img src="../../images/icr2.png" />
+                    <p>邀请会诊专家</p>
+               
+            </div>
+            <div class="icr-step icr-step3">
+               
+                    <i></i>               
+                    <em class="icr-icon3"></em>
+                    <img src="../../images/icr3.png" />
+                    <p>开启会诊间</p>
+            
+            </div>
+            <div class="icr-step icr-step4">
+              
+                    <i></i>               
+                    <em class="icr-icon4"></em>
+                    <img src="../../images/icr4.png" />
+                    <p>多人会诊<br/>即时交流</p>
+              
+            </div>
+        </div>
+        <a href="" class="icr-btn">立即体验</a>
+    </div>
+</div>
+<script>
+      $(function() {
+        $('.icr-step').hover(
+          function (){
+          $(this).find('em').fadeOut(50).next('img').fadeIn(50);
+          $(this).find('p').animate({top:'+=10px'});
+        },
+          function (){
+          $(this).find('img').fadeOut(100).prev().fadeIn(200);
+          $(this).find('p').animate({top:'-=10px'});
+          })
+        
+      })
+</script>
+
+</div>
+
+ <footer class="clearfix " style="min-width:1200px;">
+      <div class="footer footer980">
+
+          <ul class="footer-info">
+           <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+           <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+           <br>
+      <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+           <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+          </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

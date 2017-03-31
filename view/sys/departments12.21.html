@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/searchbar.js"></script>
+<title>医院列表</title>
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<script type="text/javascript">
+jQuery.fn.limit=function(){  
+    var self = $("[limit]");  
+    self.each(function(){  
+        var objString = $(this).text();  
+        var objLength = $(this).text().length;  
+        var num = $(this).attr("limit");  
+        if(objLength > num){  
+            $(this).attr("title",objString);  
+            objString = $(this).text(objString.substring(0,num) + " ...");  
+        }  
+    })  
+}  
+</script>
+</head>
+
+<body>
+
+<header class="main-header">
+   
+    <div class="top-bg clearfix">
+     <div class="width980">
+      <div class="top-message"><a href=""><i></i><span>您有<em>32</em>条短消息</span></a></div>
+      <div class="top-center">
+        <ul>
+          <li><a href="">你好，患者1</a></li>
+          <li><a href="">帮助中心</a></li>
+          <li><a href="" class="last">退出</a></li>
+        </ul>
+      </div>
+     </div>
+    </div>
+  <div class="width980">
+    <div class="logo-black"><a href="#"></a></div>
+    <div class="hearder-search">
+      <div class="search-select">
+        <p class="search-default"><i></i><span class="select-span">找医生</span></p>
+        <ul class="select-more">
+          <li><a href="#">找医生</a></li>
+          <li><a href="#">找医院</a></li>
+          <li><a href="#">查疾病</a></li>
+        </ul>
+      </div>
+      <input type="text" class="no-border search-input " value="" /><label class="gjc">请输入关键词</label>
+      <input type="button" class="no-border search-whitebtn" value="搜 索" />
+    </div>
+  </div>
+
+</header>
+<nav class="main-nav">
+  <div class="width980">
+  <div class="nav-left">
+    <ul>
+      <li><a href="">找医院</a></li>
+      <li><a href="">找专家</a></li>
+      <li><a href="">按科室查询</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <ul>
+      <li><a href="">诊间预约</a></li>
+      <li><a href="">空中诊室</a></li>
+      <li><a href="">留言咨询</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+
+<div class="new-breadcrumb width980"><span class=""><a href="#" class="bread-fir">首页</a></span> >>
+<span class=""><a href="" class="bread-fir">上海复旦大学附属中山医院</a></span> >>
+<span class="current"><a>骨科</a></span></div>
+
+
+<div class="wid-box department">
+
+    <div class="dep-profile" id="ks-bg">
+      <div class="dep-title"><h1>骨科</h1><a href="#"><h3>复旦大学附属中山医院</h3></a></div>
+
+        <p class="ksjs" limit="132">自1937年中山医院（原孙中山纪念医院）创建伊始就成立了中山医院骨科。科内名家辈出，以治学严谨，诚信奉献享誉社会，在国内首创了多项骨科手术治疗方法。经过近80年几代人的努力，已成为国内集医疗、科研、教育为一体的综合性科室，拥有一支高水平的专业团队，综合水平在国内处自1937年中山医院（原孙中山纪念医院）创建伊始就成立了中山医院骨科。科内名家辈出，以治学严谨，诚信奉献享誉社会，在国内首创了多项骨科手术治疗方法。经过近80年几代人的努力，已成为国内集医疗、科研、教育为一体的综合性科室，拥有一支高水平的专业团队，综合水平在国内处</p>
+        <a href="#" id="more" class="more">更多 >></a>
+        </div>
+
+
+        <div class="dep-totalnum">共 <span> 5 </span> 位医生</div>
+<div class="sdu-block">
+<!-- 标题 -->
+<div class="sdu-title">
+    <div class="sdu-title-left fl">
+        <h2>科室医生 / 擅长</h2>
+    </div>
+    <div class="sdu-title-right fr">
+        <em>院内排班</em>
+        <ul class="sdu-weeks">
+            <li><span>06-17</span><p>周三</p></li>
+            <li><span>06-18</span><p>周四</p></li>
+            <li><span>06-19</span><p>周五</p></li>
+            <li class="weekend"><span>06-20</span><p>周六</p></li>
+            <li class="weekend"><span>06-21</span><p>周日</p></li>
+            <li><span>06-22</span><p>周一</p></li>
+            <li><span>06-23</span><p>周二</p></li>
+        </ul>
+    </div>
+</div>
+<!-- 标题 -->
+
+<!-- 排班内容 -->
+<div class="sdu-item">
+    <div class="sdu-item-left fl">
+     <a href="dochome.html">
+            <img src="http://119.37.196.179:8080/pImage/doctor/217/doc.jpg"  onerror="util.nofind('/images/noUserPhoto.gif',this)"  alt="王建华" class="doc-av"/>
+            <p class="doc-name">王建华</p>
+            <p class="doc-sec"><span>介入科</span> <span>教授</span></p>
+            <p class="doc-sc"  limit="30"><em>擅长：</em>恶性肿瘤的介入治疗和血管及非血管性管腔狭窄的PTA和内支架置放术</p>
+    </a>
+    <input type="button" class="b-green-btn sdu-other-btn" value="视频排班"/><input type="button" class=" b-orange-btn sdu-other-btn" value="诊间排班"/><input type="button" class=" b-lb-btn sdu-other-btn" value="院内排班" style="display:none;" />
+    </div>
+    <div class="sdu-item-right">
+<!-- 
+        <ul class="sdu-schedu">
+            <li class="yn-sdu"><span class="current">院内排班</span></li>
+            <li class="sp-sdu"><span>视频排班</span></li>
+            <li class="zj-sdu "><span>诊间排班</span></li>
+        </ul> -->
+            <div class="sdu-3 sdu-yn">
+              <dl>
+                <dt class="sche-am">上午</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li><a href="hpnum.html" onmouseover="javascript:show(this,'sdu-info');" onmouseout="hide(this,'sdu-info')" class="yy"><p><em>5</em>/8</p><p>预约</p></a></li>
+                  <li><a href="hpnum.html" onmouseover="javascript:show(this,'sdu-info');" onmouseout="hide(this,'sdu-info')"  class="yy"><p><em>5</em>/8</p><p>预约</p></a></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="sche-pm">下午</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li><a href="#" class="yy sdu-full"><p><em>0</em>/8</p><p>已满</p></a></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>
+
+            </div>
+            <div class="sdu-3 sdu-sp" style="display:none;">
+              <dl>
+                <dt class="sche-am">上午</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li><a href="hpnum.html" class="yy"><p><em>5</em>/8</p><p>预约</p></a></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="sche-pm">下午</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li><a href="#" onmouseover="javascript:show(this,'sdu-info');" onmouseout="hide(this,'sdu-info')"  class="yy sdu-full"><p><em>0</em>/8</p><p>已满</p></a></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl class="last">
+               <dt class="sche-nt">晚上</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>   
+            </div>
+            <div class="sdu-3 sdu-zj" style="display:none;">
+              <dl>
+                <dt class="sche-am">上午</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="sche-pm">下午</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl class="last">
+               <dt class="sche-nt">晚上</dt>
+                <dd>
+                  <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+    </div>
+</div>
+
+
+
+
+<!-- 排班内容 -->
+   <div class="sdu-pages clearfix">
+    <div class="sdu-pages-right">
+      <span class="page-detail">共<em>4</em>页</span>
+      <span>跳至第<input type="text" id="paginationCPage" name="currentPage" value="1" class="page-to"/> 页</span>
+      <button type="submit"  class="page-go" onclick = "gotoPageByForm()">GO</button>
+    </div>
+    <div class="sdu-pages-center">
+    <a href='#' class="pageimg page-first unable" onclick="gotoPageP(1);">首页</a>
+    <a href='#' class="pageimg page-prev"  onclick="gotoPageP(0)"  >上一页</a>
+                                                                
+    <a href='#'class="page-num current">1</a>                                      
+    <a href='#' class="page-num" onclick="gotoPageP(2)">2</a>
+    <a href='#' class="page-num" onclick="gotoPageP(3)">3</a>
+    <a href='#' class="page-num" onclick="gotoPageP(4)">4</a>
+                        
+    <a href="#" class="pageimg page-next"  onclick="gotoPageP(2)" > 下一页</a>
+    <a href="#" class="pageimg page-last" onclick="gotoPageP(4)">尾页</a>
+    </div>
+
+   </div>
+</div>
+
+
+<script type="text/javascript">
+  $(function(){ 
+
+    // 表格标签切换
+    $(".sdu-item-right li").hover(function(){ 
+        var $sdu3 = $(this).parent().nextAll(".sdu-3");
+        var $span = $(this).children();
+
+            $(this).children().addClass("current");
+            $(this).siblings().children().removeClass("current");
+            $sdu3.eq($(this).index()).css("display","block").siblings(".sdu-3").css("display","none"); 
+        }) 
+})
+  // 鼠标悬停
+	function show(obj,id) { 
+
+	    var objDiv = $("#"+id+"");
+	    $(objDiv).css("display","block");
+	    $(objDiv).css("left", event.clientX + 20);
+	    $(objDiv).css("top", event.clientY );  
+	}
+
+	function hide(obj,id) {
+
+	    var objDiv = $("#"+id+"");
+	    $(objDiv).css("display", "none");
+
+	} 
+</script>
+   
+
+ </div>
+ 
+<div class="sdu-info" id="sdu-info" style="display:none;">
+<i></i>
+  <ul>
+    <li><label>看诊时间：</label><span>13:00~17:00</span></li>
+    <li><label>已预约：</label><span>5</span>人</li>
+    <li><label>总号数：</label><span>8</span></li>
+    <li><label>价格：</label>￥ <span>30.00</span></li>
+  </ul>
+</div>
+  <footer class="clearfix">
+      <div class="footer footer980">
+      <ul class="footer-dimcode">
+        <li><img src="../../images/2code.png" alt="" title="扫描下载app" ></li>
+        <li style="color:#ff9000;">扫描下载安卓版APP (不支持微信)</li>
+      </ul>
+          <ul class="footer-info">
+           <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+           <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+           <br>
+      <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+           <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+          </ul>
+    </div>
+  </footer>
+
+<script type="text/javascript">
+$(function(){  
+    $("[limit]").limit();  
+})  
+</script>
+</body>
+</html>

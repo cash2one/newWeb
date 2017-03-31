@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script> 
+    <title>医院首页</title>
+<title>医院列表</title>
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<script type="text/javascript">
+jQuery.fn.limit=function(){  
+    var self = $("[limit]");  
+    self.each(function(){  
+        var objString = $(this).text();  
+        var objLength = $(this).text().length;  
+        var num = $(this).attr("limit");  
+        if(objLength > num){  
+            $(this).attr("title",objString);  
+            objString = $(this).text(objString.substring(0,num) + " ...");  
+        }  
+    })  
+}  
+</script>
+
+</head>
+
+<body class="bybg">
+
+
+<header class="main-header">
+   
+    <div class="top-bg clearfix">
+     <div class="width980">
+      <div class="top-message"><a href=""><i></i><span>您有<em>32</em>条短消息</span></a></div>
+      <div class="top-center">
+        <ul>
+          <li><a href="">你好，患者1</a></li>
+          <li><a href="">帮助中心</a></li>
+          <li><a href="" class="last">退出</a></li>
+        </ul>
+      </div>
+     </div>
+    </div>
+  <div class="width980">
+    <div class="logo-black"><a href="#"></a></div>
+    <div class="hearder-search">
+      <div class="search-select">
+        <p class="search-default"><i></i><span class="select-span">找医生</span></p>
+        <ul class="select-more">
+          <li><a href="#">找医生</a></li>
+          <li><a href="#">找医院</a></li>
+          <li><a href="#">查疾病</a></li>
+        </ul>
+      </div>
+      <input type="text" class="no-border search-input " value="" /><label class="gjc">请输入关键词</label>
+      <input type="button" class="no-border search-whitebtn" value="搜 索" />
+    </div>
+  </div>
+
+</header>
+<nav class="main-nav">
+  <div class="width980">
+  <div class="nav-left">
+    <ul>
+      <li><a href="">找医院</a></li>
+      <li><a href="">找专家</a></li>
+      <li><a href="">按科室查询</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <ul>
+      <li><a href="">诊间预约</a></li>
+      <li><a href="">空中诊室</a></li>
+      <li><a href="">留言咨询</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+
+<div class="new-breadcrumb width980"><span class=""><a href="#" class="bread-fir">首页</a></span> >>
+<span class="current"><a>医生搜索结果</a></span></div>
+
+<div class="wid-box">
+	        <div class="our-docs search-docs">
+		            <ul class="clearfix">
+		              <li><a href="dochome.html">
+		                  <img src="../../images/user.jpg" alt="魏乐勋" class="doc-av"/>
+		                  <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+		                  <p class="doc-hp">上海复旦大学附属中山医院</p>
+		                  <p class="doc-ks">影像科 </p>
+		                  <p class="doc-sc"  limit="30"><em>擅长:</em>CT、核磁共振影像诊断，特别是神经系统、呼吸系统</p>
+		                </a></li>
+		              <li><a href="#">
+		                  <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+		                    <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师,副教授</span></p>
+		                  <p class="doc-hp">上海复旦大学附属中山医院</p>
+		                  <p class="doc-ks">影像科 </p>
+		                  <p class="doc-sc"  limit="30"><em>擅长:</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+		                </a></li>
+		              <li><a href="#">
+		                  <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+		                  <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+		                  <p class="doc-hp">上海复旦大学附属中山医院</p>
+		                  <p class="doc-ks">影像科 </p>
+		                  <p class="doc-sc" limit="30"><em>擅长:</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+		                </a></li>
+                    </ul>
+                  <ul class="clearfix">
+		              <li><a href="#">
+		                  <img src="../../images/user.jpg" alt="魏乐勋" class="doc-av"/>
+		                     <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+		                     <p class="doc-hp">上海复旦大学附属中山医院</p>
+		                     <p class="doc-ks">影像科 </p>
+		                     <p class="doc-sc" limit="30"><em>擅长:</em>CT、核磁共振影像诊断，特别是神经系统、呼吸系统</p>
+		                </a></li>
+		              <li><a href="#">
+		                  <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+		                  <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+		                  <p class="doc-hp">上海复旦大学附属中山医院</p>
+		                  <p class="doc-ks">影像科 </p>
+		                  <p class="doc-sc" limit="30"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+		                </a></li>
+		              <li><a href="#">
+		                  <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+		                  <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+		                  <p class="doc-hp">上海复旦大学附属中山医院</p>
+		                  <p class="doc-ks">影像科 </p>
+		                  <p class="doc-sc" limit="30"><em>擅长:</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+		                </a></li>
+                 </ul>
+                    <ul class="clearfix">
+                  <li><a href="dochome.html">
+                      <img src="../../images/user.jpg" alt="魏乐勋" class="doc-av"/>
+                      <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                      <p class="doc-hp">上海复旦大学附属中山医院</p>
+                      <p class="doc-ks">影像科 </p>
+                      <p class="doc-sc"><em>擅长:</em>CT、核磁共振影像诊断，特别是神经系统、呼吸系统</p>
+                    </a></li>
+                  <li><a href="#">
+                      <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+                        <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师,副教授</span></p>
+                      <p class="doc-hp">上海复旦大学附属中山医院</p>
+                      <p class="doc-ks">影像科 </p>
+                      <p class="doc-sc" limit="30"><em>擅长:</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                    </a></li>
+                  <li><a href="#">
+                      <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+                      <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                      <p class="doc-hp">上海复旦大学附属中山医院</p>
+                      <p class="doc-ks">影像科 </p>
+                      <p class="doc-sc" limit="30"><em>擅长:</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                    </a></li>
+                    </ul>
+                     <ul class="clearfix">
+                  <li><a href="#">
+                      <img src="../../images/user.jpg" alt="魏乐勋" class="doc-av"/>
+                         <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                         <p class="doc-hp">上海复旦大学附属中山医院</p>
+                         <p class="doc-ks">影像科 </p>
+                         <p class="doc-sc" limit="30"><em>擅长:</em>CT、核磁共振影像诊断，特别是神经系统、呼吸系统</p>
+                    </a></li>
+                  <li><a href="#">
+                      <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+                      <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                      <p class="doc-hp">上海复旦大学附属中山医院</p>
+                      <p class="doc-ks">影像科 </p>
+                      <p class="doc-sc" limit="30"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                    </a></li>
+                  <li><a href="#">
+                      <img src="../../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+                      <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                      <p class="doc-hp">上海复旦大学附属中山医院</p>
+                      <p class="doc-ks">影像科 </p>
+                      <p class="doc-sc" limit="30"><em>擅长:</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                    </a></li>
+		            </ul>
+		        </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+  $(function(){ 
+    $(".hp-tag li").hover( 
+        function(){ 
+            $(this).addClass("current").siblings().removeClass("current"); 
+            $("section").eq($(".hp-tag li").index(this)).css("display","block").siblings("section").css("display","none"); 
+        }) 
+}) 
+</script>
+
+
+</div>
+
+  <footer class="clearfix">
+      <div class="footer footer980">
+      <ul class="footer-dimcode">
+        <li><img src="../../images/2code.png" alt="" title="扫描下载app" ></li>
+        <li style="color:#ff9000;">扫描下载安卓版APP (不支持微信)</li>
+      </ul>
+          <ul class="footer-info">
+           <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+           <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+           <br>
+      <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+           <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+          </ul>
+    </div>
+  </footer>
+</body>
+ 
+</html>

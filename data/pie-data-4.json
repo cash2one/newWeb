@@ -1,0 +1,106 @@
+{
+	"JSChart" : {
+		"datasets" : [
+			{
+				"type" : "pie",
+				"data" : [
+					{
+						"unit" : "书写未审核",
+						"value" : "61"
+					},
+					{
+						"unit" : "修订",
+						"value" : "54"
+					},
+					{
+						"unit" : "无报告",
+						"value" : "11"
+					},
+					{
+						"unit" : "审核",
+						"value" : "72"
+					}
+				]
+			}
+		],
+		"colorset" : [
+
+			"#ACCC37",
+			"#D6E071",
+			"#E3E6A6",
+			"#F3F0D0"
+		],
+	  "optionset" : [
+		{
+		  "set" : "setTitleColor",
+		  "value" : "'#857D7D'"
+		},
+		{
+		  "set" : "setPieUnitsColor",
+		  "value" : "'#9B9B9B'"
+		},
+		{
+		  "set" : "setPieValuesColor",
+		  "value" : "'#6A0000'"
+		},
+		{
+		  "set" : "setPieValuesColor",
+		  "value" : "'#6A0000'"
+		},
+		{
+		  "set": "setLegendShow",
+		  "value": "true"
+		},
+		{
+		  "set": "setLegend",
+		  "value": "'#ACCC37', '书写未审核'"
+		},
+		{
+		  "set": "setLegend",
+		  "value": "'#D6E071', '修订'"
+		},
+		{
+		  "set": "setTitle",
+		  "value": "'报告完成'"
+		},
+		{
+		  "set": "setTitleColor",
+		  "value": "'#000'"
+		},
+		{
+		  "set": "setTitleFontSize",
+		  "value": "16"
+		},
+		{
+		  "set": "setTextPaddingTop",
+		  "value": "0"
+		},
+		{
+		  "set": "setLegend",
+		  "value": "'#E3E6A6', '无报告'"
+		},
+
+		{
+		  "set": "setLegend",
+		  "value": "'#F3F0D0', '审核'"
+		},
+
+		{
+		  "set": "setLegendPosition",
+		  "value": "'bottom center'"
+		},
+		{
+		  "set": "setSize",
+		  "value": "499,252"
+		},
+		{
+		  "set" : "setFontFamily",
+		  "value" : "'Microsoft YaHei'"
+		},
+		{
+		  "set": "setPieRadius",
+		  "value": "77"
+		}
+	  ]
+	}
+}

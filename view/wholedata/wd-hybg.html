@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>化验报告</title>
+    <link rel="stylesheet" href="../../css/wdcq.css?v=upd20160919"/>
+</head>
+<body>
+    <div class="warp">
+        <div class="bg-table-head hybg-head clearfix">
+            <i class="icon icon-open fl"></i>
+            <span>肿瘤标志物</span>
+            <span>化验日期：<b>2016-6-6</b></span>
+            <span>报告日期：<b>2016-6-6</b></span>
+            <div class="fr"><b class="icon icon-important"></b>异常<b>2</b></div>
+        </div>
+        <table class="bg-table">
+            <thead>
+                <tr>
+                    <th width="40%">项目名称</th>
+                    <th width="40%">化验结果</th>
+                    <th width="10%">单位</th>
+                    <th width="10%">参考范围</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-up">
+                    <td><span class="bg-pro-name">鳞癌相关抗原</span><a href="#" class="bg-contrast">比</a></td>
+                    <td>1.9 <b>↑</b></td>
+                    <td>ng/mL</td>
+                    <td>0-1.50</td>
+                </tr>
+                <tr class="bg-down">
+                    <td><span class="bg-pro-name">鳞癌相关抗原</span><a href="#" class="bg-contrast">比</a></td>
+                    <td>1.3 <b>↓</b></td>
+                    <td>ng/mL</td>
+                    <td>0-1.50</td>
+                </tr>
+                <tr>
+                    <td>钙素原</td>
+                    <td>1.4 <b></b></td>
+                    <td>ng/mL</td>
+                    <td>0-1.50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="contrast-marsk" class="contrast-marsk">
+        <div class="contrast-marsk-show ">
+            <div class="contrast-marsk-close clearfix">
+                <span>鳞癌相关抗原</span>
+                <a href="javascript:;">关闭</a>
+            </div>
+            <table class="base-table">
+                <thead>
+                <tr>
+                    <th width="33%">项目名称</th>
+                    <th width="33%">化验时间</th>
+                    <th width="33%">检验结果</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>鳞癌相关抗原</td>
+                    <td>2016-9-9</td>
+                    <td>32.90</td>
+                </tr>
+                <tr>
+                    <td>鳞癌相关抗原</td>
+                    <td>2016-9-9</td>
+                    <td>32.90</td>
+                </tr>
+                <tr>
+                    <td>鳞癌相关抗原</td>
+                    <td>2016-9-9</td>
+                    <td>32.90</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+
+</body>
+<script>
+    $(function(){
+        $(".bg-table-head").click(function(){
+            if($(this).next("table").is(":hidden")){
+//                alert("隐藏")
+                $(this).next("table").fadeIn("1000");
+                $(this).find("i").removeClass("icon-close").addClass("icon-open")
+            }else{
+//                alert("显示")
+                $(this).next("table").fadeOut("1000");
+                $(this).find("i").removeClass("icon-open").addClass("icon-close")
+            }
+        })
+    })
+</script>
+<script type='text/javascript'>
+    (function($){
+        $(window).load(function(){
+            $(".bg-contrast").click(function(){
+                $("#contrast-marsk").show();
+            })
+            $(".contrast-marsk-close a").click(function(){
+                $("#contrast-marsk").hide();
+            })
+        });
+    })(jQuery);
+</script>
+</html>

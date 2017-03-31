@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/themes.css?v=upd20160307" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<header class="jx-header">
+	<div class="m-width">
+	      <div class="login-ent">
+             <a href="#" ><span>登 陆</span></a>
+             <a href="#" class="current"><span>注 册</span></a>
+           </div>
+          <a href="#" class="logo"><span><img class="jx-logo-img" src="../../images/themes/logo_jx.png"></span></a>
+
+ 	</div>
+</header>
+
+<!-- content开始-->
+<article>
+	<section class="jx-banner"></section>
+	<div class="jx-tabs clearfix">
+		<div class="jx-warp">
+			<div class="jx-tab tabs-nanchang jx-tabs-on">
+				<a id="nanchang" href="javaScript:void(0);">南昌</a>
+			</div>
+			<div class="jx-tab tabs-ganzhou">
+				<a id="ganzhou" href="javaScript:void(0);">赣州</a>
+			</div>
+		</div>
+	</div>
+	<div class="jx-block">
+		<div class="nanchang">
+			<div class="jx-hospital">
+				<div class="jx-area">
+					<ul class="clearfix">
+						<li><a href=""><span class="jx-logo1"></span>南昌大学第一附属医院</a></li>
+						<li><a href=""><span class="jx-logo2"></span>南昌大学第二附属医院</a></li>
+						<li><a href=""><span class="jx-logo3"></span>江西省胸科医院</a></li>
+						<li><a href=""><span class="jx-logo4"></span>解放军第九四医院</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="ganzhou">
+			<h3>赣州全区已覆盖影像云系统</h3>
+			<div class="ganzhou-img"></div>
+		</div>
+	</div>
+ 
+
+</article>
+<!-- content结束 -->
+
+<footer class="clearfix">
+  <section class="m-width">
+	<div class="footer-links footer-center ">
+		<ul class="footer-type">
+			<h5>医疗机构 |</h5>
+			<h5><br/></h5>
+			<h5>技术支持 |</h5>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">南昌大学第一附属医院</a></li>
+			<li><a href="" alt="">南昌大学第二附属医院</a></li>
+			<li><a href="" alt="">江西省胸科医院</a></li>
+			<li><a href="" alt="">解放军第九四医院</a></li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;<br/></li>
+			<li>&nbsp;<br/></li>
+		</ul>
+		<ul class="footer-org">
+			<li><a href="" alt="">全球影像网</a></li>
+		</ul>
+		<p>杭州联众医疗科技有限公司  Copyright @ Hangzhou Lianzhong Healthcare Technology Co. Ltd</p>
+	</div>
+  </section>
+</footer>
+
+</body>
+<script>
+	$(function(){
+		$(".jx-tab a").click(function(){
+			var id = $(this).attr("id");
+			$(this).parent().addClass("jx-tabs-on");
+			$(this).parent().siblings().removeClass("jx-tabs-on");
+			$("."+id).show();
+			$("."+id).siblings().hide();
+		});
+	});
+</script>
+</html>

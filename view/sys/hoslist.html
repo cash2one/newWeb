@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../../images/favicon.ico">
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="../../js/searchbar.js"></script>
+<title>医院列表</title>
+
+</head>
+
+<body>
+<header class="main-header">
+   
+    <div class="top-bg clearfix">
+     <div class="width980">
+      <div class="top-message"><a href=""><i></i><span>您有<em>32</em>条短消息</span></a></div>
+      <div class="top-center">
+        <ul>
+          <li><a href="">你好，患者1</a></li>
+          <li><a href="">帮助中心</a></li>
+          <li><a href="" class="last">退出</a></li>
+        </ul>
+      </div>
+     </div>
+    </div>
+  <div class="width980">
+    <div class="logo-black"><a href="#"></a></div>
+    <div class="hearder-search">
+      <div class="search-select">
+        <p class="search-default"><i></i><span class="select-span">找医生</span></p>
+        <ul class="select-more">
+          <li><a href="#">找医生</a></li>
+          <li><a href="#">找医院</a></li>
+          <li><a href="#">查疾病</a></li>
+        </ul>
+      </div>
+      <input type="text" class="no-border search-input " value="" /><label class="gjc">请输入关键词</label>
+      <input type="button" class="no-border search-whitebtn" value="搜 索" />
+    </div>
+  </div>
+
+</header>
+<nav class="main-nav">
+  <div class="width980">
+  <div class="nav-left">
+    <ul>
+      <li><a href="">找医院</a></li>
+      <li><a href="">找专家</a></li>
+      <li><a href="">按科室查询</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <ul>
+      <li><a href="">诊间预约</a></li>
+      <li><a href="">空中诊室</a></li>
+      <li><a href="">留言咨询</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+
+<div class="new-breadcrumb width980"><span class=""><a href="#" class="bread-fir">首页</a></span> >>
+<span class="current"><a>全部医院</a></span></div>
+
+ <div class="wid-box list">
+ <div class="clearfix">
+  <div class="all-hos-lf">
+   <h2>地区</h2>
+   <div class="all-hos-lf-box">
+    <div class="tit">北京
+    <ul class="all-hos-dq" >
+     <li><a href="#">朝
+     阳</a></li>
+     <li><a href="#">海淀</a></li>
+     <li><a href="#">西城</a></li>
+     <li><a href="#">东城</a></li>
+     <li><a href="#">丰台</a></li>
+     <li><a href="#">石景山</a></li>
+     <li><a href="#">通州</a></li>
+     <li><a href="#">大兴</a></li>
+     <li><a href="#">昌平</a></li>
+     <li><a href="#">西城</a></li>
+     <li><a href="#">东城</a></li>
+     <li><a href="#">丰台</a></li>
+     <li><a href="#">石景山</a></li>
+     <li><a href="#">通州</a></li>
+     <li><a href="#">大兴</a></li>
+     <li><a href="#">昌平</a></li>
+    </ul>
+    </div>
+    <div class="tit">上海
+    <ul class="all-hos-dq">
+     <li><a href="#">朝阳</a></li>
+     </ul>
+    </div>
+    <div class="tit">浙江
+    <ul class="all-hos-dq">
+     <li><a href="#">杭州</a></li>
+     </ul>
+    </div>
+   </div>
+
+  </div>
+<script type="text/javascript">
+ $(function() {
+  $('.tit').click(
+    function(){ 
+      $(this).children('ul').slideDown();
+      $(this).siblings().children().slideUp().parent('.tit');
+    })
+ });
+</script>
+
+  <div class="all-hos-rg">
+  <div class="bigtit">
+   朝阳
+  </div>
+  <div class="showmain">
+   <ul>
+    <li><a href="#">中日友好医院<span> (三甲, 特色:综合)</span></a></li> 
+<li><a href="#">安贞医院 <span> (三甲, 特色:心血管)</span> </a></li>
+<li><a href="#">北京朝阳医院 <span> (三甲, 特色:呼吸) </span></a></li>
+<li><a href="#">306医院 <span> (三甲)</span> </a></li>
+<li><a href="#">医科院肿瘤医院 <span> (三甲, 特色:肿瘤)</span></a></li> 
+<li><a href="#">北京妇产医院 <span> (三甲, 特色:妇产)</span> </a></li>
+<li><a href="#">煤炭总医院 <span> (三级) </span></a></li>
+<li><a href="#">清华大学一附院 <span> (三级, 特色:心血管)</span></a></li> 
+<li><a href="#">儿研所 <span> (三甲, 特色:儿童)</span> </a></li>
+<li><a href="#">望京医院 <span> (三甲, 特色:中医) </span></a></li>
+<li><a href="#">北京地坛医院 <span> (三甲, 特色:传染)</span> </a></li>
+<li><a href="#">航空总医院 <span> (三级)</span> </a></li>
+<li><a href="#">朝阳区第三医院 <span> (二级) </span></a></li>
+ <li><a href="#">中日友好医院<span> (三甲, 特色:综合)</span></a></li> 
+<li><a href="#">安贞医院 <span> (三甲, 特色:心血管)</span> </a></li>
+<li><a href="#">北京朝阳医院 <span> (三甲, 特色:呼吸) </span></a></li>
+<li><a href="#">306医院 <span> (三甲)</span> </a></li>
+<li><a href="#">医科院肿瘤医院 <span> (三甲, 特色:肿瘤)</span></a></li> 
+<li><a href="#">北京妇产医院 <span> (三甲, 特色:妇产)</span> </a></li>
+<li><a href="#">煤炭总医院 <span> (三级) </span></a></li>
+<li><a href="#">清华大学一附院 <span> (三级, 特色:心血管)</span></a></li> 
+<li><a href="#">儿研所 <span> (三甲, 特色:儿童)</span> </a></li>
+<li><a href="#">望京医院 <span> (三甲, 特色:中医) </span></a></li>
+<li><a href="#">北京地坛医院 <span> (三甲, 特色:传染)</span> </a></li>
+<li><a href="#">航空总医院 <span> (三级)</span> </a></li>
+<li><a href="#">朝阳区第三医院 <span> (二级) </span></a></li>
+</a></li>
+   </ul>
+
+  </div>
+  </div>
+ </div>
+ </div>
+</div>
+
+
+  <footer class="clearfix">
+      <div class="footer footer980">
+      <ul class="footer-dimcode">
+        <li><img src="../../images/2code.png" alt="" title="扫描下载app" ></li>
+        <li style="color:#ff9000;">扫描下载安卓版APP (不支持微信)</li>
+      </ul>
+          <ul class="footer-info">
+           <p>客服电话：400-0571-574   &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; ICP证  浙B-20140372 浙ICP备11059294号-3 </p>
+           <p>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+           <br>
+      <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</p>
+           <p style="font-size:11px;color:#b3b3b3;">请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+          </ul>
+    </div>
+  </footer>
+
+
+  </body>
+</html>

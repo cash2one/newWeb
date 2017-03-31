@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微生物报告</title>
+    <link rel="stylesheet" href="../../css/wdcq.css?v=upd20160919"/>
+</head>
+<body>
+    <div class="warp">
+        <div class="bg-table-head wswbg-head clearfix">
+            <div class="jcbg-type">痰</div>
+            <i class="icon icon-open fl"></i>
+            <span>真菌培养；真菌测试</span>
+            <span>报告日期：<b>2016-6-6 09:22</b></span>
+        </div>
+        <div class="wswbg-show">
+            <h3 class="strong">肿瘤标志物</h3>
+            <p>双侧动脉结构正常双侧动脉结构正常双侧动脉结构正常双侧动脉结构正常双侧动脉结构正常双侧动脉结构正常</p>
+        </div>
+
+        <div class="bg-table-head wswbg-head clearfix">
+            <div class="wswbg-type">痰</div>
+            <i class="icon icon-open fl"></i>
+            <span>普通培养+鉴定</span>
+            <span>报告日期：<b>2016-6-6 09:22</b></span>
+        </div>
+        <div class="wswbg-show">
+            <div class="wswbg-inline-3 clearfix">
+                <div>是否使用过抗生素治疗： <span>y</span>;</div>
+                <div>临床的初步诊断或症状： <span>肺炎</span>；</div>
+                <div>标本种类： <span>痰</span>；</div>
+            </div>
+            <div class="wswbg-info clearfix">
+                <div>贴质沙雷菌</div>
+                <div class="wswbg-red"><span>2+</span></div>
+                <div class="wswbg-info-table-box">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th width="30%">药品名称</th>
+                            <th width="20%">耐药结果</th>
+                            <th width="25%">极限值上限</th>
+                            <th width="25%">极限值下限</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="../../js/jquery-1.9.1.min.js"></script>
+
+<script>
+    $(function(){
+        $(".bg-table-head").click(function(){
+            if($(this).next().is(":hidden")){
+//                alert("隐藏")
+                $(this).next().fadeIn("1000");
+                $(this).find("i").removeClass("icon-close").addClass("icon-open")
+            }else{
+//                alert("显示")
+                $(this).next().fadeOut("1000");
+                $(this).find("i").removeClass("icon-open").addClass("icon-close")
+            }
+        })
+    })
+    (function($){
+        $(window).load(function(){
+
+        });
+    })(jQuery);
+</script>
+</html>

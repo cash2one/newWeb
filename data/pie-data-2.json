@@ -1,0 +1,133 @@
+{
+  "JSChart" : {
+	"datasets" : [
+	  {
+		"type" : "pie",
+		"data" : [
+		  {
+			"unit" : "检查部位1",
+			"value" : "54"
+		  },
+		  {
+			"unit" : "检查部位2",
+			"value" : "40"
+		  },
+		  {
+			"unit" : "检查部位3",
+			"value" : "20"
+		  },
+		  {
+			"unit" : "检查部位4",
+			"value" : "12"
+		  },
+		  {
+			"unit" : "检查部位5",
+			"value" : "10"
+		  },
+		  {
+			"unit" : "检查部位6",
+			"value" : "4"
+		  },
+		  {
+			"unit" : "检查部位7",
+			"value" : "18"
+		  }
+		]
+	  }
+	],
+	"colorset" : [
+
+	  "#0078CB",
+	  "#0084CF",
+	  "#0097D7",
+	  "#00A9DC",
+	  "#47B8E1",
+	  "#B7DCEA",
+	  "#C7E6ED"
+
+	],
+	"optionset" : [
+	  {
+		"set" : "setTitleColor",
+		"value" : "'#857D7D'"
+	  },
+	  {
+		"set" : "setPieUnitsColor",
+		"value" : "'#9B9B9B'"
+	  },
+	  {
+		"set" : "setPieValuesColor",
+		"value" : "'#6A0000'"
+	  },
+	  {
+		"set" : "setPieValuesColor",
+		"value" : "'#6A0000'"
+	  },
+	  {
+		"set": "setLegendShow",
+		"value": "true"
+	  },
+	  {
+		"set": "setTitle",
+		"value": "'检查部位'"
+	  },
+	  {
+		"set": "setTitleColor",
+		"value": "'#000'"
+	  },
+	  {
+		"set": "setTitleFontSize",
+		"value": "16"
+	  },
+	  {
+		"set": "setTextPaddingTop",
+		"value": "0"
+	  },
+	  {
+		"set": "setLegendPosition",
+		"value": "'bottom center'"
+	  },
+	  {
+		"set": "setSize",
+		"value": "499,252"
+	  },
+	  {
+		"set" : "setFontFamily",
+		"value" : "'Microsoft YaHei'"
+	  },
+	  {
+		"set": "setLegend",
+		"value": "'#0078CB', '检查部位1'"
+	  },
+	  {
+		"set": "setLegend",
+		"value": "'#0084CF', '检查部位2'"
+	  },
+	  {
+		"set": "setLegend",
+		"value": "'#0097D7', '检查部位3'"
+	  },
+
+	  {
+		"set": "setLegend",
+		"value": "'#00A9DC', '检查部位4'"
+	  },
+	  {
+		"set": "setLegend",
+		"value": "'#47B8E1', '检查部位5'"
+	  },
+	  {
+		"set": "setLegend",
+		"value": "'#B7DCEA', '检查部位6'"
+	  },
+	  {
+		"set": "setLegend",
+		"value": "'#C7E6ED', '检查部位7'"
+	  },
+	  {
+		"set": "setPieRadius",
+		"value": "77"
+	  }
+	]
+  }
+}

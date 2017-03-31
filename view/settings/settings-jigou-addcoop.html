@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20161010" rel="stylesheet" type="text/css"/>
+    <link href="../../css/settings.css?v=upd20161103" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <link rel="icon" href="../../js/layer/skin/layer.css">
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div class="pacs-body">
+    <div class="header pacs-settings-header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pacs-warp settings-box">
+        <h4 class="bread-settings">
+            <span><a href="pacs.html">云PACS</a> >><a href="settings-jigou-jgtkgl.html">机构条款管理</a> >><b style="color:#898989;">新建合作</b></span>
+        </h4>
+        <div class="settings-left">
+            <div class="pacs-settings-left settings-left-content">
+                <p><a href="settings-jigou-qyzjgl.html">签约专家管理</a></p>
+
+                <p class="settings-on settings-click"><a href="settings-jigou-jgtkgl.html">机构条款管理</a></p>
+
+                <p><a href="settings-jigou-bggwgl.html">报告岗位管理</a></p>
+
+                <p><a href="settings-jigou-bgqxgl.html">报告权限管理</a></p>
+
+                <p><a href="settings-jigou-sz.html">历史影像回溯配置</a></p>
+
+                <p><a href="settings-jigou-ysgl.html">医生管理</a></p>
+
+                <p><a href="settings-jigou-xxsz.html">信息设置</a></p>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="settings-right  pacs-settings-right">
+            <div style="display: block;" class="settings-right-content pacs-settings-right">
+                <div class="jigou-content">
+                    <form id="form1" action="/coop/inviteCoopHos.htm" onkeydown="if(event.keyCode==13) return false;" autocomplete="off">
+                        <div class="new-coo">
+                            <div class="coo-config-tit clearfix">
+                                <h3>当前全球影像平台分配比例：<em>20.0%</em></h3>
+                                <input type="button" class="navy-btn" value="申请修改比例" style="display:none"/></div>
+                            <div class="coo-step coo-config-hos">
+                                <h3>1 .选择医疗机构</h3>
+                                <div class="config-searchbar">
+                                    <input name="searchHosName" type="text" class="blue-input text" placeholder="请输入关键字">
+                                    <input type="button" value="查询" class="magnifier" onclick="searchHos();">
+                                </div>
+                                <div class="config-search-resault" id="hosList">
+                                    <ul class="clearfix">
+                                        <li>上海xxx医院</li>
+                                        <li>上海xxx医院</li>
+                                        <li>上海xxx医院</li>
+                                        <li>上海xxx医院</li>
+                                        <li>上海xxx医院</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="coo-step coo-config-work" id="selectType" style="display:none">
+                                <h3>2.选择支持业务</h3>
+                                <ul>
+                                    <li>
+                                        <label>提供业务：</label>
+                                        <span><input type="radio" name="cooperationType" value="0" onclick="showSelectModality()">远程报告</span>
+                                        <span><input type="radio" name="cooperationType" value="1" onclick="showSelectModality()">远程会诊</span>
+                                        <span><input type="radio" name="cooperationType" value="2" onclick="showSelectModality()">双向转诊</span>
+                                    </li>
+                                    <li id="modalityDiv" style="display:none">
+                                        <label>影像过滤：<span><input type="checkbox" id="chkChooseAll" >全选</span></label>
+                                        <span><input type="checkbox" id="modality_DR" name="modality" value="DR" onclick="showModalityList('DR')">DR</span>
+                                        <span><input type="checkbox" id="modality_CR" name="modality" value="CR" onclick="showModalityList('CR')">CR</span>
+                                        <span><input type="checkbox" id="modality_DX" name="modality" value="DX" onclick="showModalityList('DX')">DX</span>
+                                        <span><input type="checkbox" id="modality_SC" name="modality" value="SC" onclick="showModalityList('SC')"/>SC</span>
+                                        <span><input type="checkbox" id="modality_CT" name="modality" value="CT" onclick="showModalityList('CT')"/>CT</span>
+                                        <span><input type="checkbox" id="modality_US" name="modality" value="US" onclick="showModalityList('US')"/>US</span>
+                                        <span><input type="checkbox" id="modality_MG" name="modality" value="MG" onclick="showModalityList('MG')"/>MG</span>
+                                        <span><input type="checkbox" id="modality_MR" name="modality" value="MR" onclick="showModalityList('MR')"/>MR</span>
+                                        <span><input type="checkbox" id="modality_NM" name="modality" value="NM" onclick="showModalityList('NM')"/>NM</span>
+                                        <span><input type="checkbox" id="modality_PT" name="modality" value="PT" onclick="showModalityList('PT')"/>PT</span>
+                                        <span><input type="checkbox" id="modality_XA" name="modality" value="XA" onclick="showModalityList('XA')"/>XA</span>
+                                        <span><input type="checkbox" id="modality_RF" name="modality" value="RF" onclick="showModalityList('RF')"/>RF</span>
+                                        <span><input type="checkbox" id="modality_SR" name="modality" value="SR" onclick="showModalityList('SR')"/>SR</span>
+                                        <span><input type="checkbox" id="modality_OT" name="modality" value="OT" onclick="showModalityList('OT')"/>OT</span>
+                                    </li>
+                                    <li id="autoFlagDiv" style="display:none">
+                                        <label>是否自动申请书写报告：</label>
+                                        <span><input type="radio" name="autoFlag" id="autoFlagOk" value="1" checked onclick="changeAutoFlag(1)">是</span>
+                                        <span><input type="radio" name="autoFlag" id="autoFlagNo" value="0" onclick="changeAutoFlag(0)">否</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="coo-step coo-config-price" id="selectPayType" style="display:none">
+                                <h3>3.价格设置</h3>
+                                <div class="config-price">
+                                    <label>交易方式：</label>
+                                    <select name="payType" onchange="changePayType()">
+                                        <option value="1">线下支付</option>
+                                        <option value="2">线上支付</option>
+                                    </select>
+                                    <!-- <input type="button" class="price-add coo-price-change"/> -->
+                                </div>
+
+                                <table class="price-setting" width="90%" id="priceDiv" style="display:none;">
+                                    <thead>
+                                    <tr>
+                                        <th>检查类型</th>
+                                        <th>服务总价（元）</th>
+                                        <th>机构所得（元）</th>
+                                        <th>平台分成（%）</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="priceList">
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <input type="button" class="confirm-btn navy-btn" value="发起交易" onclick="coop.confirmCoop();"/>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 价格助手 -->
+    <div class="price-ass clearfix" style="display:none;">
+        <input type="hidden" id="priceModality" value=""/>
+        <table class="price-setting">
+            <thead>
+            <tr>
+                <th>检查类型</th>
+                <th>服务总价（元）</th>
+                <th>机构所得（元）</th>
+                <th>平台分成（元）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span id="showModality"></span>
+                </td>
+                <td><input type="text" id="modalityPrice" value="" maxlength="6" onchange="changePrice()"/></td>
+                <td><span id="realPrice"></span></td>
+                <td><span id="ptPrice"></span></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="btn-block">
+            <input type="button" class="navy-btn pop-btn" value="保存" onclick="savePrice();"/>
+            <input type="button" class="grey-btn pop-btn m0" value="取消" onclick="closeLayer();"/>
+        </div>
+    </div>
+    <!-- 价格助手 end -->
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+
+
+<script>
+    $(function(){
+        jQuery.divselect(".user-select",".user-select-ul",".user-select-span");
+        // 高度控制
+        resize();
+        $(window).resize(function() {
+            resize();
+        });
+        function resize(){
+            //            高度控制
+            var rightH = $(".settings-right").height();
+            var windowH = document.body.clientHeight-124;
+            var height = $(".settings-box").height()-80;
+            height > windowH ? height = height :height=windowH;
+            rightH>height?$(".settings-right").height(rightH):$(".settings-right").height(height);
+        }
+        $(".jigou-tabs a").click(function(){
+            var index = $(this).index();
+            $(this).addClass("jigou-on");
+            $(this).siblings().removeClass("jigou-on");
+            $(".jigou-content"+index).siblings().hide();
+            $(".jigou-content"+index).show();
+        });
+        $(".config-search-resault li").on("click",function(){
+            if($(this).hasClass("checked")){
+                $(this).removeClass("checked");
+            }else{
+                $(this).addClass("checked");
+            }
+            $(".coo-config-work").show();
+            $(".coo-config-price").show();
+            $(".settings-right").height("auto")
+        })
+    });
+    $('.price-ass input[type=text]').on('click',function(){
+        $(this).val('');
+    })
+
+    var platShare = '20.0';
+    var orgShare = 100-'20.0';
+    /**
+     *搜索医院
+     **/
+    function searchHos(){
+        $(".config-search-resault ul").show();
+        var hosName = $("input[name='searchHosName']").val();
+        if(hosName == "" || hosName == RC_ENTERKEY){
+            layer.msg("请输入关键字", {icon: 2,time: 1000});
+            return ;
+        }
+        hosName = hosName.replace(" ","");
+        $("#hosList").html(RC_SEARCHING);
+        $("#hosList").css("display","block");
+        jQuery.ajax({
+            url:contextPath+"/coop/searchHos.htm?rand="+Math.random(),
+            data:{hosName:hosName},
+            dataType: "json",
+            success:function(result){
+                if(result.resultCode == "S000"){
+                    var info = result.resultMsg;
+                    if(info==""){
+                        $("#hosList").html("");
+                        layer.msg("未找到相关医院", {icon: 2,time: 1000});
+                        return;
+                    }
+                    var phtml = "<ul class=\"clearfix\">";
+                    for(var i=0;i<info.length;i++){
+                        var hos = info[i];
+                        phtml = phtml+"<li id='hos_"+hos.hosId+"' onclick=\"selHos('"+hos.hosId+"','"+hos.hosName+"');\"><input type=\"radio\"  >"
+                                +hos.hosName+"<input id='val_"+hos.hosId+"' value='' name='hospitalId' type='hidden'/><input id='hosName_"+hos.hosId+"' value='' name='hosName' type='hidden'/></li>";
+                    }
+                    phtml += "</ul>";
+                    $("#hosList").html(phtml);
+                    return ;
+                }else if(result.resultCode == "E000"){
+                    $("#hosList").html("");
+                    layer.msg(result.resultMsg, {icon: 2,time: 1000});
+                    return;
+                }
+                else{
+                    $("#hosList").html("未搜索到相关医院");
+                    layer.msg(result.resultMsg, {icon: 2,time: 1000});
+                    //layer.alert(result.resultMsg,0,RC_SEARCH);
+                }
+            },
+            error:function(info){
+                layer.alert(RC_OPERAFAR,0,RC_SEARCH);
+            }
+        });
+    }
+
+
+    //点击选择医院
+    function selHos(hospitalId,hosName){
+
+        if($("#hos_"+hospitalId)[0].className=="checked"){
+            $("#hos_"+hospitalId).removeClass("checked");
+            $("#val_"+hospitalId).val("");
+            $("#hosName_"+hospitalId).val("");
+        }
+        else{
+            $("#hos_"+hospitalId).addClass("checked");
+            $("#val_"+hospitalId).val(hospitalId);
+            $("#hosName_"+hospitalId).val(hosName);
+        }
+
+        var objs = $("input[name='hospitalId']");
+        $("#selectType").css("display","none");
+        $("#selectPayType").css("display","none");
+        for(var i=0;i<objs.length;i++){
+            if($(objs[i]).val()!=""){
+                $("#selectType").css("display","block");
+                showSelectModality();
+                break;
+            }
+        }
+    }
+
+    //显示影像类型选择
+    function showSelectModality(){
+        var cooperationType = $('#selectType input[name="cooperationType"]:checked ').val();
+        if(cooperationType==0){
+            $("#modalityDiv").css("display","block");
+            $("#autoFlagDiv").css("display","block");
+        }
+        else{
+            $("#modalityDiv").css("display","none");
+            $("#autoFlagDiv").css("display","none");
+        }
+        $("#selectPayType").css("display","block");
+    }
+
+    function showModalityList(modality){
+        var selected = $("#modality_"+modality).is(':checked');
+        var modalityText = modality;
+        if(selected){
+            var htmlStr = "<tr id='price_"+modality+"'><td>"+modalityText+"</td>"
+                    +"<td id='price_1_"+modality+"'>0.00</td>"
+                    +"<td id='price_2_"+modality+"'>0.00</td>"
+                    +"<input type='hidden' id='price_"+modality+"_value' value='0' name='price'/>"
+                    +"<td>"+'20.0'+"%</td>"
+                    +"<td><a href=\"javascript:showChangePrice('"+modality+"');\" class=\"coo-price-change\">修改</a></td></tr>";
+            $("#priceList").append(htmlStr);
+            changePayType();
+        }
+        else{
+            $("#price_"+modality).remove();
+            //alert($("#priceList").html());
+        }
+    }
+
+    function selectAll(){
+        //var selected = $("#modality_ALL").selected();
+    }
+
+    function changeAutoFlag(autoFlag){
+        if(autoFlag==1){
+            $('#selectPayType select[name="payType"]').val(1);
+            changePayType();
+        }
+    }
+
+    function changePayType(){
+        var payType = $('#selectPayType select[name="payType"]').val();
+        if(payType==2){
+            $("#priceDiv").css("display","");
+            $('#autoFlagNo').attr("checked","checked");
+        }
+        else{
+            $("#priceDiv").css("display","none");
+        }
+    }
+
+    function showChangePrice(modality){
+        var modalityText = modality;
+
+        $("#showModality").html(modalityText);
+        var price1 = $("#price_1_"+modality).html();
+        $("#modalityPrice").val(price1);
+        $("#priceModality").val(modality);
+
+        $("#realPrice").html(price1 - price1*'20.0'/100);
+        $("#ptPrice").html(price1*'20.0'/100);
+
+        layer.open({
+            type: 1,
+            title:false,
+            closeBtn: 1,
+            shade:0.2,
+            area: ['540px', ''],
+            content:$('.price-ass')
+        });
+
+    }
+
+    function changePrice(){
+        var value = $("#modalityPrice").val();
+        $("#realPrice").html(value - value*'20.0'/100);
+        $("#ptPrice").html(value*'20.0'/100);
+    }
+
+    function savePrice(){
+        var value = $("#modalityPrice").val();
+        var modality = $("#priceModality").val();
+
+        if(!util.isNumber(value)){
+            layer.msg("请正确设置价格",{icon: 2,time: 1000});
+            return false;
+        }
+
+        $("#price_1_"+modality).html(value);
+        $("#price_"+modality+"_value").val(value);
+        $("#price_2_"+modality).html(value - value*'20.0'/100);
+        closeLayer();
+    }
+
+    function closeLayer(){
+        layer.closeAll('page');
+    }
+    $("#chkChooseAll").click(function(){
+        var flag=this.checked;
+        if(flag==true){
+            if($("#modality_DR").prop("checked")!=true){
+                $("#modality_DR").prop("checked","true");
+                showModalityList('DR');
+            }
+            if($("#modality_CR").prop("checked")!=true){
+                $("#modality_CR").prop("checked","true");
+                showModalityList('CR');
+            }
+            if($("#modality_DX").prop("checked")!=true){
+                $("#modality_DX").prop("checked","true");
+                showModalityList('DX');
+            }
+            if($("#modality_SC").prop("checked")!=true){
+                $("#modality_SC").prop("checked","true");
+                showModalityList('SC');
+            }
+            if($("#modality_CT").prop("checked")!=true){
+                $("#modality_CT").prop("checked","true");
+                showModalityList('CT');
+            }
+            if($("#modality_US").prop("checked")!=true){
+                $("#modality_US").prop("checked","true");
+                showModalityList('US');
+            }
+            if($("#modality_MG").prop("checked")!=true){
+                $("#modality_MG").prop("checked","true");
+                showModalityList('MG');
+            }
+            if($("#modality_MR").prop("checked")!=true){
+                $("#modality_MR").prop("checked","true");
+                showModalityList('MR');
+            }
+            if($("#modality_NM").prop("checked")!=true){
+                $("#modality_NM").prop("checked","true");
+                showModalityList('NM');
+            }
+            if($("#modality_PT").prop("checked")!=true){
+                $("#modality_PT").prop("checked","true");
+                showModalityList('PT');
+            }
+            if($("#modality_XA").prop("checked")!=true){
+                $("#modality_XA").prop("checked","true");
+                showModalityList('XA');
+            }
+            if($("#modality_RF").prop("checked")!=true){
+                $("#modality_RF").prop("checked","true");
+                showModalityList('RF');
+            }
+            if($("#modality_SR").prop("checked")!=true){
+                $("#modality_SR").prop("checked","true");
+                showModalityList('SR');
+            }
+            if($("#modality_OT").prop("checked")!=true){
+                $("#modality_OT").prop("checked","true");
+                showModalityList('OT');
+            }
+        }else{
+            $("[name=modality]").removeAttr("checked");
+            $("#price_DR").remove();
+            $("#price_CR").remove();
+            $("#price_DX").remove();
+            $("#price_SC").remove();
+            $("#price_CT").remove();
+            $("#price_US").remove();
+            $("#price_MG").remove();
+            $("#price_MR").remove();
+            $("#price_NM").remove();
+            $("#price_PT").remove();
+            $("#price_XA").remove();
+            $("#price_RF").remove();
+            $("#price_SR").remove();
+            $("#price_OT").remove();
+        }
+    });
+</script>
+
+</body>
+</html>

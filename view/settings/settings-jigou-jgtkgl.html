@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pacs.css?v=upd20161010" rel="stylesheet" type="text/css"/>
+    <link href="../../css/settings.css?v=upd20161103" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <link rel="icon" href="../../js/layer/skin/layer.css">
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+<div  class="pacs-body">
+    <div class="header pacs-settings-header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pacs-warp settings-box">
+        <h4 class="bread-settings">
+            <span><a href="pacs.html">云PACS</a> >><b style="color:#898989;">机构条款管理</b></span>
+        </h4>
+
+        <div class="settings-left">
+            <div class="pacs-settings-left settings-left-content">
+                <p><a href="settings-jigou-qyzjgl.html">签约专家管理</a></p>
+
+                <p class="settings-on settings-click"><a href="settings-jigou-jgtkgl.html">机构条款管理</a></p>
+
+                <p><a href="settings-jigou-bggwgl.html">报告岗位管理</a></p>
+
+                <p><a href="settings-jigou-bgqxgl.html">报告权限管理</a></p>
+
+                <p><a href="settings-jigou-sz.html">历史影像回溯配置</a></p>
+
+                <p><a href="settings-jigou-ysgl.html">医生管理</a></p>
+
+                <p><a href="settings-jigou-xxsz.html">信息设置</a></p>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="settings-right  pacs-settings-right">
+            <div style="display: block;" class="settings-right-content pacs-settings-right">
+
+                <div class="jigou-tabs clearfix">
+                    <a href="javaScript:void(0);" class="fl jigou-on">我发起的</a>
+                    <a href="javaScript:void(0);" class="fr">邀请我的</a>
+                </div>
+                <div class="jigou-content">
+                    <div class="jigou-content0" style="display: block">
+                        <div class="jigou-query-btn">
+                            <span class="jigou-label">医院查询</span>
+                            <input type="text"/>
+                            <a class="jigou-btn" href="javaScript:void(0);">查 询</a>
+                            <a class="jigou-btn91b45d" href="settings-jigou-addcoop.html">新增医院</a>
+                            <a id="defaultpprice" class="jigou-btnff8f2c" href="javaScript:void(0);">默认价格设置</a>
+                        </div>
+                        <!--==========================================-->
+                        <div class="jigou-table-box">
+                            <div class="config-list list-style-a">
+                                <table class="config-hos style-a" cellspacing="0" border="0">
+                                    <thead>
+                                    <tr>
+                                        <th width="30%">合作医院</th>
+                                        <th width="15%">支付方式</th>
+                                        <th width="15%">业务模式</th>
+                                        <th width="10%">状态</th>
+                                        <th width="20%">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>江苏东海县青湖中心卫生院</td>
+                                        <td>线下支付</td>
+                                        <td>远程报告</td>
+                                        <td>有效</td>
+                                        <td>
+                                            <a class="view-price " href="javascript:;"
+                                               onclick="coop.cooperSuperDetail('','21431')">查看详情</a>
+                                            <a class="setting-price" href="javascript:;"
+                                               onclick="util.post('/coop/changeCooperation.htm','cooperationId=21431')">新增协议</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page-list">
+                                    <div class="page-right">
+                                <span class="pagen">本页共
+                                    <a class="page-number">&nbsp;12&nbsp;</a>
+                                    条记录&nbsp;/&nbsp;总共
+                                    <a class="page-number">&nbsp;15&nbsp;</a>条记录
+                                </span>
+                                    </div>
+                                    <div class="page-left">
+                                        <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                                        <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                                        <a href='#' class="big"><input type="text" value="1"
+                                                                       onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                                       onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                                                                       id="paginationCPage" name="currentPage" class="page-to"/>
+                                            <span>/ &nbsp; 2</span><span class="page-go" onclick="gotoPageByForm()">go</span>
+                                        </a>
+                                        <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                                        <a href="#" class="pageimg page-last" onclick="gotoPageP(2)">尾页</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--==================================-->
+                    </div>
+                    <div class="jigou-content1" style="display: none">
+                        <div class="jigou-query-btn">
+                            <span class="jigou-label">医院查询</span>
+                            <input type="text"/>
+                            <a class="jigou-btn7881a7" href="javaScript:vodi(0);">查 询</a>
+                        </div>
+                        <div class="jigou-table-box">
+                            <div class="config-list list-style-a">
+                                <table class="config-hos style-a" cellspacing="0" border="0">
+                                    <thead>
+                                    <tr>
+                                        <th width="30%">合作医院</th>
+                                        <th width="15%">支付方式</th>
+                                        <th width="15%">业务模式</th>
+                                        <th width="10%">状态</th>
+                                        <th width="20%">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>江苏东海县青湖中心卫生院</td>
+                                        <td>线下支付</td>
+                                        <td>远程报告</td>
+                                        <td>有效</td>
+                                        <td>
+                                            <a class="view-price purview_list_caozuo" href="javascript:;"
+                                               onclick="coop.cooperSuperDetail('','21431')">查看详情</a>
+                                            <a class="purview_list_caozuo  setting-price" href="javascript:;"
+                                               onclick="util.post('/coop/changeCooperation.htm','cooperationId=21431')">新增协议</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page-list">
+                                    <div class="page-right">
+                                <span class="pagen">本页共
+                                    <a class="page-number">&nbsp;12&nbsp;</a>
+                                    条记录&nbsp;/&nbsp;总共
+                                    <a class="page-number">&nbsp;15&nbsp;</a>条记录
+                                </span>
+                                    </div>
+                                    <div class="page-left">
+                                        <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+                                        <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+                                        <a href='#' class="big"><input type="text" value="1"
+                                                                       onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                                                       onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                                                                       id="paginationCPage" name="currentPage" class="page-to"/>
+                                            <span>/ &nbsp; 2</span><span class="page-go" onclick="gotoPageByForm()">go</span>
+                                        </a>
+                                        <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+                                        <a href="#" class="pageimg page-last" onclick="gotoPageP(2)">尾页</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 查看详情 start-->
+    <div class="price-set-detail clearfix" style="display:none;" id="detailCooper">
+        <input type="hidden" value="" id="cooperationId" name="cooperationId"/>
+        <div class="price-detial-block">
+            <div class="price-info">
+                <ul>
+                    <li style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width:185px;display: inline-block;max-width:185px"><label>需求医院：</label><span id="subHosName"></span></li>
+                    <li style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width:auto;display: inline-block;"><label>执行医院：</label><span id="superHosName"></span></li>
+                    <li><label>交易方式：</label><span id="payType"></span></li>
+                    <li><label>申请方式：</label><span id="autoFlag"></span></li>
+                </ul>
+            </div>
+            <div class="price-detial-block" style="border:0;" id="nomalItemDiv">
+                <h4>当前服务及价格明细：</h4>
+                <table class="price-setting pacs-price-setting" width="90%" >
+                    <thead id="itemHead">
+                    <tr>
+                        <th>检查类型</th>
+                        <th>服务总价(元)</th>
+                        <th>机构所得(元)</th>
+                        <th>平台分成(元)</th>
+                    </tr>
+                    </thead>
+                    <tbody id="itemList">
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="price-detial-block" style="border:0;" id="applyItemDiv">
+                <h4>未生效服务及价格明细：</h4>
+                <table class="price-setting pacs-price-setting" width="90%">
+                    <thead id="applyItemHead">
+                    </thead>
+                    <tbody id="applyItems">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btn-block" id="itemBtnDiv">
+            <input type="button" id="itemOkBtn" class="navy-btn pop-btn" style="display:none" value="同意" onclick="coop.replyCoopHos('','1')"/>
+            <input type="button" id="itemRejectBtn" class="navy-btn pop-btn" style="display:none" value="拒绝" onclick="coop.replyCoopHos('','-1')"/>
+            <input type="button" id="itemCancelBtn" class="grey-btn pop-btn" style="display:none" value="关闭" onclick="closeLayer();"/>
+        </div>
+    </div>
+    <!-- 查看详情 end-->
+    <!-- 价格设置详情 start-->
+    <div class="price-default clearfix" style="display:none;" id="priceListDiv">
+        <div class="price-toolbar">
+            <input type="button" class="price-add coo-price-change" id="addPriceBtn"/>
+        </div>
+
+        <table class="price-setting pacs-price-setting" width="90%">
+            <thead id="priceHead">
+            <tr>
+                <th width="25%">检查类型</th>
+                <th width="25%">专家姓名</th>
+                <th width="25%">报酬比例</th>
+                <th width="25%">操作</th>
+            </tr>
+            </thead>
+            <tbody id="priceList">
+
+            </tbody>
+        </table>
+        <div class="btn-block">
+            <input type="button" class="grey-btn pop-btn m0" value="关闭" onclick="closeLayer()"/>
+        </div>
+    </div>
+    <!-- 价格设置 end-->
+    <!-- 价格助手(新增) -->
+    <div class="price-defa-ass clearfix" style="display:none;" id="addPriceDiv">
+        <input type="hidden" id="subHosId" value=""/>
+        <table class="price-setting pacs-price-setting">
+            <thead>
+            <tr>
+                <th width="15%">检查类型</th>
+                <th>选择专家</th>
+                <th width="20%">报酬比例（%）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <select id="price_modality" onchange="changeModality()">
+
+                    </select>
+                </td>
+                <td align="left">
+                    科室：<select name="deptId" id="deptId" onchange="coop.changeDept('')">
+                    <option value="">请选择</option>
+                    <option value="272">影像中心</option>
+                    <option value="3397">信息科</option>
+                </select>
+                    专家：<select id="selectDocs">
+                </select>
+                </td>
+                <td>
+                    <input type="text" id="docShare" value="" maxlength="4"/>%
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="btn-block pacs-btn-block">
+            <input type="button" id="addPriceSubmit" class="navy-btn pop-btn" value="保存" onclick="addPrice()"/>
+            <input type="button" class="grey-btn pop-btn m0" value="取消" onclick="closedIndex()"/>
+        </div>
+    </div>
+    <!-- 默认价格助手 end -->
+</div>
+
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/layer/layer.js" type="text/javascript"></script>
+<!--<script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>-->
+<script src="../../js/jquery.select.js" type="text/javascript"></script>
+
+<script>
+    $(function () {
+        jQuery.divselect(".user-select", ".user-select-ul", ".user-select-span");
+        //            高度控制
+        resize();
+        $(window).resize(function() {
+            resize();
+        });
+        function resize(){
+            //            高度控制
+            var rightH = $(".settings-right").height();
+            var windowH = document.body.clientHeight-124;
+            var height = $(".settings-box").height()-80;
+            height > windowH ? height = height :height=windowH;
+            rightH>height?$(".settings-right").height(rightH):$(".settings-right").height(height);
+        }
+    });
+    //        layer弹出层
+    $("#defaultpprice").click(function () {
+        layer.open({
+            type: 1 //Page层类型
+            , area: ['860px', '300px']
+            , title: '默认价格配置'
+            , shade: 0.6 //遮罩透明度
+            , maxmin: true //允许全屏最小化
+            , anim: 1 //0-6的动画形式，-1不开启
+            , content: $("#priceListDiv")
+        });
+    });
+    $("#addPriceBtn").click(function () {
+        layer.open({
+            type: 1 //Page层类型
+            , area: ['600px', '300px']
+            , title: '默认价格配置'
+            , shade: 0.6 //遮罩透明度
+            , maxmin: true //允许全屏最小化
+            , anim: 1 //0-6的动画形式，-1不开启
+            , content: $("#addPriceDiv")
+        });
+    });
+    $(".view-price").on("click",function(){
+        layer.open({
+            type: 1 //Page层类型
+            , area: ['600px', 'auto']
+            , title: '默认价格配置'
+            , shade: 0.6 //遮罩透明度
+            , maxmin: true //允许全屏最小化
+            , anim: 1 //0-6的动画形式，-1不开启
+            , content: $("#detailCooper")
+        });
+    });
+</script>
+</body>
+</html>

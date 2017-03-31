@@ -1,0 +1,473 @@
+/**
+*@Description: public main css
+*@Author:     xuy 区域应用新增西宁、柳州
+*@Update:     xuy(2016-10-27 09:20)
+**/
+html{ overflow-y: auto;}
+.main-header{position: relative;}
+a.more{display: block; float: right; text-align: right; font-size: 14px ; color: #76be0d;}
+.hm-sec3{margin-top:60px; margin-bottom: 50px}
+.hm-expert{position: relative; margin: 0 auto; width: 930px; }
+.hm-expert h2{display: block; margin: 0 auto 20px; width:75px; height: 50px; color: #9a9a9a; text-align: center;}
+.hm-expert h2 p,.hm-medical h2 p,.hm-project h2 p{font-size: 12px;}
+.hm-exp-sort{position:relative; margin:20px auto; width: 190px; font-size: 14px; color: #9a9a9a;}
+.hm-exp-sort a,.hm-exp-sort span{display: inline-block; margin:0 5px;}
+.hm-exp-sort span{margin:0 20px;}
+.hm-exp-sort a.current{color: #2aacc6;}
+
+.hm-doctor ul{margin: 0 auto; width: 940px; height:320px;  }
+.hm-doctor li{float: left; margin-top: 30px; margin-right:20px; width: 210px; height: 315px; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,.1); border/*\**/:1px solid #ddd\9;}
+.hm-doctor li:hover{box-shadow: 0 0 20px rgba(0,0,0,.3);border-color /*\**/:#bbb;}
+.hm-doctor li.first{margin-left:15px;}
+.hm-doctor li.last{margin-right: -20px;}
+.hm-doctor li img{display:block; margin: 20px auto; max-width: 80px; max-height: 80px;min-height:80px; border-radius:40px;}
+.hm-doctor p{margin: 0 auto; width: 90%;line-height: 35px; font-size: 14px; color: #000; text-align: center;}
+.hm-doctor p.doc-name{color: #ff8f2c; height: 30px;  overflow: hidden; white-space:nowrap;text-overflow:ellipsis;}
+.hm-doctor .doc-name .doc-zc{font-size: 13px; margin-left:5px;}
+.hm-doctor p.doc-sc{margin-top: 20px; padding-top: 10px; height: 48px; overflow: hidden; border-top:1px dotted #aaa; color: #9a9a9a; text-align:left; line-height: 24px; font-size: 12px; }
+.hm-doctor .doc-sc em{color: #666;}
+
+.hm-sec4{position: relative; width: 100%; height:630px; min-width: 1000px;  background: #66b7cf;}/**/
+.sec4-bg-top{position: absolute; width: 100%;height: 50px; background:url(../images/hmsec4bg.png) repeat-x;}
+.sec4-bg-top span,.sec4-bg-bottom span{display: block; margin: 0 auto; width: 272px; height: 50px; background: url(../images/imgs.png) no-repeat -176px -544px ; background-color: #fff; }
+.sec4-bg-bottom span{ background-position: -176px -624px;}
+.sec4-bg-bottom{position: absolute;bottom:-50px; width: 100%;height: 50px; background:url(../images/hmsec4bg.png) repeat-x  0 -67px;}
+.hm-medical{position: relative;}
+.hm-medical h2,.hm-project h2{position: absolute; display: block; left:50%; top:-40px; margin-left:-43px; width:96px; height: 50px; color: #9a9a9a;text-align: center;}
+.hm-medical ul{width: 860px; margin:120px auto 0;}
+.hm-medical li{position:relative;float:left;width:65px;overflow:hidden;height:350px;}
+.medical-title{position: absolute;top:0; width: 65px; padding-top:90px; height: 260px; color: #fff; background:rgba(0,0,0,.8);background: #000\9;opacity: .8;z-index: 10;}
+.hm-medical li .med-tit-current{background:transparent; color: #000; text-shadow:0 0 3px rgba(0,0,0,.5); }
+.medical-title i{display: block; margin:0 auto; width:40px;height: 40px; background:url(../images/imgs.png) no-repeat;}
+.medical-title p{ margin: 20px auto; width: 18px; height: auto;line-height: 20px;font-size: 16px;}
+.medical-title .cloud-img{background-position:-141px -331px;}
+.medical-title .con-room{background-position:-188px -331px;}
+.medical-title .air-clinic{background-position:-235px -331px;}
+.medical-title .img-report{background-position:-283px -331px;}
+.medical-title .two-way{background-position:-329px -331px;}
+.med-tit-current .cloud-img{background-position:-141px -291px;}
+.med-tit-current .con-room{background-position:-188px -291px;}
+.med-tit-current .air-clinic{background-position:-235px -291px;}
+.med-tit-current .img-report{background-position:-283px -291px;}
+.med-tit-current .two-way{background-position:-329px -291px;}
+
+.hm-medical .block{position:absolute;top:0; width:600px; height: 100%; left:0;background:url(../images/homemedical.jpg) no-repeat; z-index: 0; overflow: hidden;}
+.hm-medical .block p{position: absolute; bottom:-60px; height:40px;  padding:10px; font-size: 13px;  line-height: 20px; color: #fff; background:rgba(0,0,0,.2); overflow: hidden;}
+.hm-medical li.current .block p{bottom: 0;}
+.hm-medical .block2{background-position:0 -350px ;}
+.hm-medical .block3{background-position:0 -700px ;}
+.hm-medical .block4{background-position:0 -1050px ;}
+.hm-medical .block5{background-position:0 -1400px ;}
+
+.hm-sec5{position: relative;}
+.hm-project{margin-top: 140px; height: 450px;}
+.hm-project h2{color: #fff; top:-180px;}
+
+.hm-pro-map{position: relative; margin: 40px auto 40px; width: 414px; height: 342px; background:url(../images/home0.png) no-repeat 3px -7px;}
+.hm-project ul{margin-top: 20px;}
+.hm-project ul li{position: absolute; text-indent:10px; }
+.hm-project ul li a{display: block; position: absolute;cursor: pointer;}
+.hm-pro-map li span{position: relative; left:-64px; padding-left:15px; opacity:0; color:#aaa; font:16px/30px Microsoft Yahei,sans-serif; background: url(../images/disk.png) no-repeat left center;}
+.hm-pro-map li a:hover+span{color: #000;}
+.hm-project .map-sh{top:223px;right: -157px;}
+.hm-project .map-sh a{top: -24px;left:-39px;width:20px; height:20px;}
+.hm-project .map-sh a:hover{background:url(../images/home.png) no-repeat -740px -187px;}
+.hm-project .map-pt{top:291px;right: -217px;}
+.hm-project .map-pt a{top:-59px; left:-53px; width:45px; height:55px;}
+.hm-project .map-pt a:hover{background:url(../images/home.png) no-repeat -707px -220px;}
+.hm-project .map-xn{top:140px;left:-120px;}
+.hm-project .map-xn a{top:-8px; right:-248px; width:111px; height:86px;}
+.hm-project .map-xn a:hover{background:url(../images/home.png) no-repeat -787px -6px;}
+.hm-project .map-lz{top:350px;left:150px;}
+.hm-project .map-lz a{top:-101px; left:67px;width:75px; height:62px;}
+.hm-project .map-lz a:hover{background:url(../images/home.png) no-repeat -786px -91px;}
+.hm-project .map-sc{top:270px;left:-40px;}
+.hm-project .map-sc a{top:-86px; right:-130px;width:96px; height:86px;}
+.hm-project .map-sc a:hover{background:url(../images/home.png) no-repeat -594px -180px;}
+.hm-project .map-gz{top:320px;left: 55px;}
+.hm-project .map-gz a{top:-88px; left:154px;width:58px; height:51px;}
+.hm-project .map-gz a:hover{background:url(../images/home.png) no-repeat -646px -269px;}
+.hm-project .map-xz{top:220px;left: -175px;}
+.hm-project .map-xz a{top:-66px; right:-153px; width:165px; height:106px;}
+.hm-project .map-xz a:hover{background:url(../images/home.png) no-repeat -417px -183px;}
+.hm-project .map-ks{top:60px;left: -195px;}
+.hm-project .map-ks a{top:-26px; right:-150px; width:175px; height:136px;}
+.hm-project .map-ks a:hover{background:url(../images/home.png) no-repeat -408px -42px;}
+.hm-project .map-nmg{top:10px;left:135px;}
+.hm-project .map-nmg a{top:-7px; left:32px; width:193px; height: 162px;}
+.hm-project .map-nmg a:hover{background:url(../images/home.png) no-repeat -585px -9px;}
+.hm-project .map-hb{top: 258px;right: -116px;}
+.hm-project .map-hb a{top:-62px; left:-139px; width:64px; height:40px;}
+.hm-project .map-hb a:hover{background:url(../images/home1.png) no-repeat -780px -172px;}
+.hm-project .map-jx{top: 322px;right: -51px;}
+.hm-project .map-jx a{top:-100px; left:-32px; width:40px; height:57px;}
+.hm-project .map-jx a:hover{background:url(../images/home1.png) no-repeat -853px -164px;}
+.hm-project .map-ah{top: 194px;right: -114px;}
+.hm-project .map-ah a{top:-15px; left:-71px; width:39px; height:52px;}
+.hm-project .map-ah a:hover{background:url(../images/home1.png) no-repeat -864px -97px;}
+.hm-project ul li i{display:block; width:20px;height:30px; float:left; background:url(../images/imgs.png) no-repeat -121px -235px; }
+
+.hm-news{position: absolute; bottom:10px; overflow: hidden; width: 1000px; height: 30px; font-size: 14px; line-height: 30px;  color: #777; }  
+.hm-news li{display: inline-block; width:1200px;}
+.hm-news i{display: inline-block;margin-right: 10px; width: 20px; height: 20px; background: url(../images/imgs.png) -150px -270px no-repeat; vertical-align: middle;}
+.plus-mar-left{overflow:hidden; word-break:keep-all; white-space:nowrap;}
+.plus-mar-left ul{list-style:none; margin:0; padding:0; display:inline-block; *display:inline; zoom:1;}
+.plus-mar-left li{display:inline-block; *display:inline; zoom:1; text-indent:15px;}
+
+.plus-mar-top{overflow:hidden; word-break:keep-all; white-space:nowrap;}
+.plus-mar-top ul{list-style:none; margin:0; padding:0;  line-height:40px;}
+.plus-mar-top li{ padding-right:10px;}
+
+.plus-mar-bottom{overflow:hidden; word-break:keep-all; white-space:nowrap; position:relative;}
+.plus-mar-bottom ul{list-style:none; margin:0; padding:0;  line-height:40px; position:relative;}
+.plus-mar-bottom li{ padding-right:10px;}
+
+.plus-mar-up{overflow:hidden;}
+.plus-mar-up ul{list-style:none; margin:0; padding:0;  line-height:40px;}
+
+.plus-mar-down{overflow:hidden; position:relative;}
+.plus-mar-down ul{list-style:none; margin:0; padding:0; position:relative;}
+/*16-5-04改版 16-5-04改版*/
+/*zcy-section*/
+.hm-banner{min-width: 1000px;}
+.hm-banner{min-width: 1000px;position: absolute\9;top:12%\9;left:14%\9;}
+.hm-banner .slidesjs-previous,.hm-banner .slidesjs-next{position: absolute; top:180px;left:50%; width: 0px;height: 60px; line-height:0; z-index: 100; text-indent: -9999px; }
+.hm-banner .slidesjs-pagination{position: absolute; top:164%;left:50%; margin-left: -25px; bottom: 50px; width:0px; z-index: 110;}
+.hm-sec2{position: relative; margin:-30px auto 30px; width:980px;height: 320px; background: #fff; z-index:90;}
+.hm-sec2-leftbg,.hm-sec2-rightbg{position: absolute; top:-29px; width: 28px; height: 345px;background: url(../images/home.png) no-repeat; }
+.hm-sec2-leftbg{left:-28px;}
+.hm-sec2-rightbg{right:-28px; background-position: -31px 0;}
+.hm-sec2-midbg{position: absolute; top:-22px; height:22px; width:980px;background:url(../images/sec2bg.png) repeat-x;   }
+
+.section-bg{height: 520px; width:1000px; margin: 0 auto; position:relative;}
+.section-home{float:none;margin:0; padding: 0; min-width:1000px;height: auto;}
+
+.section-imgs{position: absolute; top:40px; left:40%;width:348px; height:342px;}
+.imgs{display: block; position: absolute; background: url(../images/imgs/many-icon.png)}
+.imgs-1{top:83px;left:0px;width:30px;height:30px; background-position: -7px -53px;}
+.imgs-2{top:22px;left:221px;width:21px;height:22px;background-position: -58px -58px;}
+.imgs-3{top:242px;left:147px;width:20px;height:20px;background-position: -58px -55px;}
+.imgs-4{top:76px;left:322px;width:21px;height:22px;background-position: -7px -96px;}
+.imgs-5{top:207px;left:37px;width:92px;height:60px;background-position: -95px -17px;}
+.imgs-6{top:10px;left:70px;width:60px;height:67px;background-position: -70px -118px;}
+.imgs-7{top:207px;left:330px;width:46px;height:50px;background-position: -145px -127px;}
+.section-imgs .pills{position:absolute;top:142px;left:148px;opacity:0}
+.section-imgs .the-bone{position:absolute;top:144px;left:260px;opacity:0}
+.section-imgs .management{position:absolute;top:252px;left:188px;opacity:0}
+.section-imgs .cases{position:absolute;top:76px;left:95px;opacity:0}
+.section-imgs .plus-sign{position:absolute;top:115px;left:215px;opacity:0}
+.section-imgs .water{position:absolute;top:60px;left:54px;opacity:0}
+.section-imgs .ecg-computer{position:absolute;top:184px;left:73px;opacity:0}
+
+.section-slogan{position:absolute;top:196px;left:0px;width:480px;height:215px;padding-left:20px;color: #788583; }
+.section-slogan h1{margin-bottom: 30px;font-size: 3.5em;font-weight:600;}
+.section-slogan p{line-height:30px;font-size: 1.2em;text-indent: 1em;}
+
+.section-slogan1{position:absolute;top:147px;left:0px;width:480px;height:215px;padding-left:20px;color: #788583; }
+.section-slogan1 h1{margin-bottom: 30px;font-size: 3.5em;font-weight:600;}
+.section-slogan1 p{line-height:30px;font-size: 1.2em;text-indent: 1em;}
+
+/*空中诊室*/
+.sky{position:absolute;top:-40px;left:30px;display:inline-block;width:196px;height:44px;;background: url(../images/imgs/skys.png)}
+
+
+/*云医疗*/
+.header-bottom2{position: absolute;top: -268px;left: 0;display:block;margin-bottom: -1px; width:100%;height:270px;background: url(../images/imgs/header-bottom.png) repeat-x;}
+.section-medical{width:100%;height:700px;padding-top:15px;}
+.medical-header{margin:0 auto;}
+.medical-header p{width:200px;margin: 0 auto;font-size:1.8em;line-height: 20px;margin-bottom: 90px;text-align: center;}
+.medical-header p span{display: inline-block;padding-bottom: 15px;margin-left:10px;vertical-align: middle;}
+.medical-icon{display: inline-block;width:52px;height:30px; background: url(../images/imgs/many-icon.png) no-repeat -4px -2px;}
+.medical-image{width:938px;height:378px;position:relative;margin: 0 auto;}
+.medical-image ul{width:15%;float: left;}
+.medical-image ul li{width:145px;height:66px;}
+.medical-image ul li a{display:inline-block;width:145px;height:66px;}
+.medical-image ul li a i{display:inline-block;margin-top: 17px;margin-left: 50px;}
+.medical-cheack{width:145px;height:66px;background-color:#E3EFF2;}
+.medical-imgs{background: url(../images/imgs/many-icon.png);}
+.medical-disk-image{display:inline-block;width:42px;height:33px;background-position: -4px -136px;}
+.medical-doctor{display:inline-block;width:42px;height:33px;background-position: -4px -216px;}
+.medical-imac{display:inline-block;width:42px;height:33px;background-position: -2px -300px;}
+.medical-case{display:inline-block;width:42px;height:37px;background-position: 0px -380px;}
+.medical-two-way{display:inline-block;width:42px;height:23px;background-position: -4px -467px;}
+
+.medical-disk-image-block{position: absolute;top: 0;left: 139px;float:right;width:85%;height:330px;background-color: #E3EFF2;}
+
+.img-25-write{float:left;position:absolute;top:100px;left:0px;width:450px;height:200px;padding-left:32px;z-index: 5; }
+.img-25-write h1{margin-bottom: 40px;}
+.img-25-write p{width: 450px;font-size:1.2em;font-weight:500;line-height: 30px;margin-bottom: 0;}
+.imgs-25{float:right;position: absolute;top:67px;right:35px;}
+
+/*医生介绍*/
+.doctor-introduced{width:100%;height:700px;}
+.introduced-icon{display: inline-block;width:37px;height:41px; background: url(../images/imgs/many-icon.png) no-repeat -83px -369px;}
+.introduced{width: 1000px;height:450px;margin: 0 auto;position: relative;}
+.domestic{width:105px;color: #32C4D2;}
+.foreign{width:93px;padding-left: 20px;}
+.introduced ul{position:absolute;}
+.introduced ul li{width:327px; height:85px;margin-bottom: 54px;}
+.doc-av{display: inline-block;  position: absolute;  top: 8px;  left: 96px;  width: 238px;  height: 85px;  padding-top: 30px;}
+.doc-name span{width:64px;font-size: 1.3em;font-weight: 600; white-space: nowrap; overflow:hidden;text-overflow:ellipsis;}
+.doc-name{display: inline-block;width:64px;height:22px;margin-bottom:10px;font-size: 1.3em;font-weight: 600; white-space: nowrap; overflow:hidden;text-overflow:ellipsis;}
+.doc-zc{display: inline-block;font-size: 1.2em;margin-bottom:10px;height:22px;color:#BCC3C6;font-weight: 400;white-space: nowrap; overflow:hidden;text-overflow:ellipsis;}
+.doc-hp{display: inline-block;font-size: 1.2em;color: #738790;}
+.doc-ks{display: inline-block;font-size: 1em;color: #ADB5B7;}
+.position-1{top:147px;  left: 96px;}
+.hm-doctor1 ul li img{display: block; margin: 20px auto; max-width: 80px; max-height: 80px; min-height: 80px; border-radius: 40px;}
+.hm-doctor1 ul{ width:815px;margin: 0 auto;}
+.hm-doctor1 ul li{}
+.position-2{top:8px;left:525px;}
+.position-3{top:147px;left:525px;}
+.hm-doctor1 .slidesjs-previous,.hm-doctor1 .slidesjs-next{display: block; position: absolute; top:100px;  width: 25px;height: 32px;text-indent: -9999px; line-height: 1px; background: url(../images/imgs.png) no-repeat;}
+.hm-doctor1 .slidesjs-previous{left: 0px;background-position: -387px -239px;}
+.hm-doctor1 .slidesjs-next{right: 0px;background-position: -387px -195px;}
+.hm-doctor1 .slidesjs-previous:hover{background-position: -365px -239px;}
+.hm-doctor1 .slidesjs-next:hover{background-position: -365px -195px;}
+.hm-doctor1 .slidesjs-stop{display: none;}
+.first  img{position: absolute;top:0px;left:0px;}
+.second  img{position:absolute;top:139px;left:0px}
+.third  img{position: absolute;top:0;left:423px;}
+.last  img{position: absolute;top:139px;left:423px;}
+.second a{top:147px;  left: 96px;}
+.third a{top:8px;left:525px;}
+.last a{top:147px;left:525px;}
+a.hm-area{display:inline-block;  width:17%; text-align: center; font-size: 14px; color: #7d7d7d;}
+.the-divider{width:80%;margin:0 auto;height:1px;margin-bottom:100px;background: url(../images/imgs/The-divider.png)}
+/*热门医院*/
+.hm-hothos{margin-top:30px; margin-right:20px;width:680px; }
+.hm-hothos h3{width: 100px;}
+.hm-hos-area{margin: 0 auto;  text-align: center; width: 601px;padding-right: 10px;}
+
+.hot-hospital{width: 100%;height:684px;margin-top: 10%;}
+.hot-hospital-icon{display: inline-block;width:47px;height:41px; background: url(../images/imgs/many-icon.png) no-repeat -73px -292px;}
+.the-hospital{width: 1000px;margin: 0 auto;position: relative;}
+.the-hospital .hm-hp li{position: relative; float: left;  text-align: center;}
+.hm-hos{padding-left: 90px;margin-top: 40px;}
+
+.hm-hothos .hm-hp{margin-top: 30px; margin-left: 5px;}
+.hm-hothos .hm-hp li{position: relative; float: left;  text-align: center;}
+.hm-hp .hos1{width: 336px; height: 190px;}
+.hm-hp .hos2,.hm-hp .hos3,.hm-hp .hos4,.hm-hp .hos5,.hm-hp .hos6,.hm-hp .more{width:168px;height: 95px; }
+.hm-hp .more{background:#2aacc6;text-align: center; color:#fff; font-size: 16px; line-height: 95px;}
+.hm-hp .more a{color: #fff;}
+.hm-hp li img{width: 100%; height: 100%;}
+.hm-hp li p{position: absolute;bottom:0; width: 100%; font-size: 13px; height: 30px; line-height: 30px; background:rgba(0,0,0,.5);color: #fff;text-align: center; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.hm-hp li:hover p{background:rgba(28,94,124,.7);}
+.area-other{ margin-top:30px;height:80px;}
+.area-other li{float: left; font-size: 14px; padding:0 10px;margin-bottom: 10px; margin-right: 10px; line-height: 30px; max-width: 180px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.hm-welcome{margin-top:30px;width: 258px; min-height:246px; border-right:1px solid #dedede;}
+.hm-welcome li{ clear: both;margin-bottom: 20px; }
+li.welcome{height:100px;margin-top: 20px;}
+.welcome img{float: left; margin:20px 0 0 20px ; max-width: 65px; max-height: 65px;}
+.welcome p{float: left; width: 150px; margin:20px 0 0 15px; font-size: 16px;}
+.welcome p.hm-cpw a{font-size: 14px; color: #959595;}
+.welcome p span{display:inline-block;max-width: 150px;}
+.hm-cpw i{display: inline-block; margin-right: 10px; width: 12px; height: 13px; background:url(../images/imgs.png) no-repeat -23px -54px; }
+li.hm-btn{height: 36px;}
+.hm-wel-btn{float: left; font:14px Microsoft Yahei,sans-serif; background: #959595;color: #fff; border-radius: 2px; width: 106px;height: 35px; margin-left: 20px;}
+li.hm-mine{height: 30px; margin-left: 23px; font-size: 14px;}
+.hm-mine a{display: inline-block;margin-right: 18px; line-height: 30px; color: #76be0d;}
+.hm-mine a:hover,.hm-dis li a:hover{border-bottom: 1px solid #ff9000; color: #ff9000;}
+
+
+/*垂直专科*/
+.vertical-specialized{width: 100%;height: 1000px;}
+.vertical-specialized-subject{position:relative;width:1000px;margin: 0 auto;padding-top: 177px;}
+.vertical-icon{display: inline-block;width:46px;height:41px; background: url(../images/imgs/many-icon.png) no-repeat -61px -213px;}
+.vertical-write{display: -webkit-inline-box;padding-bottom: 40px;padding-left: 20px;color: #fff;font-size: 1.6em;vertical-align: middle;}
+.vertical-imgs{height:auto;}
+.oa{position: absolute;top:341px;left:81px;}
+.ultrasonic{position: absolute;top:341px;left:322px;}
+.lung{position: absolute;top:341px;left:570px;}
+.radiation{position: absolute;top:341px;left:817px;}
+.the-heart{position: absolute;top:550px;left:322px;}
+.lymph-node{position: absolute;top:550px;left:570px;}
+.the-brain{position: absolute;top:550px;left:81px;}
+.the-emergency{position: absolute;top:550px;left:817px;}
+.vertical-name{margin-top:30px;color:#fff;font-size: 1.3em;text-align: center}
+.movement{position:absolute;top:-11px;left:-11px;width: 123px; height:123px;-webkit-animation:circle 3s infinite linear; background: url(../images/imgs/movement.png)}
+@-webkit-keyframes circle{
+    0%{ transform:rotate(-360deg); }
+    100%{ transform:rotate(0deg); }
+}
+
+.shake1{-webkit-animation:shake1 16s infinite linear;}
+@keyframes shake1 {
+    2% {
+        transform: translate(2px, 5px) rotate(-1.5deg);}
+    4% {
+        transform: translate(5px, 2px) rotate(-2.5deg);}
+    10% {
+        transform: translate(1px, 2px) rotate(1.5deg);  }
+    20% {
+        transform: translate(-1px, -3px) rotate(1.5deg);  }
+    30% {
+        transform: translate(-3px, 4px) rotate(0.5deg);}
+    30% {
+        transform: translate(3px, -4px) rotate(2.5deg);  }
+    40% {
+        transform: translate(4px, 0px) rotate(0.5deg);  }
+    50% {
+        transform: translate(2px, -5px) rotate(3.5deg);  }
+    60% {
+        transform: translate(-1px, 7px) rotate(1.5deg);  }
+    62% {
+        transform: translate(4px, -6px) rotate(-1.5deg);  }
+    70% {
+        transform: translate(3px, 4px) rotate(-0.5deg); }
+    0%, 100% {
+        transform: translate(0, 0) rotate(0); }
+}
+
+
+.shake2{-webkit-animation:shake2 16s infinite linear;}
+@keyframes shake2 {
+    2% {
+        transform: translate(5px, 2px) rotate(-2.5deg) ;
+    }
+
+    10% {
+        transform: translate(3px, -4px) rotate(2.5deg);
+    }
+    20% {
+        transform: translate(-5px, -6px) rotate(1.5deg);
+    }
+
+    30% {
+        transform: translate(6px, 3px) rotate(-1.5deg);
+    }
+    40% {
+        transform: translate(2px, -5px) rotate(3.5deg);
+    }
+    53% {
+        transform: translate(1px, 7px) rotate(-1.5deg);
+    }
+    70% {
+        transform: translate(-1px, 7px) rotate(1.5deg);
+    }
+    80% {
+        transform: translate(4px, -6px) rotate(-1.5deg);
+    }
+    90% {
+        transform: translate(3px, 4px) rotate(-0.5deg);
+    }
+}
+
+.shake3{-webkit-animation:shake-hard 16s infinite linear;}
+@keyframes shake-hard {
+    2% {
+        transform: translate(2px, 4px) rotate(1deg); }
+    4% {
+        transform: translate(8px, 4px) rotate(0deg); }
+    24% {
+        transform: translate(3px, -2px) rotate(0deg); }
+    26% {
+        transform: translate(-1px, -4px) rotate(1deg); }
+
+    40% {
+        transform: translate(4px, 0px) rotate(0deg); }
+
+    64% {
+        transform: translate(3px, 4px) rotate(1deg); }
+
+    98% {
+        transform: translate(6px, -5px) rotate(0deg); }
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg); }
+}
+
+.shake6{-webkit-animation:shake6 16s infinite linear;}
+@keyframes shake6 {
+    10% {
+        transform: translate(-19px, -10px) rotate(-2deg);
+        opacity: 0.03; }
+    20% {
+        transform: translate(-13px, 5px) rotate(-5deg);
+        opacity: 0.04; }
+    30% {
+        transform: translate(-17px, 9px) rotate(-1deg);
+        opacity: 0.84; }
+    40% {
+        transform: translate(-17px, 17px) rotate(7deg);
+        opacity: 0.99; }
+    50% {
+        transform: translate(-10px, -9px) rotate(-5deg);
+        opacity: 0.79; }
+    60% {
+        transform: translate(-9px, -8px) rotate(-3deg);
+        opacity: 0.05; }
+    70% {
+        transform: translate(-10px, 7px) rotate(-5deg);
+        opacity: 0.81; }
+    80% {
+        transform: translate(14px, 3px) rotate(2deg);
+        opacity: 0.83; }
+    90% {
+        transform: translate(9px, -6px) rotate(-7deg);
+        opacity: 0.99; }
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg); }
+}
+
+.shake5{-webkit-animation:shake-horizontal 12s infinite linear;}
+@keyframes shake-horizontal {
+    2% {
+        transform: translate(-6px, 0) rotate(1deg); }
+    20% {
+        transform: translate(0px, 8px) rotate(0deg); }
+
+    40% {
+        transform: translate(-7px, 0) rotate(0deg); }
+    60% {
+        transform: translate(-9px, 0) rotate(1deg); }
+
+    70% {
+        transform: translate(-4px, 0) rotate(0deg); }
+
+    90% {
+        transform: translate(-6px, 0) rotate(1deg); }
+
+    0%, 100% {
+        transform: translate(0, 0) rotate(0); } }
+
+.shake7{-webkit-animation:shake7 12s infinite linear;}
+@keyframes shake7 {
+    2% {
+        transform: translate(5px, -8px) rotate(-2deg); }
+
+    10% {
+        transform: translate(-8px, 12px) rotate(-4deg); }
+
+    20% {
+        transform: translate(-8px, -14px) rotate(-4deg); }
+
+    30% {
+        transform: translate(0px, -10px) rotate(-2deg); }
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg); }
+}
+
+.content{background-attachment: fixed;}
+
+/*地域应用*/
+.regional-application{width: 100%;}
+.regional{width:1000px;margin: 0 auto;height:auto;padding-top: 206px;}
+.regional-icon{display: inline-block;width:46px;height:46px; background: url(../images/imgs/many-icon.png) no-repeat -77px -438px;}
+.regional-write{display: -webkit-inline-box;padding-bottom: 50px;padding-left:10px;color: #5BCADF;font-size: 1.8em;vertical-align: middle;}
+
+/*视差滚动*/
+.cd-container {margin: 0 auto;}
+.cd-container::after {content: '';display: table;clear: both;}
+
+/* --------------------------------Main components-------------------------------- */
+.cd-main-content {	height: 100%;position: relative;z-index: 1;}
+.cd-fixed-bg {position: relative;min-height: 80%;background-repeat: repeat-x;background-position: center center;z-index: 1;}
+.cd-fixed-bg.cd-bg-1 { background: url("../images/imgs/cloudbg.png") 50% 0 repeat-x fixed;}
+.cd-fixed-bg.cd-bg-2,.cd-fixed-bg.cd-bg-3 {background-color: #fff;}
+.cd-fixed-bg.cd-bg-4 {background-color: #fff;height:800px;}
+
+.cd-scrolling-bg {position: relative;min-height: 77%;z-index: 2;}
+.cd-scrolling-bg.cd-color-1 {background: url(../images/imgs/subject.png);}
+.cd-scrolling-bg.cd-color-2 {background-color: #d7e8ee;}
+.cd-scrolling-bg.cd-color-3 {background: url(../images/imgs/subject.png) repeat-x;}
+a.more{display: block; float: right; text-align: right; font-size: 14px ; color: #76be0d;}

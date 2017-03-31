@@ -1,0 +1,132 @@
+{
+	"JSChart" : {
+		"datasets" : [
+			{
+				"type" : "pie",
+				"data" : [
+					{
+						"unit" : "DR/CR/DX",
+						"value" : "54"
+					},
+					{
+						"unit" : "CT",
+						"value" : "40"
+					},
+					{
+						"unit" : "US",
+						"value" : "20"
+					},
+					{
+						"unit" : "MG",
+						"value" : "12"
+					},
+					{
+						"unit" : "NM",
+						"value" : "10"
+					},
+					{
+						"unit" : "XA",
+						"value" : "4"
+					},
+					{
+						"unit" : "MR",
+						"value" : "18"
+					}
+				]
+			}
+		],
+		"colorset" : [
+
+			"#BBE7E2",
+			"#CBEBE5",
+			"#00B5B4",
+			"#00BFBA",
+			"#00C9C3",
+			"#00D0C7",
+		    "#4CD7CE"
+		],
+		"optionset" : [
+			{
+				"set" : "setTitleColor",
+				"value" : "'#857D7D'"
+			},
+			{
+				"set" : "setPieUnitsColor",
+				"value" : "'#9B9B9B'"
+			},
+			{
+				"set" : "setPieValuesColor",
+				"value" : "'#6A0000'"
+			},
+			{
+			  "set" : "setPieValuesColor",
+			  "value" : "'#6A0000'"
+			},
+			{
+			  "set": "setLegendShow",
+			  "value": "true"
+			},
+			{
+			  "set": "setTitle",
+			  "value": "'影像报告'"
+			},
+			{
+			  "set": "setTitleColor",
+			  "value": "'#000'"
+			},
+			{
+			  "set": "setTitleFontSize",
+			  "value": "16"
+			},
+			{
+			  "set": "setTextPaddingTop",
+			  "value": "0"
+			},
+			{
+			  "set": "setLegendPosition",
+			  "value": "'bottom center'"
+			},
+			{
+			  "set": "setSize",
+			  "value": "499,252"
+			},
+		  {
+			"set" : "setFontFamily",
+			"value" : "'Microsoft YaHei'"
+		  },
+		  {
+			"set": "setLegend",
+			"value": "'#00B5B4', 'US'"
+		  },
+		  {
+			"set": "setLegend",
+			"value": "'#00BFBA', 'MG'"
+		  },
+		  {
+			"set": "setLegend",
+			"value": "'#00C9C3', 'NM'"
+		  },
+		  {
+			"set": "setLegend",
+			"value": "'#00D0C7', 'XA'"
+		  },
+		  {
+			"set": "setLegend",
+			"value": "'#4CD7CE', 'MR'"
+		  } ,
+		  {
+			"set": "setLegend",
+			"value": "'#CBEBE5', 'CT'"
+		  },
+		  {
+			"set": "setLegend",
+			"value": "'#BBE7E2', 'DR/CR/DX'"
+		  },
+		  {
+			"set": "setPieRadius",
+			"value": "77"
+		  }
+
+		]
+	}
+}

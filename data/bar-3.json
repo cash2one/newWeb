@@ -1,0 +1,59 @@
+{
+	"JSChart" : {
+		"datasets" : [
+			{
+				"type" : "bar",
+				"data" : [
+					{
+						"unit" : "门诊",
+						"value" : "70"
+					},
+					{
+						"unit" : "住院",
+						"value" : "50"
+					},
+					{
+						"unit" : "急诊",
+						"value" : "13"
+					}
+				]
+			}
+		],
+		"colorset" : [
+		  
+			"#EC7031",
+			"#F3AC86",
+			"#F5D4C5"
+		],
+		"optionset" : [
+		  {
+			"set": "setSize",
+			"value": "499,252"
+		  },
+		  {
+			"set": "setBarSpacingRatio",
+			"value": "80"
+		  },
+		  {
+			"set": "setTitle",
+			"value": "'就诊类别'"
+		  },
+		  {
+			"set": "setTitlePosition",
+			"value": "'right'"
+		  },
+		  {
+			"set" : "setAxisNameX",
+			"value" : "''"
+		  },
+		  {
+			"set" : "setAxisNameY",
+			"value" : "''"
+		  },
+		  {
+			"set" : "setFontFamily",
+			"value" : "'Microsoft YaHei'"
+		  }
+		]
+	}
+}

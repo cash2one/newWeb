@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>统计工作站</title>
+    <link href="../../css/layout.css?v=upd201600405" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css?v=upd20160427" rel="stylesheet" type="text/css"/>
+    <link href="../../css/clinic.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="../../js/layer/layer.js" type="text/javascript"></script>
+    <script src="../../js/jquery.select.js" type="text/javascript"></script>
+    <!--头像截取插件-->
+    <script src="../../js/jquery.imgareaselect-0.9.10/scripts/jquery.imgareaselect.pack.js"></script>
+    <link rel="stylesheet" href="../../js/jquery.imgareaselect-0.9.10/css/imgareaselect-default.css"/>
+    <!-- respond.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="../../js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script>
+        (function () {
+            if (!
+                        /*@cc_on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+    <div class="header clinic-header ">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clinic-bread">
+        <a href="#">首页</a>
+        <span>&gt;&gt;</span>
+        <a href="#">用户中心</a>
+        <span>&gt;&gt;</span>
+        <b>账户设置</b>
+    </div>
+    <div class="clinic-content clearfix">
+        <div class="clinic-left">
+            <div class="clinic-top">
+                <i></i>用户中心
+            </div>
+            <div class="big-module pb0">
+                <a href="#" class="module-title">
+                    <i class="module-title-icon icon-bianmin"></i>便民查询
+                </a>
+            </div>
+            <div class="big-module">
+                <span class="module-title">
+                    <i class="module-title-icon icon-dingdan"></i>我的订单
+                </span>
+                <p><a href="clinic-liuyan.html">留言咨询</a></p>
+                <p><a href="clinic-shipin.html">视频诊室预约</a></p>
+                <p><a href="clinic-guahao.html">医生挂号</a></p>
+            </div>
+            <div class="big-module">
+                <span class="module-title">
+                    <i class="module-title-icon icon-yingxiang"></i>我的影像
+                </span>
+                <p><a href="clinic-yunpan.html">我的云盘</a></p>
+                <p><a href="clinic-huoqu.html">影像获取</a></p>
+            </div>
+            <div class="big-module">
+                <span class="module-title">
+                    <i class="module-title-icon icon-guanzhu"></i>我的关注
+                </span>
+                <p><a href="clinic-follow-hospital.html">医院</a></p>
+                <p><a href="clinic-follow-department.html">科室</a></p>
+                <p><a href="clinic-follow-doctor.html">医生</a></p>
+            </div>
+            <div class="big-module bordernone">
+                <span class="module-title">
+                    <i class="module-title-icon icon-zhanghu"></i>我的账户
+                </span>
+                <p><a class="clinic-click" href="clinic-account.html">账户设置</a></p>
+                <p><a href="clinic-patients.html">就诊人管理</a></p>
+                <p><a href="clinic-message.html">消息中心</a></p>
+            </div>
+        </div>
+        <div class="clinic-right">
+            <div class="clinic-top">
+                <div class="clinic-right-warp clearfix">
+                    <div class="clinic-search-box">
+                        <a class="clinic-search-btn" href="javaScript:void(0);">找医生预约</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clinic-right-warp">
+                <ul class="clinic-account-list">
+                    <li>
+                        <a class="clinic-account-on" href="javaScript:void(0);">账号信息</a>
+                        <a href="javaScript:void(0);">修改密码</a>
+                        <a href="javaScript:void(0);">修改头像</a>
+                    </li>
+                </ul>
+                <div class="clinic-tabs-box">
+                    <!--账号信息-->
+                    <div class="clinic-tab clinic-account-info">
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">昵称：</span>
+                            <input class="clinic-account-name" type="text"/>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">姓名：</span>
+                            <b>周大福</b>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">身份证号码：</span>
+                            <b>330102*********12</b>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">性别：</span>
+                            <b>男</b>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">手机号码：</span>
+                            <b>13766666666</b>
+                            <a id="reset-phone" class="fr orange-text" href="javaScript:void(0);">修改</a>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">邮箱地址：</span>
+                            <b>youxiang@qq.com</b>
+                            <a id="reset-email" class="fr orange-text" href="javaScript:void(0);">绑定邮箱</a>
+                        </div>
+                        <div class="clinic-account-row clearfix">
+                            <span class="fl clinic-account-label">所在城市：</span>
+                            <div class="user-select select-2" style="z-index: 1;">
+                                <div class="grey-select" >
+                                    <span class="user-select-span select-2-span">查询条件</span>
+                                    <i></i>
+                                </div>
+                                <ul class="user-select-ul select-2-ul" style="width: 99%;z-index: 100; ">
+                                    <li><a href="javascript:;">全部</a></li>
+                                    <li><a href="javascript:;">已处理</a></li>
+                                    <li><a href="javascript:;">未处理</a></li>
+                                </ul>
+                            </div>
+                            <div class="user-select select-2" style="z-index: 1;">
+                                <div class="grey-select" >
+                                    <span class="user-select-span select-2-span">查询条件</span>
+                                    <i></i>
+                                </div>
+                                <ul class="user-select-ul select-2-ul" style="width: 99%;z-index: 100; ">
+                                    <li><a href="javascript:;">全部</a></li>
+                                    <li><a href="javascript:;">已处理</a></li>
+                                    <li><a href="javascript:;">未处理</a></li>
+                                </ul>
+                            </div>
+                            <div class="user-select select-2" style="z-index: 1;">
+                                <div class="grey-select" >
+                                    <span class="user-select-span select-2-span">查询条件</span>
+                                    <i></i>
+                                </div>
+                                <ul class="user-select-ul select-2-ul" style="width: 99%;z-index: 100; ">
+                                    <li><a href="javascript:;">全部</a></li>
+                                    <li><a href="javascript:;">已处理</a></li>
+                                    <li><a href="javascript:;">未处理</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">详细地址：</span>
+                            <input placeholder="请填写详细地址" class="clinic-account-addr" type="text"/>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">&nbsp;</span>
+                            <a class="clinic-account-submit" href="#">提交</a>
+                        </div>
+                    </div>
+                    <!--密码修改-->
+                    <div style="display:none;" class="clinic-tab clinic-password">
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">旧密码：</span>
+                            <input placeholder="请输入旧密码" class="clinic-account-name" type="text"/>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">新密码：</span>
+                            <input placeholder="请输入新密码" class="clinic-account-name" type="text"/>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">确认密码：</span>
+                            <input placeholder="请再次输入新密码" class="clinic-account-name" type="text"/>
+                        </div>
+                        <div class="clinic-account-row">
+                            <span class="clinic-account-label">&nbsp;</span>
+                            <a class="clinic-account-submit" href="#">提交</a>
+                        </div>
+                    </div>
+                    <!--头像修改-->
+                    <div style="display:none;" class="clinic-tab clinic-headimg">
+                        <h3 class="head-img-title">
+                            从电脑选择一张图片
+                            <p>支持jpg、png等格式，图片大小不超过1M</p>
+                        </h3>
+                        <div class="file">
+                            <!--<input class="my-file" type="file"/>-->
+                        </div>
+
+                        <a id="change-user" href="javaScript:void(0);">选择上传的图片</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--弹出层-->
+    <!--选择头像-->
+    <div class="user-layer" id="user-layer" style="display:none; z-index: 19892015;">
+        <div class="user-layer-main">
+            <input type="file" accept="image/jpeg,image/png" id="userPhoto" class="clinic-file" name="userPhoto" value="" onchange="util.ajaxImgUpload('/user/uploadup.htm','userPhoto','loading','userPhotoPath');">
+            <input type="button" class="user-upbtn2" value="选择上传的图片">
+            <p>选一张您喜欢的图片做头像吧。支持peg和png格式，大小不超过1M.</p>
+            <div class="uesr-img-select">
+
+                <p>点击并拖动下方方块，调整头像大小</p>
+                <div style=" width:280px; height:280px;float: left; margin-right: 60px; z-index: 19892015;"  >
+                    <img id="photo" src="../../images/2code.jpg" style="width:auto; height:auto;">
+                </div>
+
+                <p style="margin-top: 34px;">头像预览</p>
+                <div id="preview" style="width:135px; height:135px; overflow:hidden; float:left;z-index: 19892015;">
+                    <div style="width:100px;heght:100px;">
+                        <img src="../../images/2code.jpg" style="width:135px; height:135px;">
+                    </div>
+                </div>
+            </div>
+
+            <input type="button" value="确定" class="blue-btn user-succes"/>
+        </div>
+    </div>
+    <!--绑定手机-->
+    <div id="bind-phone" class="bind-box">
+        <h4>绑定手机</h4>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">当前绑定手机：</span>
+            <b>137******1234</b>
+        </div>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">新手机号：</span>
+            <input placeholder="请输入新的手机号" type="text"/>
+        </div>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">验证码：</span>
+            <input placeholder="请输入验证码" class="v-code" type="text"/>
+            <a class="get-vcode" href="javaScript:void(0);">获取验证码</a>
+        </div>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">&nbsp;</span>
+            <a class="bind-btn" href="javaScript:void(0);">绑定</a>
+        </div>
+    </div>
+    <!--绑定邮箱-->
+    <div id="bind-email" class="bind-box">
+        <h4>绑定邮箱</h4>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">当前绑定邮箱：</span>
+            <b>youxiang@q63.com</b>
+        </div>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">手机号：</span>
+            <input placeholder="请输入收取验证码的手机号" type="text"/>
+        </div>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">验证码：</span>
+            <input placeholder="请输入验证码" class="v-code" type="text"/>
+            <a class="get-vcode" href="javaScript:void(0);">获取验证码</a>
+        </div>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">邮箱：</span>
+            <input placeholder="请输入要修改的邮箱" type="text"/>
+        </div>
+        <div class="clinic-account-row">
+            <span class="clinic-account-label">&nbsp;</span>
+            <a class="bind-btn" href="javaScript:void(0);">绑定</a>
+        </div>
+    </div>
+    <!--页脚-->
+    <div class="clinic-foot">
+        <div class="footer warp">
+            <ul class="footer-text fl">
+                <li style="opacity:0.5;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</li>
+                <li class="padding"></li>
+                <li style="">客服电话：<h2>400-0571-574</h2>  &nbsp; &nbsp; &nbsp;ICP证  浙B-20140372 浙ICP备11059294号-3&nbsp; &nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202000272" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../images/beian.png" style="float:left;">浙公网安备 33010202000272号<p></p></a> </li>
+                <li style="">联系地址：杭州市上城区中河中路198号绿都大厦4F、5F    &nbsp; &nbsp; &nbsp; </li>
+                <li style="margin-bottom:20px;">为了本站的正常浏览，建议您使用IE 9及以上的IE浏览器或chrome、firefox等浏览器</li>
+            </ul>
+            <ul class="footer-img clearfix">
+                <li><img src="../../images/doctor.png">专家版</li>
+                <li><img src="../../images/patient.png">大众版</li>
+            </ul>
+            <p style="opacity:0.5;font-size:12px;">
+                杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Science Co., Ltd.
+            </p>
+        </div>
+    </div>
+<script>
+    $(function(){
+        $(".clinic-account-list li a").click(function(){
+            var i = $(this).index();
+            $(this).siblings().removeClass("clinic-account-on");
+            $(this).addClass("clinic-account-on");
+            $(".clinic-tab").hide();
+            $(".clinic-tab").eq(i).show();
+        });
+        $('#photo').imgAreaSelect({
+            aspectRatio: '1:1',
+            handles: true,
+            fadeSpeed: 200,
+            onSelectEnd : preview,
+            zIndex:99999999,
+            onSelectChange: preview
+        });
+        $("#change-user").click(function(){
+            layer.open({
+                type:1,
+                title:false,
+                shade:0.3,
+                area: ['700px', '600px'],
+                scrollbar: false,
+                content:$('#user-layer'),
+                end: function(){
+                    $(".imgareaselect-selection").parent().css({
+                        display:'none'
+                    });
+                    $(".imgareaselect-outer").css({
+                        display:'none'
+                    })
+                }
+            });
+        });
+        $("#reset-phone").click(function(){
+            layer.open({
+                type:1,
+                title:false,
+                shade:0.3,
+                area: ['580px', '340px'],
+                scrollbar: false,
+                content:$('#bind-phone'),
+            });
+        });
+
+        $("#reset-email").click(function(){
+            layer.open({
+                type:1,
+                title:false,
+                shade:0.3,
+                area: ['580px', '340px'],
+                scrollbar: false,
+                content:$('#bind-email'),
+            });
+        });
+
+
+//        头像截取
+        function preview(img, selection)
+        {
+            if(!selection.width || !selection.height){
+                return;
+            }
+            var scaleX = 135 / selection.width;
+            var scaleY = 135 / selection.height;
+
+            $('#preview img').css({
+                width: Math.round(scaleX * 280),
+                height: Math.round(scaleY * 280),
+                marginLeft: -Math.round(scaleX * selection.x1),
+                marginTop: -Math.round(scaleY * selection.y1)
+            });
+        }
+    });
+
+</script>
+</body>
+</html>

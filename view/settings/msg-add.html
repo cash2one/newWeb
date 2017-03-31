@@ -1,0 +1,133 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全球影像用户界面</title>
+<link href="../../css/layout.css?v=upd20170303" rel="stylesheet"/>
+<link rel="stylesheet" href="../../js/ztree/ztreemetroStyle.css?v=upd20160402"/>
+<link href="../../css/settings.css?v=upd20170303" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css?v=upd20170303" rel="stylesheet" type="text/css"/>
+<script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../js/ztree/jquery.ztree.min.js" type="text/javascript"></script>
+<script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+  <script language="Javascript">
+   var zTreeObj;
+   // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+   var setting = {};
+   // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+   var zNodes = [
+   {name:"好友列表", open:true, children:[
+      {name:"好友1"}, {name:"好友2"}, {name:"好友5"}, {name:"好友4"}]}
+   ];
+   $(document).ready(function(){
+      zTreeObj = $.fn.zTree.init($("#ztree"), setting, zNodes);
+
+   });
+  </script>
+</head>
+<body>
+<div class="fhr-body">
+    <div class="header msg-header">
+        <div class="header-content">
+            <div class="head-left fl clearfixed">
+                <a href="#" class=""><img src="../../images/log.png" alt=""/></a>
+                <span></span>
+            </div>
+            <div class="head-right fr clearfixed">
+                <div class="user-head">
+                    <img src="../../images/user.jpg" alt=""/>
+                </div>
+                <div class="user-info">
+                    <p>
+                        欢迎您，<span>用户名</span>
+                        <a href="#" class="message"><i></i> <em>99+</em></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;">返回桌面</a>
+                        <a href="javascript:;">帮助</a>
+                        <a href="javascript:;">退出</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<div class="fhr-warp settings-box">
+
+        <h4 class="bread-settings">
+        <span><a href="message.html">消息中心</a> >><b style="color:#898989;">发送站内消息</b></span>
+        </h4>
+    <div class="message-content">
+        <div class="send">
+            <div class="send-to">
+                    <p>
+                    <label for="send-friend">发往：</label>             
+                    <input type="text"  value="请从右侧选择" id="myfriend" name="send-friend"/>
+                     </p>
+            </div>
+            <div class="send-tit">
+                <p><label for="send-theme">主题：</label>
+                <input class="grey-select" type="text" name="send-theme" style="width:240px;"></p>
+            </div>
+            <div class="send-con">
+            <p><label for="send-theme">消息内容：</label>
+            <textarea class="box-textarea"></textarea></p>
+                <div class="send-btn">
+                <input type="button" class="msg-btn" value="发送" />
+                <input type="button" value="取 消" class="msg-btn msg-btn-ref" onclick="Boxy.get(this).hide();" />
+                </div>
+            </div>
+        </div>
+        </div>
+
+                    <div class="send-list">
+                        <h3>最近联系人</h3>
+                    <ul class="send-recentlist">
+                        <li><a href="javascript:;">swei张</a></li>
+                        <li><a href="javascript:;">王一舒</a></li>
+                        <li><a href="javascript:;">丹尼尔·史密斯</a></li>
+                        <li><a href="javascript:;">斯蒂芬</a></li>
+                        <li><a href="javascript:;">这里只放5条数据</a></li>
+                    </ul>
+                    <ul class="send-friends">
+                     <h3>我的好友</h3>
+                        <ul  id="ztree" class="ztree"></ul>
+                    </ul>
+                </div>
+
+</div>
+
+
+
+
+</div>
+<script type="text/javascript">
+$(function(){
+        $(".message-inout a").click(function() {
+           $(".message-inout a").removeClass("current");
+           $(this).addClass("current");
+        });
+
+
+    $(".send-recentlist a").on("click",function(){
+        $("#myfriend").val($(this).text());
+    });
+
+    $("#ztree .node_name").on("click",function(){
+        $("#myfriend").val($(this).text());
+    })
+});
+</script>
+</body>
+</html>

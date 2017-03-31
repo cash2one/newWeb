@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全球影像用户界面</title>
+    <link href="../../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css"/>
+    <link href="../../css/main.css?v=upd20160406" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link href="../../js/layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../../images/favicon.ico">
+    <script src="../../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../js/searchbar.js" type="text/javascript"></script>
+    <script src="../../js/layer/layer.js"></script>
+    <script>
+        (function () {
+            if (!
+                        /*@cc-on!@*/
+                            0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+<style type="text/css">
+#browser-tip p{width:70%;margin:40px auto;color: #777; font: 15px/30px Microsoft Yahei,sans-serif;}
+#browser-tip p i{display:block;float: left; margin:5px 20px 50px 20px; width: 28px;height: 28px; background:url(../../js/layer/skin/default/xubox_ico0.png) no-repeat -90px -40px; }
+.browser-dl{display: block; margin:50px auto; width:240px; height: 35px;text-align: center;
+ color: #fff; line-height: 35px;font-size: 15px; border-radius:2px;}
+    
+</style>
+</head>
+<body>
+<div class="bodymain">
+    <header>
+        <div class="user">
+            <div class="user-top">
+                <div class="user-tr">
+                    <span class="user-link">欢迎您，<strong>用户名</strong> | <a>帮助</a> | <a>退出</a></span>
+                    <a href="#"><img src="../../images/user.jpg" title="个人账户"/></a>
+
+                    <div class="user-search">
+                        <div class="select-sxtit"><span class="select-mgsw">联系人</span><span class="select-mgbt"></span>
+                        </div>
+                        <ul class="select-mgul">
+                            <li><a href="#">联系人</a></li>
+                            <li><a href="#">影像</a></li>
+                        </ul>
+                        <div class="select-in">
+                            <input type="text" class="frsearch" id="frsearch" value="请输入患者名字搜索"/>
+                        </div>
+                        <div class="search-btn"></div>
+                    </div>
+                </div>
+                <div class="user-tl">
+                    <span id="adduser"><a>加友提示(0)</a></span><span id="mail"><a>消息提示(0)</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div class="log"><a href="../../main.html"><img src="../../images/log.png"></a></div>
+            <ul class="nav-li">
+                <li><a href="#"><span class="nav-icon1"></span>桌面</a></li>
+                <li><a href="#"><span class="nav-icon6"></span>便民查询</a></li>
+                <li><a href="#"><span class="nav-icon7"></span>医生工作站</a></li>
+                <li><a href="#"><span class="nav-icon4"></span>消息</a></li>
+                <li><a href="#"><span class="nav-icon5"></span>我的主页</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="main-box" style="position: relative">
+        <aside class=" mm-menu">
+            <div class="column-wide-block for-cwb">
+                <dl class="mm-menu--items">
+                    <dt>影像
+                    <p>images</p></dt>
+                    <dd class="column-icon column-img"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul style="margin-top:14px;">
+                        <li><a href="#">· 个人影像</a></li>
+                        <li class="last"><a href="#">· 共享影像</a></li>
+                        <li><a href="#">· 获取影像</a></li>
+                        <li class="last"><a href="#">· 本院影像</a></li>
+                        <li><a href="#">· 分享历史</a></li>
+                        <li class="last"><a href="#">· 上传记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>会诊间
+                    <p>consultation</p></dt>
+                    <dd class="column-icon column-cons"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 创建影像会诊</a></li>
+                        <li class="last"><a href="#">· 影像会诊记录</a></li>
+                        <li><a href="#">· 创建视频会诊</a></li>
+                        <li class="last"><a href="#">· 视频会诊记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>空中诊室
+                    <p>air room</p></dt>
+                    <dd class="column-icon column-air"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul>
+                        <li><a href="#">· 留言咨询</a></li>
+                        <li class="last"><a href="#">· 视频诊室</a></li>
+                        <li><a href="#">· 诊间预约</a></li>
+                        <li class="last"><a href="#">· 医院挂号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block for-cwb">
+                <dl>
+                    <dt>双向转诊
+                    <p>referral</p></dt>
+                    <dd class="column-icon column-ref"></dd>
+                </dl>
+                <div class="column-detail">
+                    <ul class="">
+                        <li><a href="#">· 待办列表</a></li>
+                        <li class="last"><a href="#">· 转入记录</a></li>
+                        <li><a href="#">· 转出记录</a></li>
+                        <li class="last"><a href="#">· 患者跟踪</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl class="clearfix">
+                        <dt>影像报告
+                        <p>report</p></dt>
+                        <dd class="column-icon column-rep"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul style="margin-top:14px;">
+                            <li><a href="#">· 报告列表</a></li>
+                            <li><a href="#">· 报告书写</a></li>
+                            <li><a href="#">· 影像匹配</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl class="clearfix" style="border:0;">
+                        <dt>病历查询
+                        <p>medical record</p></dt>
+                        <dd class="column-icon column-med"></dd>
+                    </dl>
+                    <div class="column-detail narrow-right">
+                        <ul>
+                            <li><a href="#">· 按患者查询</a></li>
+                            <li><a href="#">· 按类型查询</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="column-wide-block">
+                <div class="column-narrow-block">
+                    <dl class="clearfix">
+                        <dt>联系人
+                        <p>contacts</p></dt>
+                        <dd class="column-icon column-cont"></dd>
+                    </dl>
+                    <div class="column-detail narrow-left">
+                        <ul>
+                            <li><a href="#">· 我的联系人</a></li>
+                            <li><a href="#">· 关注我的患者</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column-narrow-block">
+                    <dl class="clearfix" style="border:0;">
+                        <dt>设置管理
+                        <p>settings</p></dt>
+                        <dd class="column-icon column-set"></dd>
+                    </dl>
+                    <div class="column-detail  narrow-right">
+                        <ul class="column-spe-ul" style="margin-top:14px;">
+                            <li><a href="#">· 个人信息</a></li>
+                            <li><a href="#">· 排班设置</a></li>
+                            <li><a href="#">· 价格设置</a></li>
+                            <li><a href="#">· 报告模板</a></li>
+                            <li><a href="#">· 短信设置</a></li>
+                            <li><a href="#">· 修改密码</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <script src="../../js/jquery.sidebar.js"></script>
+        <section class="user-right  wrapper">
+            <span class="mm-menu-toggle"></span>
+
+            <div class="breadcrumbs"><span class="bread-fir">预约咨询 &gt;&gt;&gt;</span>&nbsp;<span class="bread-sec">留言咨询管理</span>
+            </div>
+
+            <div class="air-list-tab">
+                <p class="sortby-right">
+                    <input name="name" type="text" onclick="this.value=''" class="blue-input" id="pat-name"
+                           value="订单号、医生名、患者名、排号"/>
+                    <input type="button" value="" class=" magnifier"/>
+                </p>
+                <input type="button" value="进入诊室" class="navy-btn video-button browser-tip" onclick="javascript:; ">
+                <ul class="three-tab">
+                    <li>空中诊室预约记录</li>
+                    <li class="current">留言咨询记录</li>
+                    <li>诊间预约记录</li>
+                </ul>
+
+            </div>
+
+            <div class="air-list">
+                <table width="100%" border="0" cellspacing="0" class="air-list-con" style="display:none;">
+                    <thead>
+                    <tr>
+                        <td width="15%">提交时间</td>
+                        <td width="27%">主诉</td>
+                        <td width="10%">患者姓名</td>
+                        <td width="10%">预约时间</td>
+                        <td width="5%">排号</td>
+                        <td width="10%">金额</td>
+                        <td width="8%"><span class="air-list-stu">状态<i></i></span>
+
+                            <div class="air-dropmenu" style="width:8%;">
+                                <ul>
+                                    <li><a href="">已付款</a></li>
+                                    <li><a href="">已回复</a></li>
+                                    <li><a href="">未付款</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td width="15%">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="air-li-td">
+                        <td colspan="8" class="alignleft"><span class="air-list-num">订单号：4345011</span><span
+                                class="air-list-ks">科室：<a>眼科</a></span><span class="air-list-doc">咨询医生：<a
+                                href="../sys/dochome.html">王娟</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>2015-02-14 12:30:11</td>
+                        <td class="alignleft tablelong">
+                            <div class="tri-ell2" id="tri-ell2">
+                                我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好
+                            </div>
+                        </td>
+                        <td>刘梅</td>
+                        <td><strong>2015-02-17<br/>星期四 下午 17:00 </strong></td>
+                        <td>3号</td>
+                        <td><em>25.00</em> 元</td>
+                        <td><span class="list-green">已付款</span><p style="color:#228ba0;">[建议加号]</p></td>
+                        <td class="air-list-cz"><a href="report.html">查看详情</a><a href="#">进入会诊间</a><a
+                                href="report.html">删除</a><a href="report.html">再次咨询</a><a href="javascript:;" class="">申诉</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="air-li-td">
+                        <td colspan="8" class="alignleft"><span class="air-list-num">订单号：4345011</span><span
+                                class="air-list-ks">科室：<a>眼科</a></span><span class="air-list-doc">咨询医生：<a
+                                href="../sys/dochome.html">王娟</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>2015-02-14 12:30:11</td>
+                        <td class="alignleft tablelong">
+                            <div class="tri-ell2" id="tri-ell2">
+                                我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好
+                            </div>
+                        </td>
+                        <td>刘梅</td>
+                        <td><strong>2015-02-17<br/>星期四 下午 17:00 </strong></td>
+                        <td>3号</td>
+                        <td><em>25.00</em> 元</td>
+                        <td><span class="list-green">已付款</span></td>
+                        <td class="air-list-cz"><a href="report.html">查看详情</a><a href="#">进入会诊间</a><a
+                                href="report.html">删除</a><a href="report.html">再次咨询</a><a href="javascript:;" class="">申诉</a>
+                            <a href="#" id="change-user">待评价</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 空中诊室结束 -->
+
+                <table width="100%" border="0" cellspacing="0" class="air-list-con">
+                    <thead>
+                    <tr>
+                        <td width="15%">提交时间</td>
+                        <td width="35%">主诉</td>
+                        <td width="10%">患者姓名</td>
+                        <td width="5%">年龄</td>
+                        <td width="10%">金额</td>
+                        <td width="10%"><span class="air-list-stu">状态<i></i></span>
+
+                            <div class="air-dropmenu">
+                                <ul>
+                                    <li><a href="">已付款</a></li>
+                                    <li><a href="">已回复</a></li>
+                                    <li><a href="">未付款</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td width="15%">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="air-li-td">
+                        <td colspan="7" class="alignleft"><span class="air-list-num">订单号：4345011</span><span
+                                class="air-list-ks">科室：<a>眼科</a></span><span class="air-list-doc">咨询医生：<a
+                                href="../sys/dochome.html">王娟</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>2014-09-14 12:30:11</td>
+                        <td class="alignleft tablelong">
+                            <div class="tri-ell2" id="tri-ell2">
+                                我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好
+                            </div>
+                        </td>
+                        <td>刘梅</td>
+                        <td>43</td>
+                        <td><em>25.00</em> 元</td>
+                        <td><span class="list-green">已付款</span></td>
+                        <td class="air-list-cz"><a href="report.html">查看详情</a><a href="report.html">删除</a><a
+                                href="report.html">再次咨询</a>
+                            <a href="#" id="change-user">待评价</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="air-li-td">
+                        <td colspan="7" class="alignleft"><span class="air-list-num">订单号：4345011</span><span
+                                class="air-list-ks">科室：<a>眼科</a></span><span class="air-list-doc">咨询医生：<a
+                                href="../sys/dochome.html">王娟</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>2014-09-14 12:30:11</td>
+                        <td class="alignleft tablelong">
+                            <div class="tri-ell2" id="tri-ell2">
+                                我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好我亲戚的两只眼睛在2001年做了青光眼手术,其中一只效果不错,其中一只没有什么效果,之后的视力就一直不好
+                            </div>
+                        </td>
+                        <td>刘梅</td>
+                        <td>43</td>
+                        <td><em>25.00</em> 元</td>
+                        <td><span class="list-green">已付款</span><p style="color:#228ba0;">[建议加号]</p></td>
+                        <td class="air-list-cz"><a href="report.html">查看详情</a><a href="report.html">删除</a><a
+                                href="report.html">再次咨询</a>
+                            <a href="#" id="change-user">待评价</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 留言咨询结束 -->
+
+                <table width="100%" border="0" cellspacing="0" class="air-list-con" style="display:none;">
+                    <thead>
+                    <tr>
+                        <td width="15%">预约日期</td>
+                        <td width="17%">医院</td>
+                        <td width="8%">就诊人</td>
+                        <td width="10%">证件号码</td>
+                        <td width="15%">就诊日期</td>
+                        <td width="10%">排号</td>
+                        <td width="5%">金额</td>
+                        <td width="10%"><span class="air-list-stu">状态<i></i></span>
+
+                            <div class="air-dropmenu">
+                                <ul>
+                                    <li><a href="">已付款</a></li>
+                                    <li><a href="">已回复</a></li>
+                                    <li><a href="">未付款</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td width="10%">操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="air-li-td">
+                        <td colspan="9" class="alignleft"><span class="air-list-num">订单号：4345011</span><span
+                                class="air-list-ks">科室：<a>眼科</a></span><span class="air-list-doc">预约专家：<a
+                                href="../sys/dochome.html">王娟</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>2015-02-14 12:30:11</td>
+                        <td>上海交大附属仁济医院</td>
+                        <td>刘梅</td>
+                        <td>331030330232349102</td>
+                        <td><strong>2015-02-17<br/>星期四 下午 17:00</strong></td>
+                        <td><em>03</em> 号</td>
+                        <td><em>25.00</em> 元</td>
+                        <td><span class="list-green">已付款</span></td>
+                        <td class="air-list-cz"><a href="report.html">退号</a></td>
+                    </tr>
+                    </tbody>
+
+                </table>
+
+                <!-- 诊间预约结束 -->
+
+                <div class="pages">
+
+          <span class="page-detail">当前第<strong>1</strong>页 / 共<strong>1</strong>页<span>
+          <span class="page-detail">共<strong>3</strong>条记录</span>
+          <span>跳至第<input type="text" id="paginationCPage" name="currentPage" value="1" class="page-to"/> 页<span>
+          <span><button type="submit" class="page-go" onclick="gotoPageByForm()">GO</button></span>
+
+              <a href='#' class="pageimg page-first" onclick="gotoPageP(1);">首页</a>
+              <a href='#' class="pageimg page-prev" onclick="gotoPageP(0)">上一页</a>
+              <a href='#' class="page-num current">1</a>
+              <a href="#" class="pageimg page-next" onclick="gotoPageP(2)"> 下一页</a>
+              <a href="#" class="pageimg page-last" onclick="gotoPageP(1)">尾页</a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <footer class="clearfix">
+        <div class="footer footer980">
+            <ul class="footer_info">
+                <p>客服电话：400-0571-574 &nbsp; &nbsp; &nbsp;联系地址：杭州市上城区庆春路153号瑞丰大厦10楼 &nbsp; &nbsp; &nbsp; ICP证 浙B-20140372
+                    浙ICP备11059294号-3 </p>
+
+                <p>杭州联众医疗科技股份有限公司 &nbsp; &nbsp; &nbsp; Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </p>
+                <br>
+
+                <p style="font-size:11px;color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。
+                </p>
+
+                <p style="font-size:11px;color:#b3b3b3;">
+                    请使用IE8浏览器，在至少1024*768屏幕分辨率下浏览本网站，若想获得最佳浏览体验，建议使用IE10或火狐、chrome等浏览器</p>
+            </ul>
+        </div>
+    </footer>
+
+    <!--评价系统-->
+    <div class="" id="airask-layer" style="display:none;">
+        <div class="airask-layer-evaluation">
+            <div class="airask-evaluation-title">
+                <p>请您对本次医生的服务进行评价！</p>
+
+                <div class="airask-evaluation-icons">
+                    <div class="evaluation-icons">
+                        <i class="icons-like"></i>
+
+                        <p class="icons-title">值得推荐</p>
+                    </div>
+                    <div class="evaluation-icons">
+                        <i class="icons-dislike"></i>
+
+                        <p class="icons-title" style="color:#79c4d6;">有待改进</p>
+                    </div>
+                </div>
+                <div class="airask-evaluation-hr"></div>
+                <div class="airask-evaluation-stars">
+                    <div class="stars-block">
+                        <span>服务态度 :</span>
+                        <div>
+                            <div id="star1" class="star1">
+                                <ul>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="stars-block">
+                        <span>专业水平 :</span>
+                        <div>
+                            <div id="star2" class="star1">
+                                <ul>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                    <li><a href="javascript:;"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="airask-evaluation-opinion ">
+                    <textarea name="" id="" cols="30" rows="10" class="evaluation-defaule">说说您对此次服务的意见吧，您的想法很重要！
+                    </textarea>
+                </div>
+                <div class="airask-evaluation-btn button-size">
+                    <input type="button" value="提交" class="navy-btn btn-size1">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 浏览器下载提示 -->
+    <div class="" id="browser-tip" style="display:none;">
+        <p><i></i>您使用的不是火狐浏览器，视频诊室插件仅支持Firefox火狐浏览器。</p>
+        <a class="browser-dl navy-btn" href="http://download.firefox.com.cn/releases-sha2/stub/51.0/official/zh-CN/Firefox-latest.exe">点击下载Firefox Windows版</a>
+
+    </div>
+
+    <script type="text/javascript">
+        //tab选择器
+        $(function () {
+            $(".three-tab li").click(
+                    function () {
+                        $(this).addClass("current").siblings().removeClass("current");
+                        $(".air-list-con").eq($(".three-tab li").index(this)).show().siblings(".air-list-con").hide();
+                    })
+
+        })
+        // 下拉菜单,缺windows全局click事件
+        $(function () {
+            $('.air-list-stu').click(function () {
+                $(this).removeClass('blur').css('background', '#fff');
+                $('.air-dropmenu').slideDown(800);
+            })
+            $('.air-dropmenu a').click(function () {
+                $('.air-dropmenu').slideUp(200).hide();
+                $('.air-list-stu').html($(this).text() + "<i></i>").css('background', 'inherit');
+                return false;
+            })
+        })
+    </script>
+
+    <!--滑动点赞-->
+    <script type="text/javascript">
+        jQuery.star = function (oStar) {
+
+            var oStar= $(oStar);
+            var aLi =  oStar.find("li");
+            var iStar =0;
+            var i= 0;
+            var iScore=0;
+
+            for (i = 1; i <= aLi.length; i++)
+            {
+                var ali=aLi[i - 1]
+                ali.index = i;
+                //鼠标移过显示分数
+                ali.onmouseover = function ()
+                {
+
+                    fnPoint(this.index);
+
+                    //浮动层显示
+                    //计算浮动层位置
+                    //匹配浮动层文字内容
+                };
+                //鼠标离开后恢复上次评分
+                ali.onmouseout = function ()
+                {
+                    fnPoint();
+                    //关闭浮动层
+                };
+                //点击后进行评分处理
+                ali.onclick = function ()
+                {
+                    iStar = this.index;
+                }
+            }
+            //评分处理
+            function fnPoint(iArg)
+            {
+                //分数赋值
+                iScore = iArg || iStar;
+                for (i = 0; i < aLi.length; i++) {
+                    aLi[i].className = i < iScore ? "on" : "off";
+                }
+            }
+        };
+    </script>
+
+    <script>
+        jQuery.star("#star1");
+        jQuery.star("#star2");
+    </script>
+    <!--待评-->
+    <script>
+            $("#change-user").click(function () {
+            layer.open({
+                type: 1,
+                title: '评价',
+                shade: 0.3,
+                area: ['460px', '550px'],
+                scrollbar: false,
+                content: $('#airask-layer')
+            })
+        });
+            //判断浏览器版本弹出FF下载
+        $(".browser-tip").click(function () {
+            var isChrome = navigator.userAgent.toLowerCase().match(/chrome/) != null;
+            if (isChrome || $.browser.msie) {
+                layer.open({
+                    type: 1,
+                    title: false,
+                    shade: 0.3,
+                    area: ['460px', '250px'],
+                    scrollbar: false,
+                    content: $('#browser-tip')
+                })
+            }
+        })
+
+        $(".icons-dislike").click(function () {
+            $(".airask-evaluation-opinion").find(".evaluation-defaule").removeClass("evaluation-defaule").addClass("evaluation-tellwhy")
+        })
+    </script>
+
+    <script>
+        (function(){
+            $(".icons-dislike").click(function(){
+                $(this).addClass("icons-dislikeactive")
+            })
+            $(".icons-like").click(function(){
+                $(this).addClass("icons-likeactive")
+            })
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/layout.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link href="../css/main.css?v=upd20160406" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../images/favicon.ico">
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery.slides.min.js"></script>
+<script src="../js/searchbar.js"></script>
+<title>全球影像-首页</title>
+  <script> 
+   (function() {
+     if (! 
+     /*@cc-on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body>
+<header class="main-header">  
+    <div class="top-bg clearfix">
+     <div class="width980">
+      <div class="top-message"><a href=""><i></i><span>您有<em>32</em>条短消息</span></a></div>
+      <div class="top-appdl"><a href=""><i></i>电脑端下载</a></div>
+      <div class="top-center">
+        <ul>
+          <li><a href="">你好，患者1</a></li>
+          <li><a href="">帮助中心</a></li>
+          <li><a href="" class="last">退出</a></li>
+        </ul>
+      </div>
+     </div>
+    </div>
+  <div class="width980">
+    <div class="logo-black"><a href="#"></a></div>
+    <div class="hearder-search">
+      <div class="search-select">
+        <p class="search-default"><i></i><span class="select-span">找医生</span></p>
+        <ul class="select-more">
+          <li><a href="#">找医生</a></li>
+          <li><a href="#">找医院</a></li>
+          <li><a href="#">查疾病</a></li>
+        </ul>
+      </div>
+      <input type="text" class="no-border search-input " value="" /><label class="gjc">请输入关键词</label>
+      <input type="button" class="no-border search-whitebtn" value="搜 索" />
+    </div>
+  </div>
+</header>
+
+
+<section class="home">
+
+
+    <div class="hm-sec1">
+     <ul class="hm-banner" style="overflow:auto;">
+         <li class="hm-b1"></li>
+         <li class="hm-b2"></li>
+         <li class="hm-b3"></li>
+     </ul>
+    </div>
+
+
+    <div class="hm-sec2">
+        <div class="hm-sec2-leftbg"></div>
+        <div class="hm-sec2-midbg"></div>
+        <div class="hm-sec2-rightbg"></div>
+            <div class="hm-login fl"  style="display:none;">
+            <h3>快捷登录</h3>
+                <div class="hm-sec-id">
+                    <span><input type="radio" name="loginType" id="loginTypeUser"  value="1"><label for="loginTypeUser">用户</label></input></span>
+                    <span><input type="radio" name="loginType" id="loginTypeDoc"  value="2" checked="checked"><label for="loginTypeDoc">专家</label></input></span>
+                    <span><input type="radio" name="loginType" id="loginTypeHos"  value="3" ><label for="loginTypeHos">机构</label></input></span>
+                </div>
+            <div class="hm-username"><i></i><input type="text" name="" class="hm-input" value="请输入用户名"/></div>
+            <div class="hm-password"><i></i><input type="text" name="" class="hm-input" value="请输入密码"/></div>
+            <div class="hm-yzm">
+                <input id="checkCode" name="checkCode" value="" type="text"  onkeydown="onkeydownLogin(event);" />
+                <img src="/code.htm?c=0.42471123774080843" title="看不清，换一张？" id="code" name="code" onclick="util.getCode('/code.htm');return false;" align="center" height="30" width="90" style="cursor:pointer">
+            </div>
+
+                <a class="forget-pw" href="#">忘记密码？</a>
+                <button class="dl-btn">立即登录</button>
+                <button class="reg-btn">注册新账号</button>
+            </div>
+        <div class="hm-welcome fl" style="display:block;">
+      <ul>
+        <li class="welcome">
+          <img src="http://www.eimageglobal.com/pImage/doctor/1266/img-201506170061915.png" onerror="util.nofind('/images/noUserPhoto.gif',this)" width="100" height="100" />
+                               <p class="hm-un">欢迎您，<span title="江波" >江波</span></p><p class="hm-cpw"><a href="/user/modifyPass.htm" target="-blank"><i></i>修改密码</a></p>
+        </li>
+        <li class="hm-btn">
+        <input type="button" onclick="window.location.href='/user/desk.htm'" class="hm-wel-btn" value='个人中心' style="background:#285181;"/>
+        <input type="button" onclick="window.location.href='/logout.htm'" class="hm-wel-btn"  value='退出登录' style="margin-left:10px;" />
+        </li>
+        <li class="hm-mine">
+          <a href="/airConsult/list.htm?regType=00" target="-blank">我的预约</a>
+          <a href="/airConsult/list.htm?regType=02" target="-blank">我的咨询</a>
+          <a href="/airConsult/list.htm?regType=01" target="-blank">我的会诊</a>
+        </li>
+      </ul>
+    </div>
+
+
+        <script>
+            $(function(){
+                $(".hm-login input[type=text]").focus(function(){
+                   $(this).val('').css("color","#000");
+                })
+                $(".hm-login input[type=text]").blur(function(){ 
+                    if($(this).val() == ""){ 
+                     $(this).val(this.defaultValue).css("color","#aaa");
+                    }
+                }) 
+            })
+        </script>
+
+       
+
+            <div class="hm-hothos fr">
+              <div class="hm-hos-area">
+                  <a href="#" class="hm-area">上海</a>
+                  <a href="#" class="hm-area">浙江</a>
+                  <a href="#" class="hm-area">内蒙古</a>
+                  <a href="#" class="hm-area">其他地区</a>
+               </div> 
+               <h3>热门医院</h3>
+              <div class="hm-hos">
+              <ul class="hm-hp clearfix">
+                <li class="hos1">
+                <a href="#">
+                    <img src="../images/z1.jpg" alt="" />
+                    <p>上海交大附属第九人民医院</p>
+                  </a>
+                </li>
+                <li class="hos2">
+                <a href="#">
+                    <img src="../images/z2.jpg" alt="" />
+                    <p>上海新华医院</p>
+                  </a>
+                </li>
+                <li class="hos3">
+                <a href="#">
+                    <img src="../images/z3.jpg" alt="" />
+                    <p>上海仁济医院</p>
+                  </a>
+                </li>
+                <li class="hos4">
+                <a href="#">
+                    <img src="../images/z2.jpg" alt="" />
+                    <p>上海公共临床卫生中心</p>
+                  </a>
+                </li>
+                <li class="more">
+                <a href="#">更多 >></a>
+                </li>
+              </ul>
+                <ul class="area-other" style="display:none;">
+                    <li><a href="#">复旦大学附属华山医院</a></li>
+                    <li><a href="#">复旦大学附属肿瘤医院</a></li>
+                    <li><a href="#">复旦大学附属中山医院</a></li>
+                    <li><a href="#">复旦大学附属耳眼鼻喉专科医院</a></li>
+                    <li><a href="#">复旦大学附属妇产科医院（黄埔）</a></li>
+                    <li><a href="#">上海中医药大学附属岳阳中西医医院</a></li>
+                </ul>
+
+            </div>
+    </div>
+</div>
+
+
+      <div class="clearfix hm-sec3">
+
+        <div class="hm-expert">
+            <h2>专家团队<p>Expert Team</p></h2>
+
+                <div class="hm-exp-sort"><a href="#" class="current">国内专家</a> <span>|</span> <a href="#">国际专家</a></div>
+              <div class="hm-doctor" >
+                    <ul class="clearfix">
+                      <li class="first"><a href="dochome.html">
+                          <img src="../images/yygh.jpg" alt="魏乐勋" class="doc-av"/>
+                          <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                          <p class="doc-hp">上海复旦大学附属中山医院</p>
+                          <p class="doc-ks">影像科 </p>
+                          <p class="doc-sc"><em>擅长：</em>CT、核磁共振影像诊断，特别是神经系统、呼吸系统</p>
+                        </a></li>
+                      <li><a href="#">
+                          <img src="../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+                            <p class="doc-name">阿什福得 · 麦卡利斯特<span class="doc-zc">副主任医师,副教授</span></p>
+                          <p class="doc-hp">上海复旦大学附属中山医院</p>
+                          <p class="doc-ks">影像科 </p>
+                          <p class="doc-sc"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                        </a></li>
+                      <li><a href="#">
+                          <img src="../images/user.jpg" alt="宋冬雷"  class="doc-av" />
+                          <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                          <p class="doc-hp">上海复旦大学附属中山医院</p>
+                          <p class="doc-ks">影像科 </p>
+                          <p class="doc-sc"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                        </a></li>
+                      <li class="last"><a href="#">
+                          <img src="../images/user.jpg" alt="魏乐勋" class="doc-av"/>
+                             <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                             <p class="doc-hp">上海复旦大学附属中山医院</p>
+                             <p class="doc-ks">影像科 </p>
+                             <p class="doc-sc"><em>擅长：</em>CT、核磁共振影像诊断，特别是神经系统、呼吸系统</p>
+                        </a></li>
+                      </ul>
+                       <ul class="clearfix">
+                      <li class="first"><a href="#">
+                          <img src="../images/docmale.jpg" alt="宋冬雷"  class="doc-av" />
+                          <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                          <p class="doc-hp">上海复旦大学附属中山医院</p>
+                          <p class="doc-ks">影像科 </p><p class="doc-sc"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                        </a></li>
+                      <li><a href="#">
+                          <img src="../images/docmale.jpg" alt="宋冬雷"  class="doc-av" />
+                          <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                          <p class="doc-hp">上海复旦大学附属中山医院</p>
+                          <p class="doc-ks">影像科 </p>
+                          <p class="doc-sc"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                        </a></li>
+                      <li><a href="#">
+                          <img src="../images/docmale.jpg" alt="宋冬雷"  class="doc-av" />
+                          <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                          <p class="doc-hp">上海复旦大学附属中山医院</p>
+                          <p class="doc-ks">影像科 </p>
+                          <p class="doc-sc"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                        </a></li>
+                      <li class="last"><a href="#">
+                          <img src="../images/docmale.jpg" alt="宋冬雷"  class="doc-av" />
+                          <p class="doc-name">魏乐勋  <span class="doc-zc">副主任医师</span></p>
+                          <p class="doc-hp">上海复旦大学附属中山医院</p>
+                          <p class="doc-ks">影像科 </p>
+                          <p class="doc-sc"><em>擅长：</em>擅长脑动脉瘤、脑血管畸形、硬脑膜动静脉瘘、外伤性海绵窦动静脉瘘</p>
+                        </a></li>
+                    </ul>
+
+                </div>
+
+        </div>
+      </div>
+
+    <div class="hm-sec4">
+        <div class="sec4-bg-top"><span></span></div>
+        <div class="sec4-bg-bottom"><span></span></div>
+        <div class="hm-medical"  id="sec4">
+            <h2>云医疗<p>Medical Cloud</p></h2>
+                <div class="clearfix" style="width:100%;">
+                <ul>
+                   <li class="current">
+                       <div class="medical-title med-tit-current"><i class="cloud-img"></i><p>影像云盘</p></div>
+                       <div class="block block1">
+                        <p>影像云盘基于我们的“云影像”支持，为您长期存储dicom影像原始文件，您可以随时安全、便捷地浏览、保管您的影像图片、诊断报告。该功能APP已同步提供支持。</p>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="medical-title"><i class="con-room"></i><p>会诊间</p></div>
+                       <div class="block block2">
+                        <p>影像云盘基于我们的“云影像”支持，为您长期存储dicom影像原始文件，您可以随时安全、便捷地浏览、保管您的影像图片、诊断报告。该功能APP已同步提供支持。</p>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="medical-title"><i class="air-clinic"></i><p>空中诊室</p></div>
+                       <div class="block block3">
+                        <p>影像云盘基于我们的“云影像”支持，为您长期存储dicom影像原始文件，您可以随时安全、便捷地浏览、保管您的影像图片、诊断报告。该功能APP已同步提供支持。</p>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="medical-title"><i class="img-report"></i><p>影像报告</p></div>
+                       <div class="block block4">
+                        <p>影像云盘基于我们的“云影像”支持，为您长期存储dicom影像原始文件，您可以随时安全、便捷地浏览、保管您的影像图片、诊断报告。该功能APP已同步提供支持。</p>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="medical-title"><i class="two-way"></i><p>双向会诊</p></div>
+                       <div class="block block5">
+                        <p>影像云盘基于我们的“云影像”支持，为您长期存储dicom影像原始文件，您可以随时安全、便捷地浏览、保管您的影像图片、诊断报告。该功能APP已同步提供支持。</p>
+                       </div>
+                   </li>
+                </ul> 
+                </div>
+        </div>
+    </div>
+
+
+    <div class="hm-sec5">
+    <div class="hm-project">
+        <div class="hm-title">
+        <h2>区域应用<p>Regional Project</p></h2>
+        </div>
+        <div class="hm-pro-map" id="sec5">
+            <ul>
+              <li class="map-nmg"><a href="themes/nmg.html"></a><span>内蒙古云影像平台</span></li>
+              <li class="map-ks"><a href="themes/ksyc.html"></a><span>援建喀什远程移动影像系统</span></li>
+              <li class="map-xz"><a href="themes/txxz.html"></a><span>同心西藏云影像远程系统</span></li>
+              <li class="map-sc"><a href="themes/sichuan.html"></a><span>健康四川影像云平台</span></li>
+	      <li class="map-gz"><a href="themes/ysgz.html"></a><span>云上贵州·影像云</span></li>
+              <li class="map-pt"><a href="themes/fjpt.html"></a><span>莆田市影像医生签约基层服务平台</span></li>
+              <li class="map-sh"><a href="#"></a><span>上海主任专家分诊咨询</span></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+</section>
+  <footer class="clearfix">
+    <div class="footer footer980">
+        <ul class="footer-text fl">
+          <li style="color:#7d7d7d;">本网站为医疗机构、医生提供专业诊断交流平台，相关行业法律法规由医疗机构、医生自行参考<br/>为注册用户提供咨询平台，咨询所得意见仅供参考，本网站不承担由此引起的任何法律责任。</li>
+          <li class="padding"></li>
+          <li>客服电话：<h2>400-0571-574</h2>  &nbsp; &nbsp; &nbsp;ICP证  浙B-20140372 浙ICP备11059294号-3&nbsp; &nbsp;<a target="-blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202000272" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../images/beian.png" style="float:left;">浙公网安备 33010202000272号<p></p></a> </li>
+          <li>联系地址：杭州市上城区庆春路153号瑞丰大厦10楼    &nbsp; &nbsp; &nbsp; </li>
+          <li>杭州联众医疗科技股份有限公司   &nbsp; &nbsp; &nbsp;  Copyright @ Hangzhou Lianzhong Medical Technology Co., Ltd. </li>
+        </ul>
+        <ul class="footer-img fr">
+          <li>专家版<img src="../images/2code.jpg"></li>
+          <li>大众版<img src="../images/2code.jpg"></li>
+        </ul>
+    </div>
+  </footer>
+<script src="../js/jquery.home.js"></script>
+<script>
+  $(function(){
+        $('.hm-banner').slidesjs({
+            width: 980,
+            height:450,
+            play: {
+            effect: "fade",
+              active:false,
+              interval: 5000,
+              auto: true,
+              restartDelay: 2500,
+              pauseOnHover: true
+            },
+            pagination: {
+                  active: true,
+                  effect: "fade"
+            },
+            navigation: {
+                  active: true,
+                  effect: "fade"
+            }, 
+            effect: {
+              fade: {
+                speed: 2000
+              }
+            }
+        });
+  $('.hm-doctor').slidesjs({
+       navigation: {
+          active: true,
+          effect:"slide"
+            },        
+       pagination: {
+        active:false
+       },
+       play: {
+        effect: "slide",
+        active:false,
+        interval: 8000,
+        auto: true,
+        restartDelay: 3500,
+        pauseOnHover: true
+        },
+       effect: {
+          slide: {
+            speed:1500
+          },
+       width:930,
+       height:320,
+       auto:true
+        }
+      });
+  })
+</script>
+
+</body>
+</html>
