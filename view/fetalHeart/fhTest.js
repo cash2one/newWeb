@@ -12,9 +12,11 @@ fh.ajax={};
 fh.ajax.ajaxGetFirstShow=function () {
     var data={};
     data.tokenId=fh.tokenId;
+    data.Type="1";
+    data.pageSize="6";
     $.ajax({
         type:"POST",
-        url:fh.server+"interface/getDocPermission.htm",
+        url:fh.server+"interface/gravidaMonitorCount.htm",
         dataType: "json",
         data:data,
         async: true,
