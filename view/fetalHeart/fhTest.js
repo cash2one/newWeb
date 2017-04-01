@@ -16,7 +16,7 @@ fh.ajax.ajaxGetFirstShow=function () {
     data.pageSize="6";
     $.ajax({
         type:"POST",
-        url:fh.server+"interface/gravidaMonitorCount.htm",
+        url:fh.server+"fetalHeartInterface/gravidaMonitorCount.htm",
         dataType: "json",
         data:data,
         async: true,
