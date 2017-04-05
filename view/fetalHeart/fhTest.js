@@ -27,8 +27,16 @@ fh.DOM.makeFhTr=function (_result,index) {
         tr=$("<tr></tr>"),
         html="";
     html+="<td>"+index+"</td>";
-    html+=""
-
+    html+="<td>"+data.gravidaName+"</td>";
+    html+="<td>"+data.bindHospitalName+"</td>";
+    html+="<td>"+data.bindDoctorName+"</td>";
+    html+="<td>"+data.gravidaAge+"</td>";
+    html+="<td>"+data.gravidaPredictedStr+"</td>";
+    html+="<td>"+data.gravidaMobile+"</td>";
+    html+="<td><div class='toe'>"+data.memo+"</div></td>";
+    html+="<td><a class='fh-list-info newuser-add'>个人记录</a><a class='fh-list-info delete'>删除</a></td>";
+    tr.html(html);
+    return tr;
 };
 fh.ajax.ajaxGetFirstShow=function () {
     var data={};
@@ -36,6 +44,7 @@ fh.ajax.ajaxGetFirstShow=function () {
     data.type="1";
     data.pageSize="6";
     data.direction="1";
+    data.pageSize="10";
     $.ajax({
         type:"POST",
         url:fh.server+"fetalHeartInterface/gravidaMonitorCount.htm",
@@ -45,7 +54,7 @@ fh.ajax.ajaxGetFirstShow=function () {
         success: function(msg) {
             var _msg = msg;
             console.log("_msg",_msg);
-            // fh.fn.show(_msg,$("tbody.zcf_container2"));
+            fh.fn.show(_msg,$("tbody.zcf_container2"));
         },
         complete:function(){
 
@@ -53,14 +62,14 @@ fh.ajax.ajaxGetFirstShow=function () {
     });
 };
 fh.fn.show=function (_msg,pageContainer) {
-    var _msgR=_msg.resultMsg,
-        _result1=_msgR.result,
+    var _msgR=_msg.consultList,
+        // _result1=_msgR.result,
         _result;
         pageContainer.children().remove();//移除所有页面数据
 
     for(var i=fh.page.pageStart;i<fh.page.pageStart+fh.page.pageLength;i++){
         // _result=fh.dataClassification(i,_result1[i]);
-        fh.DOM.makeFhTr(_result1[i],i);
+        pageContainer.append(fh.DOM.makeFhTr(_msgR[i],i));
     }
 
 };
