@@ -5,14 +5,35 @@ var fh={};
 fh.server="/";
 fh.tokenId="";//tokenId=118514
 fh.DOM={};
-fh.DOM.makeFhTr=function () {
+fh.ajax={};
+fh.fn={};
+fh.page={};
+fh.page.pageStart=0;
+fh.page.pageLength=10;
+fh.page.pageIndex=1;//翻到第几页
+fh.page.pageCount="";
+//fetalHeartInterface/gravidaMonitorCount.htm
+//html%20V.201604/view/fetalHeart/pregnant.json
+// fh.page.showContainer=$("tbody.zcf_container");
+fh.dataClassification=function (index,_msg) {
+    var _1,_2,_3,_4,_5,_6,_7,_8,
+        arr=[];
+    // _1=;
+};
+
+
+fh.DOM.makeFhTr=function (_result,index) {
+    var data=_result,
+        tr=$("<tr></tr>"),
+        html="";
+    html+="<td>"+index+"</td>";
+    html+=""
 
 };
-fh.ajax={};
 fh.ajax.ajaxGetFirstShow=function () {
     var data={};
     data.tokenId=fh.tokenId;
-    data.Type="1";
+    data.type="1";
     data.pageSize="6";
     data.direction="1";
     $.ajax({
@@ -24,11 +45,24 @@ fh.ajax.ajaxGetFirstShow=function () {
         success: function(msg) {
             var _msg = msg;
             console.log("_msg",_msg);
+            // fh.fn.show(_msg,$("tbody.zcf_container2"));
         },
         complete:function(){
 
         }
     });
+};
+fh.fn.show=function (_msg,pageContainer) {
+    var _msgR=_msg.resultMsg,
+        _result1=_msgR.result,
+        _result;
+        pageContainer.children().remove();//移除所有页面数据
+
+    for(var i=fh.page.pageStart;i<fh.page.pageStart+fh.page.pageLength;i++){
+        // _result=fh.dataClassification(i,_result1[i]);
+        fh.DOM.makeFhTr(_result1[i],i);
+    }
+
 };
 fh.ajax.login=function () {
     var data={};
