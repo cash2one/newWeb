@@ -14,6 +14,7 @@ fh.page.pageIndex=1;//翻到第几页
 fh.page.pageCount="";
 //fetalHeartInterface/gravidaMonitorCount.htm
 //html%20V.201604/view/fetalHeart/pregnant.json
+//btn fr
 // fh.page.showContainer=$("tbody.zcf_container");
 fh.dataClassification=function (index,_msg) {
     var _1,_2,_3,_4,_5,_6,_7,_8,
@@ -26,7 +27,7 @@ fh.DOM.makeFhTr=function (_result,index) {
     var data=_result,
         tr=$("<tr></tr>"),
         html="";
-    html+="<td>"+index+"</td>";
+    html+="<td>"+(parseInt(index)+1)+"</td>";
     html+="<td>"+data.gravidaName+"</td>";
     html+="<td>"+data.bindHospitalName+"</td>";
     html+="<td>"+data.bindDoctorName+"</td>";
@@ -38,13 +39,13 @@ fh.DOM.makeFhTr=function (_result,index) {
     tr.html(html);
     return tr;
 };
-fh.ajax.ajaxGetFirstShow=function () {
-    var data={};
+fh.ajax.ajaxGetFirstShow=function (obj) {
+    var data=obj||{};
     data.tokenId=fh.tokenId;
     data.type="1";
-    data.pageSize="6";
+    data.pageSize="9";
     data.direction="1";
-    data.pageSize="10";
+    // data.pageSize="10";
     $.ajax({
         type:"POST",
         url:fh.server+"fetalHeartInterface/gravidaMonitorCount.htm",
@@ -108,4 +109,14 @@ fh.ajax.login();
 // test();
 // fh.page={};
 fh.ajax.ajaxGetFirstShow();
-
+$(document).ready(function (e) {
+    var e=e||event;
+    $("input.btn.fr").click(function (e) {
+        var e=e||event,
+            obj={};
+            obj.startDateStr=$("#studyDateStart3").val();
+            obj.endDateStr=$("#studyDateStart4").val();
+        console.log("click");
+        fh.ajax.ajaxGetFirstShow(obj);
+    })
+});
