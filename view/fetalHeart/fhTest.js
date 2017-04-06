@@ -158,6 +158,7 @@ $(document).ready(function (e) {
     $(".zcf_add").click(function (e) {
         var e=e||event,
             data=fh.common.collectDate();
+        data.fetusCount=1;
         fh.ajax.addNewUser(data);
         console.log("add");
     })
