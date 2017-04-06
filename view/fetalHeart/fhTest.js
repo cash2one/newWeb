@@ -140,7 +140,8 @@ fh.common.collectDate=function () {
     var data={};
     $(".newuser [data-base]").each(function () {
         var _this=$(this);
-        data[_this.attr("data-base")]=_this.val();
+        // console.log(this.tagName=="SPAN");
+        this.tagName=="SPAN"?data[_this.attr("data-base")]=_this.text():data[_this.attr("data-base")]=_this.val();
     });
     return data;
 };
