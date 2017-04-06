@@ -427,16 +427,15 @@
 <!-- 弹窗  新增用户-->
 <div class="newuser">
     <ul class="pregnant-info clearfix">
-        <li><span>姓名<em>*</em>：</span><input type="text"/></li>
-        <li><span>身份证<em>*</em>：</span><input type="text" value="330102195205140267"/></li>
-        <li><span>年龄：</span><input type="text" readonly/></li>
-        <li><span>孕期：</span><input type="text" readonly/></li>
-        <li><span>产/孕：</span><input type="text"/></li>
+        <li><span>姓名<em>*</em>：</span><input type="text" data-base="gravidaName"></li>
+        <li><span>身份证<em>*</em>：</span><input type="text" value="330102195205140267" data-base="gravidaIdCard"></li>
+        <li><span>年龄：</span><input type="text" readonly></li>
+        <li><span>孕期：</span><input type="text" readonly></li>
+        <li><span>产/孕：</span><input type="text" ></li>
         <li><span>胎数：</span>
-
             <div class="user-select select-1 fl" style="margin-right:20px; width:140px;z-index:50; height:28px;">
                 <div class="grey-select" style="height:26px;">
-                    <span class="user-select-span select-1-span" style="line-height:26px;">单胎</span>
+                    <span class="user-select-span select-1-span" style="line-height:26px;" data-base="fetusCount">单胎</span>
                     <i></i>
                 </div>
                 <ul class="user-select-ul select-1-ul" style="width: 99%;z-index: 100; ">
@@ -449,7 +448,7 @@
         </li>
         <li><span>预产期<em>*</em>：</span>
             <input name="studyDateStart" type="text" id="studyDateStart5" value=""
-                   onclick="WdatePicker({el:'studyDateStart5'})">
+                   onclick="WdatePicker({el:'studyDateStart5'})" data-base="gravidaPredicted">
             <img class="tri-timepicker" style="cursor:pointer;right:25px;"
                  src="../../js/My97DatePicker/skin/datePicker.gif"></li>
 
@@ -457,7 +456,7 @@
 
             <div class="user-select select-2 fl" style="margin-right:20px; width:142px;z-index: 40;">
                 <div class="grey-select" style="height:26px;">
-                    <span class="user-select-span select-2-span" style="line-height:26px;">医院一</span>
+                    <span class="user-select-span select-2-span" style="line-height:26px;" data-base="bindHospitalName">医院一</span>
                     <i></i>
                 </div>
                 <ul class="user-select-ul select-2-ul" style="width: 99%;z-index: 100; ">
@@ -474,7 +473,7 @@
 
             <div class="user-select select-4 fl" style="margin-right:20px;  width:140px;z-index: 30;">
                 <div class="grey-select" style="height:26px;">
-                    <span class="user-select-span select-4-span" style="line-height:26px;">张医生(zs)</span>
+                    <span class="user-select-span select-4-span" style="line-height:26px;" data-base="bindDoctorName">张医生(zs)</span>
                     <i></i>
                 </div>
                 <ul class="user-select-ul select-4-ul" style="width: 99%;z-index: 100; ">
@@ -485,8 +484,8 @@
                 </ul>
             </div>
         </li>
-        <li><span>地址：</span><input type="text" style="width:388px;"/></li>
-        <li><span>备注：</span><input type="text" style="width:388px;"/></li>
+        <li><span>地址：</span><input type="text" style="width:388px;" data-base="address"></li>
+        <li><span>备注：</span><input type="text" style="width:388px;" data-base="momo"></li>
         <li class="fr">该医生有 <b><em>3</em>位已分配孕妇</b> / <b><em>39</em>条未回复</b></li>
 
     </ul>
@@ -507,13 +506,13 @@
                         </ul>
                     </div>
                 </li> -->
-        <li><span>姓名：</span><input type="text" value="" /></li>
-        <li><span>电话：</span><input type="text" value="" /></li>
+        <li><span>姓名：</span><input type="text" value="" data-base="emergencyName"></li>
+        <li><span>电话：</span><input type="text" value="" data-base="emergencyMobile"></li>
 
     </ul>
-    <input type="button" value="关闭" class="grey-btn fh-pop-btn fr"/>
+    <input type="button" value="关闭" class="grey-btn fh-pop-btn fr "/>
     <input type="button" value="删除" class="orange-btn fh-pop-btn fr"/>
-    <input type="button" value="添加" class="fh-pop-btn fr"/>
+    <input type="button" value="添加" class="fh-pop-btn fr zcf_add"/>
 
 </div>
 

@@ -12,6 +12,7 @@ fh.page.pageStart=0;
 fh.page.pageLength=10;
 fh.page.pageIndex=1;//翻到第几页
 fh.page.pageCount="";
+fh.common={};
 //fetalHeartInterface/gravidaMonitorCount.htm
 //html%20V.201604/view/fetalHeart/pregnant.json
 //btn fr
@@ -27,6 +28,9 @@ fh.DOM.makeFhTr=function (_result,index) {
     var data=_result,
         tr=$("<tr></tr>"),
         html="";
+    if(typeof data!=="object"){
+        return
+    }
     html+="<td>"+(parseInt(index)+1)+"</td>";
     html+="<td>"+data.gravidaName+"</td>";
     html+="<td>"+data.bindHospitalName+"</td>";
@@ -62,12 +66,35 @@ fh.ajax.ajaxGetFirstShow=function (obj) {
         }
     });
 };
+fh.ajax.addNewUser=function (_data) {
+    if(typeof _data!=="object"){
+        return
+    };
+    var data=_data;
+    data.tokenId=fh.tokenId;
+    $.ajax({
+        type:"POST",
+        url:fh.server+"fetalHeartInterface/insertOrUpdateGravidaInfo.htm",
+        dataType: "json",
+        data:data,
+        async: true,
+        success: function(msg) {
+            var _msg = msg;
+            console.log("_msg",_msg);
+        },
+        complete:function(){
+
+        }
+    });
+};
 fh.fn.show=function (_msg,pageContainer) {
     var _msgR=_msg.consultList,
         // _result1=_msgR.result,
         _result;
         pageContainer.children().remove();//移除所有页面数据
-
+        if(_msgR.length==0){
+            return
+        }
     for(var i=fh.page.pageStart;i<fh.page.pageStart+fh.page.pageLength;i++){
         // _result=fh.dataClassification(i,_result1[i]);
         pageContainer.append(fh.DOM.makeFhTr(_msgR[i],i));
@@ -109,6 +136,14 @@ fh.ajax.login();
 // test();
 // fh.page={};
 fh.ajax.ajaxGetFirstShow();
+fh.common.collectDate=function () {
+    var data={};
+    $(".newuser [data-base]").each(function () {
+        var _this=$(this);
+        data[_this.attr("data-base")]=_this.val();
+    });
+    return data;
+};
 $(document).ready(function (e) {
     var e=e||event;
     $("input.btn.fr").click(function (e) {
@@ -118,5 +153,11 @@ $(document).ready(function (e) {
             obj.endDateStr=$("#studyDateStart4").val();
         console.log("click");
         fh.ajax.ajaxGetFirstShow(obj);
+    });
+    $(".zcf_add").click(function (e) {
+        var e=e||event,
+            data=fh.common.collectDate();
+        fh.ajax.addNewUser(data);
+        console.log("add");
     })
 });
