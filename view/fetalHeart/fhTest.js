@@ -71,8 +71,10 @@ fh.ajax.addNewUser=function (_data) {
         return
     };
     var data=_data;
-    data.bindHospitalId="";
-    data.bindDoctorId="";
+    data.bindHospitalId="95719980";
+    data.bindDoctorId="11520";
+    data.bindHospitalName="rmd影像中心";
+    data.bindDoctorName="杨利佳";
     data.tokenId=fh.tokenId;
     $.ajax({
         type:"POST",
