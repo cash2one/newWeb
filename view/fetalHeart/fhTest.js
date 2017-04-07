@@ -71,6 +71,8 @@ fh.ajax.addNewUser=function (_data) {
         return
     };
     var data=_data;
+    data.bindHospitalId="";
+    data.bindDoctorId="";
     data.tokenId=fh.tokenId;
     $.ajax({
         type:"POST",
@@ -149,6 +151,28 @@ fh.ajax.getHospital=function () {
         }
     })
 };
+fh.ajax.getDoctor=function () {
+    var data={};
+    data.tokenId=fh.tokenId;
+    data.hospitalId="95719980";
+    $.ajax({
+        type:"POST",
+        url:fh.server+"fetalHeartInterface/getGrantedDoctors.htm",
+        dataType: "json",
+        data:data,
+        async: false,
+        success: function(msg) {
+            var _msg = msg,
+                userInfo=_msg.userInfo;
+            console.log("doctor",_msg);
+            // fh.tokenId=userInfo.tokenId;
+            // console.log("tokenId=118514",fh.tokenId)
+        },
+        complete:function(){
+
+        }
+    })
+};
 fh.ajax.login();
 // function test() {
 //     var pwd =  CryptoJS.MD5("Gan123").toString();
@@ -184,4 +208,5 @@ $(document).ready(function (e) {
         console.log("add");
     });
     fh.ajax.getHospital();
+    fh.ajax.getDoctor();
 });
