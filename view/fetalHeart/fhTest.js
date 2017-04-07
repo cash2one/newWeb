@@ -208,6 +208,7 @@ $(document).ready(function (e) {
             data=fh.common.collectDate();
         data.fetusCount=1;
         fh.ajax.addNewUser(data);
+        fh.ajax.getDoctor();
         console.log("add");
     });
     fh.ajax.getHospital();
