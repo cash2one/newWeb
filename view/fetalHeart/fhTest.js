@@ -75,6 +75,7 @@ fh.ajax.addNewUser=function (_data) {
     data.bindDoctorId="11520";
     data.bindHospitalName="rmd影像中心";
     data.bindDoctorName="杨利佳";
+    data.emergencyRelation="1";
     data.tokenId=fh.tokenId;
     $.ajax({
         type:"POST",
