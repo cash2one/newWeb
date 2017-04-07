@@ -128,6 +128,27 @@ fh.ajax.login=function () {
         }
     })
 };
+fh.ajax.getHospital=function () {
+    var data={};
+    data.tokenId=fh.tokenId;
+    $.ajax({
+        type:"POST",
+        url:fh.server+"fetalHeartInterface/getFetalHospitals.htm",
+        dataType: "json",
+        data:data,
+        async: false,
+        success: function(msg) {
+            var _msg = msg,
+                userInfo=_msg.userInfo;
+            console.log("hospital",_msg);
+            // fh.tokenId=userInfo.tokenId;
+            // console.log("tokenId=118514",fh.tokenId)
+        },
+        complete:function(){
+
+        }
+    })
+};
 fh.ajax.login();
 // function test() {
 //     var pwd =  CryptoJS.MD5("Gan123").toString();
@@ -161,5 +182,6 @@ $(document).ready(function (e) {
         data.fetusCount=1;
         fh.ajax.addNewUser(data);
         console.log("add");
-    })
+    });
+    fh.ajax.getHospital();
 });
