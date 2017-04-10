@@ -28,6 +28,21 @@ i{font-style: normal}
 }
 .remove_certain{
     width: 300px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+.remove_certain_p{
+    height:200px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 200px;
+}
+.remove_certain_btnGroup{
+    text-align: center;
+    font-size: 14px;
+}
+.remove_certainY{
+    margin-right: 50px;
 }
 
 

@@ -4,6 +4,7 @@
 var fh={};
 fh.server="/";
 fh.tokenId="";//tokenId=118514
+fh.clickDom="";//点击的当前的对象的缓存
 fh.DOM={};
 fh.ajax={};
 fh.fn={};
@@ -31,7 +32,7 @@ fh.DOM.makeFhTr=function (_result,index) {
     if(typeof data!=="object"){
         return
     }
-    html+="<td style='display: none' class='zcf_dateID'></td>";
+    // html+="<td style='display: none' class='zcf_dateID'></td>";
     html+="<td>"+(parseInt(index)+1)+"</td>";
     html+="<td>"+data.gravidaName+"</td>";
     html+="<td>"+data.bindHospitalName+"</td>";
@@ -43,7 +44,8 @@ fh.DOM.makeFhTr=function (_result,index) {
     html+="<td><div class='flex-center'><div class='toe'>"+data.address+"</div></div></td>";
     html+="<td><a class='fh-list-info newuser-add'>个人记录</a><a class='fh-list-info delete'>删除</a></td>";
     tr.html(html);
-    tr.find(".zcf_dateID").data("gravidaId",data.gravidaId);
+    tr.find(".delete").data("gravidaId",data.gravidaId);
+    tr.find(".newuser-add").data("gravidaId",data.gravidaId);
     return tr;
 };
 fh.ajax.common=function (obj) {
@@ -147,7 +149,7 @@ fh.fn.show=function (_msg,pageContainer) {
             var e=e||event,
                 data={},
                 obj={};
-            data.gravidaId=_result.find(".zcf_dataID").data("gravidaId");
+            data.gravidaId=$(this).data("gravidaId");
             data.tokenId=fh.tokenId;
             obj.url=fh.server+"fetalHeartInterface/queryGravidaInfoById.htm";
             obj.data=data;
@@ -167,6 +169,7 @@ fh.fn.show=function (_msg,pageContainer) {
         remove.click(function (e) {
             var e=e||event;
             console.log("remove");
+            fh.clickDom=this;
             layer.open({
                 type: 1,
                 title: "删除",
@@ -289,7 +292,7 @@ $(document).ready(function (e) {
         var e=e||event,
             data={},
             obj={};
-        data.gravidaId=_result.find(".zcf_dataID").data("gravidaId");
+        data.gravidaId=$(fh.clickDom).data("gravidaId");
         data.tokenId=fh.tokenId;
         obj.url=fh.server+"fetalHeartInterface/delGravida.htm";
         obj.data=data;
