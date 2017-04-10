@@ -164,7 +164,7 @@ fh.fn.show=function (_msg,pageContainer) {
             };
             fh.ajax.common(obj);
         });
-        remove.click=function (e) {
+        remove.click(function (e) {
             var e=e||event;
             console.log("remove");
             layer.open({
@@ -176,7 +176,7 @@ fh.fn.show=function (_msg,pageContainer) {
                 content: $('.remove_certain')
             });
 
-        };
+        })
     }
 
 };
