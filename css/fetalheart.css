@@ -21,6 +21,15 @@ i{font-style: normal}
 .user-info a.alert i{background:url(../images/fetalheart.png) no-repeat -67px -69px;}
 .user-info a.alert{color: #ff8f2c;}
 
+/*使用flex让文本居中*/
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.remove_certain{
+    width: 300px;
+}
+
 
 /*head*/
 .fh-header{background: #bc807c;height:80px;}
@@ -208,6 +217,7 @@ h6.detail-head span{margin:0 8px;}
     background: url(../images/fetalheart.png) no-repeat -213px 0;
     cursor: pointer;
 }
+
 
 
 div.big{float:left;width:100px;}

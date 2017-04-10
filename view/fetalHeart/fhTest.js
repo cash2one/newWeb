@@ -31,6 +31,7 @@ fh.DOM.makeFhTr=function (_result,index) {
     if(typeof data!=="object"){
         return
     }
+    html+="<td style='display: none' class='zcf_dateID'></td>";
     html+="<td>"+(parseInt(index)+1)+"</td>";
     html+="<td>"+data.gravidaName+"</td>";
     html+="<td>"+data.bindHospitalName+"</td>";
@@ -38,16 +39,50 @@ fh.DOM.makeFhTr=function (_result,index) {
     html+="<td>"+data.gravidaAge+"</td>";
     html+="<td>"+data.gravidaPredictedStr+"</td>";
     html+="<td>"+data.gravidaMobile+"</td>";
-    html+="<td><div class='toe'>"+data.memo+"</div></td>";
+    // html+="<td><div class='toe'>"+data.memo+"</div></td>";
+    html+="<td><div class='flex-center'><div class='toe'>"+data.address+"</div></div></td>";
     html+="<td><a class='fh-list-info newuser-add'>个人记录</a><a class='fh-list-info delete'>删除</a></td>";
     tr.html(html);
+    tr.find(".zcf_dateID").data("gravidaId",data.gravidaId);
     return tr;
+};
+fh.ajax.common=function (obj) {
+    if(typeof obj=="undefined"){
+        throw new Error("obj undefined");
+    }
+    var _obj=obj;
+    if(!_obj.url)throw new Error("_obj.url undefined");
+    if(!_obj.data)throw new Error("_obj.data undefined");
+    if(!_obj.fn)throw new Error("_obj.url undefined");
+
+
+    $.ajax({
+        type:_obj.type||"POST",
+        url:_obj.url,
+        dataType: _obj.dataType||"json",
+        data:_obj.data,
+        async: _obj.async||true,
+        success: function(msg) {
+            var _msg = msg;
+            _obj.fn(msg);
+            try {
+                if(_obj.fn2){
+                    _obj.fn2();
+                }
+            }catch (err){
+                throw new Error(err);
+            }
+        },
+        complete:function(){
+
+        }
+    });
 };
 fh.ajax.ajaxGetFirstShow=function (obj) {
     var data=obj||{};
     data.tokenId=fh.tokenId;
     data.type="1";
-    data.pageSize="9";
+    data.pageSize="10";
     data.direction="1";
     // data.pageSize="10";
     $.ajax({
@@ -95,14 +130,52 @@ fh.ajax.addNewUser=function (_data) {
 fh.fn.show=function (_msg,pageContainer) {
     var _msgR=_msg.consultList,
         // _result1=_msgR.result,
-        _result;
+        _result,
+        add,
+        remove;
         pageContainer.children().remove();//移除所有页面数据
         if(_msgR.length==0){
             return
         }
     for(var i=fh.page.pageStart;i<fh.page.pageStart+fh.page.pageLength;i++){
         // _result=fh.dataClassification(i,_result1[i]);
-        pageContainer.append(fh.DOM.makeFhTr(_msgR[i],i));
+        _result=fh.DOM.makeFhTr(_msgR[i],i);
+        add=_result.find(".newuser-add");
+        remove=_result.find(".delete");
+        pageContainer.append(_result);
+        add.click(function (e) {
+            var e=e||event,
+                data={},
+                obj={};
+            data.gravidaId=_result.find("zcf_dataID").data("gravidaId");
+            data.tokenId=fh.tokenId;
+            obj.url=fh.server+"fetalHeartInterface/queryGravidaInfoById.htm";
+            obj.data=data;
+            obj.fn=function (_msg) {
+                console.log("addPreganet",_msg);
+                layer.open({
+                    type: 1,
+                    title: "孕妇资料",
+                    shade: 0.5,
+                    skin: 'layui-layer-rim',
+                    area: ['auto', '520px'],
+                    content: $('.newuser')
+                });
+            };
+            fh.ajax.common(obj);
+        });
+        remove.click=function (e) {
+            var e=e||event;
+            layer.open({
+                type: 1,
+                title: "删除",
+                shade: 0.5,
+                skin: 'layui-layer-rim',
+                area: ['auto'],
+                content: $('.remove_certain')
+            });
+
+        };
     }
 
 };
@@ -210,6 +283,22 @@ $(document).ready(function (e) {
         fh.ajax.addNewUser(data);
         fh.ajax.getDoctor();
         console.log("add");
+    });
+    $(".remove_certainY").click(function (e) {
+        var e=e||event,
+            data={},
+            obj={};
+        data.gravidaId=_result.find("zcf_dataID").data("gravidaId");
+        data.tokenId=fh.tokenId;
+        obj.url=fh.server+"fetalHeartInterface/delGravida.htm";
+        obj.data=data;
+        obj.fn=function (msg) {
+            console.log("remove",msg)
+        };
+        fh.ajax.common(obj);
+    });
+    $(".remove_certainN").click(function () {
+        layer.closeAll();
     });
     fh.ajax.getHospital();
     fh.ajax.getDoctor();
