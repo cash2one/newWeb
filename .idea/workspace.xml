@@ -35,10 +35,10 @@
       <file leaf-file-name="fhTest.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/fetalHeart/fhTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-247">
-              <caret line="146" column="27" selection-start-line="146" selection-start-column="27" selection-end-line="146" selection-end-column="27" />
+            <state relative-caret-position="377">
+              <caret line="172" column="27" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="27" />
               <folding>
-                <marker date="1491801011614" expanded="true" signature="702:715" ph="..." />
+                <marker date="1491804195410" expanded="true" signature="702:715" ph="..." />
               </folding>
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/fetalHeart/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="432" column="61" selection-start-line="432" selection-start-column="61" selection-end-line="432" selection-end-column="61" />
+            <state relative-caret-position="235">
+              <caret line="532" column="46" selection-start-line="532" selection-start-column="46" selection-end-line="532" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#html#0;n#!!top" expanded="false" />
@@ -63,11 +63,12 @@
                 <element signature="n#style#0;n#img#0;n#li#6;n#ul#0;n#div#2;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#li#9;n#ul#0;n#div#2;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#script#2;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#3;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#34410#63193#0" expanded="false" />
-                <element signature="e#63213#98470#0" expanded="false" />
+                <element signature="e#34432#63215#0" expanded="false" />
+                <element signature="e#63235#98492#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,8 +77,8 @@
       <file leaf-file-name="fetalheart.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/fetalheart.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state relative-caret-position="178">
+              <caret line="93" column="8" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -370,15 +371,15 @@
       <workItem from="1491371875893" duration="6636000" />
       <workItem from="1491440475190" duration="10371000" />
       <workItem from="1491529781331" duration="9547000" />
-      <workItem from="1491787773020" duration="8443000" />
+      <workItem from="1491787773020" duration="9829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80354000" />
+    <option name="totallyTimeSpent" value="81740000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27987897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -755,14 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/fetalheart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/fetalHeart/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
@@ -779,10 +772,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/fetalheart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="93" column="8" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/fetalHeart/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="432" column="61" selection-start-line="432" selection-start-column="61" selection-end-line="432" selection-end-column="61" />
+        <state relative-caret-position="235">
+          <caret line="532" column="46" selection-start-line="532" selection-start-column="46" selection-end-line="532" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#html#0;n#!!top" expanded="false" />
@@ -797,21 +798,22 @@
             <element signature="n#style#0;n#img#0;n#li#6;n#ul#0;n#div#2;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#li#9;n#ul#0;n#div#2;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#html#0;n#!!top" expanded="true" />
             <element signature="n#script#2;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#3;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#34410#63193#0" expanded="false" />
-            <element signature="e#63213#98470#0" expanded="false" />
+            <element signature="e#34432#63215#0" expanded="false" />
+            <element signature="e#63235#98492#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/fetalHeart/fhTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="146" column="27" selection-start-line="146" selection-start-column="27" selection-end-line="146" selection-end-column="27" />
+        <state relative-caret-position="377">
+          <caret line="172" column="27" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="27" />
           <folding>
-            <marker date="1491801011614" expanded="true" signature="702:715" ph="..." />
+            <marker date="1491804195410" expanded="true" signature="702:715" ph="..." />
           </folding>
         </state>
       </provider>

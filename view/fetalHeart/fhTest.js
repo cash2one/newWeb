@@ -147,7 +147,7 @@ fh.fn.show=function (_msg,pageContainer) {
             var e=e||event,
                 data={},
                 obj={};
-            data.gravidaId=_result.find("zcf_dataID").data("gravidaId");
+            data.gravidaId=_result.find(".zcf_dataID").data("gravidaId");
             data.tokenId=fh.tokenId;
             obj.url=fh.server+"fetalHeartInterface/queryGravidaInfoById.htm";
             obj.data=data;
@@ -166,6 +166,7 @@ fh.fn.show=function (_msg,pageContainer) {
         });
         remove.click=function (e) {
             var e=e||event;
+            console.log("remove");
             layer.open({
                 type: 1,
                 title: "删除",
@@ -288,7 +289,7 @@ $(document).ready(function (e) {
         var e=e||event,
             data={},
             obj={};
-        data.gravidaId=_result.find("zcf_dataID").data("gravidaId");
+        data.gravidaId=_result.find(".zcf_dataID").data("gravidaId");
         data.tokenId=fh.tokenId;
         obj.url=fh.server+"fetalHeartInterface/delGravida.htm";
         obj.data=data;
